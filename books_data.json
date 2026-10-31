@@ -227,7 +227,8 @@
           "- Études d'évaluation des interventions en santé\n- Études pronostiques\n- Études pratiques"
         ]
       ]
-    ]
+    ],
+    "category": "Transversal & Méthode"
   },
   {
     "n": 2,
@@ -457,7 +458,8 @@
           "Crises peuvent être :\n- Partielles simples, somatosensitives, aphasiques\n- Partielles complexes"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 3,
@@ -683,7 +685,8 @@
           "Fièvre prolongée sur un sujet sans terrain particulier, est définie par 3 critères : \n- T° ≥ 38,3 °C à plusieurs reprises : au repos, à distance des repas, par voie axillaire ou buccale en ajoutant +0,5°C\n- Dure depuis ≥ 3 semaines\n- Sans cause identifiée, malgré investigations appropriées (pas de liste pré-établie de ces investigations) : \n → Soit après 3 consultations \n → Soit durant 3 jours d'hospitalisation \n- Définition doit être néanmoins adaptée à la situation clinique \n (ex. T° à 38°C avec un syndrome inflammatoire persistant, sera pris en charge comme une fièvre prolongée)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 4,
@@ -917,7 +920,8 @@
           "- Normal le plus souvent\n- Si extension à une artère coronaire : SCA (troubles de la repolarisation : sous-ST ou sus-ST ou inversion de l’onde T)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 5,
@@ -1155,7 +1159,8 @@
           "- RX F/P du cou : en 1ère intention, avec rayons peu pénétrants, l'air étant utilisé comme contraste\n- TDM cervico-tho­racique : examen radiologique de référence pour l'étude du larynx\n- Imagerie peut ne pas être effectuée si inhalation avec dyspnée laryngée (urgence = ablatation du CE)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 6,
@@ -1377,7 +1382,8 @@
           "Coma traduit une défaillance de la formation réticulée activatrice ascendante (FRAA) du tronc cérébral :\n- Localisation : partie postérieure du pont et du mésencéphale et partie postéro-antérieure du diencéphale)\n- Rôle : support neurophysiologique de la vigilance\n- Il existe aussi d’autres relais de la vigilance : \n → Hypothalamus : rôle dans la régulation métabolique, hormonale et thermique \n (= 1er relais du réseau de la vigilance centré sur la FRAA)\n → Thalamus : ainsi une lésion thalamique bilatérale doit être recherchée devant trouble de la vigilance\n (= 2nd relais entre la FRAA et le cortex cérébral)\n → Cortex cérébral : implique les fonctions supérieures dans le maintient de la vigilance (attentionnelles ++)\n- Causes du coma : \n → Soit souffrance cérébrale diffuse (ex. toxique, métabolique, traumatique, infectieuse, épileptique)\n → Soit lésion cérébrale focale sous-tentorielle (lésion directe du FRAA) ou sus-tentorielle"
         ]
       ]
-    ]
+    ],
+    "category": "Urgences & Anesthésie"
   },
   {
     "n": 7,
@@ -1599,7 +1605,8 @@
           "1. Bilan de 2nd intention guidé par le contexte, la clinique et les premiers résultats d'examens\n2. TEP-TDM au 18FDG : si absence d'orientation diagnostique\n3. En l'absence de diagnostic final, le pronostic d'une fièvre prolongée est généralement bon\n4. Si au bout de la démarche diagnostique nous n'avons pas de diagnostic formel, un traitement d'épreuve peut être discuté dans des cas exceptionnels où le pronostic vital est en cause (corticothérapie, un traitement anti-tuberculeux chez le sujet à risque ...)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 8,
@@ -1837,7 +1844,8 @@
           "Anomalies des protéines membranaires et des lipides peuvent modifier la forme et diminuer la déformabilité de l'hématie, induisant leur destruction prématurée (hémolyse), ex. sphérocytose héréditaire ou maladie de Minkowski-Chauffard"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 9,
@@ -2055,7 +2063,8 @@
           "Acné n'est pas une maladie infectieuse mais une maladie inflammatoire ⚠️\nFlore anaérobie des follicules pilo-sébacés dominée par bactérie Gram + (Cutibacterium acnes anciennement Propionibacterium acnes) :\n- Propionibacterium acnes sécrète de nombreux facteurs induisant l'inflammation du follicule pilo-sébacé\n- Il existe différentes souches de Cutibacterium acnes qui ont un pouvoir inflammatoire différent\n → donc les souches sur un sujet sain sont différentes des souches de la peau d'un sujet acnéique"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 10,
@@ -2285,7 +2294,8 @@
           "Pour vieillir « en forme », il est donc essentiel de mener tout au long de sa vie des activités qui entretiennent les réserves fonctionnelles et mettent en jeu les capacités d'adaptation de l'organisme, et d'autre part :\n- Entretenir/Améliorer le capital de base intellectuel, physique et relationnel\n- Prévenir les maladies accessibles à une prévention (grippe, maladies cardiovasculaires ...)\n- Prise en charge précoce des maladies ou troubles susceptibles d'entraîner des désordres en cascade d'autres fonctions de l'organisme (troubles de la marche, état dépressif, altération de l'état nutritionnel ...)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 11,
@@ -2523,7 +2533,8 @@
           "- Stéatose aiguë gravidique \n- HELLP syndrome \n- Hématome sous capsulaire \n- Pathologies favorisées par la grossesse (biliaire, urinaire, GEU, etc.)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 12,
@@ -2741,7 +2752,8 @@
           "Sensibilité viscérale peut être :\n- Normale = besoin d'uriner progressivement croissant jusqu'à l'obtention d'un besoin pressant\n- Augmentée = besoin d'uriner très précoce, et persistant\n- Réduite = sensation de remplissage vésical, mais pas de besoin d'uriner\n- Absente = aucune sensation de remplissage, ni de besoin"
         ]
       ]
-    ]
+    ],
+    "category": "Chirurgie & Sens"
   },
   {
     "n": 13,
@@ -2967,7 +2979,8 @@
           "- Mécanisme minoritaire de façon globale, mais mécanisme exclusif pour les molécules de taille intermédiaire telles les protéines de bas PM\n- Éléments conditionnant la filtration des substances dissoutes :\n → Charge des substances : glycoprotéines de la MBG chargées négativement confèrent une sélectivité de charge \n → Taille des substances : glycoprotéines (néphrine, podocine) dans les espaces de filtration limitent le passage des plus grosses protéines\n → Molécules diffusant d’autant mieux qu’elle est chargée positivement et qu’elle est de petite taille\n → Passage des protéines dans l’urine est négligeable si poids > 68 000 Dalton (= PM de l’albumine)\n- Au sujet de la protéinurie physiologique (concentration dans l’urine définitive est < 200 mg/L) : \n → Protéines filtrées sont pour l’essentiel réabsorbées en aval dans le tubule rénal\n → Protéinurie physiologique apparaît constituée à parts égales de :\n ° Protéines d’origine plasmatique (fragments d’immunoglobulines et albumine)\n ° Protéine de Tamm-Horsfall (mucoprotéine produite par les cellules de l’anse de Henle)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 14,
@@ -3211,7 +3224,8 @@
           "Habituation ou Entretien"
         ]
       ]
-    ]
+    ],
+    "category": "Urgences & Anesthésie"
   },
   {
     "n": 15,
@@ -3441,7 +3455,8 @@
           "- Système artériel : artères hypophysaires inférieure et supérieure, provenant de l'artère carotide interne\n- Système porte (défini par un réseau capillaire à ses 2 extrémités) issu des artères hypophysaires supérieures qui relie l'hypothalamus à l'antéhypophyse, les stimulines hypo­physaires d'origine hypothalamique sont acheminées par ce système porte de l'hypothala­mus vers l'antéhypophyse\n- Drainage veineux : se fait via les 2 sinus caverneux (permet l’achememinement des hormones hypophysaires dans la circulation générale)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 16,
@@ -3675,7 +3690,8 @@
           "Cellules spumeuses = marqueur histologique des plaques d'athérome"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 17,
@@ -3909,7 +3925,8 @@
           "- Étiologie septique +++\n- Étiologie microcristalline (plus rarement)\n- Étiologie rhumatismale (maladie de Still, polyarthrite rhumatoïde)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 18,
@@ -4145,7 +4162,8 @@
           "Artères du ligament rond"
         ]
       ]
-    ]
+    ],
+    "category": "Chirurgie & Sens"
   },
   {
     "n": 19,
@@ -4368,7 +4386,8 @@
           "OACR"
         ]
       ]
-    ]
+    ],
+    "category": "Chirurgie & Sens"
   },
   {
     "n": 20,
@@ -4594,7 +4613,8 @@
           "Selon le collège de thérapeutique, un CDJ non pertinent n’influe pas sur le niveau de preuve, par contre il va influer sur la pertinence clinique\nPertinence de la question posée (objectif) qui dépend de :\n → Critères de jugement choisis (doivent être importants pour le patient) \n → Choix de la population d’étude\n → Nature de l’intervention évaluée \n → Choix du traitement contrôle (comparateur)\n → Pertinence de la durée de suivi"
         ]
       ]
-    ]
+    ],
+    "category": "Transversal & Méthode"
   },
   {
     "n": 21,
@@ -4820,7 +4840,8 @@
           "Défini par le franchissement de la membrane basale et un envahissement du tissu conjonctif sous-jacent\nCroissance tumorale nécessite une néoangiogenèse\nTumeur comporte un composant stromal (vasculaire, mésenchymateux, immunitaire)"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 22,
@@ -5050,7 +5071,8 @@
           "Conséquence de l’alitement ne sont pas spécifique de la personne âgée, mais sont :\n→ plus précoces, plus fréquentes, plus graves chez la personne âgée"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 23,
@@ -5312,7 +5334,8 @@
           "- Complications obstétricales\n- Cannabis\n- Migration\n- Urbanisation"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   },
   {
     "n": 24,
@@ -5556,7 +5579,8 @@
           "Rinne acoumétrique positif (CA – CO > 0)"
         ]
       ]
-    ]
+    ],
+    "category": "Chirurgie & Sens"
   },
   {
     "n": 25,
@@ -5786,7 +5810,8 @@
           "Pourtre médiane est ostéocartilagineuse, et est constituée d’arrière en avant par :\n- Os vomer (tel un soc de charrue, va de l’os sphénoïde aux os maxillaires)\n- Lame perpendiculaire de l’os ethmoïde\n- Septum cartilagineux"
         ]
       ]
-    ]
+    ],
+    "category": "Chirurgie & Sens"
   },
   {
     "n": 26,
@@ -6004,7 +6029,8 @@
           "- pH peu modifié : car baisse équivalente de PaCO2 et HCO3⁻\n- Baisse de PaCO2 : par dyspnée/sensations d’etouffement, et par diminution du taux de bicarbonates de sodium\n- Augmentation de la PaO2"
         ]
       ]
-    ]
+    ],
+    "category": "Femme & Enfant"
   },
   {
     "n": 27,
@@ -6254,7 +6280,8 @@
           "Vigoureux avec Cris"
         ]
       ]
-    ]
+    ],
+    "category": "Femme & Enfant"
   },
   {
     "n": 28,
@@ -6488,6 +6515,7 @@
           "Reconnaître une trisomie 21 peut s'avérer difficile, en particulier dans un contexte ethnique non familier\nSujets trisomiques 21 ont des difficultés à décrire leurs symptômes ou à localiser et quantifier leurs douleurs, le diagnostic des complications peut donc être retardé ou négligé et les bilans systématiques sont importants, mais une attention particulière doit être prêtée aux changements de l'humeur, aux modifications inattendues de poids ... → qui peuvent signer une complication secondaire"
         ]
       ]
-    ]
+    ],
+    "category": "Médecine Spécialisée"
   }
 ]
