@@ -3,67 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EDN Révision Médicale — Référentiels Officiels 2026</title>
-  <meta name="description" content="Les 28 Référentiels Médicaux Complets pour l'EDN / ECN. Conformes Collèges des Enseignants. Aperçu gratuit en ligne sécurisé.">
+  <title>EDN Révision Médicale — Référentiels Officiels 2026 par Ethan Cole</title>
+  <meta name="description" content="Les 28 Référentiels Médicaux Officiels pour l'EDN / ECN. Démo clinique interactive. Achat immédiat sur Gumroad.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://gumroad.com/js/gumroad.js"></script>
+
   <style>
     :root {
       --primary: #003366;
-      --primary-light: #0D47A1;
+      --primary-dark: #002244;
+      --primary-light: #0A58CA;
       --accent: #E03E3E;
       --accent-hover: #C53030;
-      --accent-soft: #FDE8E8;
-      --bg: #F8FAFC;
-      --card-bg: #FFFFFF;
-      --text-main: #0F172A;
-      --text-muted: #64748B;
-      --border: #E2E8F0;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+      --bg: #0B0F17;
+      --bg-card: #151C28;
+      --bg-card-hover: #1E293B;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border: #243042;
+      --border-focus: #38BDF8;
+      --glow: rgba(56, 189, 248, 0.15);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
       background-color: var(--bg);
-      color: var(--text-main);
+      color: var(--text);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
-    /* Top Announcement Bar */
-    .top-banner {
-      background: linear-gradient(90deg, #002244 0%, #003366 100%);
-      color: white;
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .badge-pill {
-      background: var(--accent);
-      color: white;
-      padding: 2px 10px;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    /* Ambient Glow background */
+    .glow-bg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, rgba(0, 51, 102, 0.05) 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     /* Navbar */
     header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(10px);
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(14px);
       position: sticky;
       top: 0;
       z-index: 50;
@@ -71,9 +61,9 @@
     }
 
     .nav-container {
-      max-width: 1280px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 14px 24px;
+      padding: 16px 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -82,142 +72,142 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
-      color: var(--primary);
+      color: white;
     }
 
     .brand-logo {
-      width: 42px;
-      height: 42px;
-      background: var(--primary);
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #0A58CA 0%, #003366 100%);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 10px;
-      font-weight: 800;
-      font-size: 1.15rem;
-      box-shadow: 0 4px 10px rgba(0, 51, 102, 0.25);
+      border-radius: 12px;
+      font-weight: 900;
+      font-size: 1.25rem;
+      box-shadow: 0 4px 15px rgba(10, 88, 202, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .brand-title {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
     .brand-sub {
       font-size: 0.78rem;
-      color: var(--text-muted);
+      color: #38BDF8;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
+    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: 8px;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 10px;
       font-size: 0.95rem;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       border: none;
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: white;
+    .btn-buy {
+      background: linear-gradient(135deg, #E03E3E 0%, #B91C1C 100%);
+      color: white !important;
+      box-shadow: 0 4px 15px rgba(224, 62, 62, 0.35);
     }
 
-    .btn-primary:hover {
-      background: var(--primary-light);
+    .btn-buy:hover {
+      background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0, 51, 102, 0.25);
+      box-shadow: 0 8px 25px rgba(224, 62, 62, 0.5);
     }
 
-    .btn-accent {
-      background: var(--accent);
-      color: white;
-      box-shadow: 0 4px 14px rgba(224, 62, 62, 0.3);
-    }
-
-    .btn-accent:hover {
-      background: var(--accent-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(224, 62, 62, 0.4);
-    }
-
-    .btn-outline {
-      background: white;
+    .btn-demo {
+      background: rgba(255, 255, 255, 0.08);
       border: 1px solid var(--border);
-      color: var(--text-main);
+      color: var(--text);
     }
 
-    .btn-outline:hover {
-      background: #F1F5F9;
-      border-color: #CBD5E1;
+    .btn-demo:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #64748B;
       transform: translateY(-1px);
     }
 
-    /* Hero Section */
+    /* Hero */
     .hero {
-      max-width: 1280px;
+      position: relative;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 50px 24px 30px;
+      padding: 60px 24px 30px;
       text-align: center;
+      z-index: 1;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #EFF6FF;
-      color: var(--primary);
-      padding: 6px 16px;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38BDF8;
+      padding: 8px 20px;
       border-radius: 9999px;
       font-size: 0.85rem;
       font-weight: 700;
-      margin-bottom: 20px;
-      border: 1px solid #BFDBFE;
+      margin-bottom: 24px;
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
+      font-size: 3.5rem;
+      font-weight: 900;
       line-height: 1.15;
-      color: var(--primary);
-      margin-bottom: 18px;
+      color: white;
+      margin-bottom: 20px;
       letter-spacing: -0.03em;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, #38BDF8 0%, #818CF8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .hero p {
       font-size: 1.25rem;
       color: var(--text-muted);
-      max-width: 820px;
-      margin: 0 auto 36px;
+      max-width: 840px;
+      margin: 0 auto 40px;
       line-height: 1.6;
     }
 
     /* Bundle Box Offer */
     .bundle-banner {
-      background: linear-gradient(135deg, #002B55 0%, #0F172A 100%);
+      background: linear-gradient(135deg, #111827 0%, #1E293B 100%);
       color: white;
-      border-radius: 20px;
-      padding: 44px;
-      margin: 20px auto 60px;
+      border-radius: 24px;
+      padding: 48px;
+      margin: 20px auto 70px;
       max-width: 1100px;
       display: grid;
       grid-template-columns: 1.25fr 0.75fr;
-      gap: 36px;
+      gap: 40px;
       align-items: center;
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
       position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.25);
     }
 
     .bundle-badge {
@@ -225,28 +215,29 @@
       background: #F59E0B;
       color: #78350F;
       font-weight: 800;
-      padding: 5px 14px;
-      border-radius: 6px;
+      padding: 6px 14px;
+      border-radius: 8px;
       font-size: 0.8rem;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .bundle-info h2 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      margin-bottom: 14px;
+      font-size: 2.3rem;
+      font-weight: 900;
+      margin-bottom: 16px;
       line-height: 1.2;
     }
 
     .bundle-features {
       list-style: none;
-      margin-top: 18px;
+      margin-top: 20px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
-      font-size: 0.98rem;
-      color: #E2E8F0;
+      gap: 14px;
+      font-size: 1rem;
+      color: #CBD5E1;
+      text-align: left;
     }
 
     .bundle-features li {
@@ -256,100 +247,99 @@
     }
 
     .bundle-pricing-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 16px;
-      padding: 34px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 36px;
       text-align: center;
-      backdrop-filter: blur(12px);
     }
 
     .old-price {
       text-decoration: line-through;
-      color: #94A3B8;
-      font-size: 1.3rem;
+      color: #64748B;
+      font-size: 1.35rem;
     }
 
     .new-price {
-      font-size: 3.8rem;
-      font-weight: 800;
-      color: #FFFFFF;
+      font-size: 4.2rem;
+      font-weight: 900;
+      color: #38BDF8;
       line-height: 1;
       margin: 8px 0;
     }
 
     .price-sub {
-      color: #CBD5E1;
+      color: #94A3B8;
       font-size: 0.88rem;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
-    /* Grid of Books */
+    /* Catalog */
     .catalog-section {
-      max-width: 1280px;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 20px 24px 80px;
+      padding: 20px 24px 100px;
     }
 
     .section-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 36px;
+      margin-bottom: 40px;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 20px;
     }
 
     .section-header h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: white;
     }
 
     .search-input {
-      padding: 12px 20px;
+      padding: 14px 22px;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 12px;
       font-size: 0.95rem;
-      width: 300px;
+      width: 320px;
       outline: none;
       transition: all 0.2s;
-      background: white;
+      background: var(--bg-card);
+      color: white;
     }
 
     .search-input:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+      border-color: #38BDF8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
     }
 
     .books-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 32px;
     }
 
     .book-card {
-      background: var(--card-bg);
+      background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 18px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
     }
 
     .book-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-      border-color: #CBD5E1;
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+      border-color: #38BDF8;
     }
 
     .cover-wrap {
       position: relative;
-      background: #F1F5F9;
-      padding-top: 140%;
+      background: #111827;
+      padding-top: 142%;
       overflow: hidden;
       cursor: pointer;
     }
@@ -361,31 +351,31 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.35s ease;
+      transition: transform 0.4s ease;
     }
 
     .book-card:hover .cover-wrap img {
-      transform: scale(1.04);
+      transform: scale(1.05);
     }
 
     .free-preview-tag {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: rgba(0, 51, 102, 0.92);
-      backdrop-filter: blur(4px);
-      color: white;
-      padding: 5px 12px;
-      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      color: #38BDF8;
+      padding: 6px 14px;
+      border-radius: 8px;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      border: 1px solid rgba(56, 189, 248, 0.3);
     }
 
     .book-body {
-      padding: 22px;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -394,24 +384,24 @@
     .book-num {
       font-size: 0.8rem;
       font-weight: 800;
-      color: var(--accent);
+      color: #38BDF8;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .book-title {
-      font-size: 1.18rem;
-      font-weight: 700;
-      color: var(--text-main);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: white;
       margin-bottom: 8px;
       line-height: 1.35;
     }
 
     .book-meta {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .book-footer {
@@ -420,18 +410,13 @@
       align-items: center;
       justify-content: space-between;
       border-top: 1px solid var(--border);
-      padding-top: 16px;
-    }
-
-    .book-price {
-      display: flex;
-      flex-direction: column;
+      padding-top: 18px;
     }
 
     .book-price .price-val {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--primary);
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: white;
     }
 
     .book-price .price-lbl {
@@ -441,15 +426,15 @@
 
     .card-actions {
       display: flex;
-      gap: 8px;
+      gap: 10px;
     }
 
-    /* Modal Reader (Interactive Demo - Read-Only, No Download) */
+    /* Modal Reader (Interactive Clinical Demo - Read-Only) */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.82);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(10px);
       z-index: 100;
       display: none;
       align-items: center;
@@ -462,35 +447,29 @@
     }
 
     .modal-content {
-      background: white;
+      background: #FFFFFF;
+      color: #0F172A;
       width: 100%;
-      max-width: 900px;
+      max-width: 920px;
       height: 90vh;
-      border-radius: 18px;
+      border-radius: 20px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
-      position: relative;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
     }
 
     .modal-header {
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--border);
+      padding: 20px 28px;
+      border-bottom: 1px solid #E2E8F0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       background: #F8FAFC;
     }
 
-    .modal-header-info {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
     .modal-header h3 {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: 800;
       color: var(--primary);
     }
@@ -498,102 +477,92 @@
     .close-btn {
       background: none;
       border: none;
-      font-size: 1.8rem;
+      font-size: 2rem;
       cursor: pointer;
-      color: var(--text-muted);
+      color: #64748B;
       line-height: 1;
-      padding: 4px;
-      transition: color 0.2s;
     }
 
     .close-btn:hover {
-      color: var(--text-main);
+      color: #0F172A;
     }
 
     .modal-body {
-      padding: 36px 44px;
+      padding: 40px;
       overflow-y: auto;
       font-family: 'Lora', Georgia, serif;
       font-size: 1.05rem;
-      line-height: 1.85;
+      line-height: 1.9;
       color: #1E293B;
-      /* Protected against copying and downloading */
       user-select: none;
       -webkit-user-select: none;
-      -moz-user-select: none;
     }
 
     .demo-banner {
       position: sticky;
       top: 0;
-      background: #FEF3C7;
-      color: #92400E;
+      background: #EFF6FF;
+      color: #1E40AF;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 0.88rem;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
       font-weight: 700;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: 1px solid #FDE68A;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+      border: 1px solid #BFDBFE;
       z-index: 10;
     }
 
     .demo-part {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 800;
       color: var(--primary);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin: 30px 0 12px;
+      margin: 32px 0 14px;
       border-bottom: 2px solid #E2E8F0;
-      padding-bottom: 6px;
+      padding-bottom: 8px;
     }
 
     .demo-chapter {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 700;
-      color: #0A4D8C;
-      margin: 22px 0 10px;
+      color: #0A58CA;
+      margin: 24px 0 12px;
     }
 
     .demo-h3 {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 1.02rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #334155;
-      margin: 16px 0 8px;
+      margin: 18px 0 10px;
     }
 
     .demo-bullet {
-      margin-left: 24px;
-      margin-bottom: 6px;
+      margin-left: 28px;
+      margin-bottom: 8px;
       list-style-type: square;
-      color: #334155;
     }
 
     .demo-callout {
-      background: #EFF6FF;
-      border-left: 4px solid #3B82F6;
-      padding: 14px 18px;
-      border-radius: 6px;
-      margin: 18px 0;
+      background: #FEF3C7;
+      border-left: 4px solid #F59E0B;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 0.95rem;
       font-weight: 600;
-      color: #1E3A8A;
+      color: #92400E;
     }
 
     .demo-table-wrap {
-      margin: 22px 0;
+      margin: 24px 0;
       overflow-x: auto;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
     }
 
     .demo-table {
@@ -604,16 +573,16 @@
     }
 
     .demo-table th {
-      background: #003366;
+      background: var(--primary);
       color: white;
       font-weight: 700;
-      padding: 10px 14px;
+      padding: 12px 16px;
       text-align: left;
     }
 
     .demo-table td {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border);
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
       color: #334155;
     }
 
@@ -622,8 +591,8 @@
     }
 
     .modal-footer {
-      padding: 16px 24px;
-      border-top: 1px solid var(--border);
+      padding: 18px 28px;
+      border-top: 1px solid #E2E8F0;
       background: #F8FAFC;
       display: flex;
       align-items: center;
@@ -632,17 +601,18 @@
 
     @media (max-width: 860px) {
       .bundle-banner { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.3rem; }
+      .hero h1 { font-size: 2.4rem; }
       .modal-body { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
+  <div class="glow-bg"></div>
+
   <!-- Top Announcement -->
-  <div class="top-banner">
-    <span class="badge-pill">EDN 2026</span>
-    <span>Programme complet réactualisé selon les derniers Collèges d'Enseignants · Zéro Hallucination</span>
+  <div style="background:#0F172A; text-align:center; padding:10px; font-size:0.85rem; border-bottom:1px solid var(--border); font-weight:600;">
+    <span style="color:#38BDF8;">EDN 2026</span> · Référentiels Médicaux Conformes aux Collèges d'Enseignants · Zéro Hallucination
   </div>
 
   <!-- Header -->
@@ -652,49 +622,49 @@
         <div class="brand-logo">EDN</div>
         <div>
           <div class="brand-title">EDN Révision</div>
-          <div class="brand-sub">Par Ethan Cole</div>
+          <div class="brand-sub">Ethan Cole</div>
         </div>
       </a>
-      <div class="nav-links">
-        <a href="#bundle" class="btn btn-accent">🔥 Pack Intégral (-70%)</a>
-      </div>
+      <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn btn-buy">
+        🔥 Pack Intégral 28 Modules (79 €)
+      </a>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
     <div class="hero-badge">
-      <span>📚 Référentiel Médical Officiel · 28 Volumes DFASM</span>
+      <span>📚 Référentiel Officiel DFASM · 28 Volumes Spécialisés</span>
     </div>
-    <h1>La Collection Intégrale pour Majorer l'EDN & ECOS</h1>
+    <h1>Major l'EDN & les ECOS avec la <span>Collection Officielle</span></h1>
     <p>
-      Accédez à la synthèse médicale la plus rigoureuse. 28 modules exhaustifs,
-      zéro approximation, cours de rangs A et B vérifiés conformes aux Collèges universitaires.
+      Les 28 modules médicaux exhaustifs pour réussir vos examens nationaux.
+      Tableaux non déformés, connaissances de rangs A et B intégrales, application Android hors-ligne offerte.
     </p>
 
     <!-- Bundle Offer Card -->
     <div id="bundle" class="bundle-banner">
       <div class="bundle-info">
-        <span class="bundle-badge">Offre Exclusive Étudiants en Médecine</span>
+        <span class="bundle-badge">Offre Spéciale Étudiants en Médecine</span>
         <h2>Pack Ultime : Les 28 Référentiels EDN</h2>
-        <p style="color: #94A3B8; font-size: 1.05rem; margin: 0;">
-          L'intégralité du programme officiel du DFASM (Cardio, Neuro, Réa, Gynéco, Pédiatrie, etc.) dans un pack unique prêt à l'emploi.
+        <p style="color: #94A3B8; font-size: 1.05rem;">
+          L'intégralité du programme officiel du 2e cycle dans un pack unique téléchargeable immédiatement.
         </p>
         <ul class="bundle-features">
-          <li>✨ <b>28 Ebooks Complets</b> (Format Word .DOCX + EPUB + PDF au choix)</li>
-          <li>📊 <b>Plus de 4 800 tableaux et schémas cliniques</b> non déformés</li>
-          <li>🎯 <b>Fiches réflexes & Pièges EDN</b> intégrés dans chaque chapitre</li>
-          <li>📱 <b>Application Android Hors-Ligne incluse</b> avec navigation rapide</li>
+          <li>✨ <b>28 Ouvrages Complets</b> (Format Word .docx haute fidélité + PDF)</li>
+          <li>📊 <b>Plus de 4 800 tableaux cliniques et arbres diagnostiques</b> non déformés</li>
+          <li>🎯 <b>Fiches réflexes & Pièges EDN</b> intégrés dans chaque item</li>
+          <li>📱 <b>Application Android Hors-Ligne incluse</b> sans connexion requise</li>
         </ul>
       </div>
 
       <div class="bundle-pricing-card">
         <div class="old-price">279,72 €</div>
         <div class="new-price">79 €</div>
-        <div class="price-sub">Paiement sécurisé Gumroad · Accès immédiat à vie</div>
-        <button class="btn btn-accent" style="width: 100%; font-size: 1.15rem; padding: 15px;" onclick="checkoutGumroad('https://edgettrading.gumroad.com/l/ycfkfa')">
-          Obtenir le Pack Intégral sur Gumroad ⚡
-        </button>
+        <div class="price-sub">Paiement unique Gumroad · Accès immédiat à vie</div>
+        <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn btn-buy" style="width: 100%; font-size: 1.15rem; padding: 16px;">
+          Commander le Pack sur Gumroad ⚡
+        </a>
       </div>
     </div>
   </section>
@@ -703,9 +673,9 @@
   <section class="catalog-section">
     <div class="section-header">
       <div>
-        <h2>Catalogue des 28 Volumes Individuels</h2>
+        <h2>Les 28 Référentiels Individuels</h2>
         <p style="color: var(--text-muted); font-size: 1rem;">
-          Consultez la démo clinique interactive protégée ou achetez directement sur Gumroad.
+          Testez la démo clinique interactive ou commandez directement sur Gumroad.
         </p>
       </div>
       <input type="text" id="searchInput" class="search-input" placeholder="🔍 Rechercher une spécialité..." onkeyup="filterBooks()">
@@ -719,10 +689,7 @@
   <div class="modal-overlay" id="previewModal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-header-info">
-          <span style="font-size: 1.4rem;">📖</span>
-          <h3 id="modalTitle">Extrait de Révision</h3>
-        </div>
+        <h3 id="modalTitle">Extrait Clinique Officiel</h3>
         <button class="close-btn" onclick="closePreview()">&times;</button>
       </div>
       
@@ -732,10 +699,12 @@
       
       <div class="modal-footer">
         <div>
-          <span id="modalPriceLabel" style="font-weight: 800; font-size: 1.25rem; color: var(--primary);">9,99 €</span>
-          <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 8px;">(Accès immédiat)</span>
+          <span id="modalPriceLabel" style="font-weight: 800; font-size: 1.3rem; color: var(--primary);">9,99 €</span>
+          <span style="font-size: 0.82rem; color: #64748B; margin-left: 8px;">(Ebook Word + PDF)</span>
         </div>
-        <button class="btn btn-accent" id="modalBuyBtn" onclick="buyCurrentBook()">Acheter ce volume sur Gumroad ⚡</button>
+        <a id="modalBuyLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-buy">
+          Acheter ce volume sur Gumroad ⚡
+        </a>
       </div>
     </div>
   </div>
@@ -744,7 +713,7 @@
     let booksData = [];
     let currentBook = null;
 
-    // Load rich book data with clinical tables and structured elements
+    // Load rich book data
     fetch('books_data.json')
       .then(res => res.json())
       .then(data => {
@@ -755,29 +724,32 @@
 
     function renderBooks(books) {
       const grid = document.getElementById('booksGrid');
-      grid.innerHTML = books.map(b => `
-        <div class="book-card" data-title="${b.title.toLowerCase()}">
-          <div class="cover-wrap" onclick="openPreview(${b.n})">
-            <img src="covers/${b.slug}.jpg" alt="${b.title}" loading="lazy">
-            <span class="free-preview-tag">👁️ Démo Interactive</span>
-          </div>
-          <div class="book-body">
-            <div class="book-num">Module ${String(b.n).padStart(2, '0')}</div>
-            <h3 class="book-title">${b.title}</h3>
-            <div class="book-meta">${b.pages} pages · Rangs A et B conformes</div>
-            <div class="book-footer">
-              <div class="book-price">
-                <span class="price-val">${b.ebook} €</span>
-                <span class="price-lbl">Ebook / Word / PDF</span>
-              </div>
-              <div class="card-actions">
-                <button class="btn btn-outline" style="padding: 8px 14px; font-size: 0.88rem;" onclick="openPreview(${b.n})">Démo</button>
-                <button class="btn btn-primary" style="padding: 8px 14px; font-size: 0.88rem;" onclick="checkoutGumroad('${b.gumroad_url || b.slug}')">Acheter</button>
+      grid.innerHTML = books.map(b => {
+        const gumroadLink = b.gumroad_url || `https://edgettrading.gumroad.com/l/${b.slug}`;
+        return `
+          <div class="book-card" data-title="${b.title.toLowerCase()}">
+            <div class="cover-wrap" onclick="openPreview(${b.n})">
+              <img src="covers/${b.slug}.jpg" alt="${b.title}" loading="lazy">
+              <span class="free-preview-tag">👁️ Démo Interactive</span>
+            </div>
+            <div class="book-body">
+              <div class="book-num">Module ${String(b.n).padStart(2, '0')}</div>
+              <h3 class="book-title">${b.title}</h3>
+              <div class="book-meta">${b.pages} pages · Rangs A et B conformes</div>
+              <div class="book-footer">
+                <div class="book-price">
+                  <span class="price-val">${b.ebook} €</span>
+                  <span class="price-lbl">Ebook / Word / PDF</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn btn-demo" style="padding: 9px 14px; font-size: 0.88rem;" onclick="openPreview(${b.n})">Démo</button>
+                  <a href="${gumroadLink}" target="_blank" rel="noopener noreferrer" class="btn btn-buy" style="padding: 9px 16px; font-size: 0.88rem;">Acheter</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
     }
 
     function filterBooks() {
@@ -793,10 +765,12 @@
 
       document.getElementById('modalTitle').innerText = `${b.title} — Démo Officielle`;
       document.getElementById('modalPriceLabel').innerText = `${b.ebook} €`;
+      
+      const gumroadLink = b.gumroad_url || `https://edgettrading.gumroad.com/l/${b.slug}`;
+      document.getElementById('modalBuyLink').href = gumroadLink;
 
       const body = document.getElementById('modalBody');
       
-      // Render Rich Demo
       let contentHtml = '';
       if (b.rich_demo && b.rich_demo.length > 0) {
         b.rich_demo.forEach(item => {
@@ -814,15 +788,10 @@
             contentHtml += `<p style="margin-bottom: 14px;">${item.text}</p>`;
           }
         });
-      } else if (b.preview_sample) {
-        b.preview_sample.forEach(p => {
-          contentHtml += `<p style="margin-bottom: 14px;">${p}</p>`;
-        });
       }
 
-      // Render Clinical Tables if available
       if (b.demo_tables && b.demo_tables.length > 0) {
-        contentHtml += `<div class="demo-chapter" style="margin-top: 28px;">Exemple de Tableau Synthétique Non Déformé :</div>`;
+        contentHtml += `<div class="demo-chapter" style="margin-top: 30px;">Exemple de Tableau Clinique Synthétique :</div>`;
         b.demo_tables.forEach(tbl => {
           contentHtml += `<div class="demo-table-wrap"><table class="demo-table">`;
           tbl.forEach((row, r_idx) => {
@@ -842,7 +811,7 @@
 
       body.innerHTML = `
         <div class="demo-banner">
-          <span>🔒 Démo interactive protégée (Consultation de conformité médicale · Téléchargement désactivé)</span>
+          <span>🔒 Démo interactive officielle protégée (Consultation uniquement · Téléchargement désactivé)</span>
         </div>
         ${contentHtml}
       `;
@@ -852,21 +821,6 @@
 
     function closePreview() {
       document.getElementById('previewModal').classList.remove('active');
-    }
-
-    function buyCurrentBook() {
-      if (currentBook) {
-        checkoutGumroad(currentBook.gumroad_url || currentBook.slug);
-      }
-    }
-
-    function checkoutGumroad(productLinkOrSlug) {
-      if (!productLinkOrSlug) return;
-      if (productLinkOrSlug.startsWith('http')) {
-        window.open(productLinkOrSlug, '_blank');
-      } else {
-        window.open(`https://gumroad.com/l/${productLinkOrSlug}`, '_blank');
-      }
     }
 
     // Protection anti-clic droit et anti-sauvegarde
