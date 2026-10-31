@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDN Révision Médicale — Référentiels Officiels 2026</title>
+  <meta name="description" content="Les 28 Référentiels Médicaux Complets pour l'EDN / ECN. Conformes Collèges des Enseignants. Aperçu gratuit en ligne sécurisé.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #003366;
+      --primary-light: #0A4D8C;
+      --accent: #E03E3E;
+      --accent-soft: #FDE8E8;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Banner */
+    .top-banner {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-pill {
+      background: var(--accent);
+      color: white;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      background: var(--primary);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 4px 14px rgba(224, 62, 62, 0.3);
+    }
+
+    .btn-accent:hover {
+      background: #c53030;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg);
+      border-color: var(--text-muted);
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #EFF6FF;
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      border: 1px solid #BFDBFE;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--primary);
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 800px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    /* Bundle Box Offer */
+    .bundle-banner {
+      background: linear-gradient(135deg, #003366 0%, #0F172A 100%);
+      color: white;
+      border-radius: 16px;
+      padding: 40px;
+      margin: 20px auto 60px;
+      max-width: 1100px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .bundle-badge {
+      display: inline-block;
+      background: #F59E0B;
+      color: #78350F;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .bundle-info h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .bundle-features {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: #E2E8F0;
+    }
+
+    .bundle-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bundle-pricing-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #94A3B8;
+      font-size: 1.25rem;
+    }
+
+    .new-price {
+      font-size: 3.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+      margin: 8px 0;
+    }
+
+    .price-sub {
+      color: #CBD5E1;
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+    }
+
+    /* Grid of Books */
+    .catalog-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 24px 80px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .search-input {
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      width: 280px;
+      outline: none;
+      transition: border 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .book-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #CBD5E1;
+    }
+
+    .cover-wrap {
+      position: relative;
+      background: #F1F5F9;
+      padding-top: 140%; /* 1:1.4 aspect ratio */
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .cover-wrap img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .book-card:hover .cover-wrap img {
+      transform: scale(1.03);
+    }
+
+    .free-preview-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--primary);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .book-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .book-num {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .book-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .book-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .book-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .book-price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-price .price-val {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .book-price .price-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Modal Reader (Protected - Read-only, no download) */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      width: 100%;
+      max-width: 840px;
+      max-height: 90vh;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      position: relative;
+    }
+
+    .modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #F8FAFC;
+    }
+
+    .modal-header h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      line-height: 1;
+      padding: 4px;
+    }
+
+    .modal-body {
+      padding: 32px 40px;
+      overflow-y: auto;
+      font-family: 'Lora', serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #1E293B;
+      /* Protection against copying & downloading */
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    .preview-watermark {
+      position: sticky;
+      top: 0;
+      background: #FEF3C7;
+      color: #92400E;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #FDE68A;
+    }
+
+    .modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--border);
+      background: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 860px) {
+      .bundle-banner {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <div class="top-banner">
+    <span class="badge-pill">EDN 2026</span>
+    <span>Programme complet réactualisé selon les derniers Collèges d'Enseignants</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-logo">EDN</div>
+        <div>
+          <div class="brand-title">EDN Révision</div>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#bundle" class="btn btn-accent">🔥 Pack Intégral (-70%)</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span>📚 Référentiel Médical Complet · 28 Volumes Spécialisés</span>
+    </div>
+    <h1>La Collection Intégrale pour Majorer l'EDN & ECOS</h1>
+    <p>
+      Accédez à la synthèse médicale la plus rigoureuse de France. 28 modules exhaustifs,
+      zéro approximation, cours de rangs A et B vérifiés conformes aux Collèges universitaires.
+    </p>
+
+    <!-- Bundle Offer Card -->
+    <div id="bundle" class="bundle-banner">
+      <div class="bundle-info">
+        <span class="bundle-badge">Offre Exclusive Étudiants en Médecine</span>
+        <h2>Pack Ultime : Les 28 Référentiels EDN</h2>
+        <p style="color: #94A3B8; font-size: 1rem; margin: 0;">
+          L'intégralité du programme officiel du DFASM (Cardio, Neuro, Réa, Gynéco, Pédiatrie, etc.) dans un pack unique prêt à l'emploi.
+        </p>
+        <ul class="bundle-features">
+          <li>✨ <b>28 Ebooks Complets</b> (Format Word .DOCX + EPUB + PDF au choix)</li>
+          <li>📊 <b>Plus de 4 800 tableaux et schémas cliniques</b> non déformés</li>
+          <li>🎯 <b>Fiches réflexes & Pièges EDN</b> intégrés dans chaque chapitre</li>
+          <li>📱 <b>Application Android Hors-Ligne incluse</b> avec navigation rapide</li>
+        </ul>
+      </div>
+
+      <div class="bundle-pricing-card">
+        <div class="old-price">279,72 €</div>
+        <div class="new-price">79 €</div>
+        <div class="price-sub">Paiement unique · Accès immédiat à vie</div>
+        <button class="btn btn-accent" style="width: 100%; font-size: 1.1rem; padding: 14px;" onclick="checkoutGumroad('pack-integral-28-modules')">
+          Obtenir le Pack Intégral ⚡
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section class="catalog-section">
+    <div class="section-header">
+      <div>
+        <h2>Catalogue des 28 Volumes Individuels</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Consultez les extraits gratuits protégés ou commandez un module à l'unité.
+        </p>
+      </div>
+      <input type="text" id="searchInput" class="search-input" placeholder="Rechercher une spécialité..." onkeyup="filterBooks()">
+    </div>
+
+    <!-- Dynamic Grid -->
+    <div class="books-grid" id="booksGrid"></div>
+  </section>
+
+  <!-- Protected Preview Reader Modal (No download) -->
+  <div class="modal-overlay" id="previewModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Extrait de Révision</h3>
+        <button class="close-btn" onclick="closePreview()">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <span id="modalPriceLabel" style="font-weight: 700; color: var(--primary);">9,99 €</span>
+        <button class="btn btn-accent" id="modalBuyBtn" onclick="buyCurrentBook()">Acheter ce volume complet</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let booksData = [];
+    let currentBook = null;
+
+    // Load dynamic data generated from actual DOCX books
+    fetch('books_data.json')
+      .then(res => res.json())
+      .then(data => {
+        booksData = data;
+        renderBooks(data);
+      })
+      .catch(err => console.error("Error loading books:", err));
+
+    function renderBooks(books) {
+      const grid = document.getElementById('booksGrid');
+      grid.innerHTML = books.map(b => `
+        <div class="book-card" data-title="${b.title.toLowerCase()}">
+          <div class="cover-wrap" onclick="openPreview(${b.n})">
+            <img src="covers/${b.slug}.jpg" alt="${b.title}" loading="lazy">
+            <span class="free-preview-tag">👁️ Aperçu Gratuit</span>
+          </div>
+          <div class="book-body">
+            <div class="book-num">Module ${String(b.n).padStart(2, '0')}</div>
+            <h3 class="book-title">${b.title}</h3>
+            <div class="book-meta">${b.pages} pages · Référentiel Collège</div>
+            <div class="book-footer">
+              <div class="book-price">
+                <span class="price-val">${b.ebook} €</span>
+                <span class="price-lbl">Ebook KDP / Numérique</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem;" onclick="openPreview(${b.n})">Lire</button>
+                <button class="btn btn-primary" style="padding: 8px 12px; font-size: 0.85rem;" onclick="checkoutGumroad('${b.slug}')">Acheter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterBooks() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = booksData.filter(b => b.title.toLowerCase().includes(q));
+      renderBooks(filtered);
+    }
+
+    function openPreview(bookNum) {
+      const b = booksData.find(x => x.n === bookNum);
+      if (!b) return;
+      currentBook = b;
+
+      document.getElementById('modalTitle').innerText = `Extrait Officiel : ${b.title}`;
+      document.getElementById('modalPriceLabel').innerText = `Volume complet : ${b.ebook} €`;
+
+      const body = document.getElementById('modalBody');
+      const paragraphsHtml = b.preview_sample.map(p => {
+        if (p.startsWith('PARTIE') || p.startsWith('Chapitre') || p.startsWith('SOMMAIRE')) {
+          return `<h4 style="font-family:'Plus Jakarta Sans',sans-serif; color:var(--primary); margin: 24px 0 10px; font-size: 1.2rem;">${p}</h4>`;
+        }
+        return `<p style="margin-bottom: 14px;">${p}</p>`;
+      }).join('');
+
+      body.innerHTML = `
+        <div class="preview-watermark">
+          <span>🔒 Aperçu interactif protégé (Consultation uniquement · Téléchargement désactivé)</span>
+        </div>
+        ${paragraphsHtml}
+      `;
+
+      document.getElementById('previewModal').classList.add('active');
+    }
+
+    function closePreview() {
+      document.getElementById('previewModal').classList.remove('active');
+    }
+
+    function buyCurrentBook() {
+      if (currentBook) {
+        checkoutGumroad(currentBook.slug);
+      }
+    }
+
+    function checkoutGumroad(productId) {
+      // Configuration de votre lien Gumroad pour chaque produit ou pour le bundle
+      const gumroadUsername = "ednmedical"; // Votre identifiant boutique Gumroad
+      const url = `https://${gumroadUsername}.gumroad.com/l/${productId}`;
+      
+      // Ouverture du checkout sécurisé Gumroad
+      window.open(url, '_blank');
+    }
+
+    // Protection anti-clic droit et anti-raccourcis d'inspection dans la modal de prévisualisation
+    window.addEventListener('contextmenu', function(e) {
+      if (document.getElementById('previewModal').classList.contains('active')) {
+        e.preventDefault();
+      }
+    });
+
+    window.addEventListener('keydown', function(e) {
+      if (document.getElementById('previewModal').classList.contains('active')) {
+        // Empêche Ctrl+S, Ctrl+P, Ctrl+U
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p' || e.key === 'u')) {
+          e.preventDefault();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
