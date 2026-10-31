@@ -7,28 +7,26 @@
   <meta name="description" content="Les 28 Référentiels Médicaux Complets pour l'EDN / ECN. Conformes Collèges des Enseignants. Aperçu gratuit en ligne sécurisé.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --primary: #003366;
-      --primary-light: #0A4D8C;
+      --primary-light: #0D47A1;
       --accent: #E03E3E;
+      --accent-hover: #C53030;
       --accent-soft: #FDE8E8;
       --bg: #F8FAFC;
       --card-bg: #FFFFFF;
       --text-main: #0F172A;
       --text-muted: #64748B;
       --border: #E2E8F0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
       --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -38,13 +36,13 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Top Banner */
+    /* Top Announcement Bar */
     .top-banner {
-      background: var(--primary);
+      background: linear-gradient(90deg, #002244 0%, #003366 100%);
       color: white;
       text-align: center;
       padding: 10px 16px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       display: flex;
       justify-content: center;
@@ -64,8 +62,8 @@
 
     /* Navbar */
     header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 50;
@@ -75,7 +73,7 @@
     .nav-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 16px 24px;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -90,8 +88,8 @@
     }
 
     .brand-logo {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       background: var(--primary);
       color: white;
       display: flex;
@@ -99,7 +97,8 @@
       justify-content: center;
       border-radius: 10px;
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      box-shadow: 0 4px 10px rgba(0, 51, 102, 0.25);
     }
 
     .brand-title {
@@ -108,10 +107,10 @@
       letter-spacing: -0.02em;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .brand-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
     }
 
     .btn {
@@ -122,10 +121,10 @@
       padding: 10px 20px;
       border-radius: 8px;
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       border: none;
     }
 
@@ -136,7 +135,8 @@
 
     .btn-primary:hover {
       background: var(--primary-light);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 51, 102, 0.25);
     }
 
     .btn-accent {
@@ -146,26 +146,28 @@
     }
 
     .btn-accent:hover {
-      background: #c53030;
-      transform: translateY(-1px);
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(224, 62, 62, 0.4);
     }
 
     .btn-outline {
-      background: transparent;
+      background: white;
       border: 1px solid var(--border);
       color: var(--text-main);
     }
 
     .btn-outline:hover {
-      background: var(--bg);
-      border-color: var(--text-muted);
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      transform: translateY(-1px);
     }
 
     /* Hero Section */
     .hero {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 60px 24px 40px;
+      padding: 50px 24px 30px;
       text-align: center;
     }
 
@@ -178,44 +180,44 @@
       padding: 6px 16px;
       border-radius: 9999px;
       font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
+      font-weight: 700;
+      margin-bottom: 20px;
       border: 1px solid #BFDBFE;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       font-weight: 800;
       line-height: 1.15;
       color: var(--primary);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       letter-spacing: -0.03em;
     }
 
     .hero p {
       font-size: 1.25rem;
       color: var(--text-muted);
-      max-width: 800px;
+      max-width: 820px;
       margin: 0 auto 36px;
       line-height: 1.6;
     }
 
     /* Bundle Box Offer */
     .bundle-banner {
-      background: linear-gradient(135deg, #003366 0%, #0F172A 100%);
+      background: linear-gradient(135deg, #002B55 0%, #0F172A 100%);
       color: white;
-      border-radius: 16px;
-      padding: 40px;
+      border-radius: 20px;
+      padding: 44px;
       margin: 20px auto 60px;
       max-width: 1100px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 36px;
       align-items: center;
       box-shadow: var(--shadow-lg);
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .bundle-badge {
@@ -223,53 +225,53 @@
       background: #F59E0B;
       color: #78350F;
       font-weight: 800;
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 6px;
       font-size: 0.8rem;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .bundle-info h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       line-height: 1.2;
     }
 
     .bundle-features {
       list-style: none;
-      margin-top: 16px;
+      margin-top: 18px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      font-size: 0.95rem;
+      gap: 12px;
+      font-size: 0.98rem;
       color: #E2E8F0;
     }
 
     .bundle-features li {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .bundle-pricing-card {
       background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 34px;
       text-align: center;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(12px);
     }
 
     .old-price {
       text-decoration: line-through;
       color: #94A3B8;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
     }
 
     .new-price {
-      font-size: 3.5rem;
+      font-size: 3.8rem;
       font-weight: 800;
       color: #FFFFFF;
       line-height: 1;
@@ -278,7 +280,7 @@
 
     .price-sub {
       color: #CBD5E1;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       margin-bottom: 24px;
     }
 
@@ -293,51 +295,53 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
       flex-wrap: wrap;
       gap: 16px;
     }
 
     .section-header h2 {
-      font-size: 1.85rem;
+      font-size: 2rem;
       font-weight: 800;
       color: var(--primary);
     }
 
     .search-input {
-      padding: 10px 18px;
+      padding: 12px 20px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 0.95rem;
-      width: 280px;
+      width: 300px;
       outline: none;
-      transition: border 0.2s;
+      transition: all 0.2s;
+      background: white;
     }
 
     .search-input:focus {
       border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
     }
 
     .books-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+      gap: 30px;
     }
 
     .book-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: all 0.25s ease;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: var(--shadow);
       position: relative;
     }
 
     .book-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
       border-color: #CBD5E1;
     }
@@ -345,7 +349,7 @@
     .cover-wrap {
       position: relative;
       background: #F1F5F9;
-      padding-top: 140%; /* 1:1.4 aspect ratio */
+      padding-top: 140%;
       overflow: hidden;
       cursor: pointer;
     }
@@ -357,30 +361,31 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      transition: transform 0.35s ease;
     }
 
     .book-card:hover .cover-wrap img {
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .free-preview-tag {
       position: absolute;
       top: 12px;
       left: 12px;
-      background: var(--primary);
+      background: rgba(0, 51, 102, 0.92);
+      backdrop-filter: blur(4px);
       color: white;
-      padding: 4px 10px;
+      padding: 5px 12px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
     }
 
     .book-body {
-      padding: 20px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -388,7 +393,7 @@
 
     .book-num {
       font-size: 0.8rem;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -396,17 +401,17 @@
     }
 
     .book-title {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       font-weight: 700;
       color: var(--text-main);
       margin-bottom: 8px;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
     .book-meta {
       font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .book-footer {
@@ -424,13 +429,13 @@
     }
 
     .book-price .price-val {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 800;
       color: var(--primary);
     }
 
     .book-price .price-lbl {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: var(--text-muted);
     }
 
@@ -439,12 +444,12 @@
       gap: 8px;
     }
 
-    /* Modal Reader (Protected - Read-only, no download) */
+    /* Modal Reader (Interactive Demo - Read-Only, No Download) */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(4px);
+      background: rgba(15, 23, 42, 0.82);
+      backdrop-filter: blur(6px);
       z-index: 100;
       display: none;
       align-items: center;
@@ -459,13 +464,13 @@
     .modal-content {
       background: white;
       width: 100%;
-      max-width: 840px;
-      max-height: 90vh;
-      border-radius: 16px;
+      max-width: 900px;
+      height: 90vh;
+      border-radius: 18px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
       position: relative;
     }
 
@@ -478,51 +483,142 @@
       background: #F8FAFC;
     }
 
+    .modal-header-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
     .modal-header h3 {
-      font-size: 1.15rem;
-      font-weight: 700;
+      font-size: 1.2rem;
+      font-weight: 800;
       color: var(--primary);
     }
 
     .close-btn {
       background: none;
       border: none;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       cursor: pointer;
       color: var(--text-muted);
       line-height: 1;
       padding: 4px;
+      transition: color 0.2s;
+    }
+
+    .close-btn:hover {
+      color: var(--text-main);
     }
 
     .modal-body {
-      padding: 32px 40px;
+      padding: 36px 44px;
       overflow-y: auto;
-      font-family: 'Lora', serif;
+      font-family: 'Lora', Georgia, serif;
       font-size: 1.05rem;
-      line-height: 1.8;
+      line-height: 1.85;
       color: #1E293B;
-      /* Protection against copying & downloading */
+      /* Protected against copying and downloading */
       user-select: none;
       -webkit-user-select: none;
       -moz-user-select: none;
-      -ms-user-select: none;
     }
 
-    .preview-watermark {
+    .demo-banner {
       position: sticky;
       top: 0;
       background: #FEF3C7;
       color: #92400E;
       font-family: 'Plus Jakarta Sans', sans-serif;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border: 1px solid #FDE68A;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      z-index: 10;
+    }
+
+    .demo-part {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin: 30px 0 12px;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 6px;
+    }
+
+    .demo-chapter {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0A4D8C;
+      margin: 22px 0 10px;
+    }
+
+    .demo-h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #334155;
+      margin: 16px 0 8px;
+    }
+
+    .demo-bullet {
+      margin-left: 24px;
+      margin-bottom: 6px;
+      list-style-type: square;
+      color: #334155;
+    }
+
+    .demo-callout {
+      background: #EFF6FF;
+      border-left: 4px solid #3B82F6;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin: 18px 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1E3A8A;
+    }
+
+    .demo-table-wrap {
+      margin: 22px 0;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .demo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+    }
+
+    .demo-table th {
+      background: #003366;
+      color: white;
+      font-weight: 700;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .demo-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #334155;
+    }
+
+    .demo-table tr:nth-child(even) {
+      background: #F8FAFC;
     }
 
     .modal-footer {
@@ -535,12 +631,9 @@
     }
 
     @media (max-width: 860px) {
-      .bundle-banner {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
+      .bundle-banner { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.3rem; }
+      .modal-body { padding: 20px; }
     }
   </style>
 </head>
@@ -549,7 +642,7 @@
   <!-- Top Announcement -->
   <div class="top-banner">
     <span class="badge-pill">EDN 2026</span>
-    <span>Programme complet réactualisé selon les derniers Collèges d'Enseignants</span>
+    <span>Programme complet réactualisé selon les derniers Collèges d'Enseignants · Zéro Hallucination</span>
   </div>
 
   <!-- Header -->
@@ -559,6 +652,7 @@
         <div class="brand-logo">EDN</div>
         <div>
           <div class="brand-title">EDN Révision</div>
+          <div class="brand-sub">Par Ethan Cole</div>
         </div>
       </a>
       <div class="nav-links">
@@ -570,11 +664,11 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-badge">
-      <span>📚 Référentiel Médical Complet · 28 Volumes Spécialisés</span>
+      <span>📚 Référentiel Médical Officiel · 28 Volumes DFASM</span>
     </div>
     <h1>La Collection Intégrale pour Majorer l'EDN & ECOS</h1>
     <p>
-      Accédez à la synthèse médicale la plus rigoureuse de France. 28 modules exhaustifs,
+      Accédez à la synthèse médicale la plus rigoureuse. 28 modules exhaustifs,
       zéro approximation, cours de rangs A et B vérifiés conformes aux Collèges universitaires.
     </p>
 
@@ -583,7 +677,7 @@
       <div class="bundle-info">
         <span class="bundle-badge">Offre Exclusive Étudiants en Médecine</span>
         <h2>Pack Ultime : Les 28 Référentiels EDN</h2>
-        <p style="color: #94A3B8; font-size: 1rem; margin: 0;">
+        <p style="color: #94A3B8; font-size: 1.05rem; margin: 0;">
           L'intégralité du programme officiel du DFASM (Cardio, Neuro, Réa, Gynéco, Pédiatrie, etc.) dans un pack unique prêt à l'emploi.
         </p>
         <ul class="bundle-features">
@@ -597,9 +691,9 @@
       <div class="bundle-pricing-card">
         <div class="old-price">279,72 €</div>
         <div class="new-price">79 €</div>
-        <div class="price-sub">Paiement unique · Accès immédiat à vie</div>
-        <button class="btn btn-accent" style="width: 100%; font-size: 1.1rem; padding: 14px;" onclick="checkoutGumroad('https://edgettrading.gumroad.com/l/ycfkfa')">
-          Obtenir le Pack Intégral ⚡
+        <div class="price-sub">Paiement sécurisé Gumroad · Accès immédiat à vie</div>
+        <button class="btn btn-accent" style="width: 100%; font-size: 1.15rem; padding: 15px;" onclick="checkoutGumroad('https://edgettrading.gumroad.com/l/ycfkfa')">
+          Obtenir le Pack Intégral sur Gumroad ⚡
         </button>
       </div>
     </div>
@@ -610,30 +704,38 @@
     <div class="section-header">
       <div>
         <h2>Catalogue des 28 Volumes Individuels</h2>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">
-          Consultez les extraits gratuits protégés ou commandez un module à l'unité.
+        <p style="color: var(--text-muted); font-size: 1rem;">
+          Consultez la démo clinique interactive protégée ou achetez directement sur Gumroad.
         </p>
       </div>
-      <input type="text" id="searchInput" class="search-input" placeholder="Rechercher une spécialité..." onkeyup="filterBooks()">
+      <input type="text" id="searchInput" class="search-input" placeholder="🔍 Rechercher une spécialité..." onkeyup="filterBooks()">
     </div>
 
     <!-- Dynamic Grid -->
     <div class="books-grid" id="booksGrid"></div>
   </section>
 
-  <!-- Protected Preview Reader Modal (No download) -->
+  <!-- Protected Preview Reader Modal (Interactive Demo) -->
   <div class="modal-overlay" id="previewModal">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 id="modalTitle">Extrait de Révision</h3>
+        <div class="modal-header-info">
+          <span style="font-size: 1.4rem;">📖</span>
+          <h3 id="modalTitle">Extrait de Révision</h3>
+        </div>
         <button class="close-btn" onclick="closePreview()">&times;</button>
       </div>
+      
       <div class="modal-body" id="modalBody">
         <!-- Injected via JavaScript -->
       </div>
+      
       <div class="modal-footer">
-        <span id="modalPriceLabel" style="font-weight: 700; color: var(--primary);">9,99 €</span>
-        <button class="btn btn-accent" id="modalBuyBtn" onclick="buyCurrentBook()">Acheter ce volume complet</button>
+        <div>
+          <span id="modalPriceLabel" style="font-weight: 800; font-size: 1.25rem; color: var(--primary);">9,99 €</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 8px;">(Accès immédiat)</span>
+        </div>
+        <button class="btn btn-accent" id="modalBuyBtn" onclick="buyCurrentBook()">Acheter ce volume sur Gumroad ⚡</button>
       </div>
     </div>
   </div>
@@ -642,7 +744,7 @@
     let booksData = [];
     let currentBook = null;
 
-    // Load dynamic data generated from actual DOCX books
+    // Load rich book data with clinical tables and structured elements
     fetch('books_data.json')
       .then(res => res.json())
       .then(data => {
@@ -657,20 +759,20 @@
         <div class="book-card" data-title="${b.title.toLowerCase()}">
           <div class="cover-wrap" onclick="openPreview(${b.n})">
             <img src="covers/${b.slug}.jpg" alt="${b.title}" loading="lazy">
-            <span class="free-preview-tag">👁️ Aperçu Gratuit</span>
+            <span class="free-preview-tag">👁️ Démo Interactive</span>
           </div>
           <div class="book-body">
             <div class="book-num">Module ${String(b.n).padStart(2, '0')}</div>
             <h3 class="book-title">${b.title}</h3>
-            <div class="book-meta">${b.pages} pages · Référentiel Collège</div>
+            <div class="book-meta">${b.pages} pages · Rangs A et B conformes</div>
             <div class="book-footer">
               <div class="book-price">
                 <span class="price-val">${b.ebook} €</span>
-                <span class="price-lbl">Ebook KDP / Numérique</span>
+                <span class="price-lbl">Ebook / Word / PDF</span>
               </div>
               <div class="card-actions">
-                <button class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem;" onclick="openPreview(${b.n})">Lire</button>
-                <button class="btn btn-primary" style="padding: 8px 12px; font-size: 0.85rem;" onclick="checkoutGumroad('${b.gumroad_url || b.slug}')">Acheter</button>
+                <button class="btn btn-outline" style="padding: 8px 14px; font-size: 0.88rem;" onclick="openPreview(${b.n})">Démo</button>
+                <button class="btn btn-primary" style="padding: 8px 14px; font-size: 0.88rem;" onclick="checkoutGumroad('${b.gumroad_url || b.slug}')">Acheter</button>
               </div>
             </div>
           </div>
@@ -689,22 +791,60 @@
       if (!b) return;
       currentBook = b;
 
-      document.getElementById('modalTitle').innerText = `Extrait Officiel : ${b.title}`;
-      document.getElementById('modalPriceLabel').innerText = `Volume complet : ${b.ebook} €`;
+      document.getElementById('modalTitle').innerText = `${b.title} — Démo Officielle`;
+      document.getElementById('modalPriceLabel').innerText = `${b.ebook} €`;
 
       const body = document.getElementById('modalBody');
-      const paragraphsHtml = b.preview_sample.map(p => {
-        if (p.startsWith('PARTIE') || p.startsWith('Chapitre') || p.startsWith('SOMMAIRE')) {
-          return `<h4 style="font-family:'Plus Jakarta Sans',sans-serif; color:var(--primary); margin: 24px 0 10px; font-size: 1.2rem;">${p}</h4>`;
-        }
-        return `<p style="margin-bottom: 14px;">${p}</p>`;
-      }).join('');
+      
+      // Render Rich Demo
+      let contentHtml = '';
+      if (b.rich_demo && b.rich_demo.length > 0) {
+        b.rich_demo.forEach(item => {
+          if (item.type === 'part') {
+            contentHtml += `<div class="demo-part">${item.text}</div>`;
+          } else if (item.type === 'chapter') {
+            contentHtml += `<div class="demo-chapter">${item.text}</div>`;
+          } else if (item.type === 'h3') {
+            contentHtml += `<div class="demo-h3">${item.text}</div>`;
+          } else if (item.type === 'bullet') {
+            contentHtml += `<li class="demo-bullet">${item.text}</li>`;
+          } else if (item.type === 'callout') {
+            contentHtml += `<div class="demo-callout">${item.text}</div>`;
+          } else {
+            contentHtml += `<p style="margin-bottom: 14px;">${item.text}</p>`;
+          }
+        });
+      } else if (b.preview_sample) {
+        b.preview_sample.forEach(p => {
+          contentHtml += `<p style="margin-bottom: 14px;">${p}</p>`;
+        });
+      }
+
+      // Render Clinical Tables if available
+      if (b.demo_tables && b.demo_tables.length > 0) {
+        contentHtml += `<div class="demo-chapter" style="margin-top: 28px;">Exemple de Tableau Synthétique Non Déformé :</div>`;
+        b.demo_tables.forEach(tbl => {
+          contentHtml += `<div class="demo-table-wrap"><table class="demo-table">`;
+          tbl.forEach((row, r_idx) => {
+            contentHtml += `<tr>`;
+            row.forEach(cell => {
+              if (r_idx === 0) {
+                contentHtml += `<th>${cell}</th>`;
+              } else {
+                contentHtml += `<td>${cell.replace(/\\n/g, '<br>')}</td>`;
+              }
+            });
+            contentHtml += `</tr>`;
+          });
+          contentHtml += `</table></div>`;
+        });
+      }
 
       body.innerHTML = `
-        <div class="preview-watermark">
-          <span>🔒 Aperçu interactif protégé (Consultation uniquement · Téléchargement désactivé)</span>
+        <div class="demo-banner">
+          <span>🔒 Démo interactive protégée (Consultation de conformité médicale · Téléchargement désactivé)</span>
         </div>
-        ${paragraphsHtml}
+        ${contentHtml}
       `;
 
       document.getElementById('previewModal').classList.add('active');
@@ -729,7 +869,7 @@
       }
     }
 
-    // Protection anti-clic droit et anti-raccourcis d'inspection dans la modal de prévisualisation
+    // Protection anti-clic droit et anti-sauvegarde
     window.addEventListener('contextmenu', function(e) {
       if (document.getElementById('previewModal').classList.contains('active')) {
         e.preventDefault();
@@ -738,7 +878,6 @@
 
     window.addEventListener('keydown', function(e) {
       if (document.getElementById('previewModal').classList.contains('active')) {
-        // Empêche Ctrl+S, Ctrl+P, Ctrl+U
         if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p' || e.key === 'u')) {
           e.preventDefault();
         }
