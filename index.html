@@ -598,7 +598,7 @@
         <div class="old-price">279,72 €</div>
         <div class="new-price">79 €</div>
         <div class="price-sub">Paiement unique · Accès immédiat à vie</div>
-        <button class="btn btn-accent" style="width: 100%; font-size: 1.1rem; padding: 14px;" onclick="checkoutGumroad('pack-integral-28-modules')">
+        <button class="btn btn-accent" style="width: 100%; font-size: 1.1rem; padding: 14px;" onclick="checkoutGumroad('https://edgettrading.gumroad.com/l/ycfkfa')">
           Obtenir le Pack Intégral ⚡
         </button>
       </div>
@@ -670,7 +670,7 @@
               </div>
               <div class="card-actions">
                 <button class="btn btn-outline" style="padding: 8px 12px; font-size: 0.85rem;" onclick="openPreview(${b.n})">Lire</button>
-                <button class="btn btn-primary" style="padding: 8px 12px; font-size: 0.85rem;" onclick="checkoutGumroad('${b.slug}')">Acheter</button>
+                <button class="btn btn-primary" style="padding: 8px 12px; font-size: 0.85rem;" onclick="checkoutGumroad('${b.gumroad_url || b.slug}')">Acheter</button>
               </div>
             </div>
           </div>
@@ -716,17 +716,17 @@
 
     function buyCurrentBook() {
       if (currentBook) {
-        checkoutGumroad(currentBook.slug);
+        checkoutGumroad(currentBook.gumroad_url || currentBook.slug);
       }
     }
 
-    function checkoutGumroad(productId) {
-      // Configuration de votre lien Gumroad pour chaque produit ou pour le bundle
-      const gumroadUsername = "ednmedical"; // Votre identifiant boutique Gumroad
-      const url = `https://${gumroadUsername}.gumroad.com/l/${productId}`;
-      
-      // Ouverture du checkout sécurisé Gumroad
-      window.open(url, '_blank');
+    function checkoutGumroad(productLinkOrSlug) {
+      if (!productLinkOrSlug) return;
+      if (productLinkOrSlug.startsWith('http')) {
+        window.open(productLinkOrSlug, '_blank');
+      } else {
+        window.open(`https://gumroad.com/l/${productLinkOrSlug}`, '_blank');
+      }
     }
 
     // Protection anti-clic droit et anti-raccourcis d'inspection dans la modal de prévisualisation
