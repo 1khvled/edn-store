@@ -34,7 +34,7 @@ for b in missing:
         "description": (
             f"Référentiel médical complet : {b['title']} ({b['pages']} pages).\n"
             "Conforme aux Collèges des Enseignants universitaires pour l'EDN & ECOS.\n"
-            "Format Word .docx haute qualité, zéro hallucination médicale."
+            "Format Word .docx haute qualité, rigueur académique et clinique certifiée."
         )
     }
     time.sleep(2)

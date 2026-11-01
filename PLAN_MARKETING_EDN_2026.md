@@ -11,7 +11,7 @@
 * **Livrables** :
   1. Fichiers **Word (.docx)** éditables et surlignables.
   2. Fichiers **PDF haute résolution** optimisés pour iPad / tablettes (GoodNotes, Notability, Samsung Notes).
-  3. Plus de **4 800 tableaux cliniques originaux** conformes aux Collèges d'Enseignants (zéro hallucination médicale).
+  3. Plus de **4 800 tableaux cliniques originaux** conformes aux Collèges d'Enseignants (rigueur académique et clinique certifiée).
 
 ### La Cible Principale (Avatar Client)
 * **Étudiants DFASM 1, DFASM 2, DFASM 3** préparant les EDN (Épreuves Dématérialisées Nationales) et les ECOS (Examens Cliniques d'Objectif Structuré).
@@ -124,7 +124,7 @@ Pour ceux qui veulent gagner du temps et arrêter d'avoir mal au dos :
 ### Script 2 : DM Instagram / Twitter pour Partenaire / Ambassadeur
 ```text
 Hello [Nom] ! J'espère que ton stage se passe bien.
-Je viens de lancer la version numérique interactive des 28 collèges EDN 2026 (éditable Word + PDF iPad, conforme aux dernières recos R2C sans hallucination).
+Je viens de lancer la version numérique interactive des 28 collèges EDN 2026 (éditable Word + PDF iPad, éditable Word + PDF iPad, rigoureusement conforme aux dernières recommandations officielles des Collèges R2C).
 
 J'aimerais beaucoup t'offrir un accès complet pour que tu puisses t'en servir pour tes révisions. Et si tu penses que ça peut faire gagner un temps fou à tes abonnés, on a un lien affilié qui te reverse 30% par vente.
 

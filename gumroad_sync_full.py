@@ -62,7 +62,7 @@ for b in books:
         "description": (
             f"Référentiel médical complet : {b['title']} ({b['pages']} pages).\n"
             "Conforme aux Collèges d'Enseignants universitaires pour l'EDN & ECOS.\n"
-            "Format Word .docx haute qualité, zéro hallucination médicale."
+            "Format Word .docx haute qualité, rigueur académique et clinique certifiée."
         )
     }
     time.sleep(2) # Respect Gumroad rate limits
