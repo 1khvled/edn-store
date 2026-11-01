@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Poste de Lecture Médicale Haute Fidélité — EDN Référence 2026</title>
-  <meta name="description" content="Consultez et feuilletez les 28 référentiels médicaux officiels EDN R2C, la banque de 100 QCMs et le carnet d'erreurs dans notre lecteur PDF haute fidélité.">
+  <meta name="description" content="Station de lecture médicale plein écran pour les 28 référentiels officiels EDN R2C, la banque de 100 QCMs, le carnet d'erreurs et le guide des stations ECOS.">
   <link rel="canonical" href="https://edn-store.vercel.app/reader">
   <meta name="robots" content="index, follow">
 
@@ -28,16 +28,61 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Full-Screen Standalone Reader Overrides */
+    /* =========================================================================
+       CLINICAL WORKSTATION THEMES & ARCHITECTURE
+       ========================================================================= */
+    :root {
+      --reader-bg: #0B0F19;
+      --reader-topbar-bg: #0F172A;
+      --reader-sidebar-bg: #0F172A;
+      --reader-border: #1E293B;
+      --reader-card-bg: #1E293B;
+      --reader-card-border: #334155;
+      --reader-text: #F8FAFC;
+      --reader-text-muted: #94A3B8;
+      --reader-accent: #0284C7;
+      --reader-accent-hover: #0369A1;
+      --reader-canvas-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+    }
+
+    [data-theme="sepia"] {
+      --reader-bg: #F4ECD8;
+      --reader-topbar-bg: #EAE1CA;
+      --reader-sidebar-bg: #EAE1CA;
+      --reader-border: #DCD0B4;
+      --reader-card-bg: #E4D9C0;
+      --reader-card-border: #D0C3A5;
+      --reader-text: #2D2319;
+      --reader-text-muted: #6B5B47;
+      --reader-accent: #B45309;
+      --reader-accent-hover: #92400E;
+      --reader-canvas-shadow: 0 12px 36px rgba(90, 70, 40, 0.2);
+    }
+
+    [data-theme="light"] {
+      --reader-bg: #F1F5F9;
+      --reader-topbar-bg: #FFFFFF;
+      --reader-sidebar-bg: #FFFFFF;
+      --reader-border: #E2E8F0;
+      --reader-card-bg: #F8FAFC;
+      --reader-card-border: #CBD5E1;
+      --reader-text: #0F172A;
+      --reader-text-muted: #64748B;
+      --reader-accent: #0284C7;
+      --reader-accent-hover: #0369A1;
+      --reader-canvas-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
+    }
+
     html, body {
       margin: 0;
       padding: 0;
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      background: #0B0F19;
-      color: #F8FAFC;
+      background: var(--reader-bg);
+      color: var(--reader-text);
       font-family: var(--font-sans);
+      transition: background 0.2s ease, color 0.2s ease;
     }
 
     .standalone-reader-app {
@@ -47,10 +92,23 @@
       height: 100vh;
     }
 
+    /* Top Reading Progress Bar */
+    .reader-reading-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #10B981, #06B6D4);
+      z-index: 200;
+      transition: width 0.2s ease;
+    }
+
+    /* Top Navigation & Toolbar */
     .reader-topbar {
       height: 60px;
-      background: #0F172A;
-      border-bottom: 1px solid #1E293B;
+      background: var(--reader-topbar-bg);
+      border-bottom: 1px solid var(--reader-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -58,6 +116,8 @@
       gap: 12px;
       flex-shrink: 0;
       z-index: 100;
+      position: relative;
+      transition: background 0.2s ease, border-color 0.2s ease;
     }
 
     .reader-topbar-left {
@@ -65,15 +125,16 @@
       align-items: center;
       gap: 12px;
       min-width: 0;
+      flex: 1;
     }
 
     .btn-reader-back {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #1E293B;
-      color: #CBD5E1;
-      border: 1px solid #334155;
+      background: var(--reader-card-bg);
+      color: var(--reader-text);
+      border: 1px solid var(--reader-card-border);
       padding: 7px 12px;
       border-radius: 6px;
       font-size: 0.82rem;
@@ -83,8 +144,8 @@
       white-space: nowrap;
     }
     .btn-reader-back:hover {
-      background: #334155;
-      color: #FFFFFF;
+      border-color: var(--reader-accent);
+      color: var(--reader-accent);
     }
 
     .reader-select-wrap {
@@ -92,24 +153,25 @@
     }
 
     .reader-doc-select {
-      background: #1E293B;
-      color: #FFFFFF;
-      border: 1px solid #334155;
-      padding: 7px 28px 7px 10px;
+      background: var(--reader-card-bg);
+      color: var(--reader-text);
+      border: 1px solid var(--reader-card-border);
+      padding: 7px 30px 7px 12px;
       border-radius: 6px;
       font-size: 0.82rem;
       font-weight: 600;
       font-family: var(--font-sans);
       outline: none;
       cursor: pointer;
-      max-width: 280px;
+      max-width: 270px;
       text-overflow: ellipsis;
       white-space: nowrap;
       appearance: none;
       -webkit-appearance: none;
+      transition: border-color 0.15s ease;
     }
     .reader-doc-select:focus {
-      border-color: #38BDF8;
+      border-color: var(--reader-accent);
     }
 
     .reader-select-arrow {
@@ -118,13 +180,14 @@
       top: 50%;
       transform: translateY(-50%);
       pointer-events: none;
-      color: #94A3B8;
+      color: var(--reader-text-muted);
     }
 
     .reader-meta-group {
       display: flex;
       flex-direction: column;
       min-width: 0;
+      flex-shrink: 0;
     }
 
     .reader-title-line {
@@ -137,12 +200,12 @@
       font-family: var(--font-serif);
       font-size: 1.05rem;
       font-weight: 700;
-      color: #FFFFFF;
+      color: var(--reader-text);
       margin: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 320px;
+      max-width: 280px;
     }
 
     .reader-doc-badge {
@@ -153,35 +216,37 @@
       letter-spacing: 0.05em;
       padding: 2px 7px;
       border-radius: 4px;
-      background: rgba(16, 185, 129, 0.2);
-      color: #34D399;
-      border: 1px solid rgba(16, 185, 129, 0.4);
+      background: rgba(16, 185, 129, 0.18);
+      color: #10B981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
       white-space: nowrap;
     }
 
     .reader-doc-sub {
-      font-size: 0.76rem;
-      color: #94A3B8;
+      font-size: 0.74rem;
+      color: var(--reader-text-muted);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 320px;
+      max-width: 280px;
     }
 
+    /* Center Page Navigator */
     .reader-topbar-center {
       display: flex;
       align-items: center;
-      gap: 8px;
-      background: #1E293B;
-      padding: 4px 10px;
+      gap: 6px;
+      background: var(--reader-card-bg);
+      padding: 4px 8px;
       border-radius: 8px;
-      border: 1px solid #334155;
+      border: 1px solid var(--reader-card-border);
+      flex-shrink: 0;
     }
 
     .btn-reader-nav {
       background: transparent;
       border: none;
-      color: #CBD5E1;
+      color: var(--reader-text);
       width: 28px;
       height: 28px;
       border-radius: 4px;
@@ -192,8 +257,8 @@
       transition: all 0.15s ease;
     }
     .btn-reader-nav:hover:not(:disabled) {
-      background: #334155;
-      color: #FFFFFF;
+      background: var(--reader-border);
+      color: var(--reader-accent);
     }
     .btn-reader-nav:disabled {
       opacity: 0.3;
@@ -203,17 +268,17 @@
     .reader-page-indicator {
       display: flex;
       align-items: center;
-      gap: 5px;
-      font-size: 0.84rem;
+      gap: 4px;
+      font-size: 0.82rem;
       font-weight: 600;
-      color: #94A3B8;
+      color: var(--reader-text-muted);
     }
 
     .reader-page-input {
       width: 44px;
-      background: #0F172A;
-      border: 1px solid #334155;
-      color: #FFFFFF;
+      background: var(--reader-bg);
+      border: 1px solid var(--reader-card-border);
+      color: var(--reader-text);
       text-align: center;
       font-size: 0.84rem;
       font-weight: 700;
@@ -222,33 +287,45 @@
       outline: none;
     }
     .reader-page-input:focus {
-      border-color: #38BDF8;
+      border-color: var(--reader-accent);
     }
 
+    /* Right Tools Toolbar */
     .reader-topbar-right {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
     .btn-reader-tool {
-      background: #1E293B;
-      border: 1px solid #334155;
-      color: #CBD5E1;
-      width: 34px;
-      height: 34px;
+      background: var(--reader-card-bg);
+      border: 1px solid var(--reader-card-border);
+      color: var(--reader-text);
+      width: 32px;
+      height: 32px;
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all 0.15s ease;
+      position: relative;
     }
-    .btn-reader-tool:hover {
-      background: #334155;
-      color: #FFFFFF;
+    .btn-reader-tool:hover, .btn-reader-tool.active {
+      background: var(--reader-border);
+      color: var(--reader-accent);
+      border-color: var(--reader-accent);
     }
 
+    .reader-zoom-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--reader-text);
+      min-width: 42px;
+      text-align: center;
+    }
+
+    /* Download & CTA Buttons */
     .btn-reader-download {
       display: inline-flex;
       align-items: center;
@@ -256,9 +333,9 @@
       background: #0284C7;
       color: #FFFFFF;
       border: 1px solid #0369A1;
-      padding: 7px 14px;
+      padding: 7px 12px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.15s ease;
@@ -272,21 +349,22 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #9F1239;
+      background: var(--emerald);
       color: #FFFFFF;
-      border: 1px solid #881337;
+      border: 1px solid var(--emerald-dark);
       padding: 7px 14px;
       border-radius: 6px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.15s ease;
       white-space: nowrap;
     }
     .btn-reader-buy:hover {
-      background: #881337;
+      background: var(--emerald-dark);
     }
 
+    /* Main Workspace */
     .reader-main-workspace {
       display: flex;
       flex: 1;
@@ -295,10 +373,11 @@
       position: relative;
     }
 
+    /* Sidebar with Tabs */
     .reader-sidebar {
-      width: 240px;
-      background: #0F172A;
-      border-right: 1px solid #1E293B;
+      width: 270px;
+      background: var(--reader-sidebar-bg);
+      border-right: 1px solid var(--reader-border);
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
@@ -306,39 +385,77 @@
       z-index: 50;
     }
     .reader-sidebar.collapsed {
-      margin-left: -240px;
+      margin-left: -270px;
     }
 
-    .reader-sidebar-head {
-      padding: 12px 16px;
-      border-bottom: 1px solid #1E293B;
+    .reader-sidebar-tabs {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      border-bottom: 1px solid var(--reader-border);
+      background: var(--reader-card-bg);
+    }
+    .reader-tab-btn {
+      flex: 1;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 10px 8px;
       font-size: 0.78rem;
       font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #94A3B8;
+      color: var(--reader-text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .reader-tab-btn:hover {
+      color: var(--reader-text);
+    }
+    .reader-tab-btn.active {
+      color: var(--reader-accent);
+      border-bottom-color: var(--reader-accent);
+      background: var(--reader-sidebar-bg);
     }
 
-    .reader-sidebar-list {
+    .reader-sidebar-search-box {
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--reader-border);
+    }
+    .reader-search-input {
+      width: 100%;
+      background: var(--reader-bg);
+      border: 1px solid var(--reader-card-border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+      color: var(--reader-text);
+      outline: none;
+    }
+    .reader-search-input:focus {
+      border-color: var(--reader-accent);
+    }
+
+    .reader-sidebar-panel {
       flex: 1;
       overflow-y: auto;
       padding: 8px;
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 4px;
+    }
+    .reader-sidebar-panel.active {
+      display: flex;
     }
 
     .thumb-item {
       padding: 8px 12px;
-      background: #1E293B;
-      border: 1px solid #334155;
+      background: var(--reader-card-bg);
+      border: 1px solid var(--reader-card-border);
       border-radius: 6px;
       font-size: 0.82rem;
       font-weight: 600;
-      color: #CBD5E1;
+      color: var(--reader-text);
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -346,15 +463,44 @@
       transition: all 0.15s ease;
     }
     .thumb-item:hover {
-      background: #334155;
-      color: #FFFFFF;
+      border-color: var(--reader-accent);
+      color: var(--reader-accent);
     }
     .thumb-item.active {
-      background: #0284C7;
-      border-color: #38BDF8;
+      background: var(--reader-accent);
+      border-color: var(--reader-accent);
       color: #FFFFFF;
     }
 
+    /* Chapter Outline in Sidebar */
+    .chapter-outline-item {
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      color: var(--reader-text);
+      cursor: pointer;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      transition: all 0.15s ease;
+    }
+    .chapter-outline-item:hover {
+      background: var(--reader-card-bg);
+      color: var(--reader-accent);
+    }
+    .chapter-outline-item.part-title {
+      font-weight: 800;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #F59E0B;
+      padding-top: 12px;
+      border-top: 1px dashed var(--reader-border);
+      margin-top: 6px;
+    }
+
+    /* Viewport Area */
     .reader-viewport-area {
       flex: 1;
       overflow: auto;
@@ -362,17 +508,53 @@
       justify-content: center;
       align-items: flex-start;
       padding: 24px;
-      background: #0B0F19;
+      background: var(--reader-bg);
       position: relative;
+      transition: background 0.2s ease;
     }
 
     .pdf-canvas-shadow {
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      box-shadow: var(--reader-canvas-shadow);
       border-radius: 4px;
       background: #FFFFFF;
       display: block;
+      transition: filter 0.2s ease;
     }
 
+    /* Medical Night Mode Canvas Invert Filter */
+    .invert-mode .pdf-canvas-shadow {
+      filter: invert(0.9) hue-rotate(180deg) contrast(1.05);
+    }
+    [data-theme="sepia"] .pdf-canvas-shadow {
+      filter: sepia(0.2) contrast(1.02);
+    }
+
+    /* Continuous Scroll Container */
+    .continuous-scroll-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+    .continuous-page-wrap {
+      position: relative;
+      margin-bottom: 16px;
+    }
+    .continuous-page-tag {
+      position: absolute;
+      top: 8px;
+      left: -48px;
+      background: var(--reader-card-bg);
+      border: 1px solid var(--reader-card-border);
+      color: var(--reader-text-muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Loading Overlay */
     .reader-loading-overlay {
       position: absolute;
       inset: 0;
@@ -385,7 +567,6 @@
       gap: 14px;
       z-index: 80;
     }
-
     .reader-spinner {
       width: 44px;
       height: 44px;
@@ -394,15 +575,87 @@
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
-
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-
     .reader-loading-text {
       font-size: 0.92rem;
       color: #E2E8F0;
       font-weight: 600;
+    }
+
+    /* Keyboard Shortcuts Modal */
+    .shortcuts-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .shortcuts-modal {
+      background: var(--reader-topbar-bg);
+      border: 1px solid var(--reader-border);
+      border-radius: 14px;
+      max-width: 500px;
+      width: 100%;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+    .shortcuts-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .shortcuts-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--reader-text);
+    }
+    .shortcuts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+    .shortcut-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      background: var(--reader-card-bg);
+      border: 1px solid var(--reader-card-border);
+      border-radius: 6px;
+    }
+    .shortcut-key {
+      background: var(--reader-bg);
+      border: 1px solid var(--reader-border);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: 700;
+      color: #38BDF8;
+    }
+
+    /* Mobile Bottom Navigation Bar */
+    .reader-mobile-bottombar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      background: var(--reader-topbar-bg);
+      border-top: 1px solid var(--reader-border);
+      padding: 0 16px;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 90;
     }
 
     @media (max-width: 900px) {
@@ -410,39 +663,45 @@
       .reader-doc-title { max-width: 180px; font-size: 0.95rem; }
       .reader-doc-select { max-width: 160px; }
       .reader-sidebar { position: absolute; left: 0; top: 0; bottom: 0; height: 100%; }
-      .reader-sidebar.collapsed { margin-left: -240px; }
+      .reader-sidebar.collapsed { margin-left: -270px; }
+      .reader-mobile-bottombar { display: flex; }
+      .reader-topbar-center { display: none; }
     }
     @media (max-width: 640px) {
       .reader-topbar { padding: 0 8px; gap: 6px; }
       .btn-reader-back span { display: none; }
-      .reader-doc-select { max-width: 130px; font-size: 0.76rem; }
+      .reader-doc-select { max-width: 120px; font-size: 0.74rem; }
       .btn-reader-download span { display: none; }
       .btn-reader-buy span { display: none; }
-      .reader-viewport-area { padding: 10px 4px; }
+      .reader-viewport-area { padding: 10px 4px 60px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="standalone-reader-app">
+  <div class="standalone-reader-app" id="readerAppRoot">
+    <!-- Top Reading Progress Line -->
+    <div class="reader-reading-progress" id="readerReadingProgress"></div>
+
     <!-- Top Navigation & Control Bar -->
-    <header class="reader-topbar">
+    <header class="reader-topbar" role="banner">
       <div class="reader-topbar-left">
-        <a href="catalogue.html" class="btn-reader-back" id="btnBackToCat" title="Retour au catalogue">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        <a href="catalogue.html" class="btn-reader-back" id="btnBackToCat" title="Retour au catalogue (Échap)">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           <span>Catalogue</span>
         </a>
 
         <!-- Document Switcher Dropdown -->
         <div class="reader-select-wrap">
           <select id="docSelector" class="reader-doc-select" onchange="onDocSelectChange(this.value)" aria-label="Sélectionner un ouvrage">
-            <optgroup label="Volumes Complets Offerts (100% Gratuits)">
+            <optgroup label="Volumes Complets & Bonus Offerts">
               <option value="book:01-lca">Tome 01 — LCA (270 pages)</option>
               <option value="book:02-neurologie">Tome 02 — Neurologie (657 pages)</option>
               <option value="doc:Banque-QCM-100-Questions-Corrigees.pdf">Banque 100 QCMs Corrigés (50 p.)</option>
               <option value="doc:Carnet-d-Erreurs-EDN-Major-2025.pdf">Carnet d'Erreurs du Major (12 p.)</option>
+              <option value="doc:Guide-Officiel-Stations-ECOS-2026.pdf">Guide 15 Stations ECOS 2026</option>
             </optgroup>
-            <optgroup label="Catalogue Officiel des 28 Collèges (Extraits)">
+            <optgroup label="Les 28 Collèges Officiels (Extraits Complets)">
               <!-- Populated dynamically via JS -->
             </optgroup>
           </select>
@@ -474,58 +733,192 @@
         </button>
       </div>
 
-      <!-- Right Action Tools -->
+      <!-- Right Toolbar Tools -->
       <div class="reader-topbar-right">
-        <button class="btn-reader-tool" onclick="toggleSidebar()" title="Afficher/Masquer le sommaire (S)" aria-label="Basculer le sommaire">
-          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+        <!-- Zoom Controls -->
+        <button class="btn-reader-tool" onclick="zoomDelta(-0.15)" title="Zoom arrière (-)" aria-label="Zoom arrière">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
         </button>
-        <button class="btn-reader-tool" onclick="zoomDelta(-0.2)" title="Zoom arrière (-)" aria-label="Zoom arrière">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
+        <span class="reader-zoom-badge" id="zoomDisplay">135%</span>
+        <button class="btn-reader-tool" onclick="zoomDelta(0.15)" title="Zoom avant (+)" aria-label="Zoom avant">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
         </button>
-        <span id="zoomDisplay" style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; min-width: 44px; text-align: center;">135%</span>
-        <button class="btn-reader-tool" onclick="zoomDelta(0.2)" title="Zoom avant (+)" aria-label="Zoom avant">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
-        </button>
-        <button class="btn-reader-tool" onclick="fitWidth()" title="Ajuster à la largeur" aria-label="Ajuster à la largeur">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m-8 10h8m-10-5h12"/></svg>
-        </button>
-        <button class="btn-reader-tool" onclick="rotatePage()" title="Pivoter à 90° (R)" aria-label="Pivoter">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-        </button>
-        <button class="btn-reader-tool" onclick="toggleFullscreen()" title="Plein écran (F)" aria-label="Plein écran">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        <button class="btn-reader-tool" onclick="fitWidth()" title="Ajuster à la largeur (W)" aria-label="Ajuster à la largeur">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m0 0l-3-3m3 3l-3 3m-8 6h8m-8 0l3 3m-3-3l3-3"/></svg>
         </button>
 
-        <a href="EDN-Tome-01-LCA-Offert.pdf" download id="btnReaderDownload" class="btn-reader-download" title="Télécharger le fichier">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        <!-- View Mode: Continuous Scroll Toggle -->
+        <button class="btn-reader-tool" id="btnToggleScrollMode" onclick="toggleScrollMode()" title="Basculer Défilement Continu (C)" aria-label="Basculer le mode de défilement">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4m0 0L3 8m4-4l4 4m6 4v12m0 0l4-4m-4 4l-4-4"/></svg>
+        </button>
+
+        <!-- Theme Switcher (Dark -> Sepia -> Light) -->
+        <button class="btn-reader-tool" id="btnToggleTheme" onclick="cycleTheme()" title="Changer le thème de lecture (T)" aria-label="Changer le thème">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Invert Mode (Night Call Filter) -->
+        <button class="btn-reader-tool" id="btnInvertMode" onclick="toggleInvertMode()" title="Mode Nuit Médical (Inverser le papier) (I)" aria-label="Inverser les couleurs">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+
+        <!-- Rotate Page -->
+        <button class="btn-reader-tool" onclick="rotatePage()" title="Faire pivoter 90° (R)" aria-label="Faire pivoter">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </button>
+
+        <!-- Fullscreen Toggle -->
+        <button class="btn-reader-tool" onclick="toggleFullscreen()" title="Plein écran (F)" aria-label="Plein écran">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        </button>
+
+        <!-- Keyboard Shortcuts Help -->
+        <button class="btn-reader-tool" onclick="openShortcutsModal()" title="Raccourcis clavier (?)" aria-label="Aide raccourcis">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </button>
+
+        <!-- Action CTAs -->
+        <a href="EDN-Tome-01-LCA-Offert.pdf" download id="btnReaderDownload" class="btn-reader-download" title="Télécharger le fichier PDF complet">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
           <span>Télécharger</span>
         </a>
 
-        <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" id="btnReaderBuy" class="btn-reader-buy">
+        <a href="pack.html" target="_blank" rel="noopener noreferrer" id="btnReaderBuy" class="btn-reader-buy">
           <span>Pack Intégral (79 €)</span>
         </a>
       </div>
     </header>
 
-    <!-- Main Workspace with Collapsible Sidebar -->
-    <div class="reader-main-workspace">
-      <aside class="reader-sidebar" id="readerSidebar">
-        <div class="reader-sidebar-head">
-          <span>Sommaire & Pages</span>
-          <span id="sidebarCount" style="color: #38BDF8;">270 p.</span>
+    <!-- Main Reader Workspace -->
+    <main class="reader-main-workspace">
+      <!-- Collapsible Sidebar with Tabs -->
+      <aside class="reader-sidebar" id="readerSidebar" role="complementary" aria-label="Sommaire et navigation">
+        <div class="reader-sidebar-tabs">
+          <button class="reader-tab-btn active" id="tabThumbnails" onclick="switchSidebarTab('thumbnails')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            Pages (<span id="sidebarCount">0</span>)
+          </button>
+          <button class="reader-tab-btn" id="tabOutline" onclick="switchSidebarTab('outline')">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+            Sommaire
+          </button>
         </div>
-        <div class="reader-sidebar-list" id="sidebarThumbList">
-          <!-- Populated dynamically via JS -->
+
+        <!-- Tab 1: Pages / Thumbnails List -->
+        <div class="reader-sidebar-panel active" id="panelThumbnails">
+          <div class="reader-sidebar-search-box">
+            <input type="text" class="reader-search-input" id="pageSearchInput" placeholder="Aller à la page..." oninput="onPageSearchInput(this.value)">
+          </div>
+          <div id="sidebarThumbList" style="display: flex; flex-direction: column; gap: 4px; padding: 4px;">
+            <!-- Generated dynamically -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Book Chapter Outline -->
+        <div class="reader-sidebar-panel" id="panelOutline">
+          <div id="sidebarOutlineList" style="display: flex; flex-direction: column; gap: 2px; padding: 4px;">
+            <!-- Generated dynamically based on active book -->
+          </div>
         </div>
       </aside>
 
-      <main class="reader-viewport-area" id="readerViewport" onclick="if(window.innerWidth <= 900) closeSidebarIfOpen();">
-        <div class="reader-loading-overlay" id="readerLoadingOverlay">
+      <!-- Viewport Area (Single Page or Continuous Scroll) -->
+      <section class="reader-viewport-area" id="readerViewport" onclick="onViewportClick(event)">
+        <!-- Loading Spinner Overlay -->
+        <div class="reader-loading-overlay" id="readerLoadingOverlay" style="display: none;">
           <div class="reader-spinner"></div>
-          <div class="reader-loading-text" id="readerLoadingText">Rendu haute fidélité en cours...</div>
+          <div class="reader-loading-text" id="readerLoadingText">Chargement du document haute fidélité...</div>
         </div>
-        <canvas id="pdfRenderCanvas" class="pdf-canvas-shadow"></canvas>
-      </main>
+
+        <!-- Single Page Canvas -->
+        <div id="singlePageWrapper" style="display: flex; justify-content: center; width: 100%;">
+          <canvas id="pdfRenderCanvas" class="pdf-canvas-shadow"></canvas>
+        </div>
+
+        <!-- Continuous Scroll Container -->
+        <div class="continuous-scroll-container" id="continuousContainer">
+          <!-- Continuous page canvases appended here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <div class="reader-mobile-bottombar">
+      <button class="btn-reader-tool" onclick="toggleSidebar()" aria-label="Ouvrir le sommaire">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+      </button>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn-reader-nav" onclick="prevPage()" aria-label="Page précédente">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <span style="font-size: 0.82rem; font-weight: 700;" id="mobilePageIndicator">1 / 1</span>
+        <button class="btn-reader-nav" onclick="nextPage()" aria-label="Page suivante">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <button class="btn-reader-tool" onclick="cycleTheme()" aria-label="Changer thème">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+        <button class="btn-reader-tool" onclick="fitWidth()" aria-label="Ajuster largeur">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m0 0l-3-3m3 3l-3 3m-8 6h8m-8 0l3 3m-3-3l3-3"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal -->
+  <div class="shortcuts-modal-backdrop" id="shortcutsModalBackdrop" onclick="if(event.target === this) closeShortcutsModal()">
+    <div class="shortcuts-modal" role="dialog" aria-modal="true" aria-labelledby="shortcutsTitle">
+      <div class="shortcuts-head">
+        <h3 class="shortcuts-title" id="shortcutsTitle">Raccourcis Clavier du Lecteur</h3>
+        <button class="btn-reader-tool" onclick="closeShortcutsModal()" aria-label="Fermer">&times;</button>
+      </div>
+      <div class="shortcuts-grid">
+        <div class="shortcut-row">
+          <span>Page Suivante</span>
+          <span class="shortcut-key">→ / J</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Page Précédente</span>
+          <span class="shortcut-key">← / K</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Zoom Avant / Arrière</span>
+          <span class="shortcut-key">+ / -</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Ajuster à la Largeur</span>
+          <span class="shortcut-key">W</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Mode Défilement Continu</span>
+          <span class="shortcut-key">C</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Rotation 90°</span>
+          <span class="shortcut-key">R</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Changer Thème (Sombre/Sépia/Clair)</span>
+          <span class="shortcut-key">T</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Mode Nuit Médical (Inverser)</span>
+          <span class="shortcut-key">I</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Plein Écran</span>
+          <span class="shortcut-key">F</span>
+        </div>
+        <div class="shortcut-row">
+          <span>Ouvrir/Fermer Sommaire</span>
+          <span class="shortcut-key">S</span>
+        </div>
+      </div>
+      <div style="margin-top: 18px; text-align: center;">
+        <button class="btn-reader-back" style="width: 100%; justify-content: center;" onclick="closeShortcutsModal()">Compris</button>
+      </div>
     </div>
   </div>
 
@@ -534,9 +927,8 @@
 
   <script>
     // =========================================================================
-    // STANDALONE DEDICATED READER WORKSTATION CONTROLLER
+    // ADVANCED CLINICAL WORKSTATION CONTROLLER
     // =========================================================================
-    // Re-use or initialize variables without shadowing
     currentPdfDoc = null;
     currentPdfPage = 1;
     currentTotalPages = 1;
@@ -545,10 +937,28 @@
     isRendering = false;
     pendingPage = null;
 
-    // Initialize reader based on URL parameters
+    let isContinuousScroll = false;
+    let activeThemeIndex = 0;
+    const availableThemes = ['dark', 'sepia', 'light'];
+    let isInvertMode = false;
+    let activeBookData = null;
+
+    // Initialization on DOMContentLoaded
     window.addEventListener('DOMContentLoaded', async () => {
       populateDocSelector();
-      
+
+      // Restore saved preferences
+      try {
+        const savedTheme = localStorage.getItem('edn_reader_theme');
+        if (savedTheme && availableThemes.includes(savedTheme)) {
+          setTheme(savedTheme);
+        }
+        const savedInvert = localStorage.getItem('edn_reader_invert');
+        if (savedInvert === 'true') {
+          toggleInvertMode(true);
+        }
+      } catch (e) {}
+
       const params = new URLSearchParams(window.location.search);
       const bookSlug = params.get('book');
       const docParam = params.get('doc');
@@ -559,7 +969,6 @@
       } else if (docParam) {
         loadDocByPath(docParam, pageParam);
       } else {
-        // Default to Tome 1
         loadBookBySlug('01-lca', 1);
       }
 
@@ -596,8 +1005,8 @@
     function loadBookBySlug(slug, initialPage) {
       if (!window.booksData) return;
       const b = window.booksData.find(x => x.slug === slug) || window.booksData[0];
-      
-      // Update select
+      activeBookData = b;
+
       const sel = document.getElementById('docSelector');
       if (sel) sel.value = `book:${b.slug}`;
 
@@ -614,13 +1023,13 @@
 
       document.getElementById('readerDocTitle').innerText = `Tome ${b.n < 10 ? '0' + b.n : b.n} — ${b.title}`;
       document.getElementById('readerSubTitle').innerText = `${b.college || 'Collège Officiel'} · ${b.pages} pages · R2C 2026`;
-      
+
       const badge = document.getElementById('readerBadge');
       if (isGift) {
         badge.innerText = 'Volume Complet Offert';
-        badge.style.color = '#34D399';
+        badge.style.color = '#10B981';
       } else {
-        badge.innerText = 'Extrait Officiel (6 pages)';
+        badge.innerText = `Extrait Officiel R2C`;
         badge.style.color = '#38BDF8';
       }
 
@@ -634,29 +1043,34 @@
 
       const buyBtn = document.getElementById('btnReaderBuy');
       if (b.gumroad_url) {
-        buyBtn.href = `https://edgettrading.gumroad.com/l/${b.gumroad_url}`;
+        buyBtn.href = b.gumroad_url;
         buyBtn.innerText = `Commander ce Tome (9,99 €)`;
       } else {
-        buyBtn.href = 'https://edgettrading.gumroad.com/l/ycfkfa';
+        buyBtn.href = 'pack.html';
         buyBtn.innerText = 'Pack Intégral (79 €)';
       }
 
+      buildOutlineFromBook(b);
       openPdfUrl(pdfUrl, initialPage);
     }
 
     function loadDocByPath(path, initialPage) {
+      activeBookData = null;
       const sel = document.getElementById('docSelector');
       if (sel) sel.value = `doc:${path}`;
 
       let title = path;
       let subtitle = 'Ressource Officielle Offerte · EDN 2026';
-      
+
       if (path.includes('QCM')) {
         title = 'Banque de 100 QCMs Corrigés Haute Performance';
         subtitle = '50 pages · Questions de concours & pièges officiels décortiqués';
       } else if (path.includes('Carnet')) {
         title = "Le Carnet d'Erreurs du Major EDN 2025";
         subtitle = '12 pages A4 · Méthode Active Recall & 40 Pièges Cliniques R2C';
+      } else if (path.includes('ECOS')) {
+        title = "Guide Officiel des 15 Stations ECOS 2026";
+        subtitle = "Checklists, Grilles d'évaluation critériées (7 min) & Pièges du jury";
       }
 
       document.getElementById('readerDocTitle').innerText = title;
@@ -668,10 +1082,114 @@
       dlBtn.href = path;
 
       const buyBtn = document.getElementById('btnReaderBuy');
-      buyBtn.href = 'https://edgettrading.gumroad.com/l/ycfkfa';
+      buyBtn.href = 'pack.html';
       buyBtn.innerText = 'Pack Intégral (79 €)';
 
+      buildOutlineFromDoc(path);
       openPdfUrl(path, initialPage);
+    }
+
+    function buildOutlineFromBook(b) {
+      const container = document.getElementById('sidebarOutlineList');
+      container.innerHTML = '';
+
+      // Pour les 26 extraits de prévisualisation (Tomes 03 à 28, 8 pages chacun)
+      if (b.n > 2) {
+        const previewSections = [
+          { title: 'Page 1 : Couverture & Spécifications Officielles', page: 1, icon: '📌' },
+          { title: 'Page 2 : Présentation du Collège & Grille Rangs A/B', page: 2, icon: '🎯' },
+          { title: 'Page 3 : Sommaire Complet du Référentiel', page: 3, icon: '📑' },
+          { title: 'Page 4 : Extrait Didactique & Sémiologie', page: 4, icon: '🔬' },
+          { title: 'Page 5 : Tableaux de Consensus Médical (I)', page: 5, icon: '📊' },
+          { title: 'Page 6 : Arbres Décisionnels & Algorithmes (II)', page: 6, icon: '🔀' },
+          { title: 'Page 7 : Points Clés & Pièges Zéros R2C', page: 7, icon: '🚨' },
+          { title: 'Page 8 : Références & Accès Volume Intégral', page: 8, icon: '📚' }
+        ];
+        previewSections.forEach(it => {
+          const div = document.createElement('div');
+          div.className = 'chapter-outline-item';
+          div.innerHTML = `<span>${it.icon}</span><span>${it.title}</span>`;
+          div.onclick = () => {
+            goToPage(it.page);
+            if (window.innerWidth <= 900) toggleSidebar();
+          };
+          container.appendChild(div);
+        });
+        return;
+      }
+
+      // Pour les 2 tomes complets offerts (Tome 01 LCA 270p et Tome 02 Neuro 657p)
+      if (b.preview_sample && Array.isArray(b.preview_sample)) {
+        b.preview_sample.forEach((item, idx) => {
+          const div = document.createElement('div');
+          const isPart = item.startsWith('PARTIE') || item.includes('SOMMAIRE');
+          div.className = 'chapter-outline-item' + (isPart ? ' part-title' : '');
+          div.innerHTML = `<span>${isPart ? '📌' : '•'}</span><span>${item}</span>`;
+          div.onclick = () => {
+            const targetPage = Math.min(currentTotalPages, Math.max(1, Math.round((idx / b.preview_sample.length) * currentTotalPages)));
+            goToPage(targetPage);
+            if (window.innerWidth <= 900) toggleSidebar();
+          };
+          container.appendChild(div);
+        });
+      } else {
+        container.innerHTML = '<div style="padding: 12px; color: var(--reader-text-muted); font-size: 0.8rem;">Sommaire détaillé en cours d\'indexation.</div>';
+      }
+    }
+
+    function buildOutlineFromDoc(path) {
+      const container = document.getElementById('sidebarOutlineList');
+      container.innerHTML = '';
+      let items = [];
+      if (path.includes('ECOS')) {
+        items = [
+          { title: 'Page de Garde & Sommaire Général', page: 1, icon: '📌' },
+          { title: 'Méthodologie & Barème ECOS R2C', page: 2, icon: '🎯' },
+          { title: 'Station 01 : SCA ST+ (Cardiologie)', page: 3, icon: '🩺' },
+          { title: 'Station 02 : AVC Ischémique (Neurologie)', page: 4, icon: '🩺' },
+          { title: 'Station 03 : Exacerbation BPCO (Pneumo)', page: 5, icon: '🩺' },
+          { title: 'Station 04 : Purpura Fulminans (Pédiatrie)', page: 6, icon: '🩺' },
+          { title: 'Station 05 : OAP Flash Réanimation', page: 7, icon: '🩺' },
+          { title: 'Station 06 : Acidocétose Diabétique', page: 8, icon: '🩺' },
+          { title: 'Station 07 : Convulsion Fébrille Nourrisson', page: 9, icon: '🩺' },
+          { title: 'Station 08 : Torsion Spermatique (Uro)', page: 10, icon: '🩺' },
+          { title: 'Station 09 : Grossesse Extra-Utérine (GEU)', page: 11, icon: '🩺' },
+          { title: 'Station 10 : Arthrite Septique Genou', page: 12, icon: '🩺' },
+          { title: 'Station 11 : Annonce Mauvaise Nouvelle', page: 13, icon: '🩺' },
+          { title: 'Station 12 : Intoxication Paracétamol', page: 14, icon: '🩺' },
+          { title: 'Station 13 : OACR Baisse Visuelle Brutale', page: 15, icon: '🩺' },
+          { title: 'Station 14 : Pyélonéphrite Obstructive', page: 16, icon: '🩺' },
+          { title: 'Station 15 : Crise Suicidaire Aiguë (Psy)', page: 17, icon: '🩺' }
+        ];
+      } else if (path.includes('Carnet')) {
+        items = [
+          { title: 'Couverture & Système Cognitif', page: 1, icon: '📌' },
+          { title: 'Partie 1 : Recueil des Fausses Réponses', page: 3, icon: '📝' },
+          { title: 'Partie 2 : Seuils Biologiques Critiques', page: 6, icon: '⚡' },
+          { title: 'Partie 3 : Contre-indications Absolues', page: 9, icon: '🚨' },
+          { title: 'Partie 4 : Méthode de Répétition Espacée', page: 11, icon: '🔁' }
+        ];
+      } else if (path.includes('QCM')) {
+        items = [
+          { title: 'QCMs 01 à 15 : Ophtalmologie & Urgences', page: 1, icon: '📝' },
+          { title: 'QCMs 16 à 30 : Neurologie Vasculaire', page: 9, icon: '📝' },
+          { title: 'QCMs 31 à 50 : Cardiologie & MTEV', page: 17, icon: '📝' },
+          { title: 'QCMs 51 à 70 : Pneumologie & Réa', page: 26, icon: '📝' },
+          { title: 'QCMs 71 à 85 : LCA & Épidémiologie', page: 35, icon: '📝' },
+          { title: 'QCMs 86 à 100 : Infectiologie & Urgences', page: 43, icon: '📝' }
+        ];
+      }
+
+      items.forEach(it => {
+        const div = document.createElement('div');
+        div.className = 'chapter-outline-item';
+        div.innerHTML = `<span>${it.icon}</span><span>${it.title}</span>`;
+        div.onclick = () => {
+          goToPage(it.page);
+          if (window.innerWidth <= 900) toggleSidebar();
+        };
+        container.appendChild(div);
+      });
     }
 
     async function openPdfUrl(url, initialPage = 1) {
@@ -683,11 +1201,16 @@
         currentTotalPages = currentPdfDoc.numPages;
 
         document.getElementById('pageTotalSpan').innerText = currentTotalPages;
-        document.getElementById('sidebarCount').innerText = `${currentTotalPages} p.`;
+        document.getElementById('sidebarCount').innerText = currentTotalPages;
         document.getElementById('pageNumberInput').max = currentTotalPages;
 
         buildThumbnails(currentTotalPages);
-        await renderPage(initialPage);
+
+        if (isContinuousScroll) {
+          await renderContinuous();
+        } else {
+          await renderPage(initialPage);
+        }
       } catch (err) {
         console.error('Erreur chargement PDF:', err);
         showLoading(true, `Impossible de charger le document (${err.message || 'Fichier inaccessible'})`);
@@ -700,8 +1223,13 @@
       currentPdfPage = num;
 
       document.getElementById('pageNumberInput').value = num;
+      document.getElementById('mobilePageIndicator').innerText = `${num} / ${currentTotalPages}`;
       document.getElementById('btnPrevPage').disabled = num <= 1;
       document.getElementById('btnNextPage').disabled = num >= currentTotalPages;
+
+      // Update Reading Progress Bar
+      const pct = Math.round((num / currentTotalPages) * 100);
+      document.getElementById('readerReadingProgress').style.width = `${pct}%`;
 
       highlightThumbnail(num);
       showLoading(true, `Rendu page ${num} sur ${currentTotalPages}...`);
@@ -740,6 +1268,64 @@
       }
     }
 
+    async function renderContinuous() {
+      if (!currentPdfDoc) return;
+      showLoading(true, 'Chargement du défilement continu...');
+      const container = document.getElementById('continuousContainer');
+      container.innerHTML = '';
+      container.style.display = 'flex';
+      document.getElementById('singlePageWrapper').style.display = 'none';
+
+      const limit = Math.min(currentTotalPages, 30);
+      for (let i = 1; i <= limit; i++) {
+        const page = await currentPdfDoc.getPage(i);
+        const wrap = document.createElement('div');
+        wrap.className = 'continuous-page-wrap';
+        wrap.id = `pageWrap_${i}`;
+
+        const tag = document.createElement('div');
+        tag.className = 'continuous-page-tag';
+        tag.innerText = `p. ${i}`;
+        wrap.appendChild(tag);
+
+        const canvas = document.createElement('canvas');
+        canvas.className = 'pdf-canvas-shadow';
+        wrap.appendChild(canvas);
+        container.appendChild(wrap);
+
+        const ctx = canvas.getContext('2d');
+        const viewport = page.getViewport({ scale: currentScale, rotation: currentRotation });
+        const outputScale = window.devicePixelRatio || 1;
+
+        canvas.width = Math.floor(viewport.width * outputScale);
+        canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = Math.floor(viewport.width) + 'px';
+        canvas.style.height = Math.floor(viewport.height) + 'px';
+
+        const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+        await page.render({
+          canvasContext: ctx,
+          transform: transform,
+          viewport: viewport
+        }).promise;
+      }
+      showLoading(false);
+    }
+
+    function toggleScrollMode() {
+      isContinuousScroll = !isContinuousScroll;
+      const btn = document.getElementById('btnToggleScrollMode');
+      btn.classList.toggle('active', isContinuousScroll);
+
+      if (isContinuousScroll) {
+        renderContinuous();
+      } else {
+        document.getElementById('continuousContainer').style.display = 'none';
+        document.getElementById('singlePageWrapper').style.display = 'flex';
+        renderPage(currentPdfPage);
+      }
+    }
+
     function queueRender(num) {
       if (isRendering) pendingPage = num;
       else renderPage(num);
@@ -759,7 +1345,12 @@
       let n = parseInt(val, 10);
       if (isNaN(n)) n = 1;
       n = Math.max(1, Math.min(n, currentTotalPages));
-      queueRender(n);
+      if (isContinuousScroll) {
+        const el = document.getElementById(`pageWrap_${n}`);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        queueRender(n);
+      }
     }
 
     function zoomDelta(delta) {
@@ -767,7 +1358,8 @@
       s = Math.max(0.5, Math.min(s, 3.0));
       currentScale = Math.round(s * 100) / 100;
       document.getElementById('zoomDisplay').innerText = `${Math.round(currentScale * 100)}%`;
-      queueRender(currentPdfPage);
+      if (isContinuousScroll) renderContinuous();
+      else queueRender(currentPdfPage);
     }
 
     function fitWidth() {
@@ -779,13 +1371,32 @@
         currentScale = Math.max(0.5, Math.min(3.0, availableW / vp.width));
         currentScale = Math.round(currentScale * 100) / 100;
         document.getElementById('zoomDisplay').innerText = `${Math.round(currentScale * 100)}%`;
-        queueRender(currentPdfPage);
+        if (isContinuousScroll) renderContinuous();
+        else queueRender(currentPdfPage);
       });
     }
 
     function rotatePage() {
       currentRotation = (currentRotation + 90) % 360;
-      queueRender(currentPdfPage);
+      if (isContinuousScroll) renderContinuous();
+      else queueRender(currentPdfPage);
+    }
+
+    function cycleTheme() {
+      activeThemeIndex = (activeThemeIndex + 1) % availableThemes.length;
+      setTheme(availableThemes[activeThemeIndex]);
+    }
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('edn_reader_theme', theme); } catch (e) {}
+    }
+
+    function toggleInvertMode(forceState) {
+      isInvertMode = (forceState !== undefined) ? forceState : !isInvertMode;
+      document.getElementById('readerAppRoot').classList.toggle('invert-mode', isInvertMode);
+      document.getElementById('btnInvertMode').classList.toggle('active', isInvertMode);
+      try { localStorage.setItem('edn_reader_invert', String(isInvertMode)); } catch (e) {}
     }
 
     function toggleFullscreen() {
@@ -800,11 +1411,11 @@
       document.getElementById('readerSidebar').classList.toggle('collapsed');
     }
 
-    function closeSidebarIfOpen() {
-      const sb = document.getElementById('readerSidebar');
-      if (!sb.classList.contains('collapsed')) {
-        sb.classList.add('collapsed');
-      }
+    function switchSidebarTab(tab) {
+      document.getElementById('tabThumbnails').classList.toggle('active', tab === 'thumbnails');
+      document.getElementById('tabOutline').classList.toggle('active', tab === 'outline');
+      document.getElementById('panelThumbnails').classList.toggle('active', tab === 'thumbnails');
+      document.getElementById('panelOutline').classList.toggle('active', tab === 'outline');
     }
 
     function buildThumbnails(total) {
@@ -818,14 +1429,14 @@
         item.id = `thumbItem_${i}`;
         item.onclick = () => {
           goToPage(i);
-          if (window.innerWidth <= 900) closeSidebarIfOpen();
+          if (window.innerWidth <= 900) toggleSidebar();
         };
         item.innerHTML = `<span>Page ${i}</span><span style="font-size: 0.72rem; opacity: 0.7;">›</span>`;
         container.appendChild(item);
       }
       if (total > 120) {
         const note = document.createElement('div');
-        note.style.cssText = 'padding: 8px; font-size: 0.76rem; color: #94A3B8; text-align: center;';
+        note.style.cssText = 'padding: 8px; font-size: 0.76rem; color: var(--reader-text-muted); text-align: center;';
         note.innerText = `+ ${total - 120} pages supplémentaires (saisie directe)`;
         container.appendChild(note);
       }
@@ -840,6 +1451,31 @@
       }
     }
 
+    function onPageSearchInput(val) {
+      const num = parseInt(val, 10);
+      if (!isNaN(num) && num >= 1 && num <= currentTotalPages) {
+        goToPage(num);
+      }
+    }
+
+    function openShortcutsModal() {
+      document.getElementById('shortcutsModalBackdrop').style.display = 'flex';
+    }
+
+    function closeShortcutsModal() {
+      document.getElementById('shortcutsModalBackdrop').style.display = 'none';
+    }
+
+    function onViewportClick(e) {
+      // Click on right third moves next, left third moves prev on mobile
+      if (window.innerWidth <= 768 && !isContinuousScroll) {
+        const x = e.clientX;
+        const w = window.innerWidth;
+        if (x > (2 * w) / 3) nextPage();
+        else if (x < w / 3) prevPage();
+      }
+    }
+
     function showLoading(show, text = '') {
       const overlay = document.getElementById('readerLoadingOverlay');
       const textEl = document.getElementById('readerLoadingText');
@@ -849,20 +1485,32 @@
 
     function handleKeyNavigation(e) {
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
-      if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === 'j' || e.key === 'J') {
         e.preventDefault(); nextPage();
-      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp' || e.key === 'k' || e.key === 'K') {
         e.preventDefault(); prevPage();
       } else if (e.key === '+' || e.key === '=') {
-        e.preventDefault(); zoomDelta(0.2);
+        e.preventDefault(); zoomDelta(0.15);
       } else if (e.key === '-') {
-        e.preventDefault(); zoomDelta(-0.2);
+        e.preventDefault(); zoomDelta(-0.15);
+      } else if (e.key === 'w' || e.key === 'W') {
+        e.preventDefault(); fitWidth();
       } else if (e.key === 'r' || e.key === 'R') {
         e.preventDefault(); rotatePage();
       } else if (e.key === 'f' || e.key === 'F') {
         e.preventDefault(); toggleFullscreen();
       } else if (e.key === 's' || e.key === 'S') {
         e.preventDefault(); toggleSidebar();
+      } else if (e.key === 't' || e.key === 'T') {
+        e.preventDefault(); cycleTheme();
+      } else if (e.key === 'i' || e.key === 'I') {
+        e.preventDefault(); toggleInvertMode();
+      } else if (e.key === 'c' || e.key === 'C') {
+        e.preventDefault(); toggleScrollMode();
+      } else if (e.key === '?') {
+        e.preventDefault(); openShortcutsModal();
+      } else if (e.key === 'Escape') {
+        closeShortcutsModal();
       }
     }
   </script>
