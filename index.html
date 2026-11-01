@@ -106,11 +106,6 @@
       50% { box-shadow: 0 0 0 10px rgba(139, 30, 30, 0); }
     }
 
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
     /* Top Notice Bar */
     .top-notice {
       background: var(--navy);
@@ -189,7 +184,23 @@
     .header-cta {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+    }
+    .btn-header-demo {
+      background: #FFFFFF;
+      color: var(--navy);
+      border: 1px solid var(--border-dark);
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 9px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-out);
+      cursor: pointer;
+    }
+    .btn-header-demo:hover {
+      border-color: var(--navy);
+      background: var(--bg-subtle);
     }
     .btn-header-bundle {
       background: var(--navy);
@@ -257,7 +268,7 @@
       line-height: 1.68;
     }
 
-    /* Stat Counters Strip */
+    /* Stats Strip */
     .stats-strip {
       max-width: 900px;
       margin: 0 auto 50px;
@@ -291,6 +302,76 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.04em;
+    }
+
+    /* Free Specimen Banner */
+    .free-specimen-box {
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      background: linear-gradient(135deg, #0A2239 0%, #163654 100%);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 28px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      color: #FFFFFF;
+      box-shadow: 0 8px 25px rgba(10, 34, 57, 0.12);
+      text-align: left;
+    }
+    .specimen-left h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #FFFFFF;
+    }
+    .specimen-left p {
+      font-size: 0.92rem;
+      color: #CBD5E1;
+      line-height: 1.5;
+    }
+    .specimen-actions {
+      display: flex;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .btn-specimen-test {
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-specimen-test:hover {
+      background: #DFCAAB;
+      transform: translateY(-1px);
+    }
+    .btn-specimen-dl {
+      background: transparent;
+      color: #FFFFFF;
+      border: 1px solid rgba(255,255,255,0.4);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-specimen-dl:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #FFFFFF;
     }
 
     /* Bundle Card */
@@ -493,6 +574,45 @@
     .cross-icon {
       color: #DC2626;
       font-weight: bold;
+    }
+
+    /* Trust & Security Strip */
+    .trust-strip {
+      max-width: 1000px;
+      margin: 0 auto 70px;
+      padding: 24px 28px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+    .trust-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .trust-badge-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--bg-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      flex-shrink: 0;
+    }
+    .trust-badge-text strong {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--navy);
+    }
+    .trust-badge-text span {
+      font-size: 0.76rem;
+      color: var(--ink-faint);
     }
 
     /* Methodology Section */
@@ -1008,6 +1128,8 @@
       background: #FFFFFF;
       font-family: var(--font-sans);
       color: var(--ink);
+      user-select: none;
+      -webkit-user-select: none;
     }
     .preview-watermark-note {
       background: var(--bg-subtle);
@@ -1018,6 +1140,9 @@
       font-weight: 600;
       margin-bottom: 28px;
       border-radius: 0 4px 4px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     /* Modal Editorial Typography */
@@ -1140,6 +1265,22 @@
       .stats-strip {
         grid-template-columns: repeat(2, 1fr);
       }
+      .free-specimen-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+      }
+      .specimen-actions {
+        width: 100%;
+        flex-direction: column;
+      }
+      .btn-specimen-test, .btn-specimen-dl {
+        width: 100%;
+        justify-content: center;
+      }
+      .trust-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
       .bundle-banner {
         grid-template-columns: 1fr;
         padding: 30px 22px;
@@ -1182,8 +1323,11 @@
         </div>
       </a>
       <div class="header-cta">
+        <button class="btn-header-demo" onclick="openFreeBookDemo()">
+          Tester la Démo Gratuite
+        </button>
         <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-header-bundle">
-          Pack Intégral 28 Ouvrages (79 €)
+          Pack Intégral (79 €)
         </a>
       </div>
     </div>
@@ -1220,6 +1364,26 @@
         <div class="stat-item">
           <div class="stat-num">100%</div>
           <div class="stat-label">Rangs A et B Conformes</div>
+        </div>
+      </div>
+
+      <!-- Free Specimen Lead Magnet -->
+      <div class="free-specimen-box">
+        <div class="specimen-left">
+          <h3>📖 Spécimen de Démonstration Offert</h3>
+          <p>
+            Testez dès maintenant le Tome 02 (Neurologie) dans le visualiseur officiel, ou téléchargez le fichier Word .docx pour vérifier la mise en page et les tableaux sur votre iPad ou ordinateur.
+          </p>
+        </div>
+        <div class="specimen-actions">
+          <button class="btn-specimen-test" onclick="openFreeBookDemo()">
+            <svg fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Tester en Direct
+          </button>
+          <a href="EDN-02-Neurologie-Extrait-Offert.docx" download class="btn-specimen-dl">
+            <svg fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Télécharger Word (.docx)
+          </a>
         </div>
       </div>
 
@@ -1316,6 +1480,46 @@
       </div>
     </section>
 
+    <!-- Trust & Security Strip -->
+    <section class="trust-strip">
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Paiement Sécurisé SSL</strong>
+          <span>Gumroad / Cartes & PayPal</span>
+        </div>
+      </div>
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Livraison Instantanée</strong>
+          <span>Accès direct après achat</span>
+        </div>
+      </div>
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Zéro Hallucination</strong>
+          <span>Source 100% Collèges d'Enseignants</span>
+        </div>
+      </div>
+      <div class="trust-badge-item">
+        <div class="trust-badge-icon">
+          <svg fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </div>
+        <div class="trust-badge-text">
+          <strong>Mises à Jour Incluses</strong>
+          <span>Édition actualisée 2026</span>
+        </div>
+      </div>
+    </section>
+
     <!-- Methodology Strip -->
     <section class="method-strip">
       <div class="method-card">
@@ -1364,7 +1568,7 @@
           <h2 class="catalog-title">Volumes Individuels par Spécialité</h2>
           <div class="catalog-count">Consultez la démo interactive de chaque volume ou achetez à l'unité (9,99 €)</div>
         </div>
-        <input type="text" id="searchInput" class="search-box" placeholder="Rechercher une spécialité..." oninput="filterBooks()">
+        <input type="text" id="searchInput" class="search-box" placeholder="Rechercher une spécialité ou un item..." oninput="filterBooks()">
       </div>
 
       <!-- Category Filter Tabs -->
@@ -1450,7 +1654,7 @@
           <h2 id="modalTitle">Titre du volume</h2>
           <div class="preview-author-sub">
             <img src="logo.jpg" alt="Ethan Cole">
-            <span>Édition Officielle Ethan Cole · Collèges d'Enseignants</span>
+            <span id="modalCollegeSub">Édition Officielle Ethan Cole · Collèges d'Enseignants</span>
           </div>
         </div>
         <div class="preview-actions-top">
@@ -1480,9 +1684,12 @@
       </div>
       <div>
         <h4 style="font-family: var(--font-serif); color: var(--navy); margin-bottom: 8px;">Garantie & Support</h4>
-        <p style="font-size: 0.85rem; color: var(--ink-muted); line-height: 1.5;">
+        <p style="font-size: 0.85rem; color: var(--ink-muted); line-height: 1.5; margin-bottom: 12px;">
           Paiement sécurisé et téléchargement instantané opérés via Gumroad. En cas de question sur vos accès, contactez directement l'auteur.
         </p>
+        <div style="font-size: 0.82rem; color: var(--navy); font-weight: 600;">
+          🔒 Infrastructure chiffrée SSL 256-bit & Protection des données.
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1494,6 +1701,7 @@
   <!-- Logic & Scripts -->
   <script>
     let booksData = [];
+    let freeDemoData = null;
     let currentCategory = 'all';
 
     // Header & Sticky Bar Scroll Behavior
@@ -1515,13 +1723,22 @@
       }
     });
 
+    // Load Catalog Data
     fetch('books_data.json')
       .then(res => res.json())
       .then(data => {
         booksData = data;
         renderBooks(data);
       })
-      .catch(err => console.error('Erreur chargement:', err));
+      .catch(err => console.error('Erreur chargement catalogue:', err));
+
+    // Pre-load Free Demo Data
+    fetch('free_book_demo.json')
+      .then(res => res.json())
+      .then(data => {
+        freeDemoData = data;
+      })
+      .catch(err => console.error('Erreur chargement spécimen:', err));
 
     function renderBooks(books) {
       const grid = document.getElementById('booksGrid');
@@ -1571,11 +1788,74 @@
       parent.classList.toggle('open');
     }
 
+    // Open Full Free Specimen Demonstration
+    function openFreeBookDemo() {
+      if (!freeDemoData) {
+        openPreview(2);
+        return;
+      }
+
+      document.getElementById('modalTitle').innerText = freeDemoData.title;
+      document.getElementById('modalCollegeSub').innerText = `${freeDemoData.college} · Spécimen Gratuit`;
+      document.getElementById('modalPriceLabel').innerText = '9,99 €';
+      document.getElementById('modalBuyLink').href = 'https://edgettrading.gumroad.com/l/lnddgc';
+
+      const body = document.getElementById('modalBody');
+      let contentHtml = '';
+
+      if (freeDemoData.content) {
+        freeDemoData.content.forEach(item => {
+          if (item.type === 'chapter') {
+            contentHtml += `<div class="doc-chapter">${item.text}</div>`;
+          } else if (item.type === 'h3') {
+            contentHtml += `<div class="doc-h3">${item.text}</div>`;
+          } else if (item.type === 'bullet') {
+            contentHtml += `<li class="doc-bullet">${item.text}</li>`;
+          } else {
+            contentHtml += `<p style="margin-bottom: 14px; color: var(--ink-muted); line-height: 1.6;">${item.text}</p>`;
+          }
+        });
+      }
+
+      if (freeDemoData.tables && freeDemoData.tables.length > 0) {
+        contentHtml += `<div class="doc-chapter" style="margin-top: 32px;">Tableau Clinique de Consensus (Collège des Enseignants de Neurologie) :</div>`;
+        freeDemoData.tables.forEach(tbl => {
+          contentHtml += `<div class="doc-table-wrap"><table class="doc-table">`;
+          tbl.forEach((row, r_idx) => {
+            contentHtml += `<tr>`;
+            row.forEach(cell => {
+              if (r_idx === 0) {
+                contentHtml += `<th>${cell}</th>`;
+              } else {
+                contentHtml += `<td>${cell.replace(/\\n/g, '<br>')}</td>`;
+              }
+            });
+            contentHtml += `</tr>`;
+          });
+          contentHtml += `</table></div>`;
+        });
+      }
+
+      body.innerHTML = `
+        <div class="preview-watermark-note">
+          <span>🌟 <strong>Chapitre Spécimen Démo Complet</strong> — Conforme Collège des Enseignants (CEN).</span>
+          <a href="EDN-02-Neurologie-Extrait-Offert.docx" download style="color: var(--navy); font-weight: 700; text-decoration: underline; font-size: 0.82rem;">
+            Télécharger ce chapitre en Word .docx
+          </a>
+        </div>
+        ${contentHtml}
+      `;
+
+      document.getElementById('previewModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
     function openPreview(bookNum) {
       const b = booksData.find(x => x.n === bookNum);
       if (!b) return;
 
       document.getElementById('modalTitle').innerText = `${b.title} — Extrait Officiel`;
+      document.getElementById('modalCollegeSub').innerText = 'Édition Officielle Ethan Cole · Collèges d\'Enseignants';
       document.getElementById('modalPriceLabel').innerText = `${b.ebook} €`;
       
       const gumroadLink = b.gumroad_url || `https://edgettrading.gumroad.com/l/${b.slug}`;
@@ -1623,7 +1903,7 @@
 
       body.innerHTML = `
         <div class="preview-watermark-note">
-          Document protégé — Démo interactive certifiée conforme aux Collèges d'Enseignants.
+          <span>🔒 Document protégé — Démo interactive certifiée conforme aux Collèges d'Enseignants.</span>
         </div>
         ${contentHtml}
       `;
@@ -1637,7 +1917,7 @@
       document.body.style.overflow = '';
     }
 
-    // Protection anti-copie & raccourcis dans le visualiseur
+    // Sécurité & Protection du contenu visualisé
     window.addEventListener('contextmenu', function(e) {
       if (document.getElementById('previewModal').classList.contains('active')) {
         e.preventDefault();
@@ -1649,7 +1929,7 @@
         closePreview();
       }
       if (document.getElementById('previewModal').classList.contains('active')) {
-        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p' || e.key === 'u')) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p' || e.key === 'u' || e.key === 'a')) {
           e.preventDefault();
         }
       }
