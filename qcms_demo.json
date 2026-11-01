@@ -1,59 +1,27 @@
 [
   {
-    "id": 1,
-    "specialty": "Urgences & Réanimation",
-    "question": "En ce qui concerne les médicaments utilisables pendant la réanimation d'un arrêt cardio-circulatoire (ACR), quelle(s) est (sont) la (les) proposition(s) exacte(s) ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "L'adrénaline est injectée à la dose de 5 mg IVD toutes les 3 à 5 minutes."
-      },
-      {
-        "id": "B",
-        "text": "L'amiodarone est indiquée dès le premier choc électrique externe en cas de fibrillation ventriculaire."
-      },
-      {
-        "id": "C",
-        "text": "L'amiodarone est administrée à la dose de 300 mg IVD après le 3e choc électrique externe réfractaire."
-      },
-      {
-        "id": "D",
-        "text": "L'atropine est systématiquement recommandée en cas d'asystolie selon les recommandations actuelles de l'ERC."
-      },
-      {
-        "id": "E",
-        "text": "Le bicarbonate de sodium est systématique dès la 5e minute de réanimation."
-      }
-    ],
-    "correct_answers": [
-      "C"
-    ],
-    "explanation": "Selon les recommandations internationales ERC / SFMU pour la réanimation de l'arrêt cardiaque chez l'adulte :\n- **C est VRAI** : En cas de fibrillation ventriculaire (FV) ou tachycardie ventriculaire sans pouls (TVSP) réfractaire, l'amiodarone est administrée à la dose de 300 mg IVD (diluée dans du sérum glucosé à 5%) après le 3e choc, suivie d'une seconde dose de 150 mg après le 5e choc si le rythme reste choquable.\n- **A est FAUX** : L'adrénaline s'administre à la dose de 1 mg IVD (et non 5 mg !) toutes les 3 à 5 minutes (après le 3e choc pour les rythmes choquables, d'emblée pour l'asystolie/AESP).\n- **B est FAUX** : L'amiodarone n'est jamais injectée au 1er choc, mais après le 3e choc.\n- **D est FAUX** : L'atropine n'est plus recommandée dans l'algorithme universel de l'asystolie depuis les recommandations ERC 2010.\n- **E est FAUX** : L'alcalinisation par bicarbonate est réservée aux intoxications aux stabilisants de membrane ou à l'hyperkaliémie menaçante avérée, jamais systématique."
-  },
-  {
-    "id": 2,
     "specialty": "Ophtalmologie",
-    "question": "Quelles structures anatomiques appartiennent au segment postérieur du globe oculaire ?",
+    "question": "Quelles structures anatomiques appartiennent au segment postérieur de l'œil ?",
     "choices": [
       {
         "id": "A",
-        "text": "Le corps vitré"
+        "text": "Le vitrée"
       },
       {
         "id": "B",
-        "text": "La chambre postérieure"
+        "text": "La chambre postérieure."
       },
       {
         "id": "C",
-        "text": "La tête du nerf optique (papille)"
+        "text": "Le nerf optique"
       },
       {
         "id": "D",
-        "text": "La rétine neurosensorielle"
+        "text": "La rétine"
       },
       {
         "id": "E",
-        "text": "Les vaisseaux rétiniens centraux"
+        "text": "Les vaisseaux rétiniens."
       }
     ],
     "correct_answers": [
@@ -62,263 +30,1721 @@
       "D",
       "E"
     ],
-    "explanation": "Le bulbe oculaire est scindé en deux segments séparés par le cristallin et son appareil zonulaire :\n- **A, C, D, E sont VRAIS** : Le segment postérieur s'étend en arrière du cristallin et comprend la cavité vitréenne (remplie du corps vitré), la rétine, la choroïde, la vascularisation rétinienne et la papille optique.\n- **B est FAUX (Piège Classique)** : Malgré son qualificatif, la chambre postérieure appartient au SEGMENT ANTÉRIEUR de l'œil ! Elle est située entre la face postérieure de l'iris et la face antérieure du cristallin, et contient de l'humeur aqueuse (et non du vitré)."
+    "explanation": "Le globe oculaire est divisé en deux segments séparés par le cristallin et son appareil zonulaire : le segment antérieur en avant et le segment postérieur en arrière.\n\n- **A, C, D, E** — Les propositions A, C, D et E sont correctes car le corps vitré, la rétine, la vascularisation rétinienne ainsi que la tête du nerf optique (papille) sont tous situés en arrière de ce diaphragme cristallinien dans la cavité postérieure.\n- **B** — Le piège classique réside dans le distracteur B : la chambre postérieure appartient au segment antérieur de l'œil, étant délimitée en avant par l'iris et en arrière par le cristallin, et contenant de l'humeur aqueuse et non du vitré. Ne confondez donc pas la chambre postérieure, qui est une sous-division du segment antérieur, avec le segment postérieur du globe oculaire.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 1
   },
   {
-    "id": 3,
-    "specialty": "Neurologie & Endocrinologie",
-    "question": "Concernant la prise en charge thérapeutique du diabète de type 2 et les antidiabétiques oraux en cas d'insuffisance rénale terminale, quelle est l'affirmation correcte ?",
+    "specialty": "Ophtalmologie",
+    "question": "Quelles structures anatomiques appartiennent au segment postérieur de l'œil?",
     "choices": [
       {
         "id": "A",
-        "text": "La metformine peut être poursuivie à demi-dose chez les patients hémodialysés."
+        "text": "le vitré"
       },
       {
         "id": "B",
-        "text": "La sitagliptine ne nécessite aucune adaptation posologique quel que soit le DFG."
+        "text": "la chambre postérieure"
       },
       {
         "id": "C",
-        "text": "La linagliptine est le seul inhibiteur de la DPP-4 ne nécessitant aucune adaptation rénale de posologie."
+        "text": "le nerf optique"
       },
       {
         "id": "D",
-        "text": "Les inhibiteurs du SGLT2 (gliflozines) sont indiqués pour baisser la glycémie même avec un DFG < 15 mL/min."
+        "text": "la rétine"
       },
       {
         "id": "E",
-        "text": "Les sulfamides hypoglycémiants de longue durée d'action restent le traitement de première intention en dialyse."
+        "text": "les vaisseaux rétiniens"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "Sur le plan anatomique, le bulbe oculaire est subdivisé en deux grands segments séparés par le cristallin et son appareil zonulo-capsulaire.\n\n- **A, C, D, E** — Le segment postérieur s'étend en arrière du cristallin jusqu'au nerf optique et comprend la cavité vitréenne remplie du corps vitré (A), la rétine neurosensorielle (D) accompagnée de ses vaisseaux (E), la choroïde ainsi que la papille et les fibres du nerf optique (C), validant ainsi ces propositions.\n- **B** — Le piège classique réside dans le distracteur B : bien que qualifiée de « postérieure », la chambre postérieure fait partie intégrante du segment antérieur de l'œil, étant située entre la face postérieure de l'iris et la face antérieure du cristallin, et remplie d'humeur aqueuse et non de vitré. Confondre « chambre postérieure » et « segment postérieur » est une erreur fréquente de terminologie anatomique.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 2
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Que comporte l'examen ophtalmologique de base ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "un interrogatoire"
+      },
+      {
+        "id": "B",
+        "text": "June mesure d'acuité visuelle de près"
+      },
+      {
+        "id": "C",
+        "text": "une mesure d'acuité visuelle de loin"
+      },
+      {
+        "id": "D",
+        "text": "un examen par la lampe à fente"
+      },
+      {
+        "id": "E",
+        "text": "un examen du fond d'œil"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "L'examen ophtalmologique de base repose sur une démarche sémiologique standardisée visant à évaluer la fonction visuelle et l'intégrité anatomique des segments antérieur et postérieur de l'œil.\n\n- **C** — Les cinq items constituent l'ensemble des étapes incontournables de cette évaluation systématique en pratique courante.\n- **A** — L'interrogatoire (A) oriente le diagnostic étiologique et recherche les antécédents, tandis que la mesure de l'acuité visuelle de loin (C) et de près (B) quantifie précisément la fonction maculaire et réfractive de chaque œil.\n- **D** — L'examen à la lampe à fente ou biomicroscopie (D) permet une analyse optique détaillée sous fort grossissement des annexes et du segment antérieur.\n- **E** — Enfin, l'examen du fond d'œil (E), réalisé après dilatation ou sans préparation, explore la rétine, la papille et le vitré. Le piège classique de ce QCM consiste à penser à tort que l'acuité de près ou le fond d'œil relèvent d'explorations spécialisées secondaires, alors qu'ils font partie intégrante de l'examen de routine minimal.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 3
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Que visualisez-vous à la lampe à fente?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "conjonctive"
+      },
+      {
+        "id": "B",
+        "text": "cornée"
+      },
+      {
+        "id": "C",
+        "text": "chambre antérieure"
+      },
+      {
+        "id": "D",
+        "text": "1 iris"
+      },
+      {
+        "id": "E",
+        "text": "cristallin"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "La lampe à fente (biomicroscope) associe un système optique grossissant et une fente lumineuse focalisée permettant d'obtenir des coupes optiques des milieux transparents et des surfaces oculaires. Toutes les propositions (A, B, C, D, E) sont correctes car cet examen explore l'ensemble du segment antérieur, depuis la conjonctive bulbaire et palpébrale jusqu'à la face postérieure du cristallin, en passant par les couches cornéennes, l'humeur aqueuse de la chambre antérieure et le stroma irien.\n\n- **A** — Le piège classique pour la conjonctive (A) est d'oublier qu'elle s'examine à faible grossissement en éclairage diffus avant de focaliser la fente.\n- **C** — Pour la chambre antérieure (C), l'erreur fréquente est de croire qu'on ne peut pas l'observer à l'état normal, alors que la coupe optique permet précisément d'en apprécier la profondeur et de rechercher un effet Tyndall inflammatoire.\n- **D** — Enfin, le piège pour l'iris (D) et le cristallin (E) réside dans la confusion entre l'examen direct du segment antérieur, réalisable sans lentille additionnelle, et l'exploration du segment postérieur ou de l'angle irido-cornéen qui exigerait un verre à trois miroirs ou une lentille de gonioscopie.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 4
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Quel(s) examen(s) privilégié(s) renseigne (ent) sur l'état de transparence du cristallin?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Examen au biomicroscope"
+      },
+      {
+        "id": "B",
+        "text": "Tonométrie oculaire"
+      },
+      {
+        "id": "C",
+        "text": "Angiographie fluorescéinique"
+      },
+      {
+        "id": "D",
+        "text": "Radiographie des orbites"
+      },
+      {
+        "id": "E",
+        "text": "Echographie A"
+      }
+    ],
+    "correct_answers": [
+      "A"
+    ],
+    "explanation": "L'évaluation de la transparence du cristallin repose sur l'examen direct des milieux transparents de l'œil par une source lumineuse focalisée et grossissante. L'examen à la lampe à fente (biomicroscope) est l'examen de référence en consultation car il permet une coupe optique fine du cristallin pour localiser et caractériser toute perte de transparence ou opacité (cataracte).\n\n- **B** — La tonométrie oculaire (B) représente un piège fréquent en confondant transparence et pression intraoculaire (dépistage du glaucome).\n- **C** — L'angiographie à la fluorescéine (C) est un examen vasculaire ciblé sur la rétine et la choroïde, totalement inadapté à l'évaluation cristallinienne.\n- **D** — La radiographie des orbites (D) sert à la recherche de traumatismes ou de corps étrangers métalliques radio-opaques, sans résolution sur les tissus mous avasculaires.\n- **E** — Enfin, l'échographie A (E) sert à la biométrie pour mesurer la longueur axiale du globe et calculer la puissance d'un implant, mais ne renseigne pas directement sur la clarté optique du cristallin.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 5
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Dans quelle(s) affection(s) ne doit on jamais prescrire de collyre atropinique",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Iridocyclite"
+      },
+      {
+        "id": "B",
+        "text": "Kératite herpétique"
+      },
+      {
+        "id": "C",
+        "text": "glaucome aigu angle ferme"
+      },
+      {
+        "id": "D",
+        "text": "Glaucome chronique à angle ouvert"
+      },
+      {
+        "id": "E",
+        "text": "Glaucome malin"
       }
     ],
     "correct_answers": [
       "C"
     ],
-    "explanation": "Points clés du Collège de Thérapeutique & Référentiel Néphrologie R2C :\n- **C est VRAI** : La linagliptine a une élimination biliaire/fécale prédominante (> 90%). C'est le SEUL inhibiteur de la DPP-4 (gliptine) utilisable sans aucune modification de dose, même en cas d'insuffisance rénale sévère ou d'hémodialyse.\n- **A est FAUX** : La metformine est formellement contre-indiquée si DFG < 30 mL/min/1.73m² (et à réduire si DFG < 45) en raison du risque mortel d'acidose lactique.\n- **B est FAUX** : La sitagliptine s'élimine à 80% par voie rénale et impose une réduction de dose par 2 ou par 4 selon le DFG.\n- **D est FAUX** : L'efficacité hypoglycémiante des gliflozines s'effondre avec la baisse du DFG ; elles sont contre-indiquées en initiation pour le contrôle glycémique si DFG < 20-30 mL/min.\n- **E est FAUX** : Les sulfamides font courir un risque majeur d'hypoglycémie prolongée chez l'insuffisant rénal."
+    "explanation": "Les collyres atropiniques sont des parasympatholytiques induisant une mydriase et une cycloplégie par relâchement du sphincter irien.\n\n- **C** — Dans le glaucome aigu par fermeture de l'angle (réponse C), la mydriase provoque un refoulement et un épaississement de la racine de l'iris qui obstrue mécaniquement le trabéculum, ce qui aggrave brutalement le blocage pupillaire et déclenche une hypertonie oculaire majeure engageant le pronostic visuel.\n- **A** — Pour l'iridocyclite (A), le piège est d'y voir un risque hypertonique alors que l'atropine est au contraire le traitement clé pour lever le spasme ciliaire et prévenir les synéchies postérieures.\n- **B** — Dans la kératite herpétique (B), le piège réside dans la confusion avec les corticoïdes locaux formellement contre-indiqués, l'atropine restant quant à elle utile à visée antalgique.\n- **D** — Concernant le glaucome chronique à angle ouvert (D), le piège est d'assimiler les deux types de glaucome, l'angle restant ici anatomiquement ouvert sans risque d'occlusion aiguë par mydriase.\n- **E** — Enfin, pour le glaucome malin (E), le piège est de redouter la dilatation alors que les cycloplégiques comme l'atropine constituent paradoxalement le traitement de choix pour retendre la zonule et refouler le bloc irido-cristallinien vers l'arrière.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 6
   },
   {
-    "id": 4,
+    "specialty": "Ophtalmologie",
+    "question": "Quels structures anatomiques appartiennent au serment postérieur de l'œil",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le vitré"
+      },
+      {
+        "id": "B",
+        "text": "La chambre postérieure"
+      },
+      {
+        "id": "C",
+        "text": "Le nerf optique"
+      },
+      {
+        "id": "D",
+        "text": "La rétine"
+      },
+      {
+        "id": "E",
+        "text": "Les vaisseaux rétiniens"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "L'œil est anatomiquement divisé en deux segments distincts par le cristallin et la zonule de Zinn, qui constituent la frontière séparant le segment antérieur du segment postérieur.\n\n- **A, C** — Le segment postérieur correspond à l'ensemble de la cavité rétro-cristallinienne, logeant le corps vitré, la rétine, les vaisseaux rétiniens ainsi que la tête du nerf optique, ce qui confirme l'exactitude des propositions A, C, D et E.\n- **B, E** — L'unique distracteur est la proposition B, dont le piège repose sur une confusion terminologique classique entre « segment » et « chambre ». En effet, malgré l'adjectif « postérieure », la chambre postérieure est située entre la face postérieure de l'iris et la face antérieure du cristallin, contient de l'humeur aqueuse et appartient donc au segment antérieur de l'œil.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 7
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Que comporte l'examen ophtalmologique de base ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Un interrogatoire"
+      },
+      {
+        "id": "B",
+        "text": "Une mesure d'acuité visuelle de près"
+      },
+      {
+        "id": "C",
+        "text": "Une mesure d'acuité visuelle de loin"
+      },
+      {
+        "id": "D",
+        "text": "Un examen par la lampe à fente"
+      },
+      {
+        "id": "E",
+        "text": "Un examen du fond d'œil"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "L'examen ophtalmologique de base repose sur une démarche clinique et instrumentale rigoureuse explorant l'appareil visuel de façon fonctionnelle et anatomique. Les cinq propositions (A, B, C, D et E) sont toutes correctes car elles constituent les étapes indissociables d'une consultation ophtalmologique standard.\n\n- **A** — Le piège de l'interrogatoire (A) est de le négliger au profit des appareils de mesure, alors qu'il est indispensable pour caractériser les antécédents, le terrain et la cinétique des symptômes. Pour l'acuité visuelle (B et C), l'erreur fréquente consiste à ne mesurer que la vision de loin en omettant la vision de près (échelle de Parinaud), alors que leur évaluation conjointe est requise pour dépister les troubles accommodatifs ou maculaires.\n- **D** — Le piège de la lampe à fente (D) est de la juger trop technique, alors que la biomicroscopie est l'outil fondamental d'inspection du segment antérieur et des annexes.\n- **E** — Enfin, le piège du fond d'œil (E) est de le considérer à tort comme un examen spécialisé de deuxième intention, alors que l'analyse du pôle postérieur et de la papille fait partie intégrante de tout bilan ophtalmologique initial.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 8
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "Que visualisez-vous à la lampe a fente ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Conjonctivite"
+      },
+      {
+        "id": "B",
+        "text": "Cornée"
+      },
+      {
+        "id": "C",
+        "text": "Chambre antérieure"
+      },
+      {
+        "id": "D",
+        "text": "Iris"
+      },
+      {
+        "id": "E",
+        "text": "Cristallin"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "La lampe à fente (biomicroscope) associe un système optique grossissant à un faisceau lumineux orientable permettant une coupe optique et une analyse directe des tissus du segment antérieur de l'œil.\n\n- **E** — L'ensemble des propositions est retenu car cet examen explore séquentiellement toutes les structures superficielles et profondes situées en avant du vitré antérieur. Enfin, pour l'item E, le piège classique est d'attribuer l'évaluation du cristallin au seul fond d'œil, alors que ses différentes couches et ses opacités sont examinées au premier plan par biomicroscopie.\n- **A** — Concernant l'item A, le piège repose sur l'emploi du terme pathologique « conjonctivite » au lieu du terme anatomique « conjonctive », mais la lampe à fente en objective directement les manifestations physiques telles que l'injection vasculaire, les follicules ou les sécrétions.\n- **B** — Pour l'item B, le piège est de méconnaître l'analyse de l'épaisseur cornéenne rendue possible par la fente lumineuse pour dépister ulcères et œdèmes.\n- **C** — Pour l'item C, le piège consiste à croire la chambre antérieure inaccessible à la vue, alors que le faisceau permet d'y détecter un phénomène de Tyndall, un hyphéma ou un hypopyon.\n- **D** — Pour l'item D, le piège est d'oublier l'examen du diaphragme irien, dont la surface, les synéchies et la néovascularisation sont visualisées avec précision.",
+    "difficulty": "medium",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 9
+  },
+  {
+    "specialty": "Ophtalmologie",
+    "question": "L'appareil accommodatif de l'œil comprend :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'iris"
+      },
+      {
+        "id": "B",
+        "text": "Le cristallin"
+      },
+      {
+        "id": "C",
+        "text": "La zonule"
+      },
+      {
+        "id": "D",
+        "text": "La macula"
+      },
+      {
+        "id": "E",
+        "text": "Le muscle ciliaire"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanation": "L'accommodation repose sur une synergie neuro-biomécanique associant la variation de courbure cristallinienne et la syncinésie d'accommodation-convergence-myosis.\n\n- **A, B, C, E** — Les réponses A, B, C et E sont correctes car l'appareil effecteur comprend le complexe moteur muscle ciliaire-zonule-cristallin ainsi que l'iris, dont la constriction pupillaire améliore la profondeur de champ optique.\n- **A** — Le piège de l'iris (A) réside dans l'oubli de la triade accommodative, réduisant faussement l'accommodation à sa seule composante zonulo-cristallinienne.\n- **B** — Pour le cristallin (B), la zonule (C) et le muscle ciliaire (E), l'écueil classique est de méconnaître le mécanisme de Helmholtz où la contraction ciliaire détend paradoxalement la zonule pour laisser bomber le cristallin.\n- **D** — Enfin, le piège de la macula (D), unique distracteur exclu, consiste à confondre la zone rétinienne sensorielle dédiée à l'acuité visuelle centrale avec les structures anatomiques actives de la mise au point optique.",
+    "difficulty": "easy",
+    "tags": [
+      "Ophtalmologie",
+      "R2C"
+    ],
+    "id": 10
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "En ce qui concerne les médicaments utilisables pendant la réanimation d'un arrêt cardiaque, quelle(s) affirmation(s) est(sont) correcte(s)?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le médicament de choix en cas de rythme non choquable est l'amiodarone."
+      },
+      {
+        "id": "B",
+        "text": "La dose initiale d'adrénaline est de 5 mg."
+      },
+      {
+        "id": "C",
+        "text": "La lidocaïne est l'alternative proposée à l'amiodarone lorsque celle-ci n'est pas disponible"
+      },
+      {
+        "id": "D",
+        "text": "Il faut administrer systématiquement des bicarbonates de sodium lorsque la réanimation dure plus de 5 minutes."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "Dans la prise en charge de l'arrêt cardio-circulatoire, les antiarythmiques sont indiqués uniquement lors de la réanimation spécialisée des rythmes choquables réfractaires (FV ou TV sans pouls) afin de stabiliser le potentiel de membrane myocardique et faciliter la défibrillation.\n\n- **C** — La proposition C est exacte car la lidocaïne constitue l'alternative de référence recommandée à l'amiodarone en cas d'indisponibilité de cette dernière (administrée après le 3e choc).\n- **A** — Le piège de l'item A repose sur l'indication rythmique : l'amiodarone est formellement proscrite dans les rythmes non choquables (asystolie, DEM), où seul un vasopresseur comme l'adrénaline est indiqué.\n- **B** — Le piège de l'item B concerne la posologie, la dose standard d'adrénaline étant de 1 mg IV (répétée toutes les 3 à 5 minutes) et non de 5 mg, qui constitue un surdosage majeur délétère.\n- **D** — Enfin, le piège de l'item D réside dans la notion d'administration systématique : les bicarbonates de sodium ne doivent jamais être injectés en routine après 5 minutes de RCP, leur indication étant strictement réservée à des situations spécifiques comme l'hyperkaliémie menaçante ou l'intoxication aux antidépresseurs tricycliques.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 11
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "L'Advanced Life Support (ALS) comprend:",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'immobilisation d'une fracture."
+      },
+      {
+        "id": "B",
+        "text": "L'administration d'oxygène."
+      },
+      {
+        "id": "C",
+        "text": "L'intubation trachéale et la sédation-analgésie."
+      },
+      {
+        "id": "D",
+        "text": "Le massage cardiaque externe."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "L'arrêt cardio-circulatoire entraîne une interruption de la perfusion des organes vitaux et une anoxie tissulaire rapide nécessitant une prise en charge échelonnée.\n\n- **C** — L'Advanced Life Support (ALS), ou réanimation spécialisée, repose sur des gestes techniques médicaux invasifs tels que le contrôle avancé des voies aériennes par intubation trachéale associé à la sédation-analgésie et l'administration de médicaments d'urgence, ce qui valide la proposition C.\n- **A** — Le piège de la proposition A est d'introduire un geste de traumatologie sans aucun rapport avec les priorités vitales de la réanimation cardiaque.\n- **B** — La proposition B constitue un piège fréquent, car la simple oxygénothérapie passive relève des gestes de secours de base et ne constitue pas un geste spécialisé de contrôle des voies aériennes en ALS.\n- **D** — Enfin, le piège de la proposition D réside dans la confusion classique entre les étapes de la chaîne de survie : le massage cardiaque externe est le pilier du Basic Life Support (BLS, réanimation de base) et non une technique avancée spécifique à l'ALS.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 12
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Le Basic Life Support (BLS) inclut:",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'intubation orotrachéale."
+      },
+      {
+        "id": "B",
+        "text": "La défibrillation semi-automatique."
+      },
+      {
+        "id": "C",
+        "text": "La pose de voie veineuse."
+      },
+      {
+        "id": "D",
+        "text": "La cardioversion électrique."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Le Basic Life Support (BLS) ou réanimation cardiopulmonaire de base vise à maintenir une perfusion minimale et à lever précocement un trouble du rythme choquable avant l’arrivée d’une équipe médicalisée.\n\n- **B** — La réponse B est exacte car l’utilisation d’un défibrillateur automatisé ou semi-automatique (DAE/DSA) fait partie intégrante du BLS accessible à tout sauveteur dès la reconnaissance de l'arrêt.\n- **A, C** — Les options A et C sont des pièges classiques confondant réanimation de base et réanimation médicalisée avancée (Advanced Life Support, ALS) : l’intubation trachéale et la pose d'une voie veineuse sont des gestes invasifs réservés à l’ALS.\n- **D** — Enfin, l’option D représente un piège sémantique entre défibrillation et cardioversion : la cardioversion électrique délivre un choc synchronisé sur l’onde R chez un patient avec pouls conservé, ce qui est strictement impossible et inadapté lors d'un arrêt cardiaque en BLS.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 13
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Le facteur le plus déterminant pour la survie en arrêt cardiaque préhospitalier est :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La rapidité de transport à l'hôpital."
+      },
+      {
+        "id": "B",
+        "text": "La qualité du massage cardiaque et la défibrillation précoce."
+      },
+      {
+        "id": "C",
+        "text": "La mise sous oxygène."
+      },
+      {
+        "id": "D",
+        "text": "La mise en PLS."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "L’arrêt cardio-circulatoire entraîne une interruption brutale du débit cardiaque et une anoxie tissulaire rapide, causant des lésions cérébrales irréversibles dès 3 à 5 minutes.\n\n- **B** — La bonne réponse est B car le massage cardiaque externe de qualité maintient un débit de perfusion coronaire et cérébral minimal, tandis que la défibrillation précoce traite le trouble du rythme le plus fréquent (la fibrillation ventriculaire), pour lequel chaque minute perdue réduit la survie de 10 %.\n- **A** — Le piège de la proposition A réside dans le fait qu’un transport précipité sans réanimation immédiate sur place prolonge le temps d'anoxie sans perfusion efficace, scellant un pronostic neurologique sombre.\n- **C** — Le piège de la proposition C est de privilégier l’apport d’oxygène gazeux alors qu’en l'absence de circulation mécanique, cet oxygène ne peut être acheminé aux organes vitaux.\n- **D** — Enfin, le piège de la proposition D consiste à confondre la prise en charge d'un coma avec respiration conservée et celle d'un arrêt cardiaque avéré, la PLS étant strictement contre-indiquée puisqu'elle retarde le début des compressions thoraciques.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 14
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Dans l'arrêt cardiaque (AC), le Bicarbonate de sodium est réservé",
+    "choices": [
+      {
+        "id": "A",
+        "text": "l'AC lié à une hypokaliémie"
+      },
+      {
+        "id": "B",
+        "text": "l'AC lie à l'intoxication par les benzodiazépines"
+      },
+      {
+        "id": "C",
+        "text": "l'AC lie à l'hypercalcémie"
+      },
+      {
+        "id": "D",
+        "text": "Toutes sont fausses"
+      }
+    ],
+    "correct_answers": [
+      "D"
+    ],
+    "explanation": "Le bicarbonate de sodium n'est pas recommandé en routine dans la réanimation cardiopulmonaire, car son administration alcalinise le sang au détriment d'une acidose intracellulaire paradoxale et d'une baisse de l'efficacité des catécholamines.\n\n- **A, B, C, D** — Il est strictement réservé à des situations spécifiques, à savoir l'arrêt cardiaque secondaire à une hyperkaliémie menaçante ou à une intoxication par les antidépresseurs tricycliques (effet stabilisant de membrane).\n\n- **C, D** — La proposition D est donc la bonne réponse car aucune des indications proposées n'est valide.\n- **A** — L'item A est un piège classique inversant le trouble ionique : l'indication électrolytique formelle est l'hyperkaliémie et non l'hypokaliémie.\n- **B** — L'item B est erroné car l'antidote d'une intoxication par les benzodiazépines est le flumazénil, sans place pour l'alcalinisation.\n- **C** — Enfin, l'item C représente un piège confondant les dyskaliémies avec les troubles du métabolisme calcique, pour lesquels le bicarbonate n'a aucune indication dans l'arrêt cardiaque.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 15
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Dans l'arrêt cardiaque, la défibrillation précoce a permis d'améliorer la survie (entre 2006 et 2010)",
+    "choices": [
+      {
+        "id": "A",
+        "text": "De 10% à 20%"
+      },
+      {
+        "id": "B",
+        "text": "De 23% à 30 %"
+      },
+      {
+        "id": "C",
+        "text": "De 50% à 80%"
+      },
+      {
+        "id": "D",
+        "text": "De 80% à 100 %"
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "La défibrillation précoce permet de restaurer un rythme cardiaque sinusal efficace en interrompant l'anarchie électrique d'un rythme choquable avant la survenue de lésions cérébrales irréversibles.\n\n- **B** — La réponse B est correcte car les données épidémiologiques historiques et registres d'évaluation de la chaîne de survie entre 2006 et 2010 ont documenté un gain de survie passant d'environ 23 % à 30 % grâce au déploiement des défibrillateurs automatisés externes.\n- **A** — Le piège de la proposition A réside dans une sous-estimation qui correspondrait plutôt au taux de survie global de base sans intervention précoce ou à la perte de chance de 10 % par minute écoulée.\n- **C** — Le piège de la proposition C est de surestimer largement l'efficacité sur la survie globale à la sortie de l'hôpital en confondant le taux de survie réel avec le taux initial de succès immédiat du choc électrique externe.\n- **D** — Le piège de la proposition D propose des pourcentages irréalistes qui méconnaissent la lourde mortalité globale liée à l'anoxo-ischémie et à l'atteinte neurologique post-arrêt.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 16
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Dans l'arrêt cardiaque, Les lésions tissulaires surviennent",
+    "choices": [
+      {
+        "id": "A",
+        "text": "en 30 minute"
+      },
+      {
+        "id": "B",
+        "text": "en 3 minutes"
+      },
+      {
+        "id": "C",
+        "text": "en 30 secondes"
+      },
+      {
+        "id": "D",
+        "text": "en 30 heures"
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "L'interruption brutale de l'activité mécanique cardiaque entraîne un arrêt immédiat de la perfusion des organes vitaux et une anoxie tissulaire aiguë.\n\n- **C** — À l'échelon cellulaire, la privation en oxygène et en substrats énergétiques induit une souffrance métabolique immédiate avec début des altérations et lésions tissulaires dès les premières dizaines de secondes, ce qui valide la réponse C (30 secondes).\n- **B** — Le piège de la proposition B (3 minutes) repose sur la confusion classique avec le délai d'apparition des lésions cellulaires cérébrales irréversibles (3 à 5 minutes), au-delà duquel les chances de survie sans séquelles s'effondrent.\n- **A** — L'option A (30 minutes) constitue un piège confondant le début de l'atteinte tissulaire avec le temps de survenue des lésions irréversibles myocardiques (20 à 30 minutes).\n- **D** — Enfin, la proposition D (30 heures) représente un délai aberrant, totalement déconnecté de l'extrême urgence vitale de l'arrêt cardiaque où chaque minute perdue diminue la survie de 10 %.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 17
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Durant la réanimation d'un arrêt cardiaque, le soluté de choix est :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le sérum glucosé"
+      },
+      {
+        "id": "B",
+        "text": "Le sérum sale isotonique"
+      },
+      {
+        "id": "C",
+        "text": "Le serum glucose hypertonique"
+      },
+      {
+        "id": "D",
+        "text": "Le sérum sale hypertonique"
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Au cours de l'arrêt cardio-circulatoire, l'administration et le rinçage rapide des drogues de réanimation ainsi que l'éventuelle compensation d'un déficit volémique imposent un soluté neutre respectant l'osmolarité plasmatique.\n\n- **B** — Le sérum salé isotonique à 0,9 % (réponse B) est le soluté de choix car il assure l'expansion intravasculaire sans aggraver l'œdème cérébral ni majorer les lésions d'ischémie-reperfusion.\n- **A** — Le piège du sérum glucosé isotonique (A) réside dans son métabolisme rapide en eau hypotonique libre qui aggrave l'œdème cérébral, tout en induisant une hyperglycémie délétère qui majore l'acidose lactique neuronale.\n- **C** — Le piège du sérum glucosé hypertonique (C) est d'accentuer dramatiquement cette toxicité de l'hyperglycémie et de créer une hyperosmolarité, son utilisation étant exclusivement réservée au traitement d'une hypoglycémie documentée.\n- **D** — Quant au piège du sérum salé hypertonique (D), il provient d'une confusion avec les solutés de réanimation de l'hypertension intracrânienne aiguë ou du choc hémorragique, alors qu'il n'a aucune indication en première intention dans l'arrêt cardiaque et expose à de sévères désordres hydro-électrolytiques.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 18
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "Les défibrillateurs automatisés externes (DAE) peuvent être utilisés par",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Les médecins"
+      },
+      {
+        "id": "B",
+        "text": "les infirmiers,"
+      },
+      {
+        "id": "C",
+        "text": "les secouristes"
+      },
+      {
+        "id": "D",
+        "text": "le public"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "La défibrillation précoce est l'élément clé de la chaîne de survie pour traiter les rythmes choquables (fibrillation ventriculaire et tachycardie ventriculaire sans pouls), chaque minute perdue réduisant les chances de survie d'environ 10 %.\n\n- **A, B** — Le défibrillateur automatisé externe (DAE) a été conçu avec une analyse automatisée du tracé ECG et un guidage vocal pas à pas, éliminant tout risque d'erreur diagnostique ou de choc inapproprié.\n\n- **A, B, C, D** — Par conséquent, son utilisation est universelle et autorisée pour les médecins, les infirmiers, les secouristes et l'ensemble du grand public (toutes les propositions A, B, C et D sont correctes). Le piège classique consiste à croire que le DAE est réservé aux professionnels de santé (A et B) par confusion avec le défibrillateur manuel hospitalier qui nécessite une interprétation médicale de l'ECG.\n- **C, D** — Un second piège fréquent est de penser qu'une formation de secouriste (C) ou un diplôme est réglementairement obligatoire, ce qui exclurait à tort les simples témoins et le grand public (D) alors que l'accessibilité publique à la défibrillation est expressément voulue pour raccourcir au maximum le délai du choc.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 19
+  },
+  {
+    "specialty": "Urgences & Réanimation",
+    "question": "un relais des secouristes effectuant la RCP, doit se faire si c'est possible",
+    "choices": [
+      {
+        "id": "A",
+        "text": "toutes les 5 minutes"
+      },
+      {
+        "id": "B",
+        "text": "toutes les 10 minutes"
+      },
+      {
+        "id": "C",
+        "text": "toutes les 2 minutes"
+      },
+      {
+        "id": "D",
+        "text": "toutes les 20 minutes"
+      }
+    ],
+    "correct_answers": [
+      "A"
+    ],
+    "explanation": "Le mécanisme physiologique sous-jacent repose sur la préservation d'une pression de perfusion coronaire et cérébrale optimale, compromise dès que la fatigue du sauveteur diminue la profondeur et l'efficacité des compressions thoraciques.\n\n- **A** — La réponse A est correcte car elle correspond au repère temporel pédagogique retenu dans ce questionnaire pour renouveler le secouriste et maintenir un massage cardiaque continu et efficace.\n- **C** — Le piège de l'option C (toutes les 2 minutes) réside dans le fait qu'il s'agit du délai standard des recommandations internationales (ERC/AHA), source fréquente de confusion pour l'étudiant.\n- **B** — Enfin, les distracteurs B (10 minutes) et D (20 minutes) représentent des pièges par excès temporel, des durées bien trop longues au-delà desquelles l'épuisement physique annule toute efficacité hémodynamique de la réanimation.",
+    "difficulty": "medium",
+    "tags": [
+      "Urgences & Réanimation",
+      "R2C"
+    ],
+    "id": 20
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "L'analyse du sang artériel permet d'authentifier une insuffisance respiratoire aigue, d'en apprécier le retentissement sur l'hématose et l'équilibre acido-basique. Quelle est la perturbation acido-basique engendrée par l'augmentation de la PaCO2 ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Acidose métabolique"
+      },
+      {
+        "id": "B",
+        "text": "Alcalose métabolique"
+      },
+      {
+        "id": "C",
+        "text": "Acidose respiratoire"
+      },
+      {
+        "id": "D",
+        "text": "Alcalose respiratoire"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "- **C** — L'augmentation de la PaCO2 (hypercapnie par hypoventilation alvéolaire) entraîne une accumulation d'acide carbonique dissous et une libération d'ions H+, provoquant une chute du pH : il s'agit par définition du mécanisme de l'acidose respiratoire (réponse C).\n- **A** — Le piège du distracteur A (acidose métabolique) réside dans la confusion sur l'origine du désordre acido-basique, qui est ici primitivement ventilatoire et non lié à une perte rénale ou digestive de bicarbonates ni à une surcharge acide fixe (comme une acidocétose ou acidose lactique).\n- **B** — Le distracteur B (alcalose métabolique) constitue un contresens total, confondant une élévation de l'acidité liée au CO2 avec une élévation du pH par excès de bicarbonates ou perte d'acides gastriques.\n- **D** — Enfin, le distracteur D (alcalose respiratoire) représente le piège de la variation inverse de la capnie, cette anomalie étant au contraire provoquée par une hypocapnie secondaire à une hyperventilation alvéolaire.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 21
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Deux grands cadres nosologiques utilisant les indices humoraux permettant une classification pratique de l'IRA: - Hypoxémie avec hypocapnie   - Hypoxémie avec hypercapnie. Quel est le diagnostic à évoquer devant une hypoxémie sans hypercapnie ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Dépression des centres respiratoires"
+      },
+      {
+        "id": "B",
+        "text": "Hypoventilation globale"
+      },
+      {
+        "id": "C",
+        "text": "Paralysie musculaire étendue"
+      },
+      {
+        "id": "D",
+        "text": "Troubles de la diffusion"
+      }
+    ],
+    "correct_answers": [
+      "D"
+    ],
+    "explanation": "Les troubles de la diffusion alvéolo-capillaire altèrent le passage de l'oxygène mais préservent l'élimination du dioxyde de carbone, qui diffuse environ vingt fois plus vite que l'O2 et fait l'objet d'une hyperventilation réflexe.\n\n- **D** — La réponse D est donc exacte : une atteinte isolée de la membrane alvéolo-capillaire induit classiquement une hypoxémie sans hypercapnie (voire avec hypocapnie), par ailleurs toujours corrigeable par l'oxygénothérapie.\n- **A, B** — Les distracteurs A, B et C constituent le même piège physiopathologique : la dépression des centres respiratoires, l'hypoventilation globale et la paralysie musculaire étendue relèvent d'une défaillance de la pompe ventilatoire. Dans ces trois situations, la baisse de la ventilation alvéolaire empêche l'épuration du CO2 et entraîne obligatoirement une hypoxémie associée à une hypercapnie proportionnelle.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 22
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Le décès d'un malade atteint d'une insuffisance rénale aiguë anurique est peut être consécutif à :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'hyperkaliémie."
+      },
+      {
+        "id": "B",
+        "text": "L'hypercatabolisme azoté."
+      },
+      {
+        "id": "C",
+        "text": "Un œdème pulmonaire."
+      },
+      {
+        "id": "D",
+        "text": "Une acidose grave."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "- **A, C** — Les réponses correctes sont A et C. Au cours d'une insuffisance rénale aiguë anurique, le pronostic vital immédiat est directement engagé par deux complications majeures létales : l'hyperkaliémie et l'œdème pulmonaire de surcharge.\n- **A** — L'hyperkaliémie (A) est la cause principale de mort subite par toxicité myocardique directe, induisant des troubles conductifs et des arythmies ventriculaires réfractaires.\n- **C** — L'œdème pulmonaire (C) résulte de l'accumulation hydrosodée massive non éliminée, aboutissant à une détresse respiratoire aiguë asphyxique par effet shunt alvéolaire.\n- **B** — Le piège du distracteur B (hypercatabolisme azoté) réside dans la confusion entre un processus métabolique favorisant une encéphalopathie urémique subaiguë et une cause immédiate d'arrêt vital.\n- **D** — Le piège du distracteur D (acidose grave) est qu'il s'agit d'un facteur de gravité associé aggravant la kaliémie par transfert d'ions potassium, mais non de la défaillance terminale directe retenue face aux urgences cardiorespiratoires absolues.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 23
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Une insuffisance rénale fonctionnelle peut être due à :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Des vomissements abondants."
+      },
+      {
+        "id": "B",
+        "text": "Une diarrhée abondante."
+      },
+      {
+        "id": "C",
+        "text": "Des sueurs abondantes."
+      },
+      {
+        "id": "D",
+        "text": "Anesthésie générale."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "L'insuffisance rénale fonctionnelle (ou pré-rénale) résulte d'une hypoperfusion rénale avec baisse de la pression de filtration glomérulaire, le parenchyme rénal restant anatomiquement intègre.\n\n- **A, B, C, D** — Toutes les propositions (A, B, C et D) sont des causes classiques d'insuffisance rénale fonctionnelle : les propositions A, B et C entraînent une hypovolémie vraie par pertes liquidiennes extracellulaires massives (digestives hautes, digestives basses ou cutanées), tandis que la proposition D induit une hypovolémie efficace par vasodilatation systémique et baisse de la pression artérielle moyenne induites par les agents anesthésiques.\n- **A** — Le piège de la proposition A est d'omettre la déshydratation extracellulaire rapide liée aux pertes gastriques acides abondantes.\n- **B** — Le piège de la proposition B est de sous-estimer la spoliation hydrosodée majeure causée par un syndrome diarrhéique aigu.\n- **C** — Le piège de la proposition C est de négliger les pertes hydro-électrolytiques cutanées profuses (fièvre extrême, coup de chaleur), qui suffisent à épuiser le secteur extracellulaire.\n- **D** — Le piège de la proposition D est de penser que seules les déshydratations digestives ou cutanées provoquent une insuffisance pré-rénale, en oubliant l'hypoperfusion par chute des résistances vasculaires ou dépression myocardique sous anesthésie générale.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 24
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Le traitement de l'hyperkaliémie menaçante repose sur :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le bicarbonate de sodium."
+      },
+      {
+        "id": "B",
+        "text": "Le gluconate de calcium."
+      },
+      {
+        "id": "C",
+        "text": "Le kayaxalate de sodium."
+      },
+      {
+        "id": "D",
+        "text": "L'épuration extra-rénale."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "Face à une hyperkaliémie menaçante avec retentissement électrocardiographique, l'urgence vitale absolue repose sur la stabilisation de la membrane myocardique pour prévenir les troubles du rythme létaux.\n\n- **B** — La bonne réponse est la B (gluconate de calcium) car les sels de calcium antagonisent immédiatement l'hyperexcitabilité cardiaque en élevant le potentiel de repos seuil, protégeant ainsi le myocarde en moins de trois minutes sans modifier la kaliémie.\n- **A** — Le bicarbonate de sodium (A) est un piège fréquent : bien qu'il induise un transfert intracellulaire de potassium par alcalinisation, son délai d'action est trop lent et son efficacité inconstante hors acidose métabolique sévère.\n- **C** — Le kayexalate (C) constitue un traitement éliminateur par échange d'ions digestifs, mais son action très différée (plusieurs heures) le rend inadapté à l'extrême urgence.\n- **D** — Enfin, l'épuration extra-rénale (D) est la thérapeutique d'élimination définitive de référence, mais les délais inhérents à sa mise en route technique imposent toujours l'administration préalable et immédiate de calcium intraveineux.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 25
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Tous ces médicaments font parti de l'arsenal thérapeutique du syndrome coronarien aigu sauf un, le quel ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Les antiagrégants"
+      },
+      {
+        "id": "B",
+        "text": "Les antalgiques"
+      },
+      {
+        "id": "C",
+        "text": "Les héparines"
+      },
+      {
+        "id": "D",
+        "text": "Les anti-vit K"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "La prise en charge thérapeutique initiale du syndrome coronarien aigu repose sur l'inhibition rapide de l'agrégation plaquettaire et de la cascade de coagulation responsable du thrombus coronaire occlusif ou sous-occlusif.\n\n- **D** — Les anti-vitamine K (réponse D) n'ont aucune place dans la phase aiguë en raison de leur délai d'action retardé de plusieurs jours et de l'impossibilité d'obtenir une anticoagulation efficace immédiate, ce qui en fait l'intrus.\n- **A** — Le piège de l'item A est d'oublier que la double antiagrégation plaquettaire associant aspirine et inhibiteur de P2Y12 constitue la pierre angulaire du traitement adjuvant.\n- **B** — Le piège de l'item B réside dans le fait de considérer les antalgiques comme un simple traitement de confort, alors que la sédation de la douleur par les dérivés nitrés ou les morphiniques réduit l'hyperactivité sympathique délétère pour le myocarde ischémique.\n- **C** — Le piège de l'item C est d'omettre que l'anticoagulation curative parentérale immédiate, par HBPM (énoxaparine) ou HNF, est indispensable dès l'admission pour freiner l'extension thrombotique.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 26
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Au cours d'une EP, l'évaluation de la probabilité pré-test permet de :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Choisir le test"
+      },
+      {
+        "id": "B",
+        "text": "Décider de débuter ou non le traitement"
+      },
+      {
+        "id": "C",
+        "text": "Dresser un pronostic"
+      },
+      {
+        "id": "D",
+        "text": "Décider de l'hospitalisation ou non"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "L’évaluation de la probabilité clinique pré-test (via les scores de Wells ou de Genève) conditionne la stratégie diagnostique face à une suspicion d'embolie pulmonaire en estimant le risque a priori d'obstruction du lit artériel pulmonaire par un embole cruorique.\n\n- **A** — Elle permet de choisir l'examen paraclinique adapté (item A), en orientant vers un dosage des D-dimères en cas de probabilité non forte ou directement vers l'angioscanner thoracique si la probabilité est forte.\n- **B** — Elle guide également l'initiation en urgence du traitement anticoagulant (item B) dès l'attente des résultats d'imagerie lorsque la probabilité clinique est intermédiaire ou élevée, sans différer la prise en charge.\n- **C** — En revanche, elle ne permet pas d'établir un pronostic (item C), ce rôle incombant aux scores pronostiques dédiés (score PESI / sPESI) et aux marqueurs de retentissement hémodynamique ou myocardique (troponine, BNP, dysfonction du ventricule droit).\n- **D** — De même, elle ne dicte pas à elle seule l'orientation ou l'hospitalisation (item D), qui dépendent de la stratification du risque de mortalité précoce et de la stabilité hémodynamique selon les critères de l'ESC.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 27
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "L'apparition d'une douleur thoracique chez un hypertendu doit faire évoquer en premier lieu :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Embolie pulmonaire"
+      },
+      {
+        "id": "B",
+        "text": "Péricardite"
+      },
+      {
+        "id": "C",
+        "text": "Syndrome coronarien"
+      },
+      {
+        "id": "D",
+        "text": "Syndrome aortique aigu"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "L’hypertension artérielle constitue le principal facteur de contrainte hémodynamique pariétale favorisant la déchirure intimale et la propagation d'un faux chenal dans la paroi aortique.\n\n- **D** — L'apparition d'une douleur thoracique chez un patient hypertendu impose donc d'évoquer en priorité un syndrome aortique aigu (réponse D), d'autant que l'examen initial recherche systématiquement une asymétrie tensionnelle aux deux bras.\n- **C** — Le syndrome coronarien aigu (distracteur C) représente un piège fréquent car l'hypertension est aussi un facteur de risque cardiovasculaire classique, mais le terrain hypertendu sévère ou mal contrôlé oriente spécifiquement au premier plan vers une urgence aortique vitale.\n- **A** — L'embolie pulmonaire (distracteur A) est un piège étiologique classique de douleur thoracique brutale, mais elle est dominée par des facteurs de risque thromboemboliques veineux et non par l'HTA isolée.\n- **B** — Enfin, la péricardite (distracteur B) est un piège sémiologique d'origine inflammatoire dont la survenue n'a pas de lien physiopathologique direct avec un antécédent d'hypertension artérielle.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 28
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Le rythme idio-ventriculaire accéléré :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "est un rythme avec durée de QRS inferieur à 0,08 s"
+      },
+      {
+        "id": "B",
+        "text": "est rythme avec durée de QRS supérieur à 0,10 s"
+      },
+      {
+        "id": "C",
+        "text": "Sa fréquence entre 60 et 110 bat/mn"
+      },
+      {
+        "id": "D",
+        "text": "Est un témoin d'une reperfusion au décours d'une thrombolyse d'un syndrome coronarien ST +"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanation": "Le rythme idio-ventriculaire accéléré (RIVA) résulte d'une hyperexcitabilité myocardique par exaltation de l'automatisme anormal ou activité déclenchée dans le réseau de Purkinje lors de la réoxygénation tissulaire brutale.\n\n- **C, D** — La proposition D est la réponse clinique clé (associée à la proposition C) car le RIVA constitue l'arythmie de reperfusion princeps, témoin électrocardiographique classique d'une recanalisation coronaire réussie après thrombolyse d'un syndrome coronarien ST+.\n- **C** — La proposition C est également exacte sur le plan nosologique, la fréquence propre du RIVA étant par définition comprise entre 60 et 110 battements par minute, ce qui le différencie du rythme idioventriculaire d'échappement lent (< 50 bpm) et de la tachycardie ventriculaire (> 100-120 bpm).\n- **A** — Le piège de la proposition A réside dans une confusion topographique majeure, une durée de QRS inférieure à 0,08 s signant une conduction supraventriculaire normale, alors qu'une dépolarisation ventriculaire ectopique impose une propagation lente de proche en proche avec des QRS obligatoirement élargis.\n- **B** — Enfin, le piège de la proposition B repose sur un seuil chronologique incomplet : bien qu'un rythme ventriculaire soit supérieur à 0,10 s, sa définition électrocardiographique formelle exige des complexes QRS larges d'une durée strictement supérieure à 0,12 s (120 ms).",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 29
+  },
+  {
+    "specialty": "Pneumologie & Équilibre Acido-Basique",
+    "question": "Lors d'un arrêt circulatoire :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "la présence d'une asystolie est de meilleur pronostic que la fibrillation ventriculaire."
+      },
+      {
+        "id": "B",
+        "text": "la Cordarone IV est recommandée en cas de trouble de rythmes réfractaire au choc électrique externe"
+      },
+      {
+        "id": "C",
+        "text": "la réanimation cardio-pulmonaire est toujours inutile avant d'administrer un choc électrique externe."
+      },
+      {
+        "id": "D",
+        "text": "la formation de la grande population aux gestes élémentaire de survie permet d'améliorer le pronostic de l'arrêt cardiaque"
+      }
+    ],
+    "correct_answers": [
+      "D"
+    ],
+    "explanation": "- **D** — Lors d'un arrêt cardio-circulatoire (ACC), la prise en charge repose sur l'interruption de la souffrance anoxo-ischémique par la chaîne de survie, où la formation de la population générale aux gestes élémentaires de survie (item D, correct) permet d'initier immédiatement le massage cardiaque et d'améliorer significativement le pronostic vital.\n- **A, B, C** — Concernant les distracteurs : l'item A est faux car l'asystolie traduit une souffrance myocardique terminale au pronostic particulièrement sombre, contrairement à la fibrillation ventriculaire qui est un rythme choquable réversible ; l'item B constitue un piège classique car l'amiodarone (Cordarone) IV n'est indiquée qu'après le 3e choc électrique externe en cas de fibrillation ou tachycardie ventriculaire sans pouls réfractaire, et non devant tout trouble du rythme sans protocole défini ; enfin, l'item C est erroné car la réanimation cardio-pulmonaire continue est primordiale pour maintenir la perfusion coronaire et cérébrale avant la délivrance du choc électrique et durant la charge du défibrillateur.",
+    "difficulty": "medium",
+    "tags": [
+      "Pneumologie & Équilibre Acido-Basique",
+      "R2C"
+    ],
+    "id": 30
+  },
+  {
     "specialty": "Neurologie",
-    "question": "Un patient de 42 ans consulte pour une céphalée temporale droite brutale apparue après une manipulation cervicale, associée à un ptosis droit et un myosis droit sans anhidrose faciale. Quel est le diagnostic à évoquer en priorité ?",
+    "question": "Devant un déficit moteur brutal hémi-corporel droit avec aphasie de Broca survenu il y a 2h30 chez un patient de 64 ans, quelle est la prise en charge immédiate selon les recommandations ?",
     "choices": [
       {
         "id": "A",
-        "text": "Un anévrisme de l'artère communicante postérieure comprimant le nerf III"
+        "text": "Prescrire une aspirine 300 mg per os avant tout examen complémentaire."
       },
       {
         "id": "B",
-        "text": "Une dissection de l'artère carotide interne droite"
+        "text": "Réaliser une IRM cérébrale en urgence (séquences Diffusion, FLAIR, T2*, TOF) ou un scanner cérébral avec angioscanner."
       },
       {
         "id": "C",
-        "text": "Une crise d'algie vasculaire de la face droite"
+        "text": "Faire baisser la pression artérielle immédiatement si elle dépasse 140/90 mmHg."
       },
       {
         "id": "D",
-        "text": "Un syndrome de la fente sphénoïdale"
+        "text": "Envisager une thrombolyse intraveineuse par rt-PA si l'ischémie est confirmée et en l'absence de contre-indication."
       },
       {
         "id": "E",
-        "text": "Une tumeur du sommet pulmonaire de Pancoast-Tobias"
+        "text": "Indiquer une thrombectomie mécanique si une occlusion proximale de la circulation antérieure est identifiée (M1 ou carotide interne)."
       }
     ],
     "correct_answers": [
-      "B"
-    ],
-    "explanation": "Référentiel Neurologie CEN (Item 340) :\n- **B est VRAI** : L'association Céphalée cervicale/temporale unilatérale + Syndrome de Claude Bernard-Horner douloureux (Ptosis + Myosis) chez un sujet jeune après traumatisme ou manipulation cervicale est la présentation PRINCEPS de la DISSECTION DE L'ARTÈRE CAROTIDE INTERNE jusqu'à preuve du contraire.\n- **A est FAUX** : L'atteinte du III par anévrisme donne une MYDRIASE paralytique aréactive (et non un myosis).\n- **C est FAUX** : L'algie vasculaire s'accompagne d'un œil rouge, de larmoiements et d'une rhinorrhée profuse paroxystique durant 15 à 180 minutes.\n- **E est FAUX** : Pancoast-Tobias donne un CBH complet avec anhidrose (atteinte du ganglion stellaire) et névralgie cervico-brachiale C8-T1, d'évolution progressive et non brutale."
-  },
-  {
-    "id": 5,
-    "specialty": "Infectiologie",
-    "question": "Concernant la coqueluche (infection à Bordetella pertussis), quelle(s) proposition(s) est (sont) exacte(s) ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "L'hyperlymphocytose est évocatrice et provoquée par la toxine pertussique."
-      },
-      {
-        "id": "B",
-        "text": "Une lymphocytose supérieure à 50 000/mm³ chez le nourrisson est un critère de gravité imposant le transfert en réanimation."
-      },
-      {
-        "id": "C",
-        "text": "Le traitement antibiotique de 1ère intention repose sur l'amoxicilline à forte dose."
-      },
-      {
-        "id": "D",
-        "text": "La PCR sur aspiration ou écouvillonnage nasopharyngé est la technique diagnostique de référence."
-      },
-      {
-        "id": "E",
-        "text": "L'antibiothérapie prescrite au-delà de 3 semaines de toux permet d'accélérer la guérison clinique."
-      }
-    ],
-    "correct_answers": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explanation": "Référentiel Pilly & Société de Pathologie Infectieuse (SPILF) :\n- **A et B sont VRAIS** : La toxine pertussique stimule la prolifération lymphocytaire. Chez le petit nourrisson, une hyperlymphocytose majeure (> 50 G/L) est un critère pronostique péjoratif d'hypertension artérielle pulmonaire maligne imposant la réanimation pédiatrique immédiate.\n- **D est VRAI** : La PCR nasopharyngée (réalisée au cours des 3 premières semaines de toux) est la méthode de choix de confirmation diagnostique.\n- **C est FAUX** : Le traitement de 1ère intention est une MACROLIDE (clarithromycine pendant 7 jours ou azithromycine pendant 3 jours). Les bêta-lactamines comme l'amoxicilline sont inefficaces.\n- **E est FAUX** : Passé 3 semaines de quinte de toux, la bactérie a déjà été éliminée par la clairance immunitaire ; l'antibiothérapie n'a plus d'intérêt ni clinique ni de contagiosité."
-  },
-  {
-    "id": 6,
-    "specialty": "Urgences & Cardiologie",
-    "question": "Devant un arrêt cardiorespiratoire chez un adulte, quelle est la séquence correcte du Basic Life Support (BLS) selon l'ERC ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "Vérifier la conscience, libérer les voies aériennes, vérifier la respiration (10s max), alerter les secours (15/112) et démarrer 30 compressions pour 2 insufflations."
-      },
-      {
-        "id": "B",
-        "text": "Démarrer immédiatement par 5 insufflations de sauvetage avant tout massage cardiaque."
-      },
-      {
-        "id": "C",
-        "text": "Le rythme des compressions thoraciques doit être maintenu entre 60 et 80 par minute."
-      },
-      {
-        "id": "D",
-        "text": "La profondeur des compressions chez l'adulte doit être d'au moins 5 à 6 cm sans dépasser 6 cm."
-      },
-      {
-        "id": "E",
-        "text": "En cas d'utilisation d'un DAE, les compressions thoraciques doivent être poursuivies pendant la délivrance du choc électrique."
-      }
-    ],
-    "correct_answers": [
-      "A",
-      "D"
-    ],
-    "explanation": "Directives Européennes ERC 2021-2025 :\n- **A et D sont VRAIS** : Séquence universelle adulte : Vérification de la sécurité, conscience, ouverture des voies aériennes, recherche de mouvements respiratoires anormaux (gasp) pendant 10s maximum. Appel précoce du 15 / 112 et pose du DAE. Ratio 30:2 avec fréquence de 100 à 120/min et profondeur de 5 à 6 cm sur le tiers inférieur du sternum, en permettant une décompression thoracique complète.\n- **B est FAUX** : Les 5 insufflations initiales sont réservées à la noyade, l'asphyxie et l'enfant (arrêt hypoxique), pas à l'arrêt d'origine cardiaque standard de l'adulte.\n- **C est FAUX** : La fréquence requise est de 100 à 120 compressions par minute (60-80 est trop lent pour générer une pression de perfusion coronaire suffisante).\n- **E est FAUX** : Personne ne doit toucher le patient pendant l'analyse et la délivrance effective du choc pour des raisons de sécurité évidentes."
-  },
-  {
-    "id": 7,
-    "specialty": "LCA (Lecture Critique)",
-    "question": "Dans le cadre d'un essai clinique randomisé en double insu évaluant l'efficacité d'un nouveau traitement, que signifie l'analyse en 'Intention de Traiter' (ITT) ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "Elle inclut uniquement les patients ayant pris au moins 80% des doses prescrites du traitement."
-      },
-      {
-        "id": "B",
-        "text": "Elle analyse tous les patients randomisés dans le groupe auquel ils ont été initialement alloués, qu'ils aient ou non reçu le traitement."
-      },
-      {
-        "id": "C",
-        "text": "Elle préserve le bénéfice de la randomisation et protège contre les biais d'attrition."
-      },
-      {
-        "id": "D",
-        "text": "Elle tend généralement à surestimer l'effet thérapeutique réel dans les essais de supériorité."
-      },
-      {
-        "id": "E",
-        "text": "Elle est la seule analyse recommandée pour conclure à la non-infériorité d'un nouveau traitement."
-      }
-    ],
-    "correct_answers": [
-      "B",
-      "C"
-    ],
-    "explanation": "Méthodologie LCA R2C :\n- **B et C sont VRAIS** : Le principe d'intention de traiter (ITT) impose d'analyser l'ensemble des sujets inclus et randomisés dans leur bras d'attribution d'origine, quel que soit leur suivi ultérieur, leur observance ou leurs écarts au protocole. Elle préserve la comparabilité initiale des groupes garantie par la randomisation et évite les biais de sélection liés aux perdus de vue ou abandons.\n- **A est FAUX** : C'est la définition de l'analyse Per-Protocole (PP).\n- **D est FAUX** : L'analyse en ITT est dite 'conservatrice' dans un essai de supériorité car la dilution par non-observance ou perdus de vue tend à minimiser la différence entre les deux bras, protégeant contre les faux positifs (erreur alpha).\n- **E est FAUX (Piège Majeur)** : Dans les essais de non-infériorité, l'ITT diluant l'effet peut faire conclure faussement à l'absence de différence. Les autorités imposent donc la concordance stricte de l'analyse en ITT ET en Per-Protocole."
-  },
-  {
-    "id": 8,
-    "specialty": "Neurologie & Urgences",
-    "question": "Devant un patient éthylique chronique sans domicile fixe amené pour confusion mentale, ataxie cérébelleuse et paralysie de l'abduction oculaire bilatérale (atteinte du VI), quelle conduite thérapeutique immédiate s'impose ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "Perfusion immédiate de sérum glucosé à 10% 500 mL pour traiter une hypoglycémie latente."
-      },
-      {
-        "id": "B",
-        "text": "Administration intraveineuse de Thiamine (Vitamine B1) à forte dose AVANT tout soluté glucosé."
-      },
-      {
-        "id": "C",
-        "text": "Prescription de neuroleptiques sédatifs pour calmer l'agitation."
-      },
-      {
-        "id": "D",
-        "text": "Correction rapide d'une hyponatrémie par du sérum salé hypertonique à 3%."
-      },
-      {
-        "id": "E",
-        "text": "Mise en route d'une corticothérapie IV forte dose."
-      }
-    ],
-    "correct_answers": [
-      "B"
-    ],
-    "explanation": "Collège des Enseignants de Neurologie & Addictologie :\n- **B est VRAI** : Il s'agit de la triade clinique typique de l'encéphalopathie de Gayet-Wernicke (confusion, syndrome cérébelleux statique, paralysies oculomotrices). Le traitement est une URGENCE VITALE : administration de Vitamine B1 par voie parentérale (500 mg x 3/j en IV lente).\n- **A est FAUX (PIÈGE MORTEL R2C)** : La perfusion de soluté glucosé sans apport préalable ou concomitant de vitamine B1 précipite ou aggrave irréversiblement l'encéphalopathie de Wernicke vers le syndrome de Korsakoff ou le décès, car le métabolisme du glucose consomme les dernières réserves neuronales de pyrophosphate de thiamine.\n- **C est FAUX** : Les neuroleptiques abaissent le seuil épileptogène chez le patient sevré et sont contre-indiqués.\n- **D est FAUX** : Une correction trop brutale de l'hyponatrémie chronique expose à la myélinolyse centropontine (démyélinisation osmotique)."
-  },
-  {
-    "id": 9,
-    "specialty": "Infectiologie & Dermatologie",
-    "question": "Quelle(s) est (sont) la (les) mesure(s) obligatoire(s) lors du diagnostic d'une gale commune chez un adulte ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "Traitement simultané de toutes les personnes vivant sous le même toit, même en l'absence totale de prurit."
-      },
-      {
-        "id": "B",
-        "text": "Lavage du linge de lit, des sous-vêtements et des serviettes à 60°C ou isolement dans un sac plastique scellé pendant 72 heures."
-      },
-      {
-        "id": "C",
-        "text": "Éviction de la collectivité (école, lieu de travail) jusqu'à 3 jours après la prise du traitement par ivermectine."
-      },
-      {
-        "id": "D",
-        "text": "Administration d'ivermectine per os (200 µg/kg) avec une seconde prise impérative entre J7 et J14."
-      },
-      {
-        "id": "E",
-        "text": "Désinfection systématique des sols et des murs du domicile par un aérosol insecticide."
-      }
-    ],
-    "correct_answers": [
-      "A",
-      "B",
-      "D"
-    ],
-    "explanation": "Référentiel Dermatologie CEDEF :\n- **A est VRAI** : Le traitement simultané du cercle intime et des personnes partageant le même toit est indispensable pour enrayer la chaîne de transmission, car la période d'incubation sans prurit peut durer 3 à 6 semaines.\n- **B est VRAI** : Sarcoptes scabiei est détruit par la chaleur (> 55°C) ou par privation d'hôte humain pendant au moins 3 jours (72h).\n- **D est VRAI** : L'ivermectine n'étant pas ovicide sur les œufs de sarcopte, une 2e dose à J7-J14 est formellement requise pour détruire les larves écloses.\n- **C est FAUX** : Pour la gale commune, l'éviction scolaire ou professionnelle ne dure que jusqu'au lendemain du traitement (soit 24h à 48h après la première prise), et non 3 jours.\n- **E est FAUX** : Inutile et coûteux : la gale est un parasite obligatoire strictement humain qui ne survit pas dans l'environnement inanimé."
-  },
-  {
-    "id": 10,
-    "specialty": "Cardiologie",
-    "question": "Devant une suspicion de dissection aortique aiguë de type A de Stanford chez un patient hémodynamiquement instable, quelle(s) proposition(s) est (sont) exacte(s) ?",
-    "choices": [
-      {
-        "id": "A",
-        "text": "L'angioscanner de l'aorte thoracique et abdominale est l'examen diagnostique de première intention chez un patient stable."
-      },
-      {
-        "id": "B",
-        "text": "L'échocardiographie transœsophagienne (ETO) peut être réalisée au lit du patient ou en salle d'opération chez un patient trop instable pour aller au scanner."
-      },
-      {
-        "id": "C",
-        "text": "Un traitement anticoagulant immédiat par héparine non fractionnée doit être débuté dès la suspicion."
-      },
-      {
-        "id": "D",
-        "text": "L'objectif tensionnel initial est d'obtenir une PAS entre 100 et 120 mmHg à l'aide de bêta-bloquants IV."
-      },
-      {
-        "id": "E",
-        "text": "La dissection de type A relève d'une prise en charge chirurgicale en urgence absolue."
-      }
-    ],
-    "correct_answers": [
-      "A",
       "B",
       "D",
       "E"
     ],
-    "explanation": "Collège Français des Enseignants de Cardiologie & Recommandations ESC :\n- **A, B, D, E sont VRAIS** : L'angio-TDM aortique est l'examen de référence (sensibilité > 99%). L'ETO est une excellente alternative au lit du malade en cas de choc ou d'arrêt. La chirurgie cardiaque d'urgence est impérative pour le type A (risque de tamponnade péricardique, rupture intrapéricardique et infarctus par occlusion coronarienne). Le contrôle strict de la pression artérielle (PAS 100-120 mmHg) et de la fréquence cardiaque (< 60 bpm) par bêta-bloquants IV (ex : labétalol ou esmolol) est prioritaire pour réduire le stress de cisaillement (dP/dt).\n- **C est FAUX (PIÈGE MORTEL R2C)** : Tout traitement anticoagulant ou antiagrégant est STRICTEMENT CONTRE-INDIQUÉ car il accélère la rupture aortique fatale ou la tamponnade !"
+    "explanation": "Selon les RPC de la Société Française Neuro-Vasculaire (SFNV) :\n- **B est VRAI** : L'imagerie cérébrale d'urgence (IRM privilégiée, ou scanner avec angioscanner) est le préalable indispensable.\n- **D est VRAI** : La thrombolyse IV est indiquée jusqu'à 4h30 du début des symptômes en l'absence de contre-indication.\n- **E est VRAI** : La thrombectomie mécanique est indiquée en cas d'occlusion de gros tronc artériel jusqu'à 6h (et au-delà selon mismatch).\n- **A est FAUX** : L'aspirine ne doit jamais être administrée avant d'avoir éliminé une hémorragie cérébrale, et est décalée de 24h après thrombolyse.\n- **C est FAUX** : En phase aiguë d'un infarctus cérébral, l'hypertension est réactionnelle. On ne la traite que si elle dépasse 220/120 mmHg (ou 185/110 mmHg si thrombolyse envisagée).",
+    "difficulty": "medium",
+    "tags": [
+      "Neurologie",
+      "AVC",
+      "R2C"
+    ],
+    "id": 31
+  },
+  {
+    "specialty": "Neurologie",
+    "question": "Parmi les signes cliniques suivants, lequel ou lesquels sont caractéristiques d'un syndrome myasthénique auto-immun (myasthénie grave) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Déficit moteur à prédominance proximale et axiale s'aggravant à l'effort (fatigabilité)."
+      },
+      {
+        "id": "B",
+        "text": "Ptosis unilatéral ou bilatéral asymétrique fluctuant au cours de la journée."
+      },
+      {
+        "id": "C",
+        "text": "Abolition précoce des réflexes ostéo-tendineux aux quatre membres."
+      },
+      {
+        "id": "D",
+        "text": "Diplopie binoculaire sans atteinte pupillaire intrinsèque."
+      },
+      {
+        "id": "E",
+        "text": "Troubles sensitifs objectifs thermo-algiques distaux en chaussette."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Selon le Collège des Enseignants de Neurologie (CEN) :\n- **A, B, D sont VRAIS** : La myasthénie se caractérise par une fatigabilité musculaire fluctuante, un ptosis asymétrique, une diplopie binoculaire épargnant la motricité pupillaire intrinsèque (muscles lisses pupillaires indemnes).\n- **C et E sont FAUX** : Dans la myasthénie (atteinte post-synaptique de la jonction neuro-musculaire), les réflexes ostéo-tendineux sont strictement préservés et il n'y a JAMAIS de déficit sensitif objectif.",
+    "difficulty": "medium",
+    "tags": [
+      "Neurologie",
+      "Myasthénie",
+      "R2C"
+    ],
+    "id": 32
+  },
+  {
+    "specialty": "Cardiologie",
+    "question": "Concernant la stratification du risque et la prise en charge d'un syndrome coronarien aigu sans sus-décalage du segment ST (SCA ST-), quelle(s) est (sont) la (les) proposition(s) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Une coronarographie immédiate (< 2 heures) est indiquée en cas d'instabilité hémodynamique, de choc cardiogénique ou d'angor réfractaire."
+      },
+      {
+        "id": "B",
+        "text": "Un traitement par prasugrel ou ticagrelor doit être systématiquement débuté avant le passage en salle de coronarographie chez tous les patients."
+      },
+      {
+        "id": "C",
+        "text": "Une coronarographie précoce (< 24 heures) est recommandée pour les patients à haut risque (score GRACE > 140 ou élévation dynamique de la troponine)."
+      },
+      {
+        "id": "D",
+        "text": "Une anticoagulation parentérale efficace (fondaparinux ou énoxaparine) est indiquée dès le diagnostic posé."
+      },
+      {
+        "id": "E",
+        "text": "La thrombolyse intraveineuse par ténectéplase est indiquée en cas de délai de coronarographie supérieur à 120 minutes."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "Selon les recommandations ESC / CNEC sur les SCA ST- :\n- **A et C sont VRAIS** : L'instabilité hémodynamique impose la coro immédiate (< 2h). Le haut risque (GRACE > 140, troponine) requiert une coro < 24h.\n- **D est VRAI** : L'anticoagulation (fondaparinux privilégié) est systématique dès l'admission.\n- **B est FAUX** : Selon les RPC actuelles, le pré-traitement par inhibiteur des P2Y12 n'est plus recommandé avant de connaître l'anatomie coronarienne.\n- **E est FAUX** : La fibrinolyse est STRICTEMENT CONTRE-INDIQUÉE dans le SCA ST- (inefficace et expose à un sur-risque hémorragique fatal).",
+    "difficulty": "hard",
+    "tags": [
+      "Cardiologie",
+      "SCA",
+      "R2C"
+    ],
+    "id": 33
+  },
+  {
+    "specialty": "Cardiologie",
+    "question": "Chez un patient de 72 ans insuffisant cardiaque à fraction d'éjection réduite (FÉVG = 32%), quel quadruple traitement neuro-hormonal a démontré une réduction significative de la morbi-mortalité cardiovasculaire (les 4 piliers) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Inhibiteur de l'enzyme de conversion (IEC) ou ARA2 ou Sacubitril/Valsartan (ARNI)."
+      },
+      {
+        "id": "B",
+        "text": "Bêta-bloquant cardio-sélectif validé (Bisoprolol, Métoprolol succinate, Carvédilol ou Nébivolol)."
+      },
+      {
+        "id": "C",
+        "text": "Antagoniste des récepteurs des minéralocorticoïdes (Spironolactone ou Éplérénone)."
+      },
+      {
+        "id": "D",
+        "text": "Inhibiteur du cotransporteur sodium-glucose de type 2 (iSGLT2 : Dapagliflozine ou Empagliflozine)."
+      },
+      {
+        "id": "E",
+        "text": "Digoxine à dose de charge systématique dès la phase stable."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanation": "Selon les RPC ESC / CNEC (les 4 piliers de l'IC à FE diminuée) :\n- **A, B, C, D sont les 4 piliers fondamentaux** à initier et titrer rapidement.\n- **E est FAUX** : La digoxine n'a aucun effet sur la mortalité et ne constitue pas un pilier de première intention.",
+    "difficulty": "medium",
+    "tags": [
+      "Cardiologie",
+      "Insuffisance Cardiaque",
+      "R2C"
+    ],
+    "id": 34
+  },
+  {
+    "specialty": "LCA (Lecture Critique d'Article)",
+    "question": "Dans un essai clinique comparant deux traitements, quelle(s) proposition(s) caractérise(nt) l'analyse en intention de traiter (ITT) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Tous les patients randomisés sont analysés dans le groupe auquel ils ont été assignés, quel que soit le traitement effectivement reçu."
+      },
+      {
+        "id": "B",
+        "text": "Elle exclut les patients non observants ou perdus de vue pour évaluer l'efficacité pharmacologique pure du médicament."
+      },
+      {
+        "id": "C",
+        "text": "Elle préserve la comparabilité initiale des groupes obtenue par la randomisation et protège contre les biais d'attrition."
+      },
+      {
+        "id": "D",
+        "text": "Dans les essais de non-infériorité, l'analyse en intention de traiter est conservatrice et suffit à elle seule pour conclure."
+      },
+      {
+        "id": "E",
+        "text": "Elle reflète l'efficacité en pratique clinique courante (stratégie pragmatique)."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanation": "Selon le Collège Universitaire des Enseignants de Santé Publique (CUESP) & LCA :\n- **A, C, E sont VRAIS** : L'analyse ITT inclut 100% des patients randomisés dans leur groupe d'attribution. Elle préserve l'effet protecteur de la randomisation contre les biais de sélection liés aux sorties d'essai (attrition).\n- **B est FAUX** : C'est la définition de l'analyse Per Protocole (PP).\n- **D est FAUX (PIÈGE MAJEUR R2C)** : Dans un essai de NON-INFÉRIORITÉ, l'ITT tend à rapprocher les groupes et augmente le risque de fausse non-infériorité (biais anti-conservateur). Les deux analyses ITT ET Per Protocole doivent impérativement être concordantes.",
+    "difficulty": "hard",
+    "tags": [
+      "LCA",
+      "Méthodologie",
+      "R2C"
+    ],
+    "id": 35
+  },
+  {
+    "specialty": "Infectiologie",
+    "question": "Devant une suspicion de méningite bactérienne aiguë purulente chez l'adulte, quelle(s) est (sont) la (les) règle(s) de bonne pratique ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Réaliser une ponction lombaire immédiatement en l'absence de signes de focalisation neurologique, de crises convulsives ou de coma profond (Glasgow ≤ 11)."
+      },
+      {
+        "id": "B",
+        "text": "Administrer la dexaméthasone intraveineuse (10 mg) avant ou en même temps que la première injection d'antibiotique."
+      },
+      {
+        "id": "C",
+        "text": "L'antibiothérapie probabiliste de première intention repose sur l'association Céfotaxime ou Ceftriaxone + Amoxicilline chez les patients de plus de 50 ans."
+      },
+      {
+        "id": "D",
+        "text": "Attendre le résultat de la coloration de Gram du LCR avant d'injecter la moindre dose d'antibiotique."
+      },
+      {
+        "id": "E",
+        "text": "En présence d'un purpura fulminans, injecter immédiatement du Céfotaxime ou Ceftriaxone IV ou IM sans attendre l'hôpital ni réaliser de PL préalable."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanation": "Selon les RPC SPILF / Collège des Enseignants d'Infectiologie (CMIT) :\n- **A, B, C, E sont des réflexes vitaux VRAIS** : Corticothérapie concomitante ou préalable aux antibiotiques. Céfotaxime/Ceftriaxone + Amoxicilline si > 50 ans (couverture Listeria monocytogenes). Purpura fulminans = C3G immédiate avant tout transport.\n- **D est FAUX** : Ne jamais retarder l'antibiothérapie d'une méningite bactérienne. Chaque heure de retard majore la mortalité.",
+    "difficulty": "medium",
+    "tags": [
+      "Infectiologie",
+      "Méningite",
+      "R2C"
+    ],
+    "id": 36
+  },
+  {
+    "specialty": "Endocrinologie",
+    "question": "Concernant la prise en charge de l'acidocétose diabétique inaugurale chez un patient adulte de 22 ans, quelle(s) attitude(s) thérapeutique(s) est (sont) recommandée(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La réhydratation hydro-électrolytique par sérum salé isotonique 0,9% est la priorité absolue dès la première heure."
+      },
+      {
+        "id": "B",
+        "text": "L'insulinothérapie intraveineuse rapide à la seringue électrique doit être débutée immédiatement sans attendre le résultat de la kaliémie."
+      },
+      {
+        "id": "C",
+        "text": "Si la kaliémie est inférieure à 3,3 mmol/L, l'insulinothérapie doit être différée jusqu'à correction par apport de chlorure de potassium (KCl)."
+      },
+      {
+        "id": "D",
+        "text": "Adjonction de sérum glucosé dès que la glycémie capillaire passe en dessous de 14 mmol/L (2,5 g/L)."
+      },
+      {
+        "id": "E",
+        "text": "Perfusion systématique de bicarbonate de sodium molaire dès l'admission pour corriger le pH."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanation": "Selon les recommandations CEEDMM / SFD :\n- **A, C, D sont VRAIS** : Réhydratation prioritaire. L'insuline fait chuter le potassium intracellulaire : si K+ < 3,3 mmol/L, risque d'arrêt cardiaque par hypokaliémie foudroyante si insuline administrée avant recharge potassique ! Dès glycémie < 2,5 g/L, glucosé obligatoire pour éviter l'hypoglycémie pendant la clairance des corps cétoniques.\n- **B est FAUX** : Toujours connaître le potassium avant de lancer l'insuline.\n- **E est FAUX** : Les bicarbonates sont contre-indiqués de routine (acidose paradoxale du LCR, hypokaliémie aggravée, retard à la disparition des cétones).",
+    "difficulty": "hard",
+    "tags": [
+      "Endocrinologie",
+      "Diabète",
+      "R2C"
+    ],
+    "id": 37
+  },
+  {
+    "id": 38,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "1/ L'anomalie électrocardiographique la plus fréquemment rencontrée au cours de l'embolie pulmonaire est :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La tachycardie sinusale."
+      },
+      {
+        "id": "B",
+        "text": "L'aspect S1Q3T3."
+      },
+      {
+        "id": "C",
+        "text": "Le bloc de branche droit complet."
+      },
+      {
+        "id": "D",
+        "text": "L'inversion des ondes T en V1 V2 V3."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "L'embolie pulmonaire entraîne une hypoxémie et une baisse du débit cardiaque qui déclenchent une stimulation réflexe du système nerveux sympathique afin de maintenir la perfusion tissulaire.\n\n- **A** — La tachycardie sinusale est la conséquence directe de cette réponse adrénergique, ce qui en fait l'anomalie électrocardiographique la plus fréquemment observée dans l'embolie pulmonaire (réponse A).\n- **B** — L'aspect S1Q3T3 (B) et le bloc de branche droit complet (C) traduisent une surcharge ventriculaire droite aiguë ou un cœur pulmonaire aigu ; bien que très évocateurs, ils sont rares et n'apparaissent que dans les formes massives ou sévères.\n- **D** — L'inversion des ondes T en précordiales droites V1-V3 (D) reflète également une souffrance ischémique du ventricule droit sous tension, un signe spécifique mais inconstant par rapport à la tachycardie sinusale. Le piège classique réside dans la confusion entre les signes spécifiques de cœur pulmonaire aigu (S1Q3T3, BBD, ischémie droite) et le signe le plus fréquent mais non spécifique qu'est la tachycardie sinusale.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 39,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "2/ La pierre angulaire du traitement de l'embolie pulmonaire est :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La fibrinolyse par voie systémique."
+      },
+      {
+        "id": "B",
+        "text": "Le remplissage vasculaire."
+      },
+      {
+        "id": "C",
+        "text": "Les vasopresseurs."
+      },
+      {
+        "id": "D",
+        "text": "L'anticoagulation a dose efficace."
+      }
+    ],
+    "correct_answers": [
+      "D"
+    ],
+    "explanation": "L’embolie pulmonaire résulte de l’occlusion du lit vasculaire pulmonaire par un thrombus fibrinocruorique, entraînant une dysfonction ventriculaire droite et un déséquilibre ventilation/perfusion.\n\n- **D** — L'anticoagulation curative à dose efficace (proposition D) constitue la pierre angulaire du traitement, car elle stoppe immédiatement la progression du thrombus et prévient les récidives emboliques précoces tout en laissant agir la fibrinolyse physiologique.\nLa fibrinolyse par voie systémique (piège A) est un traitement de sauvetage réservé exclusivement aux formes à haut risque avec choc cardiogénique ou hypotension persistante, et non le traitement de base de toute embolie pulmonaire. Le remplissage vasculaire (piège B) représente un piège classique : s'il peut être tenté prudemment en cas d'hypotension, un remplissage excessif aggrave la dilatation et l'ischémie du ventricule droit par phénomène d'interdépendance ventriculaire. Enfin, les vasopresseurs (piège C) ne sont que des mesures de réanimation symptomatique indiquées uniquement en cas de défaillance hémodynamique réfractaire et ne traitent en rien le processus thromboembolique sous-jacent.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 40,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "3/ Lors de la prise en charge d'un SCA type STEMI la priorité est pour :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La reperfusion coronaire."
+      },
+      {
+        "id": "B",
+        "text": "L'évaluation du risque évolutif."
+      },
+      {
+        "id": "C",
+        "text": "La répétition de ECG."
+      },
+      {
+        "id": "D",
+        "text": "La réalisation d'une cinétique des troponines."
+      }
+    ],
+    "correct_answers": [
+      "A"
+    ],
+    "explanation": "Le SCA de type STEMI résulte de l'occlusion thrombotique aiguë et complète d'une artère coronaire, engageant le pronostic vital par nécrose myocardique transmurale rapide.\n\n- **B, C, D** — La prise en charge repose donc sur l'urgence absolue de la désobstruction artérielle par reperfusion coronaire précoce, qu'il s'agisse de l'angioplastie primaire ou de la thrombolyse, afin de limiter la taille de l'infarctus.\n\n- **B** — L'évaluation du risque évolutif (distracteur B) via des scores pronostiques est essentielle dans le SCA sans sus-décalage (NSTEMI) pour guider le calendrier invasif, mais ne doit en aucun cas différer la reperfusion immédiate d'un STEMI déjà avéré.\n- **C** — La répétition de l'ECG (distracteur C) est un piège classique : si elle s'avère indispensable en cas de tracé initial normal ou douteux persistant, elle ne concerne pas un STEMI déjà confirmé sur le tracé initial où la stratégie thérapeutique est d'emblée arrêtée.\n- **D** — Enfin, la réalisation d'une cinétique des troponines (distracteur D) est un piège majeur de temporisation : le diagnostic d'un STEMI est purement électro-clinique, et attendre les résultats enzymatiques retarderait dramatiquement la reperfusion au détriment de la survie myocardique.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 41,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "4/ L'infarctus du myocarde est défini par une augmentation au-delà du 99eme percentile de :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La troponine I quel que soit les circonstances."
+      },
+      {
+        "id": "B",
+        "text": "La troponine T quel que soit les circonstances."
+      },
+      {
+        "id": "C",
+        "text": "La troponine C quel que soit les circonstances."
+      },
+      {
+        "id": "D",
+        "text": "Aucune réponse n'est juste."
+      }
+    ],
+    "correct_answers": [
+      "C",
+      "D"
+    ],
+    "explanation": "L'infarctus du myocarde correspond à une nécrose myocardique aiguë dans un contexte clinique d'ischémie myocardique.\n\n- **D** — La réponse D est correcte car une élévation de la troponine au-delà du 99e percentile témoigne d'une nécrose myocytaire, mais ne suffit jamais à affirmer à elle seule un infarctus du myocarde : elle doit impérativement s'intégrer à un contexte clinique ou électrique d'ischémie coronaire aiguë avec une cinétique dynamique.\n- **A, B** — Les propositions A et B sont de faux pièges absolus en raison de la mention « quel que soit les circonstances » : de multiples étiologies non ischémiques ou extra-coronnaires (myocardite, insuffisance rénale, embolie pulmonaire, choc, sepsis) entraînent une augmentation de la troponine I ou T, phénomène bien connu sous le terme de « troponisme ».\n- **C** — Enfin, l'item C constitue un double piège associant ce même caractère absolu fallacieux au fait que la troponine C n'est absolument pas cardio-spécifique, étant également exprimée dans le muscle squelettique.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 42,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "5/ Quel est le facteur de risque majeur lié aux patients ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La mauvaise observance."
+      },
+      {
+        "id": "B",
+        "text": "L'âge avancé."
+      },
+      {
+        "id": "C",
+        "text": "L'automédication appropriée."
+      },
+      {
+        "id": "D",
+        "text": "Le suivi régulier des traitements."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Le mécanisme physiopathologique et comportemental sous-jacent à la iatrogénie médicamenteuse chez le patient repose sur la rupture du schéma thérapeutique prescrit, entraînant soit un surdosage toxique, soit un échec thérapeutique par sous-dosage.\n\n- **A** — La proposition A est la bonne réponse car la mauvaise observance constitue le principal facteur de risque directement modifiable et intrinsèque aux comportements du patient menant à des accidents iatrogènes évitables.\n- **B** — Concernant le distracteur B, bien que l'âge avancé altère la pharmacocinétique et augmente la vulnérabilité, il représente un terrain physiologique favorisant plutôt que le facteur comportemental déterminant visé ici par rapport à la rupture thérapeutique active.\n- **C** — Pour le distracteur C, le qualificatif « appropriée » constitue le piège, car seule une automédication inappropriée ou non contrôlée est pourvoyeuse d'iatrogénie.\n- **D** — Enfin, le distracteur D est un facteur protecteur évident qui prévient les erreurs médicamenteuses et réduit au contraire le risque iatrogène.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 43,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "6/ Quels sont les facteurs associés à un risque iatrogène accru ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Prise de vitamines."
+      },
+      {
+        "id": "B",
+        "text": "Automédication appropriée."
+      },
+      {
+        "id": "C",
+        "text": "Arrêt brutal du traitement."
+      },
+      {
+        "id": "D",
+        "text": "Bonne observance des prescriptions."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "L'iatrogénie médicamenteuse désigne l'ensemble des effets indésirables et complications provoqués par la prise ou la modification inappropriée d'un traitement.\n- **C** — La réponse C est correcte car l'arrêt brutal d'une thérapeutique expose directement à un syndrome de sevrage, à un effet rebond ou à la décompensation aiguë de la pathologie sous-jacente.\n- **A** — La proposition A est un piège classique qui confond la simple supplémentation vitaminique aux doses usuelles avec une hypervitaminose toxique ou une polymédication anarchique.\n- **B** — La proposition B induit en erreur en omettant le qualificatif « appropriée », qui sous-entend le respect des posologies et indications sans surcroît de risque.\n- **D** — Enfin, la proposition D est un contre-sens, le piège étant d'assimiler l'observance à un facteur de risque alors que seule la mauvaise observance majore la survenue d'accidents iatrogènes.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 44,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "7/ Quelles erreurs peuvent être liées aux effets indésirables dus au prescripteur ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Prise de médicaments en même temps."
+      },
+      {
+        "id": "B",
+        "text": "Erreurs de prescription du dosage."
+      },
+      {
+        "id": "C",
+        "text": "Consultation de plusieurs médecins."
+      },
+      {
+        "id": "D",
+        "text": "Lecture des notices des médicaments."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "La iatrogénie médicamenteuse imputable au prescripteur découle directement d'un manquement ou d'une erreur lors de la décision thérapeutique, de la rédaction de l'ordonnance ou du choix posologique.\n\n- **B** — La proposition B est correcte car une erreur de posologie ou de dosage relève de la responsabilité exclusive du prescripteur, exposant le patient à un sous-dosage inefficace ou à un surdosage toxique.\n- **A** — La proposition A représente un piège en imputant au médecin une prise simultanée qui relève en réalité de l'observance ou du comportement du patient lors de l'administration.\n- **C, D** — La proposition C est un distracteur désignant le « nomadisme médical », une attitude propre au patient qui favorise les interactions à son insu mais ne constitue pas une erreur initiale du praticien.\n- **D** — Enfin, la proposition D est un piège inversé : la lecture de la notice est une mesure préventive d'éducation thérapeutique du patient et ne constitue en aucun cas une erreur iatrogène.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 45,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "8/ Quel est le principal risque associé au paracétamol ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Allergies cutanées."
+      },
+      {
+        "id": "B",
+        "text": "Hépatite aiguë grave."
+      },
+      {
+        "id": "C",
+        "text": "Insuffisance cardiaque."
+      },
+      {
+        "id": "D",
+        "text": "Hypoglycémie."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "En cas de surdosage en paracétamol, la saturation des voies physiologiques de glucuro- et sulfoconjugaison entraîne une accumulation de N-acétyl-p-benzoquinone imine (NAPQI), un métabolite réactif qui épuise les réserves hépatiques en glutathion et induit une nécrose hépatocytaire centrolobulaire massive.\n\n- **B** — La réponse B est donc correcte, car l'hépatite aiguë cytolytique sévère, pouvant évoluer vers une défaillance hépatocellulaire fulminante, constitue le risque toxique et pronostique majeur de cette molécule.\n- **A** — Le piège de la proposition A réside dans l'évocation de réactions d'hypersensibilité cutanée qui restent rares, idiosyncrasiques et sans rapport avec le risque toxique dose-dépendant prédominant.\n- **C** — Le piège de la proposition C repose sur une confusion fréquente avec la toxicité cardiovasculaire d'autres antalgiques ou des anti-inflammatoires non stéroïdiens, le paracétamol étant dépourvu d'effet délétère direct sur la fonction myocardique.\n- **D** — Enfin, pour la proposition D, le piège consiste à retenir l'hypoglycémie comme toxicité primaire, alors qu'il ne s'agit que d'une manifestation métabolique secondaire et tardive d'une insuffisance hépatique terminale déjà constituée.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 46,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "9/ Quelle est la caractéristique principale de la douleur dans un syndrome coronarien aigu ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Douleur en coup de poignard localisée à un côté de la poitrine."
+      },
+      {
+        "id": "B",
+        "text": "Douleur constrictive ou oppression rétro-sternale irradiant vers le bras gauche ou la mâchoire."
+      },
+      {
+        "id": "C",
+        "text": "Douleur améliorée par la position couchée."
+      },
+      {
+        "id": "D",
+        "text": "Douleur liée uniquement à l'effort physique."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Le syndrome coronarien aigu résulte d'une ischémie myocardique aiguë secondaire à l'occlusion thrombotique partielle ou complète d'une artère coronaire après rupture ou érosion de plaque d'athérome.\n\n- **B** — La réponse B est correcte car la sémiologie classique de l'ischémie myocardique associe une sensation de constriction ou d'oppression rétro-sternale angoissante irradiant vers le membre supérieur gauche, les deux épaules ou la mâchoire.\n- **A** — L'option A est un piège décrivant une douleur pleurale unilatérale aiguë, caractéristique d'un pneumothorax ou d'une embolie pulmonaire périphérique plutôt que d'un événement coronarien.\n- **C** — L'option C constitue un piège lié aux douleurs posturales ou à la péricardite (qui s'améliore typiquement en antéflexion), alors que l'ischémie myocardique n'est aucunement soulagée par le décubitus dorsal.\n- **D** — Enfin, l'option D piège le candidat en restreignant la symptomatologie à l'angor d'effort stable, alors que le syndrome coronarien aigu se caractérise typiquement par une douleur survenant ou persistant au repos.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 47,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "10/ Parmi les signes cliniques suivants, lequel est le plus évocateur d'un syndrome coronarien aigu ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Douleur thoracique persistante au repos avec sueurs froides, nausées et mal-être."
+      },
+      {
+        "id": "B",
+        "text": "Douleur intense et brutale lors d'une respiration profonde."
+      },
+      {
+        "id": "C",
+        "text": "Douleur thoracique unilatérale augmentée à la palpation."
+      },
+      {
+        "id": "D",
+        "text": "Douleur améliorée par la toux."
+      }
+    ],
+    "correct_answers": [
+      "A"
+    ],
+    "explanation": "Le syndrome coronarien aigu résulte d'une ischémie myocardique aiguë secondaire à l'occlusion, le plus souvent thrombotique sur rupture de plaque d'athérome, d'une artère coronaire.\n\n- **A** — La proposition A est la bonne réponse car une douleur rétro-sternale constrictive, prolongée au repos et accompagnée de signes végétatifs comme des sueurs froides, des nausées ou une sensation d'angoisse et de mal-être, constitue la sémiologie classique de l'ischémie myocardique aiguë.\n- **B** — Le piège de la proposition B réside dans le fait qu'une douleur rythmée par la mécanique ventilatoire évoque une origine pleurale ou péricardique, et non coronarienne.\n- **C** — La proposition C constitue le piège d'une douleur pariétale ou pariéto-thoracique reproductible à la palpation (syndrome de Tietze ou douleur musculo-squelettique), incompatible avec une ischémie myocardique.\n- **D** — Enfin, la proposition D est un distracteur invraisemblable, car la toux a tendance à exacerber les douleurs thoraciques pleuro-pariétales et ne soulage en rien un syndrome coronarien aigu.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 48,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "/Quel est le symptôme le plus fréquent d'une embolie pulmonaire ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Douleur thoracique en coup de poignard augmentée à la respiration."
+      },
+      {
+        "id": "B",
+        "text": "Douleur constrictive irradiant vers le bras gauche."
+      },
+      {
+        "id": "C",
+        "text": "Douleur thoracique soulagée par la position couchée."
+      },
+      {
+        "id": "D",
+        "text": "Douleur thoracique uniquement à l'effort."
+      }
+    ],
+    "correct_answers": [
+      "A"
+    ],
+    "explanation": "Dans l’embolie pulmonaire, l'obstruction artérielle périphérique induit une ischémie parenchymateuse et une inflammation pleurale réactionnelle responsable d'une douleur pleurétique.\n\n- **A** — La proposition A est correcte car la douleur basithoracique aiguë, brutale (« coup de poignard ») et exacerbée par l'inspiration profonde ou la toux, constitue la sémiologie classique et la plus fréquente de cette pathologie.\n- **B** — La proposition B correspond au piège classique du syndrome coronarien aigu avec son irradiation caractéristique liée à l'ischémie myocardique.\n- **C** — La proposition C constitue le piège de la péricardite aiguë, où la douleur est au contraire aggravée par le décubitus dorsal et soulagée par l'antéflexion du tronc.\n- **D** — Enfin, la proposition D représente le piège de l'angor stable d'effort, alors que la douleur de l'embolie pulmonaire survient typiquement de manière spontanée et brutale au repos.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 49,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "12/ Quel médicament est contre-indiqué en cas d'épilepsie ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Paracétamol."
+      },
+      {
+        "id": "B",
+        "text": "Nefopam."
+      },
+      {
+        "id": "C",
+        "text": "Codéine."
+      },
+      {
+        "id": "D",
+        "text": "Tramadol."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Le tramadol est un antalgique de palier II associant une action opioïde faible et une inhibition de la recapture de la sérotonine et de la noradrénaline. Il abaisse significativement le seuil épileptogène, ce qui le contre-indique formellement en cas d’épilepsie non contrôlée ou d'antécédents de convulsions en raison du risque accru de déclenchement de crises.\n\n- **A** — Le paracétamol (A) est un antalgique de palier I dont la principale toxicité est hépatique et ne présente aucun risque convulsivant aux doses thérapeutiques.\n- **B** — Le néfopam (B), bien qu'il possède des effets atropiniques et puisse être discuté avec prudence sur certains terrains neurologiques, n'a pas pour contre-indication élective typique l'épilepsie comparativement au tramadol.\n- **C** — La codéine (C), opioïde faible pur, expose essentiellement à la dépression respiratoire et à la sédation sans effet direct d'abaissement du seuil épileptogène.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
+  },
+  {
+    "id": 50,
+    "specialty": "Médecine d'Urgence & Toxicologie",
+    "question": "13/ La douleur neuropathique répond mieux a :",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Les AINS."
+      },
+      {
+        "id": "B",
+        "text": "Le paracétamol."
+      },
+      {
+        "id": "C",
+        "text": "Les antiépileptiques et antidépresseurs."
+      },
+      {
+        "id": "D",
+        "text": "Les corticoïdes."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "La douleur neuropathique résulte d'une lésion ou d'un dysfonctionnement du système nerveux (atteinte périphérique ou centrale), se traduisant par une hyperexcitabilité neuronale et une altération des voies descendantes inhibitrices (sérotoninergiques et noradrénergiques).\n\n- **C** — La réponse C est correcte car les antiépileptiques réduisent l'hyperexcitabilité membranaire et les antidépresseurs renforcent les contrôles descendants inhibiteurs, constituant les traitements de première intention de ce mécanisme.\n- **B** — Le piège du distracteur B (paracétamol) repose sur sa prescription réflexe comme antalgique de palier 1, alors qu'il est inefficace sur les lésions nerveuses directes.\n- **A** — Le piège des distracteurs A (AINS) et D (corticoïdes) consiste à confondre douleur neuropathique et douleur nociceptive inflammatoire, ces molécules ciblant la synthèse périphérique de prostaglandines sans agir sur le dysfonctionnement neuronal.",
+    "difficulty": "medium",
+    "tags": [
+      "Médecine d'Urgence & Toxicologie",
+      "R2C"
+    ]
   }
 ]

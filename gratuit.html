@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ressources Médicales Gratuites EDN & ECOS 2026 | Ethan Cole</title>
+  <meta name="description" content="Téléchargez gratuitement 2 tomes intégraux (Tome 1 LCA 270p, Tome 2 Neurologie 657p), la banque de 100 QCMs corrigés, le carnet d'erreurs et l'APK Android hors-ligne.">
+  <link rel="canonical" href="https://edn-store.vercel.app/gratuit">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edn-store.vercel.app/gratuit">
+  <meta property="og:title" content="Ressources Médicales Gratuites EDN & ECOS 2026 — 2 Tomes Offerts">
+  <meta property="og:description" content="2 volumes intégraux conformes aux Collèges (LCA 270p + Neuro 657p), 100 QCMs classants et Carnet d'Erreurs en téléchargement libre.">
+  <meta property="og:image" content="https://edn-store.vercel.app/logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .free-hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .free-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      border: 1px solid var(--emerald-border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .free-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.85rem);
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .free-hero p {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    .hormozi-callout {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border);
+      border-left: 5px solid var(--emerald);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 32px auto 48px;
+      max-width: 960px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .hormozi-callout-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .hormozi-callout-title {
+      font-weight: 800;
+      color: var(--navy);
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .hormozi-callout-text {
+      color: var(--ink-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .free-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+
+    .free-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .free-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      border-color: var(--border-dark);
+    }
+    .free-card.featured-card {
+      border: 2px solid var(--emerald);
+      position: relative;
+    }
+    .featured-badge-top {
+      background: var(--emerald);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-bottom-left-radius: 8px;
+    }
+
+    .free-card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .free-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .free-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      color: var(--navy-muted);
+      border: 1px solid var(--border);
+    }
+    .free-tag.tag-emerald {
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      border-color: var(--emerald-border);
+    }
+    .free-tag.tag-gold {
+      background: var(--gold-light);
+      color: var(--gold);
+      border-color: var(--gold-border);
+    }
+
+    .free-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .free-card-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .free-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .btn-free-read {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--navy);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .btn-free-read:hover {
+      background: var(--navy-light);
+      color: #FFFFFF;
+    }
+    .btn-free-download-row {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-free-dl {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.8rem;
+      padding: 8px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .btn-free-dl:hover {
+      background: #FFFFFF;
+      border-color: var(--border-dark);
+      color: var(--navy);
+    }
+
+    .banner-qcm-bridge {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 36px 32px;
+      margin: 0 auto 60px;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .banner-qcm-bridge h2 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .banner-qcm-bridge p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      max-width: 600px;
+    }
+    .btn-bridge-action {
+      background: var(--emerald);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease;
+    }
+    .btn-bridge-action:hover {
+      background: var(--emerald-dark);
+      color: #FFFFFF;
+    }
+
+    .bridge-to-pack {
+      background: #FFFFFF;
+      border: 2px dashed var(--gold-border);
+      border-radius: 16px;
+      padding: 40px 28px;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 80px;
+    }
+    .bridge-to-pack h2 {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .bridge-to-pack p {
+      color: var(--ink-muted);
+      font-size: 1rem;
+      max-width: 680px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+    .btn-pack-highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--navy);
+      color: #FFFFFF;
+      font-size: 1.05rem;
+      font-weight: 800;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+      transition: all 0.15s ease;
+    }
+    .btn-pack-highlight:hover {
+      background: var(--navy-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.25);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    Édition Officielle 2026 • <strong>2 Volumes Complets + 100 QCMs + Carnet d'Erreurs Offerts</strong> en Accès Direct.
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="logo.jpg" alt="Ethan Cole" class="brand-avatar">
+        <div class="brand-meta">
+          <span class="brand-name">EDN Référence</span>
+          <span class="brand-sub">Par Ethan Cole</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="catalogue.html" class="nav-link">Catalogue 28 Tomes</a>
+        <a href="qcm.html" class="nav-link">Entraînement QCM</a>
+        <a href="gratuit.html" class="nav-link active" style="color: var(--navy); font-weight: 700;">Ressources Offertes</a>
+        <a href="reader.html?doc=EDN-Tome-01-LCA-Offert.pdf" class="btn-header-pdf">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          Lecteur PDF
+        </a>
+        <a href="pack.html" class="btn-header-bundle">
+          Pack Intégral (79 €)
+        </a>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" onclick="toggleMobileDrawer()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" onclick="closeMobileDrawer()"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu de navigation mobile">
+    <div class="mobile-drawer-header">
+      <div class="brand-meta">
+        <span class="brand-name">EDN Référence</span>
+        <span class="brand-sub">Par Ethan Cole</span>
+      </div>
+      <button class="mobile-drawer-close" onclick="closeMobileDrawer()" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Accueil</a>
+      <a href="catalogue.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Catalogue 28 Tomes</a>
+      <a href="qcm.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Entraînement QCM</a>
+      <a href="gratuit.html" class="mobile-nav-link active" onclick="closeMobileDrawer()">Ressources Offertes</a>
+      <a href="reader.html?doc=EDN-Tome-01-LCA-Offert.pdf" class="mobile-nav-pdf-btn" onclick="closeMobileDrawer()">Lecteur PDF Intégré</a>
+    </nav>
+    <div style="padding: 20px 18px; border-top: 1px solid var(--border);">
+      <a href="pack.html" class="btn-header-bundle" style="width: 100%; justify-content: center; padding: 12px;">Pack Intégral (79 €)</a>
+      <p style="font-size: 0.75rem; color: var(--ink-faint); text-align: center; margin-top: 10px;">Accès Immédiat • 28 Tomes Word + PDF</p>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="free-hero">
+    <div class="free-badge-pill">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+      Accès 100% Libre & Gratuit • Aucun Formulaire Requis
+    </div>
+    <h1>L'Arsenal Gratuit du Futur Interne</h1>
+    <p>
+      Testez sans compromis 927 pages d'ouvrages intégraux, notre banque de 100 QCMs classants avec justifications universitaires, le carnet d'erreurs stratégique et l'application Android offline.
+    </p>
+
+    <!-- Hormozi Value Principle -->
+    <div class="hormozi-callout">
+      <div class="hormozi-callout-header">
+        <svg width="20" height="20" fill="none" stroke="var(--emerald)" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span class="hormozi-callout-title">Notre Engagement de Rigueur Médicale</span>
+      </div>
+      <p class="hormozi-callout-text">
+        Nous appliquons un principe clair : <em>rendre nos ressources gratuites plus complètes et plus rigoureuses que les modules payants concurrents</em>. Pas d'extraits tronqués de 3 pages ni d'aperçus floutés. Vous disposez ici de 2 tomes complets conformes aux Collèges d'Enseignants pour tester la méthode sur vos révisions de stage.
+      </p>
+    </div>
+  </section>
+
+  <!-- Free Resources Grid -->
+  <main class="free-grid" id="freeGrid">
+
+    <!-- Card 1: Tome 1 LCA -->
+    <div class="free-card featured-card">
+      <span class="featured-badge-top">Tome Intégral Offert</span>
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag tag-emerald">270 Pages</span>
+          <span class="free-tag">LCA R2C</span>
+          <span class="free-tag">Word + PDF</span>
+        </div>
+        <h2 class="free-card-title">Tome 01 — Lecture Critique d'Articles (LCA)</h2>
+        <p class="free-card-desc">
+          L'intégralité du programme officiel de LCA : essais cliniques randomisés, études diagnostiques, de cohorte, méta-analyses, grilles d'évaluation R2C, biais statistiques et lexique bilingue de 270 pages.
+        </p>
+        <div class="free-card-actions">
+          <a href="reader.html?doc=EDN-Tome-01-LCA-Offert.pdf" class="btn-free-read">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Feuilleter en ligne (Lecteur HD)
+          </a>
+          <div class="btn-free-download-row">
+            <a href="EDN-Tome-01-LCA-Offert.pdf" download class="btn-free-dl" title="Télécharger le PDF">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              PDF (13 Mo)
+            </a>
+            <a href="EDN-Tome-01-LCA-Offert.docx" download class="btn-free-dl" title="Télécharger le Word modifiable">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Word (.docx)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Tome 2 Neurologie -->
+    <div class="free-card featured-card">
+      <span class="featured-badge-top">Tome Intégral Offert</span>
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag tag-emerald">657 Pages</span>
+          <span class="free-tag">Collège Enseignants</span>
+          <span class="free-tag">Word + PDF</span>
+        </div>
+        <h2 class="free-card-title">Tome 02 — Neurologie Clinique</h2>
+        <p class="free-card-desc">
+          Volume exhaustif de 657 pages : sémiologie motrice et sensitive, AVC ischémiques et hémorragiques, épilepsies, sclérose en plaques, céphalées, comas et urgences neuro-vasculaires.
+        </p>
+        <div class="free-card-actions">
+          <a href="reader.html?doc=EDN-Tome-02-Neurologie-Offert.pdf" class="btn-free-read">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Feuilleter en ligne (Lecteur HD)
+          </a>
+          <div class="btn-free-download-row">
+            <a href="EDN-Tome-02-Neurologie-Offert.pdf" download class="btn-free-dl" title="Télécharger le PDF">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              PDF (20 Mo)
+            </a>
+            <a href="EDN-Tome-02-Neurologie-Offert.docx" download class="btn-free-dl" title="Télécharger le Word modifiable">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Word (.docx)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: 100 QCMs Corrigés -->
+    <div class="free-card">
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag tag-gold">100 Questions</span>
+          <span class="free-tag">Annales Réelles</span>
+          <span class="free-tag">Justifications</span>
+        </div>
+        <h2 class="free-card-title">Banque de 100 QCMs Corrigés</h2>
+        <p class="free-card-desc">
+          Questions représentatives des épreuves réelles (Urgences, Réanimation, Cardiologie, Pneumologie, Neurologie, LCA). Chaque item est accompagné de sa justification détaillée et des pièges éliminatoires.
+        </p>
+        <div class="free-card-actions">
+          <a href="qcm.html" class="btn-free-read" style="background: var(--emerald); border-color: var(--emerald);">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+            Simulateur QCM Interactif (50 QCMs)
+          </a>
+          <div class="btn-free-download-row">
+            <a href="reader.html?doc=Banque-QCM-100-Questions-Corrigees.pdf" class="btn-free-dl" title="Feuilleter en ligne">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+              Lecteur PDF
+            </a>
+            <a href="Banque-QCM-100-Questions-Corrigees.pdf" download class="btn-free-dl" title="Télécharger le PDF">
+              PDF
+            </a>
+            <a href="Banque-QCM-100-Questions-Corrigees.docx" download class="btn-free-dl" title="Télécharger le Word">
+              Word (.docx)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Carnet d'Erreurs du Major -->
+    <div class="free-card">
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag tag-gold">12 Pages</span>
+          <span class="free-tag">Outil Pratique</span>
+          <span class="free-tag">Répétition Espacée</span>
+        </div>
+        <h2 class="free-card-title">Carnet d'Erreurs EDN du Major</h2>
+        <p class="free-card-desc">
+          Le template méthodologique utilisé par les étudiants du Top 500 : grille de recensement des erreurs systématiques, pièges de cotation R2C, seuils de toxicité et réflexes de sécurité vitale.
+        </p>
+        <div class="free-card-actions">
+          <a href="reader.html?doc=Carnet-d-Erreurs-EDN-Major-2025.pdf" class="btn-free-read">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            Feuilleter le Carnet (Lecteur HD)
+          </a>
+          <div class="btn-free-download-row">
+            <a href="Carnet-d-Erreurs-EDN-Major-2025.pdf" download class="btn-free-dl">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              PDF
+            </a>
+            <a href="Carnet-d-Erreurs-EDN-Major-2025.docx" download class="btn-free-dl">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Word (.docx)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Fiches Sémiologie Neuro -->
+    <div class="free-card">
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag">Fiches Cliniques</span>
+          <span class="free-tag">Synthèse Express</span>
+        </div>
+        <h2 class="free-card-title">Fiches Sémiologie & Anatomie Clinique</h2>
+        <p class="free-card-desc">
+          Synthèse ultra-rapide des réflexes ostéotendineux, racines motrices et sensitives, territoires vasculaires cérébraux et syndromes du tronc cérébral indispensables en stage et aux ECOS.
+        </p>
+        <div class="free-card-actions">
+          <a href="Fiches-Anatomie-Semiologie-Neurologie.docx" download class="btn-free-read">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Télécharger les Fiches (.docx)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6: Guide Méthodologique EDN & ECOS -->
+    <div class="free-card">
+      <div class="free-card-body">
+        <div class="free-card-tags">
+          <span class="free-tag">Méthodologie</span>
+          <span class="free-tag">Réglementation R2C</span>
+        </div>
+        <h2 class="free-card-title">Guide Méthodologique Officiel EDN & ECOS</h2>
+        <p class="free-card-desc">
+          Décryptage précis des barèmes de cotation numérique (zéro à la question, cotation concordante/discordante), organisation des stations ECOS et stratégie de révision des 28 spécialités.
+        </p>
+        <div class="free-card-actions">
+          <a href="Guide-Methodologique-EDN-ECOS-Offert.docx" download class="btn-free-read">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Télécharger le Guide (.docx)
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7: Application Android APK -->
+    <div class="free-card featured-card" style="grid-column: 1 / -1; background: #FAFBFD;">
+      <span class="featured-badge-top" style="background: #0284C7;">Application Android v1.0.0</span>
+      <div class="free-card-body" style="display: flex; flex-direction: row; gap: 24px; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 280px;">
+          <div class="free-card-tags">
+            <span class="free-tag tag-emerald">100% Offline</span>
+            <span class="free-tag">50 Mo</span>
+            <span class="free-tag">GitHub Release v1.0.0</span>
+          </div>
+          <h2 class="free-card-title">Application Mobile Android EDN Référence</h2>
+          <p class="free-card-desc" style="margin-bottom: 0;">
+            Installez l'application autonome sur votre smartphone ou tablette de stage pour consulter vos cours même dans les sous-sols de garde sans réseau. Aucun abonnement, zéro publicité.
+          </p>
+        </div>
+        <div>
+          <a href="https://github.com/1khvled/edn-store/releases/download/v1.0.0/EDN-App-Android-Offline.apk" class="btn-free-read" style="background: #0284C7; padding: 14px 24px; font-size: 0.95rem;">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+            Télécharger l'APK Officielle (50 Mo)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Interactive QCM Bridge Banner -->
+  <section style="padding: 0 20px;">
+    <div class="banner-qcm-bridge">
+      <div>
+        <h2>Testez Vos Réflexes sur 50 QCMs Réels</h2>
+        <p>
+          Découvrez notre plateforme d'entraînement interactive avec correction immédiate, filtrage par spécialité et pièges décortiqués.
+        </p>
+      </div>
+      <a href="qcm.html" class="btn-bridge-action">
+        Lancer le Simulateur QCM
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Bridge to Complete Pack (Hormozi Conversion) -->
+  <section style="padding: 0 20px;">
+    <div class="bridge-to-pack">
+      <span class="free-badge-pill" style="background: var(--gold-light); color: var(--gold); border-color: var(--gold-border);">
+        L'Offre Irrésistible des EDN 2026
+      </span>
+      <h2>Besoin de l'Intégralité des 28 Spécialités Médicales ?</h2>
+      <p>
+        Obtenez les 28 tomes officiels au format Word modifiable (.docx) et PDF, la banque exhaustive de 1 700+ QCMs cliniques, 11 933 questions d'active recall et 8 141 tableaux comparatifs pour <strong>79 €</strong> au lieu de 2 245 €.
+      </p>
+      <a href="pack.html" class="btn-pack-highlight">
+        <span>Découvrir le Pack Intégral (79 €)</span>
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="logo.jpg" alt="Ethan Cole" class="footer-avatar">
+          <div>
+            <div class="footer-title">EDN Référence</div>
+            <div class="footer-sub">Par Dr Ethan Cole</div>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Ouvrages médicaux de référence pour la préparation des EDN et ECOS. Conformes aux Collèges d'Enseignants universitaires français et à la réforme R2C.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="catalogue.html">Catalogue des 28 Tomes</a></li>
+          <li><a href="qcm.html">Simulateur QCM</a></li>
+          <li><a href="gratuit.html">Ressources Offertes</a></li>
+          <li><a href="reader.html?doc=EDN-Tome-01-LCA-Offert.pdf">Poste de Lecture PDF</a></li>
+          <li><a href="pack.html">Pack Intégral (79 €)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Engagement & Déontologie</h3>
+        <p class="footer-disclaimer">
+          Publications pédagogiques indépendantes destinées aux étudiants en 2e cycle des études médicales (DFASM). Les contenus sont basés sur les données probantes et les recommandations professionnelles des Sociétés Savantes.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 EDN Référence — Dr Ethan Cole. Tous droits réservés.</div>
+        <div class="footer-trust-badges">
+          <span>Conforme R2C</span> • <span>Collèges Universitaires</span> • <span>Téléchargement Sécurisé</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const toggle = document.getElementById('mobileMenuToggle');
+      const isOpen = drawer.classList.contains('active');
+      if (isOpen) {
+        closeMobileDrawer();
+      } else {
+        drawer.classList.add('active');
+        backdrop.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const toggle = document.getElementById('mobileMenuToggle');
+      if (drawer) drawer.classList.remove('active');
+      if (backdrop) backdrop.classList.remove('active');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

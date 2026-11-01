@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur Interactif de QCMs R2C & Annales EDN | Ethan Cole</title>
+  <meta name="description" content="Entraînez-vous sur 50 QCMs et cas cliniques réels issus des annales classantes EDN. Correction instantanée, justifications officielles des Collèges et pièges décortiqués.">
+  <link rel="canonical" href="https://edn-store.vercel.app/qcm">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edn-store.vercel.app/qcm">
+  <meta property="og:title" content="Simulateur Interactif de QCMs R2C & Annales EDN 2026">
+  <meta property="og:description" content="Testez vos réflexes sur des questions d'annales classantes réelles. 50 QCMs interactifs avec corrections officielles.">
+  <meta property="og:image" content="https://edn-store.vercel.app/logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .qcm-standalone-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+    .qcm-toolbar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .qcm-filters-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .qcm-filter-pill {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--ink-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .qcm-filter-pill:hover {
+      background: var(--bg-accent);
+      color: var(--navy);
+    }
+    .qcm-filter-pill.active {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-color: var(--navy);
+    }
+    .qcm-stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+    }
+    .qcm-stat-item strong {
+      color: var(--navy);
+      font-size: 1rem;
+    }
+    .qcm-score-badge-live {
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      border: 1px solid var(--emerald-border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement -->
+  <aside class="top-announcement-bar" role="region" aria-label="Annonce">
+    <div class="announcement-content">
+      <span>🎯 <strong>50 QCMs d'Entraînement en Accès Libre</strong> • Justifications conformes aux Collèges d'Enseignants 2026.</span>
+    </div>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header" role="banner">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Retour à l'accueil EDN Référence">
+        <div class="brand-avatar-wrap">
+          <img src="logo.jpg" alt="Dr Ethan Cole" class="brand-avatar">
+          <span class="brand-status-dot" title="Édition vérifiée 2026"></span>
+        </div>
+        <div class="brand-meta">
+          <span class="brand-name">EDN Référence</span>
+          <span class="brand-sub">Par Ethan Cole</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Navigation principale">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="catalogue.html" class="nav-link">Catalogue 28 Tomes</a>
+        <a href="qcm.html" class="nav-link active">Entraînement QCM</a>
+        <a href="gratuit.html" class="nav-link">Ressources Offertes</a>
+        <a href="reader.html?book=01-lca" class="nav-btn-outline">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>Lecteur PDF</span>
+        </a>
+        <a href="pack.html" class="nav-btn-primary">
+          Pack Intégral (79 €)
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" onclick="toggleMobileDrawer()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" onclick="closeMobileDrawer()"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu de navigation mobile">
+    <div class="mobile-drawer-header">
+      <div class="brand-meta">
+        <span class="brand-name">EDN Référence</span>
+        <span class="brand-sub">Par Ethan Cole</span>
+      </div>
+      <button class="mobile-drawer-close" onclick="closeMobileDrawer()" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Accueil</a>
+      <a href="catalogue.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Catalogue 28 Tomes</a>
+      <a href="qcm.html" class="mobile-nav-link active" onclick="closeMobileDrawer()">Entraînement QCM</a>
+      <a href="gratuit.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Ressources Offertes</a>
+      <a href="reader.html?book=01-lca" class="mobile-nav-pdf-btn" onclick="closeMobileDrawer()">Lecteur PDF Intégré</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="pack.html" class="btn-drawer-bundle">Pack Intégral (79 €)</a>
+      <p class="drawer-guarantee-text">28 Tomes Word + PDF • Accès Immédiat</p>
+    </div>
+  </aside>
+
+  <!-- Main QCM Training Section -->
+  <main class="qcm-standalone-container" id="mainContent">
+    <header class="section-head" style="text-align: center; max-width: 800px; margin: 0 auto 32px;">
+      <div class="arsenal-badge">🎯 MODULE D'ENTRAÎNEMENT INTERACTIF</div>
+      <h1 class="section-title" style="font-size: 2.5rem;">Plateforme d'Entraînement QCM R2C</h1>
+      <p class="section-subtitle">
+        50 cas cliniques et questions d'annales corrigées. Filtrez par spécialité, validez vos réponses et consultez immédiatement l'analyse clinique détaillée de chaque distracteur et piège de concours.
+      </p>
+    </header>
+
+    <!-- Toolbar Filters & Live Stats -->
+    <div class="qcm-toolbar-card">
+      <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-faint); margin-bottom: 10px;">
+        Filtrer par Spécialité Médicale :
+      </div>
+      <div class="qcm-filters-flex" id="qcmSpecialtyFilters">
+        <button class="qcm-filter-pill active" onclick="filterQcmBySpecialty('all', this)">Toutes les Matières (50)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Urgence', this)">Urgences & Réanimation (23)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Ophtalmologie', this)">Ophtalmologie (10)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Pneumologie', this)">Pneumologie & Acido-Basique (10)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Neurologie', this)">Neurologie (2)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Cardiologie', this)">Cardiologie (2)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('LCA', this)">LCA Méthodologie (1)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Infectiologie', this)">Infectiologie (1)</button>
+        <button class="qcm-filter-pill" onclick="filterQcmBySpecialty('Endocrinologie', this)">Endocrinologie (1)</button>
+      </div>
+
+      <div class="qcm-stats-bar">
+        <div class="qcm-stat-item">
+          Questions répondues : <strong id="qcmAnsweredDisplay">0</strong> / <span id="qcmTotalDisplay">50</span>
+        </div>
+        <div class="qcm-stat-item">
+          Score Réussi : <span class="qcm-score-badge-live"><strong id="qcmScoreDisplay">0</strong> bonnes réponses</span>
+        </div>
+        <div class="qcm-stat-item" style="color: var(--ink-faint); font-size: 0.78rem;">
+          Astuce : Touches A à E pour cocher • Entrée pour valider
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Simulator Box -->
+    <div class="qcm-box" id="qcmSimulator">
+      <div id="qcmCardInner">
+        <div class="qcm-question-header">
+          <div class="qcm-counter-badge" id="qcmCounter">Question 1 sur 50</div>
+          <span class="qcm-specialty-badge" id="qcmSpecialtyBadge">Urgences & Réanimation</span>
+          <span class="qcm-classement-tag">Épreuve Classante R2C</span>
+        </div>
+
+        <h3 class="qcm-question-text" id="qcmQuestionText">
+          Chargement de la question...
+        </h3>
+
+        <!-- Choices List -->
+        <div class="qcm-choices-list" id="qcmChoicesList" role="group" aria-label="Propositions de réponse">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Explanation & Feedback Box -->
+        <div class="qcm-explanation-box" id="qcmExplanationBox" style="display: none;" role="region" aria-live="polite">
+          <div class="qcm-exp-key" id="qcmExpKey"></div>
+          <div class="qcm-exp-text" id="qcmExpText"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="qcm-footer-actions">
+          <button id="btnValidateQcm" class="btn-qcm-val" onclick="validateCurrentQcm()">
+            Valider ma réponse
+          </button>
+          <button id="btnNextQcm" class="btn-qcm-next" onclick="nextQcmQuestion()" style="display: none;">
+            Question Suivante →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hormozi Offer Banner for the 1,700 QCM Pack -->
+    <div style="margin-top: 48px; background: #FFFFFF; border: 1px solid var(--border); border-radius: 12px; padding: 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.03); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+      <div style="max-width: 580px;">
+        <span class="arsenal-badge" style="background: var(--gold-light); color: var(--gold); border-color: var(--gold-border);">📚 BANQUE GÉANTE DE 1 700+ QCMS</span>
+        <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--navy); margin: 8px 0;">Besoin de vous entraîner sur l'ensemble des 28 spécialités ?</h3>
+        <p style="font-size: 0.92rem; color: var(--ink-muted); margin: 0; line-height: 1.55;">
+          La banque complète de 1 700+ questions réelles issues des annales de concours avec corrections détaillées est incluse gratuitement en Bonus 2 dans le Pack Intégral EDN 2026.
+        </p>
+      </div>
+      <div>
+        <a href="pack.html" class="btn-card-primary" style="background: var(--crimson); color: #FFFFFF; text-decoration: none; padding: 12px 24px;">
+          Découvrir le Pack Intégral (79 €) →
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-meta" style="margin-bottom: 12px;">
+          <span class="brand-name" style="color: #FFFFFF; font-size: 1.1rem;">EDN Référence</span>
+          <span class="brand-sub">Édition Médicale Indépendante • Dr Ethan Cole</span>
+        </div>
+        <p class="footer-desc">
+          Les 28 tomes officiels R2C et stations ECOS au format Word éditable et PDF.
+        </p>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Navigation</div>
+        <a href="index.html" class="footer-link">Accueil</a>
+        <a href="catalogue.html" class="footer-link">Catalogue 28 Tomes</a>
+        <a href="qcm.html" class="footer-link">Entraînement QCM</a>
+        <a href="gratuit.html" class="footer-link">Ressources Offertes</a>
+        <a href="reader.html?book=01-lca" class="footer-link">Lecteur PDF Intégré</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Offres & Affiliation</div>
+        <a href="pack.html" class="footer-link">Pack Intégral (79 €)</a>
+        <a href="https://edgettrading.gumroad.com/affiliates" target="_blank" rel="noopener noreferrer" class="footer-link">Programme Affilié (30%)</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 EDN Référence — Dr Ethan Cole. Conforme aux Collèges d'Enseignants Universitaires.</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Specialty Filtering Extension for standalone QCM platform
+    let activeSpecialtyFilter = 'all';
+
+    function filterQcmBySpecialty(spec, btn) {
+      activeSpecialtyFilter = spec;
+      document.querySelectorAll('.qcm-filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (!window.qcmsDemoList) return;
+
+      if (spec === 'all') {
+        currentQcmFilteredList = [...window.qcmsDemoList];
+      } else {
+        currentQcmFilteredList = window.qcmsDemoList.filter(q => q.specialty.toLowerCase().includes(spec.toLowerCase()));
+      }
+
+      currentQcmIndex = 0;
+      qcmScore = 0;
+      qcmAnsweredCount = 0;
+      document.getElementById('qcmScoreDisplay').innerText = '0';
+      document.getElementById('qcmAnsweredDisplay').innerText = '0';
+      document.getElementById('qcmTotalDisplay').innerText = currentQcmFilteredList.length;
+
+      renderCurrentQcm();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack Intégral EDN 2026 — Les 28 Référentiels Médicaux Officiels | Ethan Cole</title>
+  <meta name="description" content="Obtenez l'arsenal complet pour réussir vos EDN et ECOS : 28 tomes Word modifiables + PDF HD, 1 700+ QCMs cliniques, 11 933 toggles d'active recall et application Android offline. 79 € accès à vie.">
+  <link rel="canonical" href="https://edn-store.vercel.app/pack">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://edn-store.vercel.app/pack">
+  <meta property="og:title" content="Pack Intégral EDN 2026 — 28 Référentiels Médicaux Officiels (79 €)">
+  <meta property="og:description" content="28 tomes Word modifiables + 28 PDF HD + 1 700+ QCMs corrigés + 11 933 questions active recall. Accès immédiat et à vie.">
+  <meta property="og:image" content="https://edn-store.vercel.app/logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .pack-page-wrapper {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 20px 100px;
+    }
+
+    .pack-hero {
+      text-align: center;
+      padding: 30px 0 50px;
+    }
+    .pack-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 20px;
+    }
+    .pack-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.18;
+      margin-bottom: 20px;
+    }
+    .pack-hero-sub {
+      font-size: 1.15rem;
+      color: var(--ink-muted);
+      max-width: 820px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    /* Proof Points Banner */
+    .proof-strip {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding: 18px 24px;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      margin-bottom: 50px;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .proof-item svg {
+      color: var(--emerald);
+      flex-shrink: 0;
+    }
+
+    /* Core Problem Agitation */
+    .agitation-card {
+      background: #FFFDFD;
+      border: 1px solid #FECDD3;
+      border-left: 5px solid #E11D48;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 48px;
+    }
+    .agitation-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: #9F1239;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .agitation-text {
+      color: #4C0519;
+      font-size: 0.94rem;
+      line-height: 1.65;
+    }
+
+    /* The Grand Slam Stack Section */
+    .stack-section {
+      margin-bottom: 60px;
+    }
+    .stack-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .stack-header h2 {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .stack-header p {
+      color: var(--ink-muted);
+      font-size: 1rem;
+    }
+
+    .stack-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+      transition: all 0.2s ease;
+    }
+    .stack-card:hover {
+      border-color: var(--navy);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    .stack-card.core-product {
+      border: 2px solid var(--emerald);
+      background: #FAFDFB;
+    }
+    .stack-info {
+      flex: 1;
+    }
+    .stack-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .tag-core {
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      border: 1px solid var(--emerald-border);
+    }
+    .tag-bonus {
+      background: var(--gold-light);
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+    }
+    .stack-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .stack-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+    .stack-val {
+      text-align: right;
+      min-width: 120px;
+    }
+    .stack-val-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      font-weight: 600;
+      display: block;
+    }
+    .stack-val-price {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--navy);
+      text-decoration: line-through;
+      color: var(--crimson);
+    }
+
+    /* Price Anchor Box (Hormozi Closing Box) */
+    .closing-box {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      border-radius: 18px;
+      padding: 48px 36px;
+      text-align: center;
+      margin-bottom: 60px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .closing-box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .closing-value-line {
+      font-size: 1.1rem;
+      color: #94A3B8;
+      margin-bottom: 8px;
+    }
+    .closing-value-strike {
+      text-decoration: line-through;
+      color: #F87171;
+      font-weight: 700;
+      font-size: 1.35rem;
+    }
+    .closing-price-main {
+      font-family: var(--font-serif);
+      font-size: clamp(3.5rem, 6vw, 5rem);
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .closing-price-main span {
+      font-size: 1.8rem;
+      color: #34D399;
+      font-weight: 700;
+    }
+    .closing-badge-terms {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #E2E8F0;
+      margin-bottom: 28px;
+    }
+    .btn-buy-huge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #10B981;
+      color: #FFFFFF;
+      font-size: 1.25rem;
+      font-weight: 800;
+      padding: 20px 48px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+      transition: all 0.2s ease;
+      max-width: 100%;
+    }
+    .btn-buy-huge:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(16, 185, 129, 0.5);
+      color: #FFFFFF;
+    }
+    .closing-security {
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Comparison Table */
+    .compare-section {
+      margin-bottom: 60px;
+    }
+    .compare-table-wrap {
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .compare-table th, .compare-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th {
+      background: var(--bg-subtle);
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .compare-table th.col-highlight {
+      background: var(--emerald-light);
+      color: var(--emerald-dark);
+      font-size: 1rem;
+    }
+    .compare-table td.col-highlight {
+      background: #F8FEFA;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* Guarantee Box */
+    .guarantee-card {
+      background: #FFFFFF;
+      border: 2px solid var(--border-dark);
+      border-radius: 14px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 60px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+    }
+    .guarantee-icon {
+      flex-shrink: 0;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--emerald-light);
+      border: 2px solid var(--emerald-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--emerald-dark);
+    }
+    .guarantee-text h3 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .guarantee-text p {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      margin-bottom: 60px;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+    .faq-q {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .stack-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .stack-val {
+        text-align: left;
+        border-top: 1px solid var(--border);
+        padding-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .guarantee-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    Édition Officielle 2026 • <strong>Pack Intégral 28 Tomes + 1 700 QCMs + 11 933 Toggles</strong> • Accès Immédiat.
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand-link">
+        <img src="logo.jpg" alt="Ethan Cole" class="brand-avatar">
+        <div class="brand-meta">
+          <span class="brand-name">EDN Référence</span>
+          <span class="brand-sub">Par Ethan Cole</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="catalogue.html" class="nav-link">Catalogue 28 Tomes</a>
+        <a href="qcm.html" class="nav-link">Entraînement QCM</a>
+        <a href="gratuit.html" class="nav-link">Ressources Offertes</a>
+        <a href="reader.html?book=01-lca" class="btn-header-pdf">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          Lecteur PDF
+        </a>
+        <a href="pack.html" class="btn-header-bundle" style="background: var(--emerald); border-color: var(--emerald);">
+          Pack Intégral (79 €)
+        </a>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" onclick="toggleMobileDrawer()">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop" onclick="closeMobileDrawer()"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Menu de navigation mobile">
+    <div class="mobile-drawer-header">
+      <div class="brand-meta">
+        <span class="brand-name">EDN Référence</span>
+        <span class="brand-sub">Par Ethan Cole</span>
+      </div>
+      <button class="mobile-drawer-close" onclick="closeMobileDrawer()" aria-label="Fermer le menu">&times;</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Accueil</a>
+      <a href="catalogue.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Catalogue 28 Tomes</a>
+      <a href="qcm.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Entraînement QCM</a>
+      <a href="gratuit.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Ressources Offertes</a>
+      <a href="reader.html?book=01-lca" class="mobile-nav-pdf-btn" onclick="closeMobileDrawer()">Lecteur PDF Intégré</a>
+    </nav>
+    <div style="padding: 20px 18px; border-top: 1px solid var(--border);">
+      <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-header-bundle" style="width: 100%; justify-content: center; padding: 12px; background: var(--emerald);">Commander le Pack (79 €)</a>
+      <p style="font-size: 0.75rem; color: var(--ink-faint); text-align: center; margin-top: 10px;">Accès Immédiat • Téléchargement Direct</p>
+    </div>
+  </aside>
+
+  <!-- Pack Content -->
+  <main class="pack-page-wrapper">
+
+    <!-- Hero Section -->
+    <section class="pack-hero">
+      <div class="pack-hero-badge">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Offre Intégrale EDN & ECOS 2026 — Accès Définitif
+      </div>
+      <h1>L'Arsenal Absolu des 28 Référentiels Médicaux</h1>
+      <p class="pack-hero-sub">
+        Tout ce dont vous avez besoin pour sécuriser le Rang A, dominer le Rang B et décrocher votre spécialité de rêve sans passer vos nuits à recopier des manuels de 1 000 pages.
+      </p>
+
+      <!-- Proof Strip -->
+      <div class="proof-strip">
+        <div class="proof-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          28 Tomes Word Modifiables (.docx)
+        </div>
+        <div class="proof-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          28 Ouvrages PDF HD avec Signets
+        </div>
+        <div class="proof-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          1 700+ QCMs Cliniques Corrigés
+        </div>
+        <div class="proof-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          11 933 Toggles d'Active Recall
+        </div>
+        <div class="proof-item">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          Zéro Abonnement Récurrent
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem Agitation (Hormozi Effort & Sacrifice reduction) -->
+    <section class="agitation-card">
+      <div class="agitation-title">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        Le Piège Classique de la D4 : S'épuiser à Recopier au Lieu d'Ancrer
+      </div>
+      <p class="agitation-text">
+        Préparer les EDN représente plus de <strong>20 000 pages</strong> réparties sur 28 Collèges d'Enseignants. La plupart des étudiants perdent 60% de leur temps à faire des fiches manuelles, à courir après des abonnements mensuels à 70 € qui expirent le lendemain du concours, ou à transporter des manuels papier de 3 kg dans les couloirs de l'hôpital. Résultat : fatigue chronique, révisions superficielles du Rang B et stress le jour J.<br><br>
+        <strong>Nous avons fait l'inverse :</strong> tout le travail d'extraction, de hiérarchisation Rang A/B, de mise en tableaux et de formulation des questions d'auto-évaluation est déjà réalisé. Vous téléchargez les fichiers Word, vous les adaptez à vos mnémotechniques et vous vous concentrez à 100% sur l'ancrage mémoriel.
+      </p>
+    </section>
+
+    <!-- The Grand Slam Stack Section -->
+    <section class="stack-section">
+      <div class="stack-header">
+        <h2>La Décomposition Complète de la Valeur Offerte</h2>
+        <p>Voici l'intégralité des outils livrés immédiatement lors de votre commande :</p>
+      </div>
+
+      <!-- Core Product -->
+      <div class="stack-card core-product">
+        <div class="stack-info">
+          <span class="stack-tag tag-core">Composant Principal</span>
+          <h3 class="stack-name">Les 28 Référentiels Officiels EDN 2026 en Format Word Modifiable (.docx)</h3>
+          <p class="stack-desc">
+            Les 28 spécialités médicales complètes (Neurologie, Cardiologie, Pneumologie, LCA, Réanimation, Hématologie, Pédiatrie, etc.). Format .docx prêt à être annoté, édité, enrichi de vos notes de cours et synchronisé sur Google Docs ou Notion.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">980 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 1: 28 PDF HD -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 1</span>
+          <h3 class="stack-name">Les 28 Ouvrages Complets en Format PDF Haute Définition</h3>
+          <p class="stack-desc">
+            Mise en page éditoriale soignée avec table des matières interactive, signets rapides pour naviguer d'un item à un autre sur iPad, tablette Android ou lecteur reMarkable.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">280 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 2: 1700+ QCM Bank -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 2</span>
+          <h3 class="stack-name">La Banque Exhaustive de 1 700+ QCMs Cliniques d'Annales & Épreuves Classantes</h3>
+          <p class="stack-desc">
+            Plus de 1 700 questions officielles couvrant l'ensemble du programme avec justifications cliniques rédigées, sources des Collèges et focus sur les pièges éliminatoires.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">250 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 3: Active Recall Toggles -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 3</span>
+          <h3 class="stack-name">L'Arsenal d'Active Recall — 11 933 Toggles & Questions Masquées</h3>
+          <p class="stack-desc">
+            Le mécanisme d'apprentissage le plus efficace au monde : chaque fait clinique critique, chaque contre-indication et posologie est transformé en bloc de rappel actif pour tester votre mémoire instantanément.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">190 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 4: Clinical Tables -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 4</span>
+          <h3 class="stack-name">La Bibliothèque des 8 141 Tableaux Cliniques & Arbres Décisionnels</h3>
+          <p class="stack-desc">
+            Diagnostic différentiel instantané, critères de sévérité (FINE, CURB-65, Glasgow, Child-Pugh, etc.) et protocoles de première intention synthétisés sous forme de tableaux clairs.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">150 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 5: Carnet d'Erreurs & ECOS -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 5</span>
+          <h3 class="stack-name">Le Carnet d'Erreurs du Major + Guide Méthodologique ECOS 2026</h3>
+          <p class="stack-desc">
+            Le carnet de bord stratégique pour ne plus jamais reproduire les fautes de cotation aux dossiers progressifs et la méthodologie pas-à-pas pour réussir les stations pratiques ECOS.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">75 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 6: Android App -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 6</span>
+          <h3 class="stack-name">L'Application Mobile Android EDN Référence 100% Hors-Ligne (APK)</h3>
+          <p class="stack-desc">
+            Application mobile native v1.0.0 sans publicité ni tracking. Consultez l'intégralité des 28 référentiels directement sur votre smartphone de stage, même en zone blanche sans réseau.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">120 €</span>
+        </div>
+      </div>
+
+      <!-- Bonus 7: Lifetime Updates -->
+      <div class="stack-card">
+        <div class="stack-info">
+          <span class="stack-tag tag-bonus">Bonus 7</span>
+          <h3 class="stack-name">Mises à Jour Réglementaires R2C & Collèges Gratuites à Vie</h3>
+          <p class="stack-desc">
+            Dès qu'un Collège publie une révision de recommandations ou une modification de rang, vous recevez les versions mises à jour sans débourser un centime de plus.
+          </p>
+        </div>
+        <div class="stack-val">
+          <span class="stack-val-label">Valeur Réelle</span>
+          <span class="stack-val-price">200 €</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Grand Slam Closing Box (Hormozi Anchor) -->
+    <section class="closing-box" id="commander">
+      <div class="closing-value-line">
+        Valeur Totale Cumulée de l'Arsenal : <span class="closing-value-strike">2 245 €</span>
+      </div>
+      <div class="closing-price-main">
+        79 € <span>Paiement Unique</span>
+      </div>
+      <div class="closing-badge-terms">
+        Accès Immédiat • Téléchargement Illimité • Licence Définitive Sans Abonnement
+      </div>
+
+      <div>
+        <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-buy-huge">
+          <span>Débloquer le Pack Intégral Maintenant (79 €)</span>
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+
+      <div class="closing-security">
+        <span>🔒 Paiement Sécurisé SSL Gumroad</span>
+        <span>⚡ Liens Envoyés Instantanément par Email</span>
+        <span>📱 Compatible PC, Mac, iPad & Android</span>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="compare-section">
+      <div class="stack-header">
+        <h2>Comment Nous Nous Comparons aux Alternatives</h2>
+        <p>Une comparaison transparente avec les méthodes traditionnelles de révision :</p>
+      </div>
+
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Critères de Choix</th>
+              <th class="col-highlight">Pack Intégral EDN Référence</th>
+              <th>Plateformes d'Abonnement en Ligne</th>
+              <th>Collection Papier des 28 Collèges</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Coût Total</strong></td>
+              <td class="col-highlight"><strong>79 € unique (à vie)</strong></td>
+              <td>600 € à 900 € / an</td>
+              <td>1 200 € à 1 500 €</td>
+            </tr>
+            <tr>
+              <td><strong>Format Modifiable (.docx)</strong></td>
+              <td class="col-highlight">Oui (Personnalisable à 100%)</td>
+              <td>Non (Verrouillé dans le navigateur)</td>
+              <td>Non (Papier fixe)</td>
+            </tr>
+            <tr>
+              <td><strong>Accès Hors-Ligne en Stage</strong></td>
+              <td class="col-highlight">Oui (PDF, Word, App Android)</td>
+              <td>Nécessite souvent 4G / Wi-Fi</td>
+              <td>Oui (mais pèse 35 kg au total)</td>
+            </tr>
+            <tr>
+              <td><strong>Active Recall Intégré</strong></td>
+              <td class="col-highlight">11 933 Toggles structurés</td>
+              <td>Variable selon abonnement</td>
+              <td>Aucun</td>
+            </tr>
+            <tr>
+              <td><strong>Banque de QCMs Corrigés</strong></td>
+              <td class="col-highlight">1 700+ Questions officielles</td>
+              <td>Oui</td>
+              <td>Non inclus ou en sus</td>
+            </tr>
+            <tr>
+              <td><strong>Validité de l'Accès</strong></td>
+              <td class="col-highlight">À vie (Fichiers sur votre disque)</td>
+              <td>Coupé après le concours</td>
+              <td>À vie</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Guarantee Box (Risk Reversal) -->
+    <section class="guarantee-card">
+      <div class="guarantee-icon">
+        <svg width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div class="guarantee-text">
+        <h3>Garantie Sérénité Interne & Assistance 7j/7</h3>
+        <p>
+          Nous nous engageons sur l'exactitude clinique et la conformité stricte aux référentiels des Collèges d'Enseignants universitaires. Si vous rencontrez la moindre difficulté technique de téléchargement ou d'ouverture des fichiers sur votre matériel, notre équipe vous répond en moins de 24 heures avec des liens alternatifs directs.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="stack-header">
+        <h2>Questions Fréquentes</h2>
+        <p>Tout ce que vous devez savoir avant de rejoindre nos étudiants :</p>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Comment s'effectue la livraison après le paiement ?</div>
+        <div class="faq-a">
+          Dès la validation de votre règlement sécurisé sur Gumroad, vous êtes redirigé instantanément vers une page de téléchargement direct. Vous recevez simultanément un email de confirmation contenant vos liens d'accès permanents aux 28 tomes (Word + PDF), aux bonus QCMs et à l'application mobile.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Puis-je modifier les fichiers Word sur Mac, iPad ou Google Docs ?</div>
+        <div class="faq-a">
+          Oui, absolument. Tous les fichiers sont fournis au format standard Microsoft Word (.docx). Ils s'ouvrent parfaitement dans Microsoft 365, Word pour Mac, iPadOS, Google Docs, LibreOffice et Pages. Vous pouvez surligner, insérer vos propres images de stage, supprimer des paragraphes ou créer vos propres fiches de synthèse.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Les ouvrages sont-ils conformes à la réforme R2C 2026 ?</div>
+        <div class="faq-a">
+          Oui. Tous les tomes distinguent clairement les connaissances de <strong>Rang A</strong> (savoirs fondamentaux indispensables pour valider) et les connaissances de <strong>Rang B</strong> (savoirs approfondis et discriminants pour le classement final), conformément aux recommandations officielles des Collèges d'Enseignants.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Y a-t-il un abonnement ou des frais cachés ?</div>
+        <div class="faq-a">
+          Aucun abonnement, aucun prélèvement récurrent. Vous payez 79 € une seule fois et conservez l'accès à vie aux fichiers sur vos disques durs, tablettes et ordinateurs personnels.
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-buy-huge">
+        <span>Sécuriser Mes 28 Tomes Complets (79 €)</span>
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <p style="margin-top: 14px; font-size: 0.85rem; color: var(--ink-faint);">Téléchargement direct • Plus de 140 étudiants équipés cette année</p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="logo.jpg" alt="Ethan Cole" class="footer-avatar">
+          <div>
+            <div class="footer-title">EDN Référence</div>
+            <div class="footer-sub">Par Dr Ethan Cole</div>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Ouvrages médicaux de référence pour la préparation des EDN et ECOS. Conformes aux Collèges d'Enseignants universitaires français et à la réforme R2C.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="catalogue.html">Catalogue des 28 Tomes</a></li>
+          <li><a href="qcm.html">Simulateur QCM</a></li>
+          <li><a href="gratuit.html">Ressources Offertes</a></li>
+          <li><a href="reader.html?book=01-lca">Poste de Lecture PDF</a></li>
+          <li><a href="pack.html">Pack Intégral (79 €)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Engagement & Déontologie</h3>
+        <p class="footer-disclaimer">
+          Publications pédagogiques indépendantes destinées aux étudiants en 2e cycle des études médicales (DFASM). Les contenus sont basés sur les données probantes et les recommandations professionnelles des Sociétés Savantes.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 EDN Référence — Dr Ethan Cole. Tous droits réservés.</div>
+        <div class="footer-trust-badges">
+          <span>Conforme R2C</span> • <span>Collèges Universitaires</span> • <span>Téléchargement Sécurisé Gumroad</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const toggle = document.getElementById('mobileMenuToggle');
+      const isOpen = drawer.classList.contains('active');
+      if (isOpen) {
+        closeMobileDrawer();
+      } else {
+        drawer.classList.add('active');
+        backdrop.classList.add('active');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const backdrop = document.getElementById('mobileDrawerBackdrop');
+      const toggle = document.getElementById('mobileMenuToggle');
+      if (drawer) drawer.classList.remove('active');
+      if (backdrop) backdrop.classList.remove('active');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  </script>
+</body>
+</html>

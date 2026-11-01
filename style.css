@@ -81,7 +81,7 @@
     }
 
     /* --- Header --- */
-    header {
+    header, .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -90,7 +90,7 @@
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-    .header-inner {
+    .header-inner, .header-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 12px 24px;
@@ -132,7 +132,7 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
-    .header-nav {
+    .header-nav, .nav-desktop {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -147,7 +147,7 @@
     .nav-link:hover {
       color: var(--navy);
     }
-    .btn-header-pdf {
+    .btn-header-pdf, .nav-btn-outline {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -162,11 +162,11 @@
       transition: all 0.15s ease;
       box-shadow: var(--shadow-sm);
     }
-    .btn-header-pdf:hover {
+    .btn-header-pdf:hover, .nav-btn-outline:hover {
       background: var(--bg-subtle);
       border-color: var(--navy);
     }
-    .btn-header-bundle {
+    .btn-header-bundle, .nav-btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -180,7 +180,7 @@
       transition: all 0.15s ease;
       box-shadow: var(--shadow-sm);
     }
-    .btn-header-bundle:hover {
+    .btn-header-bundle:hover, .nav-btn-primary:hover {
       background: var(--navy-light);
       transform: translateY(-1px);
     }
@@ -2206,7 +2206,7 @@
   .affiliate-desc { margin: 0 auto; }
 }
 @media (max-width: 768px) {
-  .header-nav { display: none !important; }
+  .header-nav, .nav-desktop { display: none !important; }
   .mobile-menu-toggle { display: flex; }
   .section-about { padding: 32px 20px; }
   .affiliate-card { padding: 28px 20px; }

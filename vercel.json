@@ -1,6 +1,13 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/catalogue", "destination": "/catalogue.html" },
+    { "source": "/qcm", "destination": "/qcm.html" },
+    { "source": "/gratuit", "destination": "/gratuit.html" },
+    { "source": "/pack", "destination": "/pack.html" },
+    { "source": "/reader", "destination": "/reader.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
