@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://edn-store.vercel.app/sitemap.xml
+
+# Protect internal preview PDFs from search crawler scraping
+Disallow: /previews/

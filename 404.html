@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Introuvable | EDN Référence 2026</title>
+  <meta name="description" content="La page demandée est introuvable. Accédez aux 28 référentiels EDN/ECOS officiels et aux ressources gratuites d'Ethan Cole.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-page: #FBFBFA;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F8FAFC;
+      --navy: #0F172A;
+      --navy-light: #1E293B;
+      --navy-muted: #334155;
+      --ink: #1E293B;
+      --ink-muted: #475569;
+      --ink-faint: #64748B;
+      --border: #E2E8F0;
+      --gold: #B45309;
+      --gold-light: #FFFBEB;
+      --gold-border: #FDE68A;
+      --emerald: #059669;
+      --emerald-light: #ECFDF5;
+      --emerald-border: #A7F3D0;
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: rgba(251, 251, 250, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      color: var(--navy);
+      display: block;
+    }
+
+    .brand-sub {
+      font-size: 0.75rem;
+      color: var(--ink-faint);
+      display: block;
+    }
+
+    .btn-return-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 0.6rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-return-home:hover {
+      background: var(--navy-light);
+      transform: translateY(-1px);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .error-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gold-light);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .error-tag::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .error-desc {
+      max-width: 620px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+    }
+
+    .actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--navy);
+      color: #FFFFFF;
+      padding: 0.85rem 1.6rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .btn-main:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #FFFFFF;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      padding: 0.85rem 1.4rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--navy-muted);
+      background: var(--bg-subtle);
+    }
+
+    /* Lead magnets shortcuts */
+    .shortcuts-wrapper {
+      width: 100%;
+      text-align: left;
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+    }
+
+    .shortcuts-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+      text-align: center;
+    }
+
+    .shortcuts-sub {
+      text-align: center;
+      color: var(--ink-faint);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--emerald-light);
+      border: 1px solid var(--emerald-border);
+      color: var(--emerald);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-bottom: 0.65rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.5;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: all 0.15s ease;
+    }
+
+    .card-btn:hover {
+      background: var(--navy);
+      color: #FFFFFF;
+      border-color: var(--navy);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #FFFFFF;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-faint);
+    }
+
+    footer a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="/" class="brand-link">
+        <img src="logo.jpg" alt="Ethan Cole" class="brand-avatar">
+        <div>
+          <span class="brand-name">EDN Référence</span>
+          <span class="brand-sub">Par Ethan Cole · Conforme R2C</span>
+        </div>
+      </a>
+      <a href="/" class="btn-return-home">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Retour au Store
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="error-tag">Diagnostic d'Aiguillage · Code 404</div>
+    <h1>Cette page clinique est introuvable.</h1>
+    <p class="error-desc">
+      Le chapitre, la ressource ou l'URL que vous recherchez n'existe pas ou a été déplacé.
+      Reprenez votre révision des EDN & ECOS à partir de la page principale ou téléchargez directement nos supports de référence offerts.
+    </p>
+
+    <div class="actions-row">
+      <a href="/" class="btn-main">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Retourner au Catalogue des 28 Tomes
+      </a>
+      <a href="/#qcmSimulator" class="btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        Simulateur de QCMs en Ligne
+      </a>
+    </div>
+
+    <div class="shortcuts-wrapper">
+      <h2 class="shortcuts-title">Accès Direct aux Ressources Cliniques Offertes</h2>
+      <p class="shortcuts-sub">Téléchargement libre sans inscription — Documents originaux conformes Collèges d'Enseignants</p>
+
+      <div class="grid-cards">
+        <!-- Tome 1: LCA -->
+        <div class="card">
+          <span class="card-badge">Tome 01 · 270 pages</span>
+          <h3 class="card-title">LCA — Lecture Critique d'Article</h3>
+          <p class="card-desc">Méthodologie intégrale, analyse des biais, tests statistiques et grille de lecture pour l'épreuve de LCA.</p>
+          <div class="card-links">
+            <a href="/EDN-Tome-01-LCA-Offert.pdf" download class="card-btn">PDF HD</a>
+            <a href="/EDN-Tome-01-LCA-Offert.docx" download class="card-btn">Word (.docx)</a>
+            <a href="/EDN-Tome-01-LCA-Offert.epub" download class="card-btn">ePub</a>
+          </div>
+        </div>
+
+        <!-- Tome 2: Neurologie -->
+        <div class="card">
+          <span class="card-badge">Tome 02 · 657 pages</span>
+          <h3 class="card-title">Neurologie Complète R2C</h3>
+          <p class="card-desc">Sémiologie, AVC, SLA, épilepsie, céphalées, myasthénie et 872 tableaux synoptiques de consensus.</p>
+          <div class="card-links">
+            <a href="/EDN-Tome-02-Neurologie-Offert.pdf" download class="card-btn">PDF HD</a>
+            <a href="/EDN-Tome-02-Neurologie-Offert.docx" download class="card-btn">Word (.docx)</a>
+            <a href="/EDN-Tome-02-Neurologie-Offert.epub" download class="card-btn">ePub</a>
+          </div>
+        </div>
+
+        <!-- Banque 100 QCMs -->
+        <div class="card">
+          <span class="card-badge">Banque d'Annales</span>
+          <h3 class="card-title">100 QCMs Corrigés & Pièges Déjoués</h3>
+          <p class="card-desc">Dossiers progressifs et questions isolées d'Ophtalmologie et Urgences-Réanimation avec justifications détaillées.</p>
+          <div class="card-links">
+            <a href="/Banque-QCM-100-Questions-Corrigees.pdf" download class="card-btn">PDF (50 p.)</a>
+            <a href="/Banque-QCM-100-Questions-Corrigees.docx" download class="card-btn">Word (.docx)</a>
+          </div>
+        </div>
+
+        <!-- Carnet d'Erreurs -->
+        <div class="card">
+          <span class="card-badge">Méthode Major 2025</span>
+          <h3 class="card-title">Carnet d'Erreurs EDN Major</h3>
+          <p class="card-desc">Système actif d'audit des lacunes et tables cliniques de pièges pour ne plus perdre de points sur les items clés.</p>
+          <div class="card-links">
+            <a href="/Carnet-d-Erreurs-EDN-Major-2025.pdf" download class="card-btn">Guide PDF</a>
+            <a href="/Carnet-d-Erreurs-EDN-Major-2025.docx" download class="card-btn">Modèle Word</a>
+          </div>
+        </div>
+
+        <!-- App Android -->
+        <div class="card">
+          <span class="card-badge">App Android · 50 Mo</span>
+          <h3 class="card-title">Application Hors-Ligne Officielle</h3>
+          <p class="card-desc">Révision continue en salle de garde et en stage hospitalier sans connexion 4G/Wifi.</p>
+          <div class="card-links">
+            <a href="/EDN-App-Android-Offline.apk" download class="card-btn">Télécharger l'APK</a>
+          </div>
+        </div>
+
+        <!-- Guide ECOS -->
+        <div class="card">
+          <span class="card-badge">Préparation ECOS 2026</span>
+          <h3 class="card-title">Guide Méthodologique & 15 Pièges</h3>
+          <p class="card-desc">Grille d'évaluation des 7 minutes d'ECOS, communication médicale et pièges d'examinateurs.</p>
+          <div class="card-links">
+            <a href="/Guide-Methodologique-EDN-ECOS-Offert.docx" download class="card-btn">Guide (.docx)</a>
+            <a href="/GUIDE_METHODOLOGIQUE_EDN_2026.md" target="_blank" class="card-btn">Markdown</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>EDN 2026 Référence Officielle · Développé avec rigueur médicale par <strong>Ethan Cole</strong></p>
+    <p style="margin-top: 0.35rem;"><a href="/">Retour à l'accueil</a> · <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer">Pack Intégral 28 Tomes</a></p>
+  </footer>
+
+</body>
+</html>

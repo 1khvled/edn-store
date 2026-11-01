@@ -1,3 +1,9 @@
 .vercel
-
 *.py
+*.pyc
+__pycache__/
+*.csv
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
