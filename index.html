@@ -511,6 +511,293 @@
       }
     });
 
+  
+    // =========================================================================
+    // HIGH-PERFORMANCE PDF.JS READER ENGINE
+    // =========================================================================
+    let currentPdfDoc = null;
+    let currentPdfPage = 1;
+    let currentPdfTotalPages = 1;
+    let currentPdfScale = 1.35;
+    let currentPdfRotation = 0;
+    let isRenderingPdfPage = false;
+    let pendingPdfPage = null;
+    let currentPdfUrl = null;
+
+    async function openPdfReader(url, title, subtitle, downloadUrl, buyUrl, isSample) {
+      const modal = document.getElementById('pdfReaderModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      document.getElementById('pdfReaderTitle').innerText = title || 'Référentiel Médical Officiel';
+      document.getElementById('pdfReaderSub').innerText = subtitle || "Collèges d'Enseignants Universitaires";
+      
+      const badge = document.getElementById('pdfReaderBadge');
+      if (isSample) {
+        badge.innerText = 'Extrait Officiel (6 pages)';
+        badge.style.background = '#92400E';
+        badge.style.color = '#FDE68A';
+      } else {
+        badge.innerText = 'Édition Complète Offerte';
+        badge.style.background = '#065F46';
+        badge.style.color = '#6EE7B7';
+      }
+
+      const dlBtn = document.getElementById('btnDownloadCurrentPdf');
+      dlBtn.href = downloadUrl || url;
+      dlBtn.style.display = downloadUrl ? 'inline-flex' : 'none';
+
+      const buyBtn = document.getElementById('btnBuyCurrentPdf');
+      if (buyUrl) {
+        buyBtn.href = buyUrl;
+        buyBtn.style.display = 'inline-flex';
+      } else {
+        buyBtn.href = 'https://edgettrading.gumroad.com/l/ycfkfa';
+        buyBtn.style.display = 'inline-flex';
+      }
+
+      currentPdfUrl = url;
+      currentPdfPage = 1;
+      currentPdfRotation = 0;
+      currentPdfScale = window.innerWidth < 768 ? 0.85 : 1.35;
+      updateZoomDisplay();
+
+      showPdfSpinner(true);
+      try {
+        if (!window.pdfjsLib) {
+          throw new Error('PDF.js non chargé');
+        }
+        const loadingTask = pdfjsLib.getDocument(url);
+        currentPdfDoc = await loadingTask.promise;
+        currentPdfTotalPages = currentPdfDoc.numPages;
+
+        document.getElementById('pdfPageTotal').innerText = currentPdfTotalPages;
+        document.getElementById('pdfSidebarCount').innerText = `${currentPdfTotalPages} p.`;
+        document.getElementById('pdfPageInput').max = currentPdfTotalPages;
+
+        buildPdfSidebarThumbnails(currentPdfTotalPages);
+        await renderPdfPage(1);
+      } catch (err) {
+        console.error('Erreur ouverture PDF:', err);
+        // Fallback: open PDF directly in new tab if canvas failed
+        window.open(url, '_blank');
+        closePdfReader();
+      } finally {
+        showPdfSpinner(false);
+      }
+
+      window.addEventListener('keydown', handlePdfKeydown);
+    }
+
+    function closePdfReader() {
+      const modal = document.getElementById('pdfReaderModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handlePdfKeydown);
+      currentPdfDoc = null;
+    }
+
+    function showPdfSpinner(show) {
+      const sp = document.getElementById('pdfSpinnerOverlay');
+      if (sp) sp.style.display = show ? 'flex' : 'none';
+    }
+
+    async function renderPdfPage(num) {
+      if (!currentPdfDoc) return;
+      isRenderingPdfPage = true;
+      currentPdfPage = num;
+
+      document.getElementById('pdfPageInput').value = num;
+      document.getElementById('btnPrevPage').disabled = num <= 1;
+      document.getElementById('btnNextPage').disabled = num >= currentPdfTotalPages;
+
+      highlightActiveThumbnail(num);
+
+      try {
+        const page = await currentPdfDoc.getPage(num);
+        const canvas = document.getElementById('pdfRenderCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const viewport = page.getViewport({ scale: currentPdfScale, rotation: currentPdfRotation });
+        const outputScale = window.devicePixelRatio || 1;
+
+        canvas.width = Math.floor(viewport.width * outputScale);
+        canvas.height = Math.floor(viewport.height * outputScale);
+        canvas.style.width = Math.floor(viewport.width) + 'px';
+        canvas.style.height = Math.floor(viewport.height) + 'px';
+
+        const transform = outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+
+        const renderContext = {
+          canvasContext: ctx,
+          transform: transform,
+          viewport: viewport
+        };
+
+        await page.render(renderContext).promise;
+      } catch (err) {
+        console.warn('Erreur rendu page PDF:', err);
+      } finally {
+        isRenderingPdfPage = false;
+        if (pendingPdfPage !== null) {
+          const p = pendingPdfPage;
+          pendingPdfPage = null;
+          renderPdfPage(p);
+        }
+      }
+    }
+
+    function queueRenderPdfPage(num) {
+      if (isRenderingPdfPage) {
+        pendingPdfPage = num;
+      } else {
+        renderPdfPage(num);
+      }
+    }
+
+    function prevPdfPage() {
+      if (currentPdfPage <= 1) return;
+      queueRenderPdfPage(currentPdfPage - 1);
+    }
+
+    function nextPdfPage() {
+      if (currentPdfPage >= currentPdfTotalPages) return;
+      queueRenderPdfPage(currentPdfPage + 1);
+    }
+
+    function goToPdfPage(val) {
+      let pageNum = parseInt(val, 10);
+      if (isNaN(pageNum)) pageNum = 1;
+      pageNum = Math.max(1, Math.min(pageNum, currentPdfTotalPages));
+      queueRenderPdfPage(pageNum);
+    }
+
+    function zoomPdf(delta) {
+      let newScale = currentPdfScale + delta;
+      newScale = Math.max(0.5, Math.min(newScale, 3.0));
+      currentPdfScale = Math.round(newScale * 100) / 100;
+      updateZoomDisplay();
+      queueRenderPdfPage(currentPdfPage);
+    }
+
+    function fitPdfWidth() {
+      const viewportEl = document.getElementById('pdfViewport');
+      const availWidth = viewportEl.clientWidth - 48;
+      if (!currentPdfDoc || availWidth <= 0) return;
+
+      currentPdfDoc.getPage(currentPdfPage).then(page => {
+        const vp = page.getViewport({ scale: 1.0, rotation: currentPdfRotation });
+        currentPdfScale = Math.round((availWidth / vp.width) * 100) / 100;
+        updateZoomDisplay();
+        queueRenderPdfPage(currentPdfPage);
+      });
+    }
+
+    function rotatePdf() {
+      currentPdfRotation = (currentPdfRotation + 90) % 360;
+      queueRenderPdfPage(currentPdfPage);
+    }
+
+    function updateZoomDisplay() {
+      document.getElementById('pdfZoomLabel').innerText = `${Math.round(currentPdfScale * 100)}%`;
+    }
+
+    function togglePdfSidebar() {
+      const sb = document.getElementById('pdfReaderSidebar');
+      sb.classList.toggle('collapsed');
+    }
+
+    function togglePdfFullscreen() {
+      const modal = document.getElementById('pdfReaderModal');
+      if (!document.fullscreenElement) {
+        modal.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    }
+
+    function buildPdfSidebarThumbnails(total) {
+      const list = document.getElementById('pdfThumbnailsScroll');
+      list.innerHTML = '';
+      const limit = Math.min(total, 60); // build thumbnail cards
+
+      for (let i = 1; i <= limit; i++) {
+        const item = document.createElement('div');
+        item.className = `pdf-thumb-card ${i === 1 ? 'active' : ''}`;
+        item.id = `pdfThumb_${i}`;
+        item.onclick = () => queueRenderPdfPage(i);
+        item.innerHTML = `
+          <span class="pdf-thumb-num">Page ${i}</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        `;
+        list.appendChild(item);
+      }
+    }
+
+    function highlightActiveThumbnail(num) {
+      const activeOld = document.querySelector('.pdf-thumb-card.active');
+      if (activeOld) activeOld.classList.remove('active');
+      const activeNew = document.getElementById(`pdfThumb_${num}`);
+      if (activeNew) {
+        activeNew.classList.add('active');
+        activeNew.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+
+    function handlePdfKeydown(e) {
+      if (e.key === 'Escape') {
+        closePdfReader();
+      } else if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+        nextPdfPage();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevPdfPage();
+      } else if (e.key === '+' || e.key === '=') {
+        zoomPdf(0.2);
+      } else if (e.key === '-') {
+        zoomPdf(-0.2);
+      } else if (e.key.toLowerCase() === 'f') {
+        togglePdfFullscreen();
+      } else if (e.key.toLowerCase() === 'r') {
+        rotatePdf();
+      }
+    }
+
+    // Connect Book Catalog buttons to open PDF reader
+    function openBookPdf(num) {
+      const b = booksData.find(x => x.n === num);
+      if (!b) return;
+
+      if (num === 1) {
+        openPdfReader(
+          'EDN-Tome-01-LCA-Offert.pdf',
+          'Tome 01 — LCA (Lecture Critique d\'Article)',
+          '270 pages · Volume Complet Offert · Conforme R2C',
+          'EDN-Tome-01-LCA-Offert.pdf',
+          'https://edgettrading.gumroad.com/l/ycfkfa',
+          false
+        );
+      } else if (num === 2) {
+        openPdfReader(
+          'EDN-Tome-02-Neurologie-Offert.pdf',
+          'Tome 02 — Neurologie R2C Complète',
+          '657 pages · 872 Tableaux Cliniques · Volume Complet Offert',
+          'EDN-Tome-02-Neurologie-Offert.pdf',
+          'https://edgettrading.gumroad.com/l/ycfkfa',
+          false
+        );
+      } else {
+        const previewUrl = b.preview_pdf || `previews/preview-${num < 10 ? '0' + num : num}.pdf`;
+        openPdfReader(
+          previewUrl,
+          `Tome ${num < 10 ? '0' + num : num} — ${b.title}`,
+          `${b.pages} pages · ${b.college} · R2C 2026`,
+          b.gumroad_url ? `https://edgettrading.gumroad.com/l/${b.gumroad_url}` : null,
+          b.gumroad_url ? `https://edgettrading.gumroad.com/l/${b.gumroad_url}` : 'https://edgettrading.gumroad.com/l/ycfkfa',
+          true
+        );
+      }
+    }
+
   </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2160,7 +2447,358 @@
       line-height: 1.5;
     }
 
+  
+    /* ==========================================================================
+       REAL PDF READER MODAL (HIGH-PERFORMANCE WORKSTATION)
+       ========================================================================== */
+    .pdf-reader-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(11, 15, 25, 0.96);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      animation: fadeIn 0.2s ease;
+    }
+    .pdf-reader-modal.active {
+      display: flex;
+    }
+    .pdf-topbar {
+      height: 58px;
+      background: #0f172a;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      color: #f8fafc;
+      flex-shrink: 0;
+      gap: 12px;
+      user-select: none;
+    }
+    .pdf-topbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      flex: 1;
+    }
+    .pdf-doc-meta {
+      min-width: 0;
+    }
+    .pdf-doc-title {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f8fafc;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .pdf-doc-sub {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .pdf-doc-badge {
+      display: inline-block;
+      background: #065F46;
+      color: #6EE7B7;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .pdf-topbar-center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e293b;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      flex-shrink: 0;
+    }
+    .pdf-btn-nav {
+      background: transparent;
+      border: none;
+      color: #cbd5e1;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .pdf-btn-nav:hover:not(:disabled) {
+      background: #334155;
+      color: #fff;
+    }
+    .pdf-btn-nav:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+    .pdf-page-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+    .pdf-page-input {
+      width: 44px;
+      background: #0f172a;
+      border: 1px solid #475569;
+      color: #f8fafc;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 3px 0;
+      border-radius: 4px;
+      outline: none;
+    }
+    .pdf-page-input:focus {
+      border-color: #38bdf8;
+    }
+    .pdf-topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .pdf-btn-tool {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .pdf-btn-tool:hover {
+      background: #334155;
+      color: #fff;
+    }
+    .pdf-zoom-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #cbd5e1;
+      min-width: 44px;
+      text-align: center;
+    }
+    .pdf-btn-download-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0284c7;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .pdf-btn-download-top:hover {
+      background: #0369a1;
+    }
+    .pdf-btn-buy-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #b45309;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .pdf-btn-buy-top:hover {
+      background: #92400e;
+    }
+    .pdf-btn-close-reader {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.8rem;
+      line-height: 1;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+    .pdf-btn-close-reader:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+
+    /* Reader Main Workspace */
+    .pdf-workspace {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left Sidebar: Thumbnails / Outline */
+    .pdf-sidebar {
+      width: 240px;
+      background: #0f172a;
+      border-right: 1px solid #1e293b;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      transition: margin-left 0.25s ease;
+    }
+    .pdf-sidebar.collapsed {
+      margin-left: -240px;
+    }
+    .pdf-sidebar-header {
+      padding: 12px 14px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pdf-thumbnails-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pdf-thumb-card {
+      background: #1e293b;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #cbd5e1;
+    }
+    .pdf-thumb-card:hover {
+      background: #334155;
+      color: #fff;
+    }
+    .pdf-thumb-card.active {
+      border-color: #38bdf8;
+      background: #0c4a6e;
+      color: #fff;
+    }
+    .pdf-thumb-num {
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+
+    /* Center Viewport */
+    .pdf-viewport {
+      flex: 1;
+      overflow: auto;
+      background: #1e293b;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 24px;
+      position: relative;
+      user-select: text;
+    }
+    .pdf-canvas-container {
+      position: relative;
+      background: #ffffff;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 0 auto;
+      transition: transform 0.1s ease;
+    }
+    #pdfRenderCanvas {
+      display: block;
+      margin: 0 auto;
+    }
+    .pdf-spinner-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #f8fafc;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    .pdf-spinner {
+      width: 38px;
+      height: 38px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      border-top-color: #38bdf8;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .pdf-spinner-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e2e8f0;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-sidebar {
+        display: none !important;
+      }
+      .pdf-topbar-right .pdf-zoom-badge,
+      .pdf-topbar-right button:nth-child(4),
+      .pdf-topbar-right button:nth-child(5) {
+        display: none !important;
+      }
+      .pdf-viewport {
+        padding: 10px 4px;
+      }
+    }
+
   </style>
+
+  <!-- Mozilla PDF.js Reader Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    if (window.pdfjsLib) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    }
+  </script>
+
 </head>
 <body>
 
@@ -2180,8 +2818,8 @@
         </div>
       </a>
       <div class="header-cta">
-        <button class="btn-header-demo" onclick="openFreeBookDemo('tome1')">
-          🎁 2 Livres Offerts (0 €)
+        <button class="btn-header-demo" onclick="openBookPdf(2)">
+          📖 Lecteur PDF Intégré
         </button>
         <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-header-bundle">
           Pack Intégral (79 €)
@@ -2242,7 +2880,7 @@
               <p class="gift-card-desc">Programme officiel de méthodologie, types d'études et statistiques.</p>
             </div>
             <div class="gift-card-actions">
-              <button class="btn-gift-read" onclick="openFreeBookDemo('tome1')">Lire en Ligne</button>
+              <button class="btn-gift-read" onclick="openBookPdf(1)"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>Feuilleter le Tome 1 (270 p.)</button>
               <div class="gift-btn-row">
                 <a href="EDN-Tome-01-LCA-Offert.docx" download class="btn-gift-dl">Word (.docx)</a>
                 <a href="EDN-Tome-01-LCA-Offert.pdf" download class="btn-gift-dl">PDF HD</a>
@@ -2259,7 +2897,7 @@
               <p class="gift-card-desc">Sémiologie, AVC, SLA, myasthénie, épilepsie et 872 tableaux préservés.</p>
             </div>
             <div class="gift-card-actions">
-              <button class="btn-gift-read" onclick="openFreeBookDemo('tome2')">Lire en Ligne</button>
+              <button class="btn-gift-read" onclick="openBookPdf(2)"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>Feuilleter le Tome 2 (657 p.)</button>
               <div class="gift-btn-row">
                 <a href="EDN-Tome-02-Neurologie-Offert.docx" download class="btn-gift-dl">Word (.docx)</a>
                 <a href="EDN-Tome-02-Neurologie-Offert.pdf" download class="btn-gift-dl">PDF HD</a>
@@ -2296,7 +2934,7 @@
                 Tester en Direct ci-dessous
               </a>
               <div class="gift-btn-row">
-                <a href="Banque-QCM-100-Questions-Corrigees.pdf" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #065F46;">PDF (50 p.)</a>
+                <button class="btn-gift-dl" onclick="openPdfReader('Banque-QCM-100-Questions-Corrigees.pdf', 'Banque de 100 QCMs Corrigés Haute Performance', '50 pages · Clés Officielles & Pièges Déjoués', 'Banque-QCM-100-Questions-Corrigees.pdf', null, false)" style="background: #fff; font-weight: 700; color: #065F46; border: none; cursor: pointer;">Feuilleter PDF (50 p.)</button>
                 <a href="Banque-QCM-100-Questions-Corrigees.docx" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #065F46;">Word (.docx)</a>
               </div>
             </div>
@@ -2315,7 +2953,7 @@
                 Modèle Word (.docx)
               </a>
               <div class="gift-btn-row">
-                <a href="Carnet-d-Erreurs-EDN-Major-2025.pdf" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #92400E;">Guide PDF</a>
+                <button class="btn-gift-dl" onclick="openPdfReader('Carnet-d-Erreurs-EDN-Major-2025.pdf', 'Le Carnet d\'Erreurs EDN — Méthode Major 2025', 'Rappel Actif · Grilles de Pièges R2C', 'Carnet-d-Erreurs-EDN-Major-2025.pdf', null, false)" style="background: #fff; font-weight: 700; color: #92400E; border: none; cursor: pointer;">Feuilleter PDF</button>
                 <a href="Fiches-Anatomie-Semiologie-Neurologie.docx" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #92400E;">Fiches Neuro</a>
               </div>
             </div>
@@ -2991,5 +3629,95 @@
       }
     });
   </script>
+
+  <!-- REAL PDF READER MODAL (HIGH-PERFORMANCE WORKSTATION) -->
+  <div class="pdf-reader-modal" id="pdfReaderModal" role="dialog" aria-modal="true">
+    <!-- Topbar Controls -->
+    <div class="pdf-topbar">
+      <div class="pdf-topbar-left">
+        <button class="pdf-btn-tool" onclick="togglePdfSidebar()" title="Afficher/Masquer les vignettes (V)">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+        </button>
+        <div class="pdf-doc-meta">
+          <h2 id="pdfReaderTitle" class="pdf-doc-title">Référentiel Médical Officiel</h2>
+          <div class="pdf-doc-sub">
+            <span id="pdfReaderBadge" class="pdf-doc-badge">Édition Complète</span>
+            <span id="pdfReaderSub">Collèges d'Enseignants Universitaires · R2C 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Page Nav Center -->
+      <div class="pdf-topbar-center">
+        <button class="pdf-btn-nav" id="btnPrevPage" onclick="prevPdfPage()" title="Page précédente (Flèche Gauche)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="pdf-page-indicator">
+          <span>Page</span>
+          <input type="number" id="pdfPageInput" class="pdf-page-input" min="1" value="1" onchange="goToPdfPage(this.value)">
+          <span>/</span>
+          <span id="pdfPageTotal">1</span>
+        </div>
+        <button class="pdf-btn-nav" id="btnNextPage" onclick="nextPdfPage()" title="Page suivante (Flèche Droite)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Tools & Actions Right -->
+      <div class="pdf-topbar-right">
+        <button class="pdf-btn-tool" onclick="zoomPdf(-0.2)" title="Zoom arrière (-)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4"/></svg>
+        </button>
+        <span id="pdfZoomLabel" class="pdf-zoom-badge">100%</span>
+        <button class="pdf-btn-tool" onclick="zoomPdf(0.2)" title="Zoom avant (+)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        </button>
+        <button class="pdf-btn-tool" onclick="fitPdfWidth()" title="Ajuster à la largeur">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8m0 0l-3-3m3 3l-3 3m-8 6h8m-8 0l3 3m-3-3l3-3"/></svg>
+        </button>
+        <button class="pdf-btn-tool" onclick="rotatePdf()" title="Faire pivoter 90° (R)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </button>
+        <button class="pdf-btn-tool" onclick="togglePdfFullscreen()" title="Plein écran (F)">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+        </button>
+
+        <a href="#" id="btnDownloadCurrentPdf" download class="pdf-btn-download-top" title="Télécharger le fichier PDF complet">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Télécharger</span>
+        </a>
+        <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" id="btnBuyCurrentPdf" class="pdf-btn-buy-top">
+          Pack Intégral (79 €)
+        </a>
+        <button class="pdf-btn-close-reader" onclick="closePdfReader()" title="Fermer le lecteur (Échap)">&times;</button>
+      </div>
+    </div>
+
+    <!-- Workspace -->
+    <div class="pdf-workspace">
+      <!-- Left Vignettes Sidebar -->
+      <aside class="pdf-sidebar" id="pdfReaderSidebar">
+        <div class="pdf-sidebar-header">
+          <span>Sommaire & Pages</span>
+          <span id="pdfSidebarCount" style="color: #38bdf8;">0 p.</span>
+        </div>
+        <div class="pdf-thumbnails-scroll" id="pdfThumbnailsScroll">
+          <!-- Dynamically inserted page cards -->
+        </div>
+      </aside>
+
+      <!-- Center Viewport Canvas -->
+      <div class="pdf-viewport" id="pdfViewport">
+        <div class="pdf-spinner-overlay" id="pdfSpinnerOverlay" style="display: none;">
+          <div class="pdf-spinner"></div>
+          <div class="pdf-spinner-text">Rendu haute fidélité en cours...</div>
+        </div>
+        <div class="pdf-canvas-container" id="pdfCanvasContainer">
+          <canvas id="pdfRenderCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

@@ -230,7 +230,8 @@
     ],
     "category": "Transversal & Méthode",
     "is_free_gift": true,
-    "free_download_url": "EDN-Tome-01-LCA-Offert.docx"
+    "free_download_url": "EDN-Tome-01-LCA-Offert.docx",
+    "preview_pdf": "previews/preview-01-lca.pdf"
   },
   {
     "n": 2,
@@ -463,7 +464,8 @@
     ],
     "category": "Médecine Spécialisée",
     "is_free_gift": true,
-    "free_download_url": "EDN-Tome-02-Neurologie-Offert.docx"
+    "free_download_url": "EDN-Tome-02-Neurologie-Offert.docx",
+    "preview_pdf": "previews/preview-02-neurologie.pdf"
   },
   {
     "n": 3,
@@ -690,7 +692,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-03-infectiologie.pdf"
   },
   {
     "n": 4,
@@ -925,7 +928,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-04-cardiologie.pdf"
   },
   {
     "n": 5,
@@ -1164,7 +1168,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-05-pneumologie.pdf"
   },
   {
     "n": 6,
@@ -1387,7 +1392,8 @@
         ]
       ]
     ],
-    "category": "Urgences & Anesthésie"
+    "category": "Urgences & Anesthésie",
+    "preview_pdf": "previews/preview-06-urgences.pdf"
   },
   {
     "n": 7,
@@ -1610,7 +1616,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-07-medecine-interne.pdf"
   },
   {
     "n": 8,
@@ -1849,7 +1856,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-08-hematologie.pdf"
   },
   {
     "n": 9,
@@ -2068,7 +2076,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-09-dermatologie.pdf"
   },
   {
     "n": 10,
@@ -2299,7 +2308,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-10-geriatrie.pdf"
   },
   {
     "n": 11,
@@ -2538,7 +2548,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-11-digestif.pdf"
   },
   {
     "n": 12,
@@ -2757,7 +2768,8 @@
         ]
       ]
     ],
-    "category": "Chirurgie & Sens"
+    "category": "Chirurgie & Sens",
+    "preview_pdf": "previews/preview-12-urologie.pdf"
   },
   {
     "n": 13,
@@ -2984,7 +2996,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-13-nephrologie.pdf"
   },
   {
     "n": 14,
@@ -3229,7 +3242,8 @@
         ]
       ]
     ],
-    "category": "Urgences & Anesthésie"
+    "category": "Urgences & Anesthésie",
+    "preview_pdf": "previews/preview-14-douleur-anesthesie.pdf"
   },
   {
     "n": 15,
@@ -3460,7 +3474,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-15-endocrinologie.pdf"
   },
   {
     "n": 16,
@@ -3695,7 +3710,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-16-nutrition-activite-physique.pdf"
   },
   {
     "n": 17,
@@ -3930,7 +3946,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-17-rhumatologie.pdf"
   },
   {
     "n": 18,
@@ -4167,7 +4184,8 @@
         ]
       ]
     ],
-    "category": "Chirurgie & Sens"
+    "category": "Chirurgie & Sens",
+    "preview_pdf": "previews/preview-18-orthopedie.pdf"
   },
   {
     "n": 19,
@@ -4391,7 +4409,8 @@
         ]
       ]
     ],
-    "category": "Chirurgie & Sens"
+    "category": "Chirurgie & Sens",
+    "preview_pdf": "previews/preview-19-ophtalmologie.pdf"
   },
   {
     "n": 20,
@@ -4618,7 +4637,8 @@
         ]
       ]
     ],
-    "category": "Transversal & Méthode"
+    "category": "Transversal & Méthode",
+    "preview_pdf": "previews/preview-20-mt-sp-ml-therapeutique.pdf"
   },
   {
     "n": 21,
@@ -4845,7 +4865,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-21-oncologie.pdf"
   },
   {
     "n": 22,
@@ -5076,7 +5097,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-22-mpr.pdf"
   },
   {
     "n": 23,
@@ -5339,7 +5361,8 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-23-psychiatrie.pdf"
   },
   {
     "n": 24,
@@ -5584,7 +5607,8 @@
         ]
       ]
     ],
-    "category": "Chirurgie & Sens"
+    "category": "Chirurgie & Sens",
+    "preview_pdf": "previews/preview-24-orl.pdf"
   },
   {
     "n": 25,
@@ -5815,7 +5839,8 @@
         ]
       ]
     ],
-    "category": "Chirurgie & Sens"
+    "category": "Chirurgie & Sens",
+    "preview_pdf": "previews/preview-25-cmf.pdf"
   },
   {
     "n": 26,
@@ -6034,7 +6059,8 @@
         ]
       ]
     ],
-    "category": "Femme & Enfant"
+    "category": "Femme & Enfant",
+    "preview_pdf": "previews/preview-26-gynecologie.pdf"
   },
   {
     "n": 27,
@@ -6285,7 +6311,8 @@
         ]
       ]
     ],
-    "category": "Femme & Enfant"
+    "category": "Femme & Enfant",
+    "preview_pdf": "previews/preview-27-pediatrie.pdf"
   },
   {
     "n": 28,
@@ -6520,6 +6547,7 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "preview_pdf": "previews/preview-28-genetique.pdf"
   }
 ]
