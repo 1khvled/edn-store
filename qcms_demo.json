@@ -1,0 +1,324 @@
+[
+  {
+    "id": 1,
+    "specialty": "Urgences & Réanimation",
+    "question": "En ce qui concerne les médicaments utilisables pendant la réanimation d'un arrêt cardio-circulatoire (ACR), quelle(s) est (sont) la (les) proposition(s) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'adrénaline est injectée à la dose de 5 mg IVD toutes les 3 à 5 minutes."
+      },
+      {
+        "id": "B",
+        "text": "L'amiodarone est indiquée dès le premier choc électrique externe en cas de fibrillation ventriculaire."
+      },
+      {
+        "id": "C",
+        "text": "L'amiodarone est administrée à la dose de 300 mg IVD après le 3e choc électrique externe réfractaire."
+      },
+      {
+        "id": "D",
+        "text": "L'atropine est systématiquement recommandée en cas d'asystolie selon les recommandations actuelles de l'ERC."
+      },
+      {
+        "id": "E",
+        "text": "Le bicarbonate de sodium est systématique dès la 5e minute de réanimation."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "Selon les recommandations internationales ERC / SFMU pour la réanimation de l'arrêt cardiaque chez l'adulte :\n- **C est VRAI** : En cas de fibrillation ventriculaire (FV) ou tachycardie ventriculaire sans pouls (TVSP) réfractaire, l'amiodarone est administrée à la dose de 300 mg IVD (diluée dans du sérum glucosé à 5%) après le 3e choc, suivie d'une seconde dose de 150 mg après le 5e choc si le rythme reste choquable.\n- **A est FAUX** : L'adrénaline s'administre à la dose de 1 mg IVD (et non 5 mg !) toutes les 3 à 5 minutes (après le 3e choc pour les rythmes choquables, d'emblée pour l'asystolie/AESP).\n- **B est FAUX** : L'amiodarone n'est jamais injectée au 1er choc, mais après le 3e choc.\n- **D est FAUX** : L'atropine n'est plus recommandée dans l'algorithme universel de l'asystolie depuis les recommandations ERC 2010.\n- **E est FAUX** : L'alcalinisation par bicarbonate est réservée aux intoxications aux stabilisants de membrane ou à l'hyperkaliémie menaçante avérée, jamais systématique."
+  },
+  {
+    "id": 2,
+    "specialty": "Ophtalmologie",
+    "question": "Quelles structures anatomiques appartiennent au segment postérieur du globe oculaire ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le corps vitré"
+      },
+      {
+        "id": "B",
+        "text": "La chambre postérieure"
+      },
+      {
+        "id": "C",
+        "text": "La tête du nerf optique (papille)"
+      },
+      {
+        "id": "D",
+        "text": "La rétine neurosensorielle"
+      },
+      {
+        "id": "E",
+        "text": "Les vaisseaux rétiniens centraux"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "Le bulbe oculaire est scindé en deux segments séparés par le cristallin et son appareil zonulaire :\n- **A, C, D, E sont VRAIS** : Le segment postérieur s'étend en arrière du cristallin et comprend la cavité vitréenne (remplie du corps vitré), la rétine, la choroïde, la vascularisation rétinienne et la papille optique.\n- **B est FAUX (Piège Classique)** : Malgré son qualificatif, la chambre postérieure appartient au SEGMENT ANTÉRIEUR de l'œil ! Elle est située entre la face postérieure de l'iris et la face antérieure du cristallin, et contient de l'humeur aqueuse (et non du vitré)."
+  },
+  {
+    "id": 3,
+    "specialty": "Neurologie & Endocrinologie",
+    "question": "Concernant la prise en charge thérapeutique du diabète de type 2 et les antidiabétiques oraux en cas d'insuffisance rénale terminale, quelle est l'affirmation correcte ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La metformine peut être poursuivie à demi-dose chez les patients hémodialysés."
+      },
+      {
+        "id": "B",
+        "text": "La sitagliptine ne nécessite aucune adaptation posologique quel que soit le DFG."
+      },
+      {
+        "id": "C",
+        "text": "La linagliptine est le seul inhibiteur de la DPP-4 ne nécessitant aucune adaptation rénale de posologie."
+      },
+      {
+        "id": "D",
+        "text": "Les inhibiteurs du SGLT2 (gliflozines) sont indiqués pour baisser la glycémie même avec un DFG < 15 mL/min."
+      },
+      {
+        "id": "E",
+        "text": "Les sulfamides hypoglycémiants de longue durée d'action restent le traitement de première intention en dialyse."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "Points clés du Collège de Thérapeutique & Référentiel Néphrologie R2C :\n- **C est VRAI** : La linagliptine a une élimination biliaire/fécale prédominante (> 90%). C'est le SEUL inhibiteur de la DPP-4 (gliptine) utilisable sans aucune modification de dose, même en cas d'insuffisance rénale sévère ou d'hémodialyse.\n- **A est FAUX** : La metformine est formellement contre-indiquée si DFG < 30 mL/min/1.73m² (et à réduire si DFG < 45) en raison du risque mortel d'acidose lactique.\n- **B est FAUX** : La sitagliptine s'élimine à 80% par voie rénale et impose une réduction de dose par 2 ou par 4 selon le DFG.\n- **D est FAUX** : L'efficacité hypoglycémiante des gliflozines s'effondre avec la baisse du DFG ; elles sont contre-indiquées en initiation pour le contrôle glycémique si DFG < 20-30 mL/min.\n- **E est FAUX** : Les sulfamides font courir un risque majeur d'hypoglycémie prolongée chez l'insuffisant rénal."
+  },
+  {
+    "id": 4,
+    "specialty": "Neurologie",
+    "question": "Un patient de 42 ans consulte pour une céphalée temporale droite brutale apparue après une manipulation cervicale, associée à un ptosis droit et un myosis droit sans anhidrose faciale. Quel est le diagnostic à évoquer en priorité ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Un anévrisme de l'artère communicante postérieure comprimant le nerf III"
+      },
+      {
+        "id": "B",
+        "text": "Une dissection de l'artère carotide interne droite"
+      },
+      {
+        "id": "C",
+        "text": "Une crise d'algie vasculaire de la face droite"
+      },
+      {
+        "id": "D",
+        "text": "Un syndrome de la fente sphénoïdale"
+      },
+      {
+        "id": "E",
+        "text": "Une tumeur du sommet pulmonaire de Pancoast-Tobias"
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Référentiel Neurologie CEN (Item 340) :\n- **B est VRAI** : L'association Céphalée cervicale/temporale unilatérale + Syndrome de Claude Bernard-Horner douloureux (Ptosis + Myosis) chez un sujet jeune après traumatisme ou manipulation cervicale est la présentation PRINCEPS de la DISSECTION DE L'ARTÈRE CAROTIDE INTERNE jusqu'à preuve du contraire.\n- **A est FAUX** : L'atteinte du III par anévrisme donne une MYDRIASE paralytique aréactive (et non un myosis).\n- **C est FAUX** : L'algie vasculaire s'accompagne d'un œil rouge, de larmoiements et d'une rhinorrhée profuse paroxystique durant 15 à 180 minutes.\n- **E est FAUX** : Pancoast-Tobias donne un CBH complet avec anhidrose (atteinte du ganglion stellaire) et névralgie cervico-brachiale C8-T1, d'évolution progressive et non brutale."
+  },
+  {
+    "id": 5,
+    "specialty": "Infectiologie",
+    "question": "Concernant la coqueluche (infection à Bordetella pertussis), quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'hyperlymphocytose est évocatrice et provoquée par la toxine pertussique."
+      },
+      {
+        "id": "B",
+        "text": "Une lymphocytose supérieure à 50 000/mm³ chez le nourrisson est un critère de gravité imposant le transfert en réanimation."
+      },
+      {
+        "id": "C",
+        "text": "Le traitement antibiotique de 1ère intention repose sur l'amoxicilline à forte dose."
+      },
+      {
+        "id": "D",
+        "text": "La PCR sur aspiration ou écouvillonnage nasopharyngé est la technique diagnostique de référence."
+      },
+      {
+        "id": "E",
+        "text": "L'antibiothérapie prescrite au-delà de 3 semaines de toux permet d'accélérer la guérison clinique."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Référentiel Pilly & Société de Pathologie Infectieuse (SPILF) :\n- **A et B sont VRAIS** : La toxine pertussique stimule la prolifération lymphocytaire. Chez le petit nourrisson, une hyperlymphocytose majeure (> 50 G/L) est un critère pronostique péjoratif d'hypertension artérielle pulmonaire maligne imposant la réanimation pédiatrique immédiate.\n- **D est VRAI** : La PCR nasopharyngée (réalisée au cours des 3 premières semaines de toux) est la méthode de choix de confirmation diagnostique.\n- **C est FAUX** : Le traitement de 1ère intention est une MACROLIDE (clarithromycine pendant 7 jours ou azithromycine pendant 3 jours). Les bêta-lactamines comme l'amoxicilline sont inefficaces.\n- **E est FAUX** : Passé 3 semaines de quinte de toux, la bactérie a déjà été éliminée par la clairance immunitaire ; l'antibiothérapie n'a plus d'intérêt ni clinique ni de contagiosité."
+  },
+  {
+    "id": 6,
+    "specialty": "Urgences & Cardiologie",
+    "question": "Devant un arrêt cardiorespiratoire chez un adulte, quelle est la séquence correcte du Basic Life Support (BLS) selon l'ERC ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vérifier la conscience, libérer les voies aériennes, vérifier la respiration (10s max), alerter les secours (15/112) et démarrer 30 compressions pour 2 insufflations."
+      },
+      {
+        "id": "B",
+        "text": "Démarrer immédiatement par 5 insufflations de sauvetage avant tout massage cardiaque."
+      },
+      {
+        "id": "C",
+        "text": "Le rythme des compressions thoraciques doit être maintenu entre 60 et 80 par minute."
+      },
+      {
+        "id": "D",
+        "text": "La profondeur des compressions chez l'adulte doit être d'au moins 5 à 6 cm sans dépasser 6 cm."
+      },
+      {
+        "id": "E",
+        "text": "En cas d'utilisation d'un DAE, les compressions thoraciques doivent être poursuivies pendant la délivrance du choc électrique."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "D"
+    ],
+    "explanation": "Directives Européennes ERC 2021-2025 :\n- **A et D sont VRAIS** : Séquence universelle adulte : Vérification de la sécurité, conscience, ouverture des voies aériennes, recherche de mouvements respiratoires anormaux (gasp) pendant 10s maximum. Appel précoce du 15 / 112 et pose du DAE. Ratio 30:2 avec fréquence de 100 à 120/min et profondeur de 5 à 6 cm sur le tiers inférieur du sternum, en permettant une décompression thoracique complète.\n- **B est FAUX** : Les 5 insufflations initiales sont réservées à la noyade, l'asphyxie et l'enfant (arrêt hypoxique), pas à l'arrêt d'origine cardiaque standard de l'adulte.\n- **C est FAUX** : La fréquence requise est de 100 à 120 compressions par minute (60-80 est trop lent pour générer une pression de perfusion coronaire suffisante).\n- **E est FAUX** : Personne ne doit toucher le patient pendant l'analyse et la délivrance effective du choc pour des raisons de sécurité évidentes."
+  },
+  {
+    "id": 7,
+    "specialty": "LCA (Lecture Critique)",
+    "question": "Dans le cadre d'un essai clinique randomisé en double insu évaluant l'efficacité d'un nouveau traitement, que signifie l'analyse en 'Intention de Traiter' (ITT) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Elle inclut uniquement les patients ayant pris au moins 80% des doses prescrites du traitement."
+      },
+      {
+        "id": "B",
+        "text": "Elle analyse tous les patients randomisés dans le groupe auquel ils ont été initialement alloués, qu'ils aient ou non reçu le traitement."
+      },
+      {
+        "id": "C",
+        "text": "Elle préserve le bénéfice de la randomisation et protège contre les biais d'attrition."
+      },
+      {
+        "id": "D",
+        "text": "Elle tend généralement à surestimer l'effet thérapeutique réel dans les essais de supériorité."
+      },
+      {
+        "id": "E",
+        "text": "Elle est la seule analyse recommandée pour conclure à la non-infériorité d'un nouveau traitement."
+      }
+    ],
+    "correct_answers": [
+      "B",
+      "C"
+    ],
+    "explanation": "Méthodologie LCA R2C :\n- **B et C sont VRAIS** : Le principe d'intention de traiter (ITT) impose d'analyser l'ensemble des sujets inclus et randomisés dans leur bras d'attribution d'origine, quel que soit leur suivi ultérieur, leur observance ou leurs écarts au protocole. Elle préserve la comparabilité initiale des groupes garantie par la randomisation et évite les biais de sélection liés aux perdus de vue ou abandons.\n- **A est FAUX** : C'est la définition de l'analyse Per-Protocole (PP).\n- **D est FAUX** : L'analyse en ITT est dite 'conservatrice' dans un essai de supériorité car la dilution par non-observance ou perdus de vue tend à minimiser la différence entre les deux bras, protégeant contre les faux positifs (erreur alpha).\n- **E est FAUX (Piège Majeur)** : Dans les essais de non-infériorité, l'ITT diluant l'effet peut faire conclure faussement à l'absence de différence. Les autorités imposent donc la concordance stricte de l'analyse en ITT ET en Per-Protocole."
+  },
+  {
+    "id": 8,
+    "specialty": "Neurologie & Urgences",
+    "question": "Devant un patient éthylique chronique sans domicile fixe amené pour confusion mentale, ataxie cérébelleuse et paralysie de l'abduction oculaire bilatérale (atteinte du VI), quelle conduite thérapeutique immédiate s'impose ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Perfusion immédiate de sérum glucosé à 10% 500 mL pour traiter une hypoglycémie latente."
+      },
+      {
+        "id": "B",
+        "text": "Administration intraveineuse de Thiamine (Vitamine B1) à forte dose AVANT tout soluté glucosé."
+      },
+      {
+        "id": "C",
+        "text": "Prescription de neuroleptiques sédatifs pour calmer l'agitation."
+      },
+      {
+        "id": "D",
+        "text": "Correction rapide d'une hyponatrémie par du sérum salé hypertonique à 3%."
+      },
+      {
+        "id": "E",
+        "text": "Mise en route d'une corticothérapie IV forte dose."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Collège des Enseignants de Neurologie & Addictologie :\n- **B est VRAI** : Il s'agit de la triade clinique typique de l'encéphalopathie de Gayet-Wernicke (confusion, syndrome cérébelleux statique, paralysies oculomotrices). Le traitement est une URGENCE VITALE : administration de Vitamine B1 par voie parentérale (500 mg x 3/j en IV lente).\n- **A est FAUX (PIÈGE MORTEL R2C)** : La perfusion de soluté glucosé sans apport préalable ou concomitant de vitamine B1 précipite ou aggrave irréversiblement l'encéphalopathie de Wernicke vers le syndrome de Korsakoff ou le décès, car le métabolisme du glucose consomme les dernières réserves neuronales de pyrophosphate de thiamine.\n- **C est FAUX** : Les neuroleptiques abaissent le seuil épileptogène chez le patient sevré et sont contre-indiqués.\n- **D est FAUX** : Une correction trop brutale de l'hyponatrémie chronique expose à la myélinolyse centropontine (démyélinisation osmotique)."
+  },
+  {
+    "id": 9,
+    "specialty": "Infectiologie & Dermatologie",
+    "question": "Quelle(s) est (sont) la (les) mesure(s) obligatoire(s) lors du diagnostic d'une gale commune chez un adulte ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Traitement simultané de toutes les personnes vivant sous le même toit, même en l'absence totale de prurit."
+      },
+      {
+        "id": "B",
+        "text": "Lavage du linge de lit, des sous-vêtements et des serviettes à 60°C ou isolement dans un sac plastique scellé pendant 72 heures."
+      },
+      {
+        "id": "C",
+        "text": "Éviction de la collectivité (école, lieu de travail) jusqu'à 3 jours après la prise du traitement par ivermectine."
+      },
+      {
+        "id": "D",
+        "text": "Administration d'ivermectine per os (200 µg/kg) avec une seconde prise impérative entre J7 et J14."
+      },
+      {
+        "id": "E",
+        "text": "Désinfection systématique des sols et des murs du domicile par un aérosol insecticide."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Référentiel Dermatologie CEDEF :\n- **A est VRAI** : Le traitement simultané du cercle intime et des personnes partageant le même toit est indispensable pour enrayer la chaîne de transmission, car la période d'incubation sans prurit peut durer 3 à 6 semaines.\n- **B est VRAI** : Sarcoptes scabiei est détruit par la chaleur (> 55°C) ou par privation d'hôte humain pendant au moins 3 jours (72h).\n- **D est VRAI** : L'ivermectine n'étant pas ovicide sur les œufs de sarcopte, une 2e dose à J7-J14 est formellement requise pour détruire les larves écloses.\n- **C est FAUX** : Pour la gale commune, l'éviction scolaire ou professionnelle ne dure que jusqu'au lendemain du traitement (soit 24h à 48h après la première prise), et non 3 jours.\n- **E est FAUX** : Inutile et coûteux : la gale est un parasite obligatoire strictement humain qui ne survit pas dans l'environnement inanimé."
+  },
+  {
+    "id": 10,
+    "specialty": "Cardiologie",
+    "question": "Devant une suspicion de dissection aortique aiguë de type A de Stanford chez un patient hémodynamiquement instable, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'angioscanner de l'aorte thoracique et abdominale est l'examen diagnostique de première intention chez un patient stable."
+      },
+      {
+        "id": "B",
+        "text": "L'échocardiographie transœsophagienne (ETO) peut être réalisée au lit du patient ou en salle d'opération chez un patient trop instable pour aller au scanner."
+      },
+      {
+        "id": "C",
+        "text": "Un traitement anticoagulant immédiat par héparine non fractionnée doit être débuté dès la suspicion."
+      },
+      {
+        "id": "D",
+        "text": "L'objectif tensionnel initial est d'obtenir une PAS entre 100 et 120 mmHg à l'aide de bêta-bloquants IV."
+      },
+      {
+        "id": "E",
+        "text": "La dissection de type A relève d'une prise en charge chirurgicale en urgence absolue."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanation": "Collège Français des Enseignants de Cardiologie & Recommandations ESC :\n- **A, B, D, E sont VRAIS** : L'angio-TDM aortique est l'examen de référence (sensibilité > 99%). L'ETO est une excellente alternative au lit du malade en cas de choc ou d'arrêt. La chirurgie cardiaque d'urgence est impérative pour le type A (risque de tamponnade péricardique, rupture intrapéricardique et infarctus par occlusion coronarienne). Le contrôle strict de la pression artérielle (PAS 100-120 mmHg) et de la fréquence cardiaque (< 60 bpm) par bêta-bloquants IV (ex : labétalol ou esmolol) est prioritaire pour réduire le stress de cisaillement (dP/dt).\n- **C est FAUX (PIÈGE MORTEL R2C)** : Tout traitement anticoagulant ou antiagrégant est STRICTEMENT CONTRE-INDIQUÉ car il accélère la rupture aortique fatale ou la tamponnade !"
+  }
+]

@@ -4,19 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDN 2026 — Référentiels Médicaux Officiels | Ethan Cole</title>
-  <meta name="description" content="Les 28 référentiels officiels pour l'EDN et les ECOS par Ethan Cole. 2 Ouvrages intégraux 100% offerts. Démo clinique interactive fidèle, conformité R2C.">
+  <meta name="description" content="Les 28 référentiels officiels pour l'EDN et les ECOS par Ethan Cole. 2 Ouvrages intégraux offerts (Word, PDF, ePub) + Application Android Hors-Ligne + Guide ECOS.">
   
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://edn-store.vercel.app/">
   <meta property="og:title" content="EDN 2026 — Référentiels Médicaux Officiels | Ethan Cole">
-  <meta property="og:description" content="Les 28 volumes officiels EDN / ECOS au format Word (.docx) & PDF. 2 Ouvrages complets offerts. Plus de 4 800 tableaux cliniques conformes Collèges d'Enseignants.">
+  <meta property="og:description" content="Les 28 volumes officiels EDN / ECOS au format Word (.docx) & PDF. 2 Ouvrages complets offerts + Application Android. Plus de 4 800 tableaux cliniques conformes Collèges d'Enseignants.">
   <meta property="og:image" content="https://edn-store.vercel.app/logo.jpg">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="EDN 2026 — 28 Référentiels Médicaux Officiels">
-  <meta name="twitter:description" content="Les 28 tomes complets conformes R2C en format Word éditable et PDF. 2 Livres complets 100% offerts.">
+  <meta name="twitter:description" content="Les 28 tomes complets conformes R2C en format Word éditable, PDF et ePub. 2 Livres complets + App Android 100% offerts.">
   <meta name="twitter:image" content="https://edn-store.vercel.app/logo.jpg">
 
   <!-- Schema.org JSON-LD Structured Data -->
@@ -26,7 +26,7 @@
     "@type": "Product",
     "name": "Pack Intégral EDN 2026 — 28 Référentiels Médicaux Officiels",
     "image": "https://edn-store.vercel.app/logo.jpg",
-    "description": "Collection exhaustive des 28 référentiels médicaux pour la préparation des EDN et ECOS, conforme aux Collèges d'Enseignants universitaires français. Format Word .docx modifiable et PDF.",
+    "description": "Collection exhaustive des 28 référentiels médicaux pour la préparation des EDN et ECOS, conforme aux Collèges d'Enseignants universitaires français. Format Word .docx modifiable, PDF, ePub et Application Android hors-ligne.",
     "brand": {
       "@type": "Brand",
       "name": "Ethan Cole"
@@ -45,6 +45,472 @@
       "reviewCount": "142"
     }
   }
+  
+    // --- Interactive QCM Simulator Engine ---
+    const qcmsDemoList = [
+  {
+    "id": 1,
+    "specialty": "Urgences & Réanimation",
+    "question": "En ce qui concerne les médicaments utilisables pendant la réanimation d'un arrêt cardio-circulatoire (ACR), quelle(s) est (sont) la (les) proposition(s) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'adrénaline est injectée à la dose de 5 mg IVD toutes les 3 à 5 minutes."
+      },
+      {
+        "id": "B",
+        "text": "L'amiodarone est indiquée dès le premier choc électrique externe en cas de fibrillation ventriculaire."
+      },
+      {
+        "id": "C",
+        "text": "L'amiodarone est administrée à la dose de 300 mg IVD après le 3e choc électrique externe réfractaire."
+      },
+      {
+        "id": "D",
+        "text": "L'atropine est systématiquement recommandée en cas d'asystolie selon les recommandations actuelles de l'ERC."
+      },
+      {
+        "id": "E",
+        "text": "Le bicarbonate de sodium est systématique dès la 5e minute de réanimation."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "Selon les recommandations internationales ERC / SFMU pour la réanimation de l'arrêt cardiaque chez l'adulte :\n- **C est VRAI** : En cas de fibrillation ventriculaire (FV) ou tachycardie ventriculaire sans pouls (TVSP) réfractaire, l'amiodarone est administrée à la dose de 300 mg IVD (diluée dans du sérum glucosé à 5%) après le 3e choc, suivie d'une seconde dose de 150 mg après le 5e choc si le rythme reste choquable.\n- **A est FAUX** : L'adrénaline s'administre à la dose de 1 mg IVD (et non 5 mg !) toutes les 3 à 5 minutes (après le 3e choc pour les rythmes choquables, d'emblée pour l'asystolie/AESP).\n- **B est FAUX** : L'amiodarone n'est jamais injectée au 1er choc, mais après le 3e choc.\n- **D est FAUX** : L'atropine n'est plus recommandée dans l'algorithme universel de l'asystolie depuis les recommandations ERC 2010.\n- **E est FAUX** : L'alcalinisation par bicarbonate est réservée aux intoxications aux stabilisants de membrane ou à l'hyperkaliémie menaçante avérée, jamais systématique."
+  },
+  {
+    "id": 2,
+    "specialty": "Ophtalmologie",
+    "question": "Quelles structures anatomiques appartiennent au segment postérieur du globe oculaire ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Le corps vitré"
+      },
+      {
+        "id": "B",
+        "text": "La chambre postérieure"
+      },
+      {
+        "id": "C",
+        "text": "La tête du nerf optique (papille)"
+      },
+      {
+        "id": "D",
+        "text": "La rétine neurosensorielle"
+      },
+      {
+        "id": "E",
+        "text": "Les vaisseaux rétiniens centraux"
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanation": "Le bulbe oculaire est scindé en deux segments séparés par le cristallin et son appareil zonulaire :\n- **A, C, D, E sont VRAIS** : Le segment postérieur s'étend en arrière du cristallin et comprend la cavité vitréenne (remplie du corps vitré), la rétine, la choroïde, la vascularisation rétinienne et la papille optique.\n- **B est FAUX (Piège Classique)** : Malgré son qualificatif, la chambre postérieure appartient au SEGMENT ANTÉRIEUR de l'œil ! Elle est située entre la face postérieure de l'iris et la face antérieure du cristallin, et contient de l'humeur aqueuse (et non du vitré)."
+  },
+  {
+    "id": 3,
+    "specialty": "Neurologie & Endocrinologie",
+    "question": "Concernant la prise en charge thérapeutique du diabète de type 2 et les antidiabétiques oraux en cas d'insuffisance rénale terminale, quelle est l'affirmation correcte ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "La metformine peut être poursuivie à demi-dose chez les patients hémodialysés."
+      },
+      {
+        "id": "B",
+        "text": "La sitagliptine ne nécessite aucune adaptation posologique quel que soit le DFG."
+      },
+      {
+        "id": "C",
+        "text": "La linagliptine est le seul inhibiteur de la DPP-4 ne nécessitant aucune adaptation rénale de posologie."
+      },
+      {
+        "id": "D",
+        "text": "Les inhibiteurs du SGLT2 (gliflozines) sont indiqués pour baisser la glycémie même avec un DFG < 15 mL/min."
+      },
+      {
+        "id": "E",
+        "text": "Les sulfamides hypoglycémiants de longue durée d'action restent le traitement de première intention en dialyse."
+      }
+    ],
+    "correct_answers": [
+      "C"
+    ],
+    "explanation": "Points clés du Collège de Thérapeutique & Référentiel Néphrologie R2C :\n- **C est VRAI** : La linagliptine a une élimination biliaire/fécale prédominante (> 90%). C'est le SEUL inhibiteur de la DPP-4 (gliptine) utilisable sans aucune modification de dose, même en cas d'insuffisance rénale sévère ou d'hémodialyse.\n- **A est FAUX** : La metformine est formellement contre-indiquée si DFG < 30 mL/min/1.73m² (et à réduire si DFG < 45) en raison du risque mortel d'acidose lactique.\n- **B est FAUX** : La sitagliptine s'élimine à 80% par voie rénale et impose une réduction de dose par 2 ou par 4 selon le DFG.\n- **D est FAUX** : L'efficacité hypoglycémiante des gliflozines s'effondre avec la baisse du DFG ; elles sont contre-indiquées en initiation pour le contrôle glycémique si DFG < 20-30 mL/min.\n- **E est FAUX** : Les sulfamides font courir un risque majeur d'hypoglycémie prolongée chez l'insuffisant rénal."
+  },
+  {
+    "id": 4,
+    "specialty": "Neurologie",
+    "question": "Un patient de 42 ans consulte pour une céphalée temporale droite brutale apparue après une manipulation cervicale, associée à un ptosis droit et un myosis droit sans anhidrose faciale. Quel est le diagnostic à évoquer en priorité ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Un anévrisme de l'artère communicante postérieure comprimant le nerf III"
+      },
+      {
+        "id": "B",
+        "text": "Une dissection de l'artère carotide interne droite"
+      },
+      {
+        "id": "C",
+        "text": "Une crise d'algie vasculaire de la face droite"
+      },
+      {
+        "id": "D",
+        "text": "Un syndrome de la fente sphénoïdale"
+      },
+      {
+        "id": "E",
+        "text": "Une tumeur du sommet pulmonaire de Pancoast-Tobias"
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Référentiel Neurologie CEN (Item 340) :\n- **B est VRAI** : L'association Céphalée cervicale/temporale unilatérale + Syndrome de Claude Bernard-Horner douloureux (Ptosis + Myosis) chez un sujet jeune après traumatisme ou manipulation cervicale est la présentation PRINCEPS de la DISSECTION DE L'ARTÈRE CAROTIDE INTERNE jusqu'à preuve du contraire.\n- **A est FAUX** : L'atteinte du III par anévrisme donne une MYDRIASE paralytique aréactive (et non un myosis).\n- **C est FAUX** : L'algie vasculaire s'accompagne d'un œil rouge, de larmoiements et d'une rhinorrhée profuse paroxystique durant 15 à 180 minutes.\n- **E est FAUX** : Pancoast-Tobias donne un CBH complet avec anhidrose (atteinte du ganglion stellaire) et névralgie cervico-brachiale C8-T1, d'évolution progressive et non brutale."
+  },
+  {
+    "id": 5,
+    "specialty": "Infectiologie",
+    "question": "Concernant la coqueluche (infection à Bordetella pertussis), quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'hyperlymphocytose est évocatrice et provoquée par la toxine pertussique."
+      },
+      {
+        "id": "B",
+        "text": "Une lymphocytose supérieure à 50 000/mm³ chez le nourrisson est un critère de gravité imposant le transfert en réanimation."
+      },
+      {
+        "id": "C",
+        "text": "Le traitement antibiotique de 1ère intention repose sur l'amoxicilline à forte dose."
+      },
+      {
+        "id": "D",
+        "text": "La PCR sur aspiration ou écouvillonnage nasopharyngé est la technique diagnostique de référence."
+      },
+      {
+        "id": "E",
+        "text": "L'antibiothérapie prescrite au-delà de 3 semaines de toux permet d'accélérer la guérison clinique."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Référentiel Pilly & Société de Pathologie Infectieuse (SPILF) :\n- **A et B sont VRAIS** : La toxine pertussique stimule la prolifération lymphocytaire. Chez le petit nourrisson, une hyperlymphocytose majeure (> 50 G/L) est un critère pronostique péjoratif d'hypertension artérielle pulmonaire maligne imposant la réanimation pédiatrique immédiate.\n- **D est VRAI** : La PCR nasopharyngée (réalisée au cours des 3 premières semaines de toux) est la méthode de choix de confirmation diagnostique.\n- **C est FAUX** : Le traitement de 1ère intention est une MACROLIDE (clarithromycine pendant 7 jours ou azithromycine pendant 3 jours). Les bêta-lactamines comme l'amoxicilline sont inefficaces.\n- **E est FAUX** : Passé 3 semaines de quinte de toux, la bactérie a déjà été éliminée par la clairance immunitaire ; l'antibiothérapie n'a plus d'intérêt ni clinique ni de contagiosité."
+  },
+  {
+    "id": 6,
+    "specialty": "Urgences & Cardiologie",
+    "question": "Devant un arrêt cardiorespiratoire chez un adulte, quelle est la séquence correcte du Basic Life Support (BLS) selon l'ERC ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Vérifier la conscience, libérer les voies aériennes, vérifier la respiration (10s max), alerter les secours (15/112) et démarrer 30 compressions pour 2 insufflations."
+      },
+      {
+        "id": "B",
+        "text": "Démarrer immédiatement par 5 insufflations de sauvetage avant tout massage cardiaque."
+      },
+      {
+        "id": "C",
+        "text": "Le rythme des compressions thoraciques doit être maintenu entre 60 et 80 par minute."
+      },
+      {
+        "id": "D",
+        "text": "La profondeur des compressions chez l'adulte doit être d'au moins 5 à 6 cm sans dépasser 6 cm."
+      },
+      {
+        "id": "E",
+        "text": "En cas d'utilisation d'un DAE, les compressions thoraciques doivent être poursuivies pendant la délivrance du choc électrique."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "D"
+    ],
+    "explanation": "Directives Européennes ERC 2021-2025 :\n- **A et D sont VRAIS** : Séquence universelle adulte : Vérification de la sécurité, conscience, ouverture des voies aériennes, recherche de mouvements respiratoires anormaux (gasp) pendant 10s maximum. Appel précoce du 15 / 112 et pose du DAE. Ratio 30:2 avec fréquence de 100 à 120/min et profondeur de 5 à 6 cm sur le tiers inférieur du sternum, en permettant une décompression thoracique complète.\n- **B est FAUX** : Les 5 insufflations initiales sont réservées à la noyade, l'asphyxie et l'enfant (arrêt hypoxique), pas à l'arrêt d'origine cardiaque standard de l'adulte.\n- **C est FAUX** : La fréquence requise est de 100 à 120 compressions par minute (60-80 est trop lent pour générer une pression de perfusion coronaire suffisante).\n- **E est FAUX** : Personne ne doit toucher le patient pendant l'analyse et la délivrance effective du choc pour des raisons de sécurité évidentes."
+  },
+  {
+    "id": 7,
+    "specialty": "LCA (Lecture Critique)",
+    "question": "Dans le cadre d'un essai clinique randomisé en double insu évaluant l'efficacité d'un nouveau traitement, que signifie l'analyse en 'Intention de Traiter' (ITT) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Elle inclut uniquement les patients ayant pris au moins 80% des doses prescrites du traitement."
+      },
+      {
+        "id": "B",
+        "text": "Elle analyse tous les patients randomisés dans le groupe auquel ils ont été initialement alloués, qu'ils aient ou non reçu le traitement."
+      },
+      {
+        "id": "C",
+        "text": "Elle préserve le bénéfice de la randomisation et protège contre les biais d'attrition."
+      },
+      {
+        "id": "D",
+        "text": "Elle tend généralement à surestimer l'effet thérapeutique réel dans les essais de supériorité."
+      },
+      {
+        "id": "E",
+        "text": "Elle est la seule analyse recommandée pour conclure à la non-infériorité d'un nouveau traitement."
+      }
+    ],
+    "correct_answers": [
+      "B",
+      "C"
+    ],
+    "explanation": "Méthodologie LCA R2C :\n- **B et C sont VRAIS** : Le principe d'intention de traiter (ITT) impose d'analyser l'ensemble des sujets inclus et randomisés dans leur bras d'attribution d'origine, quel que soit leur suivi ultérieur, leur observance ou leurs écarts au protocole. Elle préserve la comparabilité initiale des groupes garantie par la randomisation et évite les biais de sélection liés aux perdus de vue ou abandons.\n- **A est FAUX** : C'est la définition de l'analyse Per-Protocole (PP).\n- **D est FAUX** : L'analyse en ITT est dite 'conservatrice' dans un essai de supériorité car la dilution par non-observance ou perdus de vue tend à minimiser la différence entre les deux bras, protégeant contre les faux positifs (erreur alpha).\n- **E est FAUX (Piège Majeur)** : Dans les essais de non-infériorité, l'ITT diluant l'effet peut faire conclure faussement à l'absence de différence. Les autorités imposent donc la concordance stricte de l'analyse en ITT ET en Per-Protocole."
+  },
+  {
+    "id": 8,
+    "specialty": "Neurologie & Urgences",
+    "question": "Devant un patient éthylique chronique sans domicile fixe amené pour confusion mentale, ataxie cérébelleuse et paralysie de l'abduction oculaire bilatérale (atteinte du VI), quelle conduite thérapeutique immédiate s'impose ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Perfusion immédiate de sérum glucosé à 10% 500 mL pour traiter une hypoglycémie latente."
+      },
+      {
+        "id": "B",
+        "text": "Administration intraveineuse de Thiamine (Vitamine B1) à forte dose AVANT tout soluté glucosé."
+      },
+      {
+        "id": "C",
+        "text": "Prescription de neuroleptiques sédatifs pour calmer l'agitation."
+      },
+      {
+        "id": "D",
+        "text": "Correction rapide d'une hyponatrémie par du sérum salé hypertonique à 3%."
+      },
+      {
+        "id": "E",
+        "text": "Mise en route d'une corticothérapie IV forte dose."
+      }
+    ],
+    "correct_answers": [
+      "B"
+    ],
+    "explanation": "Collège des Enseignants de Neurologie & Addictologie :\n- **B est VRAI** : Il s'agit de la triade clinique typique de l'encéphalopathie de Gayet-Wernicke (confusion, syndrome cérébelleux statique, paralysies oculomotrices). Le traitement est une URGENCE VITALE : administration de Vitamine B1 par voie parentérale (500 mg x 3/j en IV lente).\n- **A est FAUX (PIÈGE MORTEL R2C)** : La perfusion de soluté glucosé sans apport préalable ou concomitant de vitamine B1 précipite ou aggrave irréversiblement l'encéphalopathie de Wernicke vers le syndrome de Korsakoff ou le décès, car le métabolisme du glucose consomme les dernières réserves neuronales de pyrophosphate de thiamine.\n- **C est FAUX** : Les neuroleptiques abaissent le seuil épileptogène chez le patient sevré et sont contre-indiqués.\n- **D est FAUX** : Une correction trop brutale de l'hyponatrémie chronique expose à la myélinolyse centropontine (démyélinisation osmotique)."
+  },
+  {
+    "id": 9,
+    "specialty": "Infectiologie & Dermatologie",
+    "question": "Quelle(s) est (sont) la (les) mesure(s) obligatoire(s) lors du diagnostic d'une gale commune chez un adulte ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "Traitement simultané de toutes les personnes vivant sous le même toit, même en l'absence totale de prurit."
+      },
+      {
+        "id": "B",
+        "text": "Lavage du linge de lit, des sous-vêtements et des serviettes à 60°C ou isolement dans un sac plastique scellé pendant 72 heures."
+      },
+      {
+        "id": "C",
+        "text": "Éviction de la collectivité (école, lieu de travail) jusqu'à 3 jours après la prise du traitement par ivermectine."
+      },
+      {
+        "id": "D",
+        "text": "Administration d'ivermectine per os (200 µg/kg) avec une seconde prise impérative entre J7 et J14."
+      },
+      {
+        "id": "E",
+        "text": "Désinfection systématique des sols et des murs du domicile par un aérosol insecticide."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanation": "Référentiel Dermatologie CEDEF :\n- **A est VRAI** : Le traitement simultané du cercle intime et des personnes partageant le même toit est indispensable pour enrayer la chaîne de transmission, car la période d'incubation sans prurit peut durer 3 à 6 semaines.\n- **B est VRAI** : Sarcoptes scabiei est détruit par la chaleur (> 55°C) ou par privation d'hôte humain pendant au moins 3 jours (72h).\n- **D est VRAI** : L'ivermectine n'étant pas ovicide sur les œufs de sarcopte, une 2e dose à J7-J14 est formellement requise pour détruire les larves écloses.\n- **C est FAUX** : Pour la gale commune, l'éviction scolaire ou professionnelle ne dure que jusqu'au lendemain du traitement (soit 24h à 48h après la première prise), et non 3 jours.\n- **E est FAUX** : Inutile et coûteux : la gale est un parasite obligatoire strictement humain qui ne survit pas dans l'environnement inanimé."
+  },
+  {
+    "id": 10,
+    "specialty": "Cardiologie",
+    "question": "Devant une suspicion de dissection aortique aiguë de type A de Stanford chez un patient hémodynamiquement instable, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": [
+      {
+        "id": "A",
+        "text": "L'angioscanner de l'aorte thoracique et abdominale est l'examen diagnostique de première intention chez un patient stable."
+      },
+      {
+        "id": "B",
+        "text": "L'échocardiographie transœsophagienne (ETO) peut être réalisée au lit du patient ou en salle d'opération chez un patient trop instable pour aller au scanner."
+      },
+      {
+        "id": "C",
+        "text": "Un traitement anticoagulant immédiat par héparine non fractionnée doit être débuté dès la suspicion."
+      },
+      {
+        "id": "D",
+        "text": "L'objectif tensionnel initial est d'obtenir une PAS entre 100 et 120 mmHg à l'aide de bêta-bloquants IV."
+      },
+      {
+        "id": "E",
+        "text": "La dissection de type A relève d'une prise en charge chirurgicale en urgence absolue."
+      }
+    ],
+    "correct_answers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanation": "Collège Français des Enseignants de Cardiologie & Recommandations ESC :\n- **A, B, D, E sont VRAIS** : L'angio-TDM aortique est l'examen de référence (sensibilité > 99%). L'ETO est une excellente alternative au lit du malade en cas de choc ou d'arrêt. La chirurgie cardiaque d'urgence est impérative pour le type A (risque de tamponnade péricardique, rupture intrapéricardique et infarctus par occlusion coronarienne). Le contrôle strict de la pression artérielle (PAS 100-120 mmHg) et de la fréquence cardiaque (< 60 bpm) par bêta-bloquants IV (ex : labétalol ou esmolol) est prioritaire pour réduire le stress de cisaillement (dP/dt).\n- **C est FAUX (PIÈGE MORTEL R2C)** : Tout traitement anticoagulant ou antiagrégant est STRICTEMENT CONTRE-INDIQUÉ car il accélère la rupture aortique fatale ou la tamponnade !"
+  }
+];
+    let currentQcmIndex = 0;
+    let userSelectedChoices = new Set();
+    let qcmScore = 0;
+    let qcmAnsweredCount = 0;
+
+    function renderCurrentQcm() {
+      if (currentQcmIndex >= qcmsDemoList.length) {
+        renderQcmFinished();
+        return;
+      }
+
+      const q = qcmsDemoList[currentQcmIndex];
+      userSelectedChoices.clear();
+
+      document.getElementById('qcmCounter').innerText = `Question ${currentQcmIndex + 1} sur ${qcmsDemoList.length}`;
+      document.getElementById('qcmSpecialtyBadge').innerText = q.specialty;
+      document.getElementById('qcmQuestionText').innerText = q.question;
+
+      const choicesList = document.getElementById('qcmChoicesList');
+      choicesList.innerHTML = '';
+
+      q.choices.forEach(ch => {
+        const item = document.createElement('div');
+        item.className = 'qcm-choice-item';
+        item.id = `choice_${ch.id}`;
+        item.onclick = () => toggleChoiceSelection(ch.id);
+        item.innerHTML = `
+          <div class="choice-letter">${ch.id}</div>
+          <div class="choice-text">${ch.text}</div>
+        `;
+        choicesList.appendChild(item);
+      });
+
+      document.getElementById('qcmExplanationBox').style.display = 'none';
+      document.getElementById('btnValidateQcm').style.display = 'inline-block';
+      document.getElementById('btnNextQcm').style.display = 'none';
+    }
+
+    function toggleChoiceSelection(choiceId) {
+      // Only toggle if not already validated
+      if (document.getElementById('btnNextQcm').style.display !== 'none') return;
+
+      const el = document.getElementById(`choice_${choiceId}`);
+      if (userSelectedChoices.has(choiceId)) {
+        userSelectedChoices.delete(choiceId);
+        el.classList.remove('selected');
+      } else {
+        userSelectedChoices.add(choiceId);
+        el.classList.add('selected');
+      }
+    }
+
+    function validateCurrentQcm() {
+      const q = qcmsDemoList[currentQcmIndex];
+      const correctSet = new Set(q.correct_answers);
+
+      // Check correctness
+      let isPerfect = (userSelectedChoices.size === correctSet.size) &&
+                      [...userSelectedChoices].every(x => correctSet.has(x));
+
+      qcmAnsweredCount++;
+      if (isPerfect) qcmScore++;
+
+      document.getElementById('qcmScoreDisplay').innerText = qcmScore;
+      document.getElementById('qcmAnsweredDisplay').innerText = qcmAnsweredCount;
+
+      // Color choices
+      q.choices.forEach(ch => {
+        const el = document.getElementById(`choice_${ch.id}`);
+        const isCorrect = correctSet.has(ch.id);
+        const wasSelected = userSelectedChoices.has(ch.id);
+
+        if (isCorrect && wasSelected) {
+          el.classList.add('state-correct');
+        } else if (!isCorrect && wasSelected) {
+          el.classList.add('state-incorrect');
+        } else if (isCorrect && !wasSelected) {
+          el.classList.add('state-missed');
+        }
+      });
+
+      // Show explanation
+      const expBox = document.getElementById('qcmExplanationBox');
+      const expKey = document.getElementById('qcmExpKey');
+      const expText = document.getElementById('qcmExpText');
+
+      const corrStr = q.correct_answers.join(', ');
+      expKey.innerHTML = isPerfect
+        ? `<span>✅ Excellente réponse ! Clé officielle : ${corrStr}</span>`
+        : `<span style="color: #B91C1C;">❌ Erreur. Clé officielle : ${corrStr}</span>`;
+
+      expText.innerText = q.explanation;
+      expBox.style.display = 'block';
+
+      document.getElementById('btnValidateQcm').style.display = 'none';
+      document.getElementById('btnNextQcm').style.display = 'inline-flex';
+    }
+
+    function nextQcmQuestion() {
+      currentQcmIndex++;
+      renderCurrentQcm();
+    }
+
+    function renderQcmFinished() {
+      const card = document.getElementById('qcmCardInner');
+      const pct = Math.round((qcmScore / qcmsDemoList.length) * 100);
+      card.innerHTML = `
+        <div class="qcm-finish-banner">
+          <div class="qcm-finish-title">🎉 Test Terminé ! Score : ${qcmScore} / ${qcmsDemoList.length} (${pct}%)</div>
+          <p class="qcm-finish-desc">
+            Vous avez testé un échantillon de 10 questions réelles R2C. Vous souhaitez vous entraîner sur l'intégralité de nos <strong>1 700+ QCMs & Annales</strong> et disposer des <strong>28 Référentiels complets</strong> ?
+          </p>
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-buy-bundle" style="display: inline-block;">
+              Débloquer le Pack Intégral R2C (79 €)
+            </a>
+            <button onclick="restartQcmQuiz()" class="btn-gift-read" style="background: var(--bg-surface); color: var(--navy); border: 1px solid var(--border);">
+              Recommencer le Test
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function restartQcmQuiz() {
+      currentQcmIndex = 0;
+      qcmScore = 0;
+      qcmAnsweredCount = 0;
+      document.getElementById('qcmScoreDisplay').innerText = 0;
+      document.getElementById('qcmAnsweredDisplay').innerText = 0;
+      location.reload();
+    }
+
+    // Initialize QCM on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (document.getElementById('qcmChoicesList')) {
+        renderCurrentQcm();
+      }
+    });
+
   </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -306,14 +772,14 @@
       letter-spacing: 0.04em;
     }
 
-    /* Hormozi Double Free Gift Section */
+    /* Alex Hormozi Free Mega Arsenal Box */
     .free-gift-mega-box {
       max-width: 1040px;
       margin: 0 auto 60px;
       background: #FFFFFF;
       border: 2px solid #059669;
       border-radius: 14px;
-      padding: 36px 42px;
+      padding: 38px 42px;
       box-shadow: 0 10px 35px rgba(5, 150, 105, 0.08);
       text-align: left;
       position: relative;
@@ -348,14 +814,14 @@
     }
     .free-gift-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
     }
     .gift-card {
       background: var(--bg-subtle);
       border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 20px;
+      padding: 18px 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -378,13 +844,14 @@
     }
     .gift-card-title {
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: 1.12rem;
       color: var(--navy);
       font-weight: 600;
       margin-bottom: 6px;
+      line-height: 1.3;
     }
     .gift-card-desc {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       color: var(--ink-faint);
       line-height: 1.5;
       margin-bottom: 16px;
@@ -392,14 +859,14 @@
     .gift-card-actions {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 6px;
     }
     .btn-gift-read {
       background: var(--navy);
       color: #FFFFFF;
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 600;
-      padding: 9px 12px;
+      padding: 8px 10px;
       border-radius: 5px;
       border: none;
       cursor: pointer;
@@ -413,9 +880,9 @@
       background: #FFFFFF;
       color: var(--navy);
       border: 1px solid var(--border-dark);
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      padding: 8px 12px;
+      padding: 7px 10px;
       border-radius: 5px;
       text-decoration: none;
       text-align: center;
@@ -423,7 +890,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
     }
     .btn-gift-dl:hover {
       background: #E8E2D8;
@@ -1406,13 +1873,300 @@
         display: none;
       }
     }
+  
+    /* --- 6-Card Free Gift Grid --- */
+    .free-gift-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+    }
+    .gift-card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .gift-btn-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .gift-btn-row .btn-gift-dl {
+      flex: 1;
+      min-width: 90px;
+      padding: 6px 8px;
+      font-size: 0.74rem;
+      text-align: center;
+      justify-content: center;
+    }
+
+    /* --- Interactive QCM Simulator --- */
+    .qcm-section {
+      margin-top: 48px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+    .qcm-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #1e3a8a, #b45309, #059669);
+    }
+    .qcm-header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .qcm-badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #DEF7EC;
+      color: #03543F;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .qcm-section-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .qcm-section-subtitle {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      max-width: 720px;
+      line-height: 1.5;
+    }
+    .qcm-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 22px;
+      margin-top: 12px;
+    }
+    .qcm-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .qcm-counter {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .qcm-spec-badge {
+      display: inline-block;
+      background: #E0E7FF;
+      color: #3730A3;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+    .qcm-score-badge {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #047857;
+      background: #ECFDF5;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid #A7F3D0;
+    }
+    .qcm-question-prompt {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-weight: 600;
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+    .qcm-choices {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .qcm-choice-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .qcm-choice-item:hover {
+      border-color: #3b82f6;
+      background: #F8FAFC;
+    }
+    .qcm-choice-item.selected {
+      border-color: #1e3a8a;
+      background: #EFF6FF;
+    }
+    .qcm-choice-item.state-correct {
+      border-color: #059669 !important;
+      background: #ECFDF5 !important;
+    }
+    .qcm-choice-item.state-incorrect {
+      border-color: #DC2626 !important;
+      background: #FEF2F2 !important;
+    }
+    .qcm-choice-item.state-missed {
+      border-color: #D97706 !important;
+      background: #FFFBEB !important;
+    }
+    .choice-letter {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--navy);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .qcm-choice-item.selected .choice-letter {
+      background: #1e3a8a;
+      color: #fff;
+      border-color: #1e3a8a;
+    }
+    .qcm-choice-item.state-correct .choice-letter {
+      background: #059669;
+      color: #fff;
+      border-color: #059669;
+    }
+    .qcm-choice-item.state-incorrect .choice-letter {
+      background: #DC2626;
+      color: #fff;
+      border-color: #DC2626;
+    }
+    .choice-text {
+      font-size: 0.94rem;
+      color: var(--ink);
+      line-height: 1.45;
+      flex: 1;
+    }
+    .qcm-exp-box {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      animation: fadeIn 0.25s ease;
+    }
+    .qcm-exp-key {
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #166534;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .qcm-exp-text {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.55;
+      white-space: pre-line;
+    }
+    .qcm-actions-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-qcm-val {
+      background: #0f172a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 22px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-qcm-val:hover {
+      background: #1e293b;
+    }
+    .btn-qcm-next {
+      background: #059669;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-qcm-next:hover {
+      background: #047857;
+    }
+    .qcm-finish-banner {
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      border-radius: 8px;
+      padding: 20px 22px;
+      text-align: center;
+    }
+    .qcm-finish-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: #166534;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .qcm-finish-desc {
+      font-size: 0.92rem;
+      color: var(--ink-muted);
+      max-width: 600px;
+      margin: 0 auto 16px;
+      line-height: 1.5;
+    }
+
   </style>
 </head>
 <body>
 
   <!-- Top bar notice -->
   <div class="top-notice">
-    Édition Officielle 2026 — <strong>2 Ouvrages Complets Offerts</strong> pour tester la collection conforme aux Collèges Universitaires.
+    Édition Officielle 2026 — <strong>2 Ouvrages Complets + Banque 100 QCMs + Carnet d'Erreurs Offerts</strong> + Application Android Hors-Ligne.
   </div>
 
   <!-- Header -->
@@ -1470,13 +2224,13 @@
         </div>
       </div>
 
-      <!-- Alex Hormozi Free Ethical Bribe Box: 2 Free Books + Free Methodology Guide -->
+      <!-- Alex Hormozi Free Mega Arsenal Box: 2 Free Books + Free App + Free Methodology Guide -->
       <div class="free-gift-mega-box">
-        <span class="free-gift-tag">🎁 Cadeaux de Bienvenue 100% Offerts</span>
+        <span class="free-gift-tag">🎁 Arsenal Démo 100% Gratuit — Zéro Engagement</span>
         <div class="free-gift-header">
-          <h2>Testez 2 Volumes Complets & Notre Guide Méthodologique</h2>
+          <h2>Débloquez 6 Ressources Cliniques Offertes (Word, PDF, ePub, APK & QCMs)</h2>
           <p>
-            Nous sommes tellement certains de la clarté et de la rigueur de notre travail que nous vous offrons <strong>2 tomes intégraux</strong> et notre guide ECOS pour vérifier la qualité par vous-même avant d'envisager le pack complet.
+            Nous appliquons une transparence clinique totale : téléchargez gratuitement <strong>2 tomes complets</strong>, notre banque de <strong>100 QCMs corrigés</strong>, le <strong>Carnet d'Erreurs du Major EDN 2025</strong> et l'application mobile pour juger de la rigueur de notre travail.
           </p>
         </div>
         <div class="free-gift-grid">
@@ -1485,14 +2239,15 @@
             <div>
               <span class="gift-card-badge">Tome 01 · 270 pages · Offert</span>
               <h3 class="gift-card-title">LCA — Lecture Critique d'Article</h3>
-              <p class="gift-card-desc">L'intégralité du programme officiel de méthodologie, types d'études et statistiques.</p>
+              <p class="gift-card-desc">Programme officiel de méthodologie, types d'études et statistiques.</p>
             </div>
             <div class="gift-card-actions">
               <button class="btn-gift-read" onclick="openFreeBookDemo('tome1')">Lire en Ligne</button>
-              <a href="EDN-Tome-01-LCA-Offert.docx" download class="btn-gift-dl">
-                <svg fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Télécharger Word (.docx)
-              </a>
+              <div class="gift-btn-row">
+                <a href="EDN-Tome-01-LCA-Offert.docx" download class="btn-gift-dl">Word (.docx)</a>
+                <a href="EDN-Tome-01-LCA-Offert.pdf" download class="btn-gift-dl">PDF HD</a>
+                <a href="EDN-Tome-01-LCA-Offert.epub" download class="btn-gift-dl">ePub</a>
+              </div>
             </div>
           </div>
 
@@ -1501,28 +2256,82 @@
             <div>
               <span class="gift-card-badge">Tome 02 · 657 pages · Offert</span>
               <h3 class="gift-card-title">Neurologie R2C Complète</h3>
-              <p class="gift-card-desc">Sémiologie, AVC, SLA, myasthénie, épilepsie et 872 tableaux cliniques préservés.</p>
+              <p class="gift-card-desc">Sémiologie, AVC, SLA, myasthénie, épilepsie et 872 tableaux préservés.</p>
             </div>
             <div class="gift-card-actions">
               <button class="btn-gift-read" onclick="openFreeBookDemo('tome2')">Lire en Ligne</button>
-              <a href="EDN-Tome-02-Neurologie-Offert.docx" download class="btn-gift-dl">
-                <svg fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Télécharger Word (.docx)
-              </a>
+              <div class="gift-btn-row">
+                <a href="EDN-Tome-02-Neurologie-Offert.docx" download class="btn-gift-dl">Word (.docx)</a>
+                <a href="EDN-Tome-02-Neurologie-Offert.pdf" download class="btn-gift-dl">PDF HD</a>
+                <a href="EDN-Tome-02-Neurologie-Offert.epub" download class="btn-gift-dl">ePub</a>
+              </div>
             </div>
           </div>
 
-          <!-- Gift 3: Guide Méthodologique -->
+          <!-- Gift 3: Android App -->
+          <div class="gift-card">
+            <div>
+              <span class="gift-card-badge" style="background: #E0E7FF; color: #3730A3;">App Android · 50 Mo</span>
+              <h3 class="gift-card-title">Application Mobile Hors-Ligne</h3>
+              <p class="gift-card-desc">L'ensemble des cours et fiches accessibles directement en stage sans connexion 4G/Wifi.</p>
+            </div>
+            <div class="gift-card-actions">
+              <a href="EDN-App-Android-Offline.apk" download class="btn-gift-read" style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; background: #3730A3;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Télécharger l'APK (50 Mo)
+              </a>
+              <span style="font-size: 0.74rem; color: var(--ink-faint); text-align: center;">Compatible téléphones & tablettes Android</span>
+            </div>
+          </div>
+
+          <!-- Gift 4: Banque 100 QCMs -->
+          <div class="gift-card" style="border-color: #059669; background: #F0FDF4;">
+            <div>
+              <span class="gift-card-badge" style="background: #059669; color: #FFFFFF;">🎁 NOUVEAU · 100 QCMs</span>
+              <h3 class="gift-card-title">Banque de 100 QCMs Corrigés</h3>
+              <p class="gift-card-desc">Ophtalmologie & Urgences Réanimation avec analyse détaillée de chaque piège.</p>
+            </div>
+            <div class="gift-card-actions">
+              <a href="#qcmSimulator" class="btn-gift-read" style="text-decoration: none; text-align: center; background: #059669;">
+                Tester en Direct ci-dessous
+              </a>
+              <div class="gift-btn-row">
+                <a href="Banque-QCM-100-Questions-Corrigees.pdf" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #065F46;">PDF (50 p.)</a>
+                <a href="Banque-QCM-100-Questions-Corrigees.docx" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #065F46;">Word (.docx)</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift 5: Carnet d'Erreurs -->
+          <div class="gift-card" style="border-color: #D97706; background: #FFFBEB;">
+            <div>
+              <span class="gift-card-badge" style="background: #D97706; color: #FFFFFF;">🎁 NOUVEAU · Méthode Major</span>
+              <h3 class="gift-card-title">Le Carnet d'Erreurs EDN 2025</h3>
+              <p class="gift-card-desc">Le système actif de rappel pour ne plus jamais reproduire la même erreur aux QCMs.</p>
+            </div>
+            <div class="gift-card-actions">
+              <a href="Carnet-d-Erreurs-EDN-Major-2025.docx" download class="btn-gift-read" style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px; background: #B45309;">
+                <svg fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                Modèle Word (.docx)
+              </a>
+              <div class="gift-btn-row">
+                <a href="Carnet-d-Erreurs-EDN-Major-2025.pdf" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #92400E;">Guide PDF</a>
+                <a href="Fiches-Anatomie-Semiologie-Neurologie.docx" download class="btn-gift-dl" style="background: #fff; font-weight: 700; color: #92400E;">Fiches Neuro</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gift 6: Guide Méthodologique ECOS -->
           <div class="gift-card">
             <div>
               <span class="gift-card-badge">Guide Spécial · ECOS & EDN</span>
               <h3 class="gift-card-title">Les 15 Pièges de Rang B</h3>
-              <p class="gift-card-desc">Grille d'évaluation des stations ECOS (7 min) et pièges cliniques classiques.</p>
+              <p class="gift-card-desc">Grilles d'évaluation des stations ECOS (7 min) et pièges cliniques classiques.</p>
             </div>
             <div class="gift-card-actions">
               <a href="Guide-Methodologique-EDN-ECOS-Offert.docx" download class="btn-gift-read" style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px;">
                 <svg fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                Télécharger le Guide (.docx)
+                Télécharger (.docx)
               </a>
               <a href="GUIDE_METHODOLOGIQUE_EDN_2026.md" target="_blank" class="btn-gift-dl">
                 Consulter en Markdown
@@ -1532,12 +2341,60 @@
         </div>
       </div>
 
-      <!-- Featured Hormozi Grand Slam Offer (Bonus Stacking) -->
+      <!-- Interactive QCM Test Engine Section -->
+      <section class="qcm-section" id="qcmSimulator">
+        <div class="qcm-header-wrap">
+          <div>
+            <span class="qcm-badge-tag">🎯 Entraînement Immédiat — 100% Gratuit</span>
+            <h2 class="qcm-section-title">Testeur de QCMs R2C en Direct</h2>
+            <p class="qcm-section-subtitle">
+              Testez vos réflexes sur des questions réelles des concours classants. Cochez vos réponses (A à E), validez pour comparer avec la clé officielle et lire les justifications intégrales des Collèges.
+            </p>
+          </div>
+          <div class="qcm-score-badge">
+            Score : <span id="qcmScoreDisplay">0</span>/<span id="qcmAnsweredDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="qcm-card" id="qcmCardInner">
+          <div class="qcm-card-top">
+            <div>
+              <span id="qcmCounter" class="qcm-counter">Question 1 sur 10</span>
+              <span id="qcmSpecialtyBadge" class="qcm-spec-badge">Urgences & Réanimation</span>
+            </div>
+            <span style="font-size: 0.76rem; color: var(--ink-faint); font-weight: 600;">Épreuve Classante R2C</span>
+          </div>
+
+          <div class="qcm-question-prompt" id="qcmQuestionText">
+            Chargement de la question...
+          </div>
+
+          <div class="qcm-choices" id="qcmChoicesList">
+            <!-- Rendered by JS -->
+          </div>
+
+          <div class="qcm-exp-box" id="qcmExplanationBox" style="display: none;">
+            <div class="qcm-exp-key" id="qcmExpKey"></div>
+            <div class="qcm-exp-text" id="qcmExpText"></div>
+          </div>
+
+          <div class="qcm-actions-row">
+            <button id="btnValidateQcm" class="btn-qcm-val" onclick="validateCurrentQcm()">
+              Valider ma réponse
+            </button>
+            <button id="btnNextQcm" class="btn-qcm-next" onclick="nextQcmQuestion()" style="display: none;">
+              Question Suivante →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Hormozi Grand Slam Offer<!-- Featured Hormozi Grand Slam Offer (Bonus Stacking) -->
       <div class="bundle-banner">
         <div>
           <h2 class="bundle-banner-title">L'Offre Grand Chelem : Pack Intégral EDN 2026</h2>
           <p class="bundle-banner-desc">
-            La collection exhaustive couvrant l'ensemble des 28 spécialités médicales et chirurgicales (13 800+ pages), livrée instantanément avec ses 4 bonus exclusifs.
+            La collection exhaustive couvrant l'ensemble des 28 spécialités médicales et chirurgicales (13 800+ pages), livrée instantanément avec 7 bonus à très haute valeur ajoutée.
           </p>
           <ul class="bundle-features">
             <li>
@@ -1546,29 +2403,41 @@
             </li>
             <li>
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span><strong>Bonus 1 :</strong> Grilles d'évaluation cliniques pour les ECOS <span class="bonus-tag">Valeur 49 € · Offert</span></span>
+              <span><strong>Bonus 1 :</strong> Application Android Hors-Ligne complète <span class="bonus-tag">Valeur 99 € · Offert</span></span>
             </li>
             <li>
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span><strong>Bonus 2 :</strong> 4 800+ Tableaux Réflexes sans déformation <span class="bonus-tag">Valeur 39 € · Offert</span></span>
+              <span><strong>Bonus 2 :</strong> Banque Complète de 1 700+ QCMs & Annales Détaillées <span class="bonus-tag">Valeur 199 € · Offert</span></span>
             </li>
             <li>
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span><strong>Bonus 3 :</strong> Double format Microsoft Word (.docx modifiable) + PDF Tablette <span class="bonus-tag">Valeur 39 € · Offert</span></span>
+              <span><strong>Bonus 3 :</strong> Le Carnet d'Erreurs Interactif EDN (Méthode Major 2025) <span class="bonus-tag">Valeur 49 € · Offert</span></span>
             </li>
             <li>
               <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-              <span><strong>Bonus 4 :</strong> Mises à jour R2C garanties pour toute la session 2026 <span class="bonus-tag">Valeur 99 € · Offert</span></span>
+              <span><strong>Bonus 4 :</strong> Fiches Anatomie Clinique & Sémiologie Neurologique <span class="bonus-tag">Valeur 69 € · Offert</span></span>
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Bonus 5 :</strong> Grilles d'évaluation cliniques pour les ECOS <span class="bonus-tag">Valeur 79 € · Offert</span></span>
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Bonus 6 :</strong> 4 800+ Tableaux Réflexes sans déformation <span class="bonus-tag">Valeur 99 € · Offert</span></span>
+            </li>
+            <li>
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              <span><strong>Bonus 7 :</strong> Mises à jour R2C garanties pour toute la session 2026 <span class="bonus-tag">Valeur 149 € · Offert</span></span>
             </li>
           </ul>
         </div>
         <div class="bundle-pricing-side">
-          <div class="bundle-value-anchor">Valeur Totale : 1 346 €</div>
+          <div class="bundle-value-anchor">Valeur Totale Réelle : 2 245 €</div>
           <div class="bundle-price-wrap">
             <span class="bundle-curr-price">79 €</span>
             <span class="bundle-old-price">279 €</span>
           </div>
-          <span class="bundle-savings">Économisez 1 267 € (94% de réduction)</span>
+          <span class="bundle-savings">Économisez 2 166 € (96% de réduction)</span>
           <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-buy-bundle">
             Obtenir le Pack Intégral (79 €)
           </a>
@@ -1579,7 +2448,7 @@
       </div>
     </section>
 
-    <!-- Value Comparison Section -->
+    <!-- Value Comparison Section --><!-- Value Comparison Section -->
     <section class="compare-section">
       <div class="section-headline">
         <h2>Pourquoi choisir la collection Ethan Cole ?</h2>
@@ -1612,7 +2481,7 @@
               <td><strong>Format modifiable (.docx & PDF)</strong></td>
               <td><span class="cross-icon">✗</span> Non (format papier lourd)</td>
               <td><span class="cross-icon">✗</span> Souvent PDF verrouillé</td>
-              <td class="highlight-col"><span class="check-icon">✓</span> Word éditable + PDF</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> Word éditable + PDF + ePub</td>
             </tr>
             <tr>
               <td><strong>Tableaux synthétiques alignés</strong></td>
@@ -1621,10 +2490,10 @@
               <td class="highlight-col"><span class="check-icon">✓</span> 4 800+ tableaux préservés</td>
             </tr>
             <tr>
-              <td><strong>Portabilité (iPad, GoodNotes, Mac/PC)</strong></td>
-              <td><span class="cross-icon">✗</span> 35 kg de livres à transporter</td>
-              <td><span class="check-icon">✓</span> Numérique</td>
-              <td class="highlight-col"><span class="check-icon">✓</span> Accessible partout hors-ligne</td>
+              <td><strong>Application mobile hors-ligne</strong></td>
+              <td><span class="cross-icon">✗</span> Non (poids 35 kg)</td>
+              <td><span class="cross-icon">✗</span> Non</td>
+              <td class="highlight-col"><span class="check-icon">✓</span> App Android incluse</td>
             </tr>
           </tbody>
         </table>
@@ -1747,11 +2616,11 @@
       <div class="faq-list">
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
-            <span>Pourquoi offrez-vous 2 livres complets gratuitement ?</span>
+            <span>Pourquoi offrez-vous 2 livres complets et l'application Android gratuitement ?</span>
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </div>
           <div class="faq-answer">
-            Parce que nous savons que la confiance ne s'achète pas avec des promesses mais avec des preuves. En téléchargeant le Tome 01 (LCA) et le Tome 02 (Neurologie) en Word .docx, vous constatez immédiatement l'extrême rigueur des tableaux et la fluidité d'édition. Si vous aimez ces 2 tomes, le pack complet à 79 € devient une décision évidente.
+            Parce que la confiance repose sur des preuves tangibles. En téléchargeant le Tome 01 (LCA), le Tome 02 (Neurologie) et l'Application Android hors-ligne, vous constatez immédiatement l'extrême rigueur des tableaux et la fluidité des révisions. Si ces ressources vous aident, vous saurez exactement pourquoi le pack complet à 79 € est votre meilleur allié.
           </div>
         </div>
         <div class="faq-item">
@@ -1760,7 +2629,7 @@
             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
           </div>
           <div class="faq-answer">
-            Chaque volume est fourni au format <strong>Microsoft Word (.docx) entièrement éditable</strong> ainsi qu'en version <strong>PDF haute définition</strong>. Vous pouvez les surligner, les annoter, les imprimer ou les intégrer dans vos fiches personnelles (Notion, GoodNotes, iPad, etc.).
+            Chaque volume est fourni au format <strong>Microsoft Word (.docx) entièrement éditable</strong>, en version <strong>PDF haute définition</strong> ainsi qu'en format <strong>ePub</strong> pour liseuses. L'Application Android hors-ligne est également fournie avec l'accès direct aux 28 modules.
           </div>
         </div>
         <div class="faq-item">
@@ -1789,8 +2658,8 @@
   <div class="sticky-bottom-bar" id="stickyBottomBar">
     <div class="sticky-bar-info">
       <div>
-        <div class="sticky-bar-title">Pack Intégral EDN 2026 (28 Ouvrages + 4 Bonus)</div>
-        <div class="sticky-bar-sub">Word .docx modifiable & PDF · Téléchargement immédiat · 79 €</div>
+        <div class="sticky-bar-title">Pack Intégral EDN 2026 (28 Ouvrages + 5 Bonus)</div>
+        <div class="sticky-bar-sub">Word .docx, PDF, ePub & App Android · Téléchargement immédiat · 79 €</div>
       </div>
     </div>
     <a href="https://edgettrading.gumroad.com/l/ycfkfa" target="_blank" rel="noopener noreferrer" class="btn-sticky-bundle">
