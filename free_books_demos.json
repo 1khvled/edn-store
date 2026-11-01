@@ -1,0 +1,724 @@
+{
+  "tome1": {
+    "n": 1,
+    "title": "Tome 01 — LCA (Lecture Critique d'Article) [OFFERT]",
+    "college": "Collège Universitaire de Santé Publique & Méthodologie",
+    "download_file": "EDN-Tome-01-LCA-Offert.docx",
+    "content": [
+      {
+        "type": "chapter",
+        "text": "Chapitre 08 : Population"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 09 : Comparabilité des groupes"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 10 : Biais, Validité interne et Validité externe"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 11 : Critère de jugement"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 12 : Calcul du NSN"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 13 : Règles d'éthique"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 14 : Analyse statistique"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 15 : Tableaux et figures"
+      },
+      {
+        "type": "chapter",
+        "text": "PARTIE 1\n\nSELON LE TYPE D'ÉTUDE"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 01 — Étude épidémiologique"
+      },
+      {
+        "type": "text",
+        "text": "Différents types d'études épidémiologiques (selon leur finalité)"
+      },
+      {
+        "type": "text",
+        "text": "Choix du type d'étude selon sa finalité"
+      },
+      {
+        "type": "text",
+        "text": "Estimation des risques selon le type d'étude observationnelles"
+      },
+      {
+        "type": "text",
+        "text": "Impact en population : Fraction attribuable"
+      },
+      {
+        "type": "text",
+        "text": "Exemple de LCA Facile sur la fraction étiologique"
+      },
+      {
+        "type": "text",
+        "text": "Fraction étiologique"
+      },
+      {
+        "type": "text",
+        "text": "Le « risque attribuable pour les exposés » (ou « fraction étiologique ») mesure la proportion de cas de la maladie qu'on peut attribuer au facteur de risque parmi les sujets exposés à ce facteur (par exemple, pourcentage des cas de cancer du poumon dus au tabagisme parmi les fumeurs)."
+      },
+      {
+        "type": "text",
+        "text": "La fraction étiologique vaut : (RR − 1)/RR."
+      },
+      {
+        "type": "text",
+        "text": "Ainsi, si le RR vaut 4, la fraction étiologique vaut : (4 − 1)/4 = 0,75."
+      },
+      {
+        "type": "text",
+        "text": "C'est-à-dire que 75 % des cas survenus chez des sujets exposés peuvent être attribués à l'exposition au facteur de risque, et auraient donc pu être évités."
+      },
+      {
+        "type": "text",
+        "text": "Prenons l'exemple du cancer du poumon :"
+      },
+      {
+        "type": "bullet",
+        "text": "si le RR vaut 4 parmi la population fumeuse par rapport à la population non fumeuse, cela signifie que pour 4 cas de cancer chez les fumeurs on a 1 cas de cancer chez les non-fumeurs pour des populations identiques en effectif ;"
+      },
+      {
+        "type": "bullet",
+        "text": "imaginons maintenant que les 4 patients fumeurs n'aient pas fumé au cours de leur vie, ils rejoindraient alors le risque de la population générale. On aurait alors parmi ces 4 patients non pas 0 cas de cancer mais bien 1 cas de cancer, ce qui correspond bien au risque de la population générale ;"
+      },
+      {
+        "type": "bullet",
+        "text": "donc en pratique, on peut dire que le tabac explique 3 cas de cancer sur 4 chez les patients fumeurs, soit 75 % des cas survenus chez les patients exposés au tabac. Ce pourcentage correspond bien à la fraction étiologique évoquée ci-dessus en cas de RR à 4."
+      },
+      {
+        "type": "text",
+        "text": "Formule : Fraction de risque attribuable (RA, proportion de cas imputable au facteur en population générale)"
+      },
+      {
+        "type": "text",
+        "text": "Classification des études épidémiologiques"
+      },
+      {
+        "type": "text",
+        "text": "Épidémiologie interventionnelle (expérimentale ou évaluative)"
+      },
+      {
+        "type": "text",
+        "text": "Généralités"
+      },
+      {
+        "type": "text",
+        "text": "Toute enquête où l'attribution de l'exposition est contrôlée par l'investigateur"
+      },
+      {
+        "type": "bullet",
+        "text": "Très rare en pratique, car ce type d'étude n'est souvent pas éthique (on ne peut pas randomiser sur un facteur de risque)"
+      },
+      {
+        "type": "bullet",
+        "text": "Caractéristiques : toujours prospectives, randomisées ou non, souvent contrôlées"
+      },
+      {
+        "type": "bullet",
+        "text": "Si groupes comparables + biais contrôlés : la différence observée entre les groupes permet de poser un lien de causalité"
+      },
+      {
+        "type": "text",
+        "text": "Essais semi-expérimentaux"
+      },
+      {
+        "type": "text",
+        "text": "Correspond à l'évaluation de l'impact d'un programme de prévention ou de dépistage :"
+      },
+      {
+        "type": "bullet",
+        "text": "Études transversales \"avant/après\" : comparaison du même groupe avant/après le programme de prévention"
+      },
+      {
+        "type": "bullet",
+        "text": "Études transversales \"ici/ailleurs\" : comparaison de 2 groupes ayant suivi ou pas le programme de prévention"
+      },
+      {
+        "type": "bullet",
+        "text": "Études transversales \"avant/après\" et \"ici/ailleurs\" : combinaison des 2"
+      },
+      {
+        "type": "text",
+        "text": "Épidémiologie observationnelle (non expérimentale)"
+      },
+      {
+        "type": "text",
+        "text": "Toute enquête où l'attribution de l'exposition n'est pas contrôlée par l'investigateur"
+      },
+      {
+        "type": "text",
+        "text": "Enquêtes descriptives"
+      },
+      {
+        "type": "text",
+        "text": "Surveillance épidémiologique : étude descriptive portant sur des groupes de personnes"
+      },
+      {
+        "type": "text",
+        "text": "Recours à systèmes d'enregistrement permanent"
+      },
+      {
+        "type": "bullet",
+        "text": "Statistiques nationales ou régionales de mortalité"
+      },
+      {
+        "type": "bullet",
+        "text": "Registres de morbidités (dans une population géographiquement définie)"
+      },
+      {
+        "type": "bullet",
+        "text": "INSEE, données du SNIIRAM (système national d'information d'inter-régimes de l'assurance maladie) ..."
+      },
+      {
+        "type": "text",
+        "text": "Méthodes de standardisation (indispensable pour ces études)"
+      },
+      {
+        "type": "text",
+        "text": "Reposent sur le calcul du taux d'incidence (ou de mortalité)"
+      },
+      {
+        "type": "text",
+        "text": "Taux d'incidence = nombre de nouveaux cas survenus au cours d'une année dans une zone géographiquement définie, divisé par le nombre de personnes à risque (en pratique : le nombre de personnes résidant dans la zone géographique pour l'année considérée)"
+      },
+      {
+        "type": "text",
+        "text": "En pratique la comparaison des taux entres les zones géographiques (ou entre les périodes) nécessitent une standardisation sur l'âge (ou souvent le sexe) : car la répartition âge/sexe peut varier selon la zone/période"
+      },
+      {
+        "type": "text",
+        "text": "Cas particulier : étude de corrélation écologique (ecological study)"
+      },
+      {
+        "type": "text",
+        "text": "Enquêtes analytiques"
+      },
+      {
+        "type": "text",
+        "text": "Consistent en la recherche d'une association statistique entre une maladie et une expostion à un facteur \n(permettent d'établir une association statistique, mais pas un lien de causalité ⚠️)"
+      },
+      {
+        "type": "text",
+        "text": "Il en existe 5 types :"
+      },
+      {
+        "type": "text",
+        "text": "Attention, finesse importante : parfois on récupère tous les cas de la cohorte, et on tire au sort un certain nombre de témoins pour l'appariement\n→ cela n'a bien sûr rien à voir avec une randomisation"
+      },
+      {
+        "type": "text",
+        "text": "Épidémiologie évaluative"
+      },
+      {
+        "type": "text",
+        "text": "Domaine de l'épidémiologie cherchant à estimer et quantifier l'impact d'une action sur l'état de santé d'une population\n(programme d'éducation, campagne de dépistage, essai thérapeutique)"
+      },
+      {
+        "type": "text",
+        "text": "Il repose sur la mise en place d'études épidémiologiques pouvant répondre à différents schémas :"
+      },
+      {
+        "type": "text",
+        "text": "Type d'étude"
+      },
+      {
+        "type": "text",
+        "text": "Principaux types d’étude épidémiologique"
+      },
+      {
+        "type": "text",
+        "text": "Étude de Cohorte, Étude Cas-témoins"
+      },
+      {
+        "type": "text",
+        "text": "Choix entre étude cas-témoin et étude de cohorte va dépendre de la question posée"
+      },
+      {
+        "type": "h3",
+        "text": "Critères de choix, Protocoles : cohorte vs cas-témoins"
+      },
+      {
+        "type": "text",
+        "text": "Avantages/Inconvénients : cohorte, cas-témoins"
+      },
+      {
+        "type": "text",
+        "text": "Cohorte vs Cas-Témoins — Avantages et Inconvénients"
+      },
+      {
+        "type": "text",
+        "text": "Études de cohorte"
+      },
+      {
+        "type": "text",
+        "text": "Choix de la population - Recrutement"
+      },
+      {
+        "type": "text",
+        "text": "Il existe 2 possibilités pour le choix de la population :"
+      },
+      {
+        "type": "text",
+        "text": "On distingue aussi 2 types de cohorte sur le mode de recrutement :"
+      },
+      {
+        "type": "text",
+        "text": "Receuil des facteurs de risque"
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Objectif de l'étude",
+          "Type d'étude"
+        ],
+        [
+          "Estimer la prévalence (descriptive)",
+          "Étude transversale descriptive"
+        ],
+        [
+          "Estimer l'incidence (descriptive)",
+          "Étude descriptive d'incidence à partir de système d'enregistrement Étude descriptive de cohorte prospective"
+        ],
+        [
+          "Rechercher les facteurs de risque (étiologique)",
+          "Étude de cohorte prospectiveÉtude cas-témoinÉtude cas-témoin nichée dans une cohorte"
+        ],
+        [
+          "Rechercher les facteurs pronostiques",
+          "Étude de cohorte prospective Étude de cohorte rétrospective"
+        ],
+        [
+          "Évaluer l'effet d'une action de santé (intervention sur les habitudes de vie, dépistage, programme d'éducation à la santé, politique de santé…)",
+          "Essai randomisé individuel (préférable si possible) Essai randomisé en cluster (à utiliser quand la randomisation individuelle des sujets est impossible) Enquêtes avant–après/ici-ailleurs (à utiliser surtout quand l'intervention ne peut être appliquée que sur l'ensemble de la population)"
+        ]
+      ],
+      [
+        [
+          "Caractéristique",
+          "Description / Données Cliniques"
+        ],
+        [
+          "Descriptives",
+          "Description de caractéristiques brutes de l'état de santé d'une population (incidence, prévalence, morbidité, mortalité ...) Ainsi que leurs éventuelles variations :  - Variations dans l'espace (variations géographiques) - Au cours du temps (variations temporelles) - Selon certaines grandes catégories (âge, sexe, statut socio-économique ...)"
+        ],
+        [
+          "Étiologiques  (ou analytiques)",
+          "Évaluation de l'ampleur d'un phénomène de santé : maladie, décès, FR, pratiques de soins ..."
+        ],
+        [
+          "Autres",
+          "- Études d'évaluation des interventions en santé - Études pronostiques - Études pratiques"
+        ]
+      ],
+      [
+        [
+          "Caractéristique",
+          "Description / Données Cliniques"
+        ],
+        [
+          "Estimer un taux",
+          "- Prévalence (étude transversale) - Incidence (cohorte rétrospective ou prospective)"
+        ],
+        [
+          "Mesurer une association",
+          "- Risque relatif (RR, rapport des incidences de la maladie entre 2 groupes de la cohorte : exposés/non-exposés) - Odds ratio (OR, estimation du risque relatif : études cas-témoins, ou cohorte exposés/non-exposés)"
+        ],
+        [
+          "Mesurer un impact",
+          "- Excès de risque (différence entre risque absolu des exposés, et risque de base des non exposés dans études de cohorte) - Fraction de risque attribuable (RA, proportion de cas imputable au facteur)"
+        ]
+      ],
+      [
+        [
+          "Caractéristique",
+          "Description / Données Cliniques"
+        ],
+        [
+          "Principe",
+          "RR ou un OR significatif ne reflète pas forcément que l'exposition ait un impact très important en population générale, cela va dépendre de la fréquence de l'exposition et de la taille de l'effet"
+        ],
+        [
+          "Fraction attribuable",
+          "FRACTION ATTRIBUABLE = RISQUE ATTRIBUABLE (RA) = FRACTION ÉTIOLOGIQUE EN POPULATION GÉNÉRALE - Déf. : proportion de cas ou décès d'une maladie en population générale que l'on peut attribuer à un FR/exposition - Calcul : [PF x (RR-1)] / [PF x (RR-1) + 1]  → Avec PF (fréquence d'exposition) = proportion de sujets exposés au facteur dans la population   → Type d'étude dédié au calcul de la Fraction du Risque attribuable = étude de cohorte prospective  → Si étude cas-témoins : RR est estimé par OR, et PF est la prévalence de l'exposition chez les témoins - Intérêt du RA : quantifier le pourcentage de cas évitables si l'on pouvait supprimer le facteur d'exposition   → À différencier du RR ou du OR qui cherchent à mesure une association, ici on mesure un impact  → Multiplication du RA par la prévalence de la maladie permet d'estimer le nombre de cas qui seraient évités si l'exposition était supprimée - Conditions indispensables pour pouvoir calculer la fraction du risque attribuable :   → Avoir des informations sur la proportion de sujets exposés dans la population (pas toujours possible)  → Existence d'un lien de nature causale entre le facteur et la maladie (sinon calcul de RA non valide)"
+        ],
+        [
+          "Fraction étiologique",
+          "Fraction étiologique (FE) = FRACTION DE RISQUE ATTRIBUABLE CHEZ LES EXPOSÉES - Def. = proportion de cas attribuables au facteur parmi les sujets exposés,  - Calcul : FE = (RR-1)/RR"
+        ],
+        [
+          "Taille de l’effet",
+          "Ces dernières années ont vu naître des études ayant des effectifs tellement importants qu'une différence d'âge de 3 mois entre deux groupes sera significative, il est donc également important de raisonner en termes de taille d'effet et de pertinence clinique"
+        ]
+      ]
+    ]
+  },
+  "tome2": {
+    "n": 2,
+    "title": "Tome 02 — Neurologie [OFFERT]",
+    "college": "Collège des Enseignants de Neurologie (CEN)",
+    "download_file": "EDN-Tome-02-Neurologie-Offert.docx",
+    "content": [
+      {
+        "type": "chapter",
+        "text": "Chapitre 09 : Compression médullaire non traumatique (93)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 10 : Sclérose latérale amyotrophique (96)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 11 : Sclérose en plaque (104)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 12 : Accidents vasculaires cérébraux (340)"
+      },
+      {
+        "type": "chapter",
+        "text": "PARTIE 2 — CÉPHALÉE"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 13 : Céphalées (99, 100)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 14 : Méningites, méningo-encéphalites, abcès cérébral (151)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 15 : Hémorragie méningée non traumatique (341)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 16 : Tumeurs intracrâniennes (299)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 17 : Syndrome d'HTIC (100, 299)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 18 : Hydrocéphalie (100, 299)"
+      },
+      {
+        "type": "chapter",
+        "text": "PARTIE 3 — AUTRES"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 19 : Épilepsie (105)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 20 : Troubles de la marche et de l'équilibre (109, 131)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 21 : Mouvements anormaux (107)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 22 : Maladie de Parkinson (106)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 23 : Troubles du sommeil (110)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 24 : Troubles cognitifs (132)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 25 : État confusionnel / Confusion mentale (108, 343)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 26 : Évaluation cognitive (118)"
+      },
+      {
+        "type": "chapter",
+        "text": "Chapitre 01 — Sémiologie, anatomie, syndrome (neurologie)"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome hémisphérique"
+      },
+      {
+        "type": "h3",
+        "text": "Aires cérébrales"
+      },
+      {
+        "type": "text",
+        "text": "Aire cérébrale"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome rolandique"
+      },
+      {
+        "type": "h3",
+        "text": "Rappel anatomique"
+      },
+      {
+        "type": "text",
+        "text": "Sillon de Rolando, ou scissure centrale, sépare"
+      },
+      {
+        "type": "bullet",
+        "text": "la Circonvolution frontale ascendante (F.A. ou gyrus précentral)"
+      },
+      {
+        "type": "bullet",
+        "text": "de la Circonvolution pariétale ascendante (P.A. ou gyrus postcentral)"
+      },
+      {
+        "type": "text",
+        "text": "Ce cortex primaire comporte :"
+      },
+      {
+        "type": "bullet",
+        "text": "l'Aire somatomotrice (F.A., dont les neurones constituent une grande partie de l'origine de la voie corticospinale ou faisceau pyramidal, destinée à l'hémicorps controlatéral)"
+      },
+      {
+        "type": "bullet",
+        "text": "et l'Aire somatosensitive (P.A., dont les neurones reçoivent les afférences sensitives thalamiques de l'hémicorps controlatéral)"
+      },
+      {
+        "type": "text",
+        "text": "Il existe une somatotopie (homonculus)"
+      },
+      {
+        "type": "bullet",
+        "text": "Territoires de la face et de la main sont surreprésentés et siègent dans la partie inférieure de ces gyri à la face externe de l'hémisphère (opercule rolandique)\n→ opercule rolandique = lobule rolandique : situé à la partie inférieur du gyrus pré-central"
+      },
+      {
+        "type": "text",
+        "text": "Territoires du membre inférieur à la face interne de l'hémisphère (lobule paracentral)"
+      },
+      {
+        "type": "text",
+        "text": "Homoculus de Penfiel"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome pariétal"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome occipital"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome temporal"
+      },
+      {
+        "type": "text",
+        "text": "Sémiologie complexe, à l'image de l'hétérogénéité fonctionnelle de ce lobe\nAire temporale comprends les centres de l'audition et du langage (compréhension) et est traversée par les voies optiques"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome frontal"
+      },
+      {
+        "type": "text",
+        "text": "Comprend les fonctions de vie sociale, d'humeur, d'oculomotricité conjuguée, de commande motrice élaborée, située en avant de la FA (circonvulsion frontale ascendante)"
+      },
+      {
+        "type": "text",
+        "text": "Système nerveux autonome"
+      },
+      {
+        "type": "text",
+        "text": "Fibres végétatives (vois efférentes sympathiques et parasympathiques) :"
+      },
+      {
+        "type": "text",
+        "text": "– Corps cellulaire du neurone préganglionnaire est situé dans le tronc cérébral ou la moelle spinale"
+      },
+      {
+        "type": "text",
+        "text": "– Axone quitte le système nerveux central par le trajet des nerfs crâniens (III, VII, IX, X) ou des racines antérieures médullaires pour faire un relais avec le neurone post-ganglionnaires innervant les muscles lisses et les glandes"
+      },
+      {
+        "type": "text",
+        "text": "Effets selon l’organe"
+      },
+      {
+        "type": "text",
+        "text": "Effets de la stimulation des récepteurs adrénergiques"
+      },
+      {
+        "type": "text",
+        "text": "Résumé"
+      },
+      {
+        "type": "text",
+        "text": "Sur la vessie"
+      },
+      {
+        "type": "text",
+        "text": "voir schéma du collège"
+      },
+      {
+        "type": "text",
+        "text": "Système orthosympathique → actif pendant la phase de stockage"
+      },
+      {
+        "type": "text",
+        "text": "Système parasympathique → actif pendant la miction"
+      },
+      {
+        "type": "text",
+        "text": "Sur le coeur et les vaisseaux"
+      },
+      {
+        "type": "text",
+        "text": "Médicaments"
+      },
+      {
+        "type": "text",
+        "text": "Actions sur les récepteurs sympathiques"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome anti-cholinergique ou atropinique"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome cérebelleux"
+      },
+      {
+        "type": "text",
+        "text": "Anatomie fonctionnelle du cervelet"
+      },
+      {
+        "type": "text",
+        "text": "Placé en dérivation du tronc cérébral, le cervelet est constitué d'un vermis médian, et de 2 hémisphères latéraux"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome cérébelleux"
+      },
+      {
+        "type": "text",
+        "text": "Signes cérébelleux sont ipsilatéraux à la lésion (du même côté) lorsque celle-ci siège au-dessous de la commissure de Wernekink (mésencéphale)"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome cérébelleux statique : troubles de l'équilibre et de la marche"
+      },
+      {
+        "type": "h3",
+        "text": "Syndrome cérébelleux cinétique : troubles de l'exécution des mouvements"
+      },
+      {
+        "type": "text",
+        "text": "Selon la localisation de l'atteinte"
+      },
+      {
+        "type": "text",
+        "text": "Formes cliniques de l’atteinte cérébelleux"
+      },
+      {
+        "type": "text",
+        "text": "Atteintes responsables d'un syndrome cérébelleux"
+      },
+      {
+        "type": "bullet",
+        "text": "Atteinte directe du cervelet"
+      },
+      {
+        "type": "bullet",
+        "text": "Atteinte des voies cérébelleuses passant par les pédoncules cérébelleux"
+      },
+      {
+        "type": "bullet",
+        "text": "Atteinte des voies cortico-ponto-cérébelleuses"
+      }
+    ],
+    "tables": [
+      [
+        [
+          "Paramètre 1",
+          "Localisation",
+          "Symptômes déficitaires",
+          "Crise comitale focale"
+        ],
+        [
+          "Moteur",
+          "Gyrus pré-central (frontal)",
+          "- Hémiplégie controlatérale :  → Si la lésion touche la face externe : prédominance brachio-faciale   (artère sylvienne superficielle)  → Si la lésion touche le lobule paracentral : prédominance crurale  (artère cérébrale antérieure) - Paralysie faciale centrale (quand la lésion est limitée à l'opercule rolandique) - Syndrome pseudo-bulbaire quand il y a une lésion des 2 opercules rolandiques [rare] - Paraplégie en cas de lésion comprimant les 2 lobules paracentraux [rare]",
+          "Crises Bravais-jacksoniennes (crises motrices) : - Myoclonies qui débutent au niveau de la main - Puis se propagent en remontant le bras, en quelques secondes"
+        ],
+        [
+          "Sensitif",
+          "Gyrus post-central (pariétal)",
+          "Déficit sensitif à tous les modes sur l’hémicorps controlatéral → à prédominance brachio-faciale (parfois cheiro-orale = main et bouche)",
+          "Marche Bravais-jacksoniennes (crises sensitives) :  1. Paresthésies qui débutent au niveau de la main 2. Puis se propagent en remontant le bras, en quelques secondes"
+        ],
+        [
+          "Autre",
+          "F3",
+          "Aphasie de Broca (si la lésion déborde sur la partie postérieure de F3 [= pied de F3])",
+          ""
+        ]
+      ],
+      [
+        [
+          "Caractéristique",
+          "Description / Données Cliniques"
+        ],
+        [
+          "Structures touchées",
+          "Lobe pariétal comporte :  - Gyrus post central - Structures dites associatives car intégrant des fonctions cognitives :  → Hémisphère majeur : permet la latéralité et la praxie  → Hémisphère mineur : gère la reconnaissance du corps et la conscience de soi"
+        ],
+        [
+          "Symptômes déficitaires",
+          "- Déficits sensitifs [lésion du gyrus post-central] :   → Déficits sensitifs élémentaires (hypo ou anesthésies) hémicorporels controlatéraux  → En l’absence de déficit sensitif élémentaire (ou seulement un déficit modéré), rechercher une atteinte de la sensibilité élaborée :   ° Extinction sensitive (en stimulant simultanément 2 points symétriques, le malade avec les yeux fermés ne perçoit que 1 stimulation)  ° Astéréognosie (demander au maladie d’identifier divers objets par la palpation aveugle) - Troubles du schéma corporel :  → Hémisphère mineur : hémiasomatognosie, illusions corporelles (plus rarement)  → Hémisphère majeur : agnosie digitale, autotopoagnosie, indistinction droite/gauche - Troubles visuo-spatiaux :   → Quadranopsie inférieure controlatérale (atteinte des radiations optiques)  → Négligence visuo-spatiale (héminégligence)  → Perte de la mémoire topographique, parfois désorientation spatiale isolée - Apraxies (toutes, sauf l’apraxie motrice qui dûe à une lésion préfrontale) : gestuelle (idéomotrice et idéatoire), constructive, de l’habillage - Troubles du langage :   → Aphasie de Wernicke (lésion du gyrus supramarginalis et du pli courbe, situés respectivement à la partie antérieure et postérieure de P2)  → Aphasie de conduction (lésion du faisceau arqué)  → Aphasie transcorticale sensorielle  → Agraphie"
+        ],
+        [
+          "Crise comitale focale",
+          "Crises peuvent être : - Partielles simples, somatosensitives, aphasiques - Partielles complexes"
+        ]
+      ],
+      [
+        [
+          "Caractéristique",
+          "Description / Données Cliniques"
+        ],
+        [
+          "Symptômes déficitaires",
+          "- Déficits visuels élémentaires (cortex primaire) :   → Hémianopsie (ou quadranopise) latérale homonyme controlatérale (par lésion de l'aire 17)  → Cécité corticale (lésions bilatérales) - Déficits visuels complexes (cortex associatif) :   → Négligence visuelle ou visuo spatiale  → Agnosies visuelles : pour les objets, les couleurs, les visages (prosopagnosie), les lettres (alexie)  syndrome alexie-agraphie peut s'observer dans certaines lésion occipito-pariétales"
+        ],
+        [
+          "Crise comitale focale",
+          "- Simples : phosphènes - Complexes : animaux, personnages, scènes - Autres manifestations \"positives\" :   → Métamorphopsies = vision déformée des objets  → Hallucinations visuelles = perceptions sans objets"
+        ],
+        [
+          "Notes rang C",
+          "- Crises épileptiques à point de départ occipital comportent une sémiologie hallucinatoire élémentaire latéralisée (phosphènes colorés, fixe ou mobiles, ligne), parfois suivi d’une cécité ou HLH post-critique) - Crises épileptiques à point de départ temporal ont une sémiologie plus élaborée (scènes complexes)"
+        ]
+      ]
+    ]
+  }
+}

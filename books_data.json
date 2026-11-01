@@ -5,7 +5,7 @@
     "title": "LCA - Lecture Critique d'Article",
     "pages": 270,
     "price": 24.99,
-    "ebook": 9.99,
+    "ebook": "0 (Offert)",
     "free": true,
     "preview_sample": [
       "SOMMAIRE DÉTAILLÉ DU MODULE",
@@ -228,7 +228,9 @@
         ]
       ]
     ],
-    "category": "Transversal & Méthode"
+    "category": "Transversal & Méthode",
+    "is_free_gift": true,
+    "free_download_url": "EDN-Tome-01-LCA-Offert.docx"
   },
   {
     "n": 2,
@@ -236,7 +238,7 @@
     "title": "Neurologie",
     "pages": 657,
     "price": 34.99,
-    "ebook": 9.99,
+    "ebook": "0 (Offert)",
     "free": true,
     "preview_sample": [
       "SOMMAIRE DÉTAILLÉ DU MODULE",
@@ -459,7 +461,9 @@
         ]
       ]
     ],
-    "category": "Médecine Spécialisée"
+    "category": "Médecine Spécialisée",
+    "is_free_gift": true,
+    "free_download_url": "EDN-Tome-02-Neurologie-Offert.docx"
   },
   {
     "n": 3,
