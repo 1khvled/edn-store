@@ -231,7 +231,9 @@
     "category": "Transversal & Méthode",
     "is_free_gift": true,
     "free_download_url": "EDN-Tome-01-LCA-Offert.docx",
-    "preview_pdf": "previews/preview-01-lca.pdf"
+    "preview_pdf": "previews/preview-01-lca.pdf",
+    "cover": "covers/01-lca.jpg",
+    "college": "Collège Universitaire des Enseignants de Santé Publique (CUESP)"
   },
   {
     "n": 2,
@@ -465,7 +467,9 @@
     "category": "Médecine Spécialisée",
     "is_free_gift": true,
     "free_download_url": "EDN-Tome-02-Neurologie-Offert.docx",
-    "preview_pdf": "previews/preview-02-neurologie.pdf"
+    "preview_pdf": "previews/preview-02-neurologie.pdf",
+    "cover": "covers/02-neurologie.jpg",
+    "college": "Collège des Enseignants de Neurologie (CEN)"
   },
   {
     "n": 3,
@@ -693,7 +697,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-03-infectiologie.pdf"
+    "preview_pdf": "previews/preview-03-infectiologie.pdf",
+    "cover": "covers/03-infectiologie.jpg",
+    "college": "Collège des Universitaires de Maladies Infectieuses (CMIT)"
   },
   {
     "n": 4,
@@ -929,7 +935,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-04-cardiologie.pdf"
+    "preview_pdf": "previews/preview-04-cardiologie.pdf",
+    "cover": "covers/04-cardiologie.jpg",
+    "college": "Collège National des Enseignants de Cardiologie (CNEC)"
   },
   {
     "n": 5,
@@ -1169,7 +1177,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-05-pneumologie.pdf"
+    "preview_pdf": "previews/preview-05-pneumologie.pdf",
+    "cover": "covers/05-pneumologie.jpg",
+    "college": "Collège des Enseignants de Pneumologie (CEP)"
   },
   {
     "n": 6,
@@ -1393,7 +1403,9 @@
       ]
     ],
     "category": "Urgences & Anesthésie",
-    "preview_pdf": "previews/preview-06-urgences.pdf"
+    "preview_pdf": "previews/preview-06-urgences.pdf",
+    "cover": "covers/06-urgences.jpg",
+    "college": "Collège Français de Médecine d'Urgence & Réanimation (CFMU)"
   },
   {
     "n": 7,
@@ -1617,7 +1629,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-07-medecine-interne.pdf"
+    "preview_pdf": "previews/preview-07-medecine-interne.pdf",
+    "cover": "covers/07-medecine-interne.jpg",
+    "college": "Collège National des Enseignants de Médecine Interne (CEMI)"
   },
   {
     "n": 8,
@@ -1857,7 +1871,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-08-hematologie.pdf"
+    "preview_pdf": "previews/preview-08-hematologie.pdf",
+    "cover": "covers/08-hematologie.jpg",
+    "college": "Société Française d'Hématologie (SFH)"
   },
   {
     "n": 9,
@@ -2077,7 +2093,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-09-dermatologie.pdf"
+    "preview_pdf": "previews/preview-09-dermatologie.pdf",
+    "cover": "covers/09-dermatologie.jpg",
+    "college": "Collège des Enseignants en Dermatologie de France (CEDF)"
   },
   {
     "n": 10,
@@ -2309,7 +2327,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-10-geriatrie.pdf"
+    "preview_pdf": "previews/preview-10-geriatrie.pdf",
+    "cover": "covers/10-geriatrie.jpg",
+    "college": "Collège National des Enseignants de Gériatrie (CNEG)"
   },
   {
     "n": 11,
@@ -2549,7 +2569,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-11-digestif.pdf"
+    "preview_pdf": "previews/preview-11-digestif.pdf",
+    "cover": "covers/11-digestif.jpg",
+    "college": "Collège des Enseignants d'Hépato-Gastro-Entérologie (CDU-HGE)"
   },
   {
     "n": 12,
@@ -2769,7 +2791,9 @@
       ]
     ],
     "category": "Chirurgie & Sens",
-    "preview_pdf": "previews/preview-12-urologie.pdf"
+    "preview_pdf": "previews/preview-12-urologie.pdf",
+    "cover": "covers/12-urologie.jpg",
+    "college": "Collège Français des Enseignants d'Urologie (CFEU)"
   },
   {
     "n": 13,
@@ -2997,7 +3021,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-13-nephrologie.pdf"
+    "preview_pdf": "previews/preview-13-nephrologie.pdf",
+    "cover": "covers/13-nephrologie.jpg",
+    "college": "Collège Universitaire des Enseignants de Néphrologie (CUEN)"
   },
   {
     "n": 14,
@@ -3243,7 +3269,9 @@
       ]
     ],
     "category": "Urgences & Anesthésie",
-    "preview_pdf": "previews/preview-14-douleur-anesthesie.pdf"
+    "preview_pdf": "previews/preview-14-douleur-anesthesie.pdf",
+    "cover": "covers/14-douleur-anesthesie.jpg",
+    "college": "Collège des Enseignants d'Anesthésie-Réanimation & Douleur (CNEAR/SFETD)"
   },
   {
     "n": 15,
@@ -3475,7 +3503,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-15-endocrinologie.pdf"
+    "preview_pdf": "previews/preview-15-endocrinologie.pdf",
+    "cover": "covers/15-endocrinologie.jpg",
+    "college": "Collège des Enseignants d'Endocrinologie & Métabolisme (CEEDMM)"
   },
   {
     "n": 16,
@@ -3711,7 +3741,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-16-nutrition-activite-physique.pdf"
+    "preview_pdf": "previews/preview-16-nutrition-activite-physique.pdf",
+    "cover": "covers/16-nutrition-activite-physique.jpg",
+    "college": "Collège des Enseignants de Nutrition & Diététique"
   },
   {
     "n": 17,
@@ -3947,7 +3979,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-17-rhumatologie.pdf"
+    "preview_pdf": "previews/preview-17-rhumatologie.pdf",
+    "cover": "covers/17-rhumatologie.jpg",
+    "college": "Collège Français des Enseignants en Rhumatologie (COFER)"
   },
   {
     "n": 18,
@@ -4185,7 +4219,9 @@
       ]
     ],
     "category": "Chirurgie & Sens",
-    "preview_pdf": "previews/preview-18-orthopedie.pdf"
+    "preview_pdf": "previews/preview-18-orthopedie.pdf",
+    "cover": "covers/18-orthopedie.jpg",
+    "college": "Collège Français de Chirurgie Orthopédique & Traumatologie (CFCOT)"
   },
   {
     "n": 19,
@@ -4410,7 +4446,9 @@
       ]
     ],
     "category": "Chirurgie & Sens",
-    "preview_pdf": "previews/preview-19-ophtalmologie.pdf"
+    "preview_pdf": "previews/preview-19-ophtalmologie.pdf",
+    "cover": "covers/19-ophtalmologie.jpg",
+    "college": "Collège des Ophtalmologistes Universitaires de France (COUF)"
   },
   {
     "n": 20,
@@ -4638,7 +4676,9 @@
       ]
     ],
     "category": "Transversal & Méthode",
-    "preview_pdf": "previews/preview-20-mt-sp-ml-therapeutique.pdf"
+    "preview_pdf": "previews/preview-20-mt-sp-ml-therapeutique.pdf",
+    "cover": "covers/20-mt-sp-ml-therapeutique.jpg",
+    "college": "Collèges CUESP / Thérapeutique / Médecine Légale"
   },
   {
     "n": 21,
@@ -4866,7 +4906,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-21-oncologie.pdf"
+    "preview_pdf": "previews/preview-21-oncologie.pdf",
+    "cover": "covers/21-oncologie.jpg",
+    "college": "Collège National des Enseignants de Cancérologie (CNEC)"
   },
   {
     "n": 22,
@@ -5098,7 +5140,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-22-mpr.pdf"
+    "preview_pdf": "previews/preview-22-mpr.pdf",
+    "cover": "covers/22-mpr.jpg",
+    "college": "Collège Français des Enseignants Universitaires de MPR (COFEMER)"
   },
   {
     "n": 23,
@@ -5362,7 +5406,9 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-23-psychiatrie.pdf"
+    "preview_pdf": "previews/preview-23-psychiatrie.pdf",
+    "cover": "covers/23-psychiatrie.jpg",
+    "college": "Collège National des Enseignants de Psychiatrie (CNUP)"
   },
   {
     "n": 24,
@@ -5608,7 +5654,9 @@
       ]
     ],
     "category": "Chirurgie & Sens",
-    "preview_pdf": "previews/preview-24-orl.pdf"
+    "preview_pdf": "previews/preview-24-orl.pdf",
+    "cover": "covers/24-orl.jpg",
+    "college": "Collège Français d'ORL et de Chirurgie Cervico-Faciale"
   },
   {
     "n": 25,
@@ -5840,7 +5888,9 @@
       ]
     ],
     "category": "Chirurgie & Sens",
-    "preview_pdf": "previews/preview-25-cmf.pdf"
+    "preview_pdf": "previews/preview-25-cmf.pdf",
+    "cover": "covers/25-cmf.jpg",
+    "college": "Collège des Enseignants de Chirurgie Maxillo-Faciale"
   },
   {
     "n": 26,
@@ -6060,7 +6110,9 @@
       ]
     ],
     "category": "Femme & Enfant",
-    "preview_pdf": "previews/preview-26-gynecologie.pdf"
+    "preview_pdf": "previews/preview-26-gynecologie.pdf",
+    "cover": "covers/26-gynecologie.jpg",
+    "college": "Collège National des Gynécologues et Obstétriciens (CNGOF)"
   },
   {
     "n": 27,
@@ -6312,7 +6364,9 @@
       ]
     ],
     "category": "Femme & Enfant",
-    "preview_pdf": "previews/preview-27-pediatrie.pdf"
+    "preview_pdf": "previews/preview-27-pediatrie.pdf",
+    "cover": "covers/27-pediatrie.jpg",
+    "college": "Collège des Enseignants de Pédiatrie"
   },
   {
     "n": 28,
@@ -6548,6 +6602,8 @@
       ]
     ],
     "category": "Médecine Spécialisée",
-    "preview_pdf": "previews/preview-28-genetique.pdf"
+    "preview_pdf": "previews/preview-28-genetique.pdf",
+    "cover": "covers/28-genetique.jpg",
+    "college": "Collège des Enseignants de Génétique Médicale"
   }
 ]
